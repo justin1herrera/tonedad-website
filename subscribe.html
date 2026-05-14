@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subscribe · tone.dad</title>
+<meta name="description" content="Subscriber-only stories from the edit suite. Faith, fatherhood, Taylor Swift, the Jets, and building things at 4 AM. Always free. Never for everyone.">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://www.tone.dad/subscribe">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.tone.dad/subscribe">
+<meta property="og:title" content="Subscribe · tone.dad — Notes from the Edit Suite">
+<meta property="og:description" content="Subscriber-only stories from the edit suite. Taylor Swift, the Jets, faith, fatherhood. Always free. Never for everyone.">
+<meta property="og:image" content="https://www.tone.dad/media/og-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="tone.dad">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Subscribe · tone.dad — Notes from the Edit Suite">
+<meta name="twitter:description" content="Subscriber-only stories from the edit suite. Always free. Never for everyone.">
+<meta name="twitter:image" content="https://www.tone.dad/media/og-share.jpg">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:       #0C0C0E;
+  --bg-2:     #111114;
+  --bg-card:  #16161A;
+  --ink:      #E8E4DA;
+  --ink-soft: rgba(232,228,218,0.50);
+  --muted:    rgba(232,228,218,0.28);
+  --rule:     rgba(232,228,218,0.08);
+  --accent:   #C8553A;
+  --amber:    #D4A03C;
+  --green:    #3CB878;
+  --blue:     #5B8FD4;
+  --tc:       #8A8A7A;
+
+  --serif: 'Fraunces', 'Times New Roman', serif;
+  --sans:  'Inter Tight', system-ui, -apple-system, sans-serif;
+  --mono:  'JetBrains Mono', ui-monospace, monospace;
+  --ease:  cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+}
+
+/* ── scanline + grain ── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.03;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(232,228,218,0.03) 2px,
+      rgba(232,228,218,0.03) 4px
+    ),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 100% 100%, 180px 180px;
+}
+
+::selection { background: var(--accent); color: var(--ink); }
+a { color: inherit; text-decoration: none; }
+
+/* ============================================================
+   TOP BAR — session metadata
+   ============================================================ */
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 44px;
+  position: relative;
+  z-index: 10;
+  border-bottom: 1px solid var(--rule);
+}
+.top-brand {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  font-variation-settings: "opsz" 144, "SOFT" 60;
+  color: var(--ink);
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+.top-brand:hover { opacity: 0.85; }
+.top-brand .dot {
+  display: inline-block;
+  width: 4px; height: 4px;
+  background: var(--ink);
+  border-radius: 50%;
+  margin: 0 2px;
+  vertical-align: middle;
+  opacity: 0.5;
+}
+.top-session {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--tc);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.top-session-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  animation: blink 2.4s ease-in-out infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* ============================================================
+   HERO — session file
+   ============================================================ */
+.hero {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 80px 44px 48px;
+  text-align: center;
+}
+.hero-file {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--tc);
+  margin-bottom: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.hero-file::before,
+.hero-file::after {
+  content: "";
+  width: 22px; height: 1px;
+  background: var(--tc);
+  opacity: 0.4;
+}
+.hero-h1 {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(36px, 7vw, 62px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.06;
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  margin-bottom: 28px;
+}
+.hero-h1 em {
+  font-style: italic;
+  color: var(--amber);
+}
+.hero-sub {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(16px, 2.2vw, 19px);
+  line-height: 1.65;
+  color: var(--ink-soft);
+  max-width: 460px;
+  margin: 0 auto 48px;
+  letter-spacing: -0.01em;
+  font-variation-settings: "opsz" 72, "SOFT" 60;
+}
+
+/* ============================================================
+   CTA — the join button
+   ============================================================ */
+.cta-wrap {
+  max-width: 420px;
+  margin: 0 auto 18px;
+}
+.cta-btn {
+  display: block;
+  text-align: center;
+  padding: 18px 40px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.35s cubic-bezier(.34,1.56,.64,1), box-shadow 0.3s;
+  text-decoration: none;
+  box-shadow: 0 0 0 0 rgba(200,85,58,0);
+}
+.cta-btn:hover {
+  background: #D46345;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(200,85,58,0.3);
+}
+.cta-btn:active { transform: translateY(0); }
+.cta-ghost {
+  background: transparent;
+  border: 1px solid rgba(232,228,218,0.12);
+  color: var(--ink);
+  box-shadow: none;
+}
+.cta-ghost:hover {
+  background: rgba(232,228,218,0.04);
+  border-color: rgba(232,228,218,0.22);
+  box-shadow: none;
+  transform: translateY(-1px);
+}
+
+.cta-fine {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* ============================================================
+   TIMELINE — the NLE scrubber
+   ============================================================ */
+.timeline {
+  position: relative;
+  padding: 72px 0 0;
+}
+.timeline-track {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background: var(--rule);
+  overflow: visible;
+}
+.timeline-fill {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 0;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--amber) 100%);
+  border-radius: 2px;
+  transition: width 1.2s var(--ease);
+}
+.timeline-fill.is-on { width: 33%; }
+.timeline-head {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 2px; height: 32px;
+  background: var(--amber);
+  transform: translate(-50%, -50%);
+  border-radius: 1px;
+  box-shadow: 0 0 12px rgba(212,160,60,0.4);
+  transition: left 1.2s var(--ease);
+}
+.timeline-head.is-on { left: 33%; }
+.timeline-markers {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+}
+.timeline-marker {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.timeline-marker::before {
+  content: "";
+  display: block;
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  border: 2px solid var(--muted);
+  background: var(--bg);
+  transition: border-color 0.4s, background 0.4s, box-shadow 0.4s;
+}
+.timeline-marker.is-active::before {
+  border-color: var(--amber);
+  background: var(--amber);
+  box-shadow: 0 0 10px rgba(212,160,60,0.35);
+}
+.timeline-marker:nth-child(1) { left: 16.6%; }
+.timeline-marker:nth-child(2) { left: 50%; }
+.timeline-marker:nth-child(3) { left: 83.3%; }
+
+.timeline-label {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  white-space: nowrap;
+  text-transform: uppercase;
+  transition: color 0.4s;
+}
+.timeline-marker.is-active .timeline-label { color: var(--amber); }
+
+/* ============================================================
+   SESSION CLIPS — the story "bins"
+   ============================================================ */
+.clips {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 64px 44px;
+}
+.clips-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.clips-title {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.clips-count {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--tc);
+}
+
+.clip {
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  gap: 0 24px;
+  align-items: start;
+  padding: 28px 0;
+  border-top: 1px solid var(--rule);
+  position: relative;
+  transition: background 0.3s;
+}
+.clip:last-child { border-bottom: 1px solid var(--rule); }
+.clip:hover { background: rgba(232,228,218,0.015); }
+
+.clip-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 4px;
+}
+.clip-num {
+  font-family: var(--mono);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--muted);
+  line-height: 1;
+}
+.clip-tc {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  letter-spacing: 0.06em;
+  color: var(--tc);
+}
+
+.clip-body {
+  min-width: 0;
+}
+.clip-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(22px, 3.2vw, 28px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+}
+.clip-excerpt {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  max-width: 520px;
+}
+.clip-excerpt-blur {
+  position: relative;
+}
+.clip-excerpt-blur::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 60px;
+  background: linear-gradient(transparent, var(--bg));
+  pointer-events: none;
+}
+
+.clip-status {
+  padding-top: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+.clip-badge {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+.clip-badge-locked {
+  background: rgba(200,85,58,0.12);
+  color: var(--accent);
+  border: 1px solid rgba(200,85,58,0.2);
+}
+.clip-badge-rough {
+  background: rgba(212,160,60,0.1);
+  color: var(--amber);
+  border: 1px solid rgba(212,160,60,0.18);
+}
+.clip-badge-review {
+  background: rgba(91,143,212,0.1);
+  color: var(--blue);
+  border: 1px solid rgba(91,143,212,0.18);
+}
+.clip-waveform {
+  width: 64px;
+  height: 20px;
+  opacity: 0.3;
+}
+.clip-waveform rect {
+  fill: currentColor;
+}
+
+/* === Clip 001 lead — polaroid teaser cluster === */
+.clip-lead {
+  border-top: 1px solid var(--amber);
+  padding-top: 36px;
+  padding-bottom: 36px;
+  background: linear-gradient(180deg, rgba(212,160,60,0.04) 0%, transparent 60%);
+}
+.clip-lead .clip-num { color: var(--amber); }
+.clip-tease {
+  grid-column: 2 / 4;
+  margin-top: 22px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+  padding: 8px 8px 18px;
+}
+.clip-pic {
+  position: relative;
+  background: #FBF6E9;
+  padding: 8px 8px 22px;
+  box-shadow:
+    0 22px 36px -22px rgba(0,0,0,0.7),
+    0 8px 16px -8px rgba(0,0,0,0.4);
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+.clip-pic:hover {
+  transform: rotate(0deg) translateY(-3px) scale(1.02);
+  box-shadow:
+    0 28px 44px -22px rgba(0,0,0,0.8),
+    0 12px 22px -10px rgba(0,0,0,0.5);
+  z-index: 4;
+}
+.clip-pic:nth-child(1) { transform: rotate(-2.4deg); }
+.clip-pic:nth-child(2) { transform: rotate(1.4deg); margin-top: 12px; z-index: 2; }
+.clip-pic:nth-child(3) { transform: rotate(-1deg); margin-top: -6px; }
+.clip-pic-tape {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 60px; height: 16px;
+  background: rgba(212,160,60,0.32);
+  border: 1px solid rgba(212,160,60,0.4);
+  z-index: 3;
+}
+.clip-pic-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #2A2521 0%, #14110E 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.clip-pic-frame img,
+.clip-pic-frame video {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.9) contrast(1.04);
+  position: relative;
+  z-index: 2;
+}
+.clip-pic-frame[data-placeholder]::before {
+  content: attr(data-placeholder);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 8.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(232,228,218,0.32);
+  text-align: center;
+  padding: 0 14px;
+  z-index: 1;
+}
+.clip-pic-frame[data-placeholder]::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px dashed rgba(232,228,218,0.10);
+  z-index: 0;
+}
+.clip-pic-cap {
+  position: absolute;
+  bottom: 4px;
+  left: 8px;
+  right: 8px;
+  font-family: var(--mono);
+  font-size: 7px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(27,23,20,0.45);
+  text-align: center;
+}
+.clip-pic-cap em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 11px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: rgba(27,23,20,0.7);
+}
+.clip-tease-callout {
+  position: absolute;
+  top: 38%;
+  left: calc(33.33% - 24px);
+  transform: rotate(-6deg);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--accent);
+  font-variation-settings: "opsz" 144, "SOFT" 80;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 10;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+.clip-tease-callout::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: -42px;
+  width: 38px;
+  height: 22px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 22' fill='none' stroke='%23C8553A' stroke-width='1.6' stroke-linecap='round'%3E%3Cpath d='M2 18 C 8 14, 16 8, 26 4'/%3E%3Cpath d='M22 2 L 28 4 L 26 10'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(8deg);
+}
+
+/* ============================================================
+   CREDENTIALS — the session credits
+   ============================================================ */
+.credits {
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 40px 44px;
+  text-align: center;
+  background: var(--bg-2);
+}
+.credits-label {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--tc);
+  margin-bottom: 16px;
+}
+.credits-list {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(14px, 2vw, 18px);
+  line-height: 2;
+  color: var(--ink-soft);
+  letter-spacing: -0.01em;
+  font-variation-settings: "opsz" 72, "SOFT" 60;
+}
+.credits-list strong {
+  font-weight: 500;
+  color: var(--ink);
+  font-style: italic;
+}
+.credits-list .sep {
+  color: var(--muted);
+  margin: 0 2px;
+  font-style: normal;
+}
+
+/* ============================================================
+   PROMISE — session rules
+   ============================================================ */
+.rules {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 64px 44px;
+}
+.rules-head {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 36px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.rules-head::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.rule-card {
+  background: var(--bg);
+  padding: 32px 28px;
+}
+.rule-card-icon {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--amber);
+  margin-bottom: 16px;
+  display: block;
+}
+.rule-card-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+  font-variation-settings: "opsz" 72, "SOFT" 60;
+  color: var(--ink);
+}
+.rule-card-text {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  line-height: 1.65;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   BOTTOM CTA — final session prompt
+   ============================================================ */
+.bottom {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 48px 44px 56px;
+  text-align: center;
+}
+.bottom-prompt {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(18px, 2.6vw, 24px);
+  color: var(--ink-soft);
+  letter-spacing: -0.01em;
+  font-variation-settings: "opsz" 72, "SOFT" 60;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+.bottom-prompt strong {
+  color: var(--ink);
+  font-weight: 400;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.foot {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 28px 44px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.foot span, .foot a {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.foot a { transition: color 0.25s; }
+.foot a:hover { color: var(--ink-soft); }
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.r {
+  opacity: 0;
+  animation: fadeUp 0.8s var(--ease) forwards;
+}
+.d1 { animation-delay: 0.08s; }
+.d2 { animation-delay: 0.2s; }
+.d3 { animation-delay: 0.35s; }
+.d4 { animation-delay: 0.5s; }
+.d5 { animation-delay: 0.65s; }
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+@media (max-width: 720px) {
+  .top { padding: 16px 20px; }
+  .top-session span:not(.top-session-dot) { display: none; }
+  .hero { padding: 56px 24px 40px; }
+  .hero-h1 { font-size: clamp(30px, 9vw, 48px); margin-bottom: 20px; }
+  .hero-sub { font-size: 16px; margin-bottom: 36px; }
+  .cta-btn { font-size: 10px; padding: 16px 32px; }
+  .timeline { padding-top: 48px; }
+  .timeline-label { font-size: 7px; }
+  .clips { padding: 48px 20px; }
+  .clip { grid-template-columns: 48px 1fr; gap: 0 16px; padding: 22px 0; }
+  .clip-status { display: none; }
+  .clip-num { font-size: 16px; }
+  .clip-title { font-size: 20px; }
+  .clip-excerpt { font-size: 13px; }
+  .clip-tc { font-size: 8px; }
+  .clip-tease { grid-column: 1 / 3; gap: 8px; padding: 8px 0 14px; }
+  .clip-pic { padding: 6px 6px 18px; }
+  .clip-pic-cap { font-size: 6.5px; }
+  .clip-pic-cap em { font-size: 9.5px; }
+  .clip-tease-callout { font-size: 13px; left: calc(33.33% - 14px); top: 32%; }
+  .clip-tease-callout::before { width: 24px; height: 14px; right: -28px; }
+  .credits { padding: 32px 24px; }
+  .rules { padding: 48px 20px; }
+  .rules-grid { grid-template-columns: 1fr; }
+  .rule-card { padding: 24px 20px; }
+  .bottom { padding: 40px 24px 44px; }
+  .foot { padding: 24px 20px; flex-direction: column; gap: 8px; }
+}
+@media (max-width: 480px) {
+  .hero-file { font-size: 8px; letter-spacing: 0.22em; }
+  .timeline-head { height: 24px; }
+  .timeline-marker::before { width: 7px; height: 7px; }
+  .timeline-label { font-size: 6.5px; top: 14px; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top r">
+  <a class="top-brand" href="/">tone<span class="dot"></span>dad</a>
+  <div class="top-session">
+    <span class="top-session-dot"></span>
+    <span>SESSION ACTIVE</span>
+    <span>NJ-04-2026</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-file r d1">Session: notes_from_the_edit_suite</div>
+  <h1 class="hero-h1 r d2">The stories that never<br>made the <em>final cut.</em></h1>
+  <p class="hero-sub r d3">
+    Before the work goes public. Before anyone else reads it. A seat in the edit suite — faith, fatherhood, and the things I build at 4 AM.
+  </p>
+  <div class="cta-wrap r d4">
+    <a class="cta-btn" href="https://tonedad.beehiiv.com/subscribe" target="_blank" rel="noopener">Join the session</a>
+  </div>
+  <p class="cta-fine r d5">Always free · never for everyone</p>
+</div>
+
+<!-- TIMELINE SCRUBBER -->
+<div class="timeline r" id="timeline">
+  <div class="timeline-track">
+    <div class="timeline-fill" id="tlFill"></div>
+    <div class="timeline-head" id="tlHead"></div>
+    <div class="timeline-markers">
+      <div class="timeline-marker" id="tm1">
+        <span class="timeline-label">001</span>
+      </div>
+      <div class="timeline-marker" id="tm2">
+        <span class="timeline-label">002</span>
+      </div>
+      <div class="timeline-marker" id="tm3">
+        <span class="timeline-label">003</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SESSION CLIPS -->
+<div class="clips">
+  <div class="clips-head">
+    <span class="clips-title">Session clips</span>
+    <span class="clips-count">3 of 3 loaded</span>
+  </div>
+
+  <!-- CLIP 001 — lead story with polaroid teaser -->
+  <div class="clip clip-lead" data-clip="1">
+    <div class="clip-meta">
+      <span class="clip-num">001</span>
+      <span class="clip-tc">TC 00:26:14</span>
+    </div>
+    <div class="clip-body">
+      <h3 class="clip-title">Blank Space.</h3>
+      <p class="clip-excerpt">
+        Taylor Swift's team called on a Tuesday. By Thursday we were on set at a Long Island estate watching chandeliers get smashed and paint fly across a canvas. I was 27, still cutting wedding highlights in my basement. She held my Galaxy S5. I didn't save it. This is the story I've never told.
+      </p>
+    </div>
+    <div class="clip-status">
+      <span class="clip-badge clip-badge-rough">Rough cut</span>
+      <svg class="clip-waveform" viewBox="0 0 64 20" aria-hidden="true">
+        <rect x="0" y="6" width="2" height="8" rx="1"/>
+        <rect x="5" y="3" width="2" height="14" rx="1"/>
+        <rect x="10" y="7" width="2" height="6" rx="1"/>
+        <rect x="15" y="1" width="2" height="18" rx="1"/>
+        <rect x="20" y="5" width="2" height="10" rx="1"/>
+        <rect x="25" y="8" width="2" height="4" rx="1"/>
+        <rect x="30" y="2" width="2" height="16" rx="1"/>
+        <rect x="35" y="6" width="2" height="8" rx="1"/>
+        <rect x="40" y="4" width="2" height="12" rx="1"/>
+        <rect x="45" y="7" width="2" height="6" rx="1"/>
+        <rect x="50" y="3" width="2" height="14" rx="1"/>
+        <rect x="55" y="5" width="2" height="10" rx="1"/>
+        <rect x="60" y="8" width="2" height="4" rx="1"/>
+      </svg>
+    </div>
+
+    <!-- Polaroid tease: BTS proof -->
+    <div class="clip-tease" aria-hidden="true">
+      <figure class="clip-pic">
+        <span class="clip-pic-tape"></span>
+        <div class="clip-pic-frame" data-placeholder="Me + JK · on set">
+          <img src="/media/blank-space-jk.jpg" alt="" onerror="this.style.display='none'" />
+        </div>
+        <figcaption class="clip-pic-cap">Long Island · 2014</figcaption>
+      </figure>
+
+      <figure class="clip-pic">
+        <span class="clip-pic-tape"></span>
+        <div class="clip-pic-frame" data-placeholder="Taylor + my phone">
+          <img src="/media/blank-space-phone.jpg" alt="" style="object-position: 70% center;" onerror="this.style.display='none'" />
+        </div>
+        <figcaption class="clip-pic-cap"><em>she's holding it.</em></figcaption>
+      </figure>
+
+      <figure class="clip-pic">
+        <span class="clip-pic-tape"></span>
+        <div class="clip-pic-frame">
+          <video src="/media/bts-blankspace.mp4" muted loop playsinline autoplay preload="metadata"></video>
+        </div>
+        <figcaption class="clip-pic-cap">BTS · take 04</figcaption>
+      </figure>
+
+      <span class="clip-tease-callout">that's my phone!</span>
+    </div>
+  </div>
+
+  <!-- CLIP 002 -->
+  <div class="clip" data-clip="2">
+    <div class="clip-meta">
+      <span class="clip-num">002</span>
+      <span class="clip-tc">TC 01:14:02</span>
+    </div>
+    <div class="clip-body">
+      <h3 class="clip-title">The freakin' Jets.</h3>
+      <div class="clip-excerpt-blur">
+        <p class="clip-excerpt">
+          Five NFL seasons on retainer. One team that somehow keeps believing every September. The production stories, the sideline moments, and what it taught me about showing up for a thing that might not work.
+        </p>
+      </div>
+    </div>
+    <div class="clip-status">
+      <span class="clip-badge clip-badge-review">In review</span>
+      <svg class="clip-waveform" viewBox="0 0 64 20" aria-hidden="true">
+        <rect x="0" y="7" width="2" height="6" rx="1"/>
+        <rect x="5" y="4" width="2" height="12" rx="1"/>
+        <rect x="10" y="8" width="2" height="4" rx="1"/>
+        <rect x="15" y="2" width="2" height="16" rx="1"/>
+        <rect x="20" y="6" width="2" height="8" rx="1"/>
+        <rect x="25" y="3" width="2" height="14" rx="1"/>
+        <rect x="30" y="7" width="2" height="6" rx="1"/>
+        <rect x="35" y="5" width="2" height="10" rx="1"/>
+        <rect x="40" y="1" width="2" height="18" rx="1"/>
+        <rect x="45" y="6" width="2" height="8" rx="1"/>
+        <rect x="50" y="8" width="2" height="4" rx="1"/>
+        <rect x="55" y="4" width="2" height="12" rx="1"/>
+        <rect x="60" y="7" width="2" height="6" rx="1"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- CLIP 003 -->
+  <div class="clip" data-clip="3">
+    <div class="clip-meta">
+      <span class="clip-num">003</span>
+      <span class="clip-tc">TC 02:38:51</span>
+    </div>
+    <div class="clip-body">
+      <h3 class="clip-title">Ten months with Avid DiVa.</h3>
+      <div class="clip-excerpt-blur">
+        <p class="clip-excerpt">
+          Dustin Robertson let me live in his Hollywood studio. We cut Mariah Carey, Gaga, Gap. Then we packed up and moved to Palm Springs. This is that story.
+        </p>
+      </div>
+    </div>
+    <div class="clip-status">
+      <span class="clip-badge clip-badge-locked">Locked</span>
+      <svg class="clip-waveform" viewBox="0 0 64 20" aria-hidden="true">
+        <rect x="0" y="5" width="2" height="10" rx="1"/>
+        <rect x="5" y="8" width="2" height="4" rx="1"/>
+        <rect x="10" y="3" width="2" height="14" rx="1"/>
+        <rect x="15" y="6" width="2" height="8" rx="1"/>
+        <rect x="20" y="2" width="2" height="16" rx="1"/>
+        <rect x="25" y="7" width="2" height="6" rx="1"/>
+        <rect x="30" y="4" width="2" height="12" rx="1"/>
+        <rect x="35" y="8" width="2" height="4" rx="1"/>
+        <rect x="40" y="5" width="2" height="10" rx="1"/>
+        <rect x="45" y="1" width="2" height="18" rx="1"/>
+        <rect x="50" y="6" width="2" height="8" rx="1"/>
+        <rect x="55" y="3" width="2" height="14" rx="1"/>
+        <rect x="60" y="5" width="2" height="10" rx="1"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- CREDITS -->
+<div class="credits">
+  <div class="credits-label">Session credits · 12 years in the suite</div>
+  <p class="credits-list">
+    <strong>NBC Universal</strong> <span class="sep">·</span>
+    <strong>Taylor Swift</strong> <span class="sep">·</span>
+    <strong>Katy Perry</strong> <span class="sep">·</span>
+    Lady Gaga <span class="sep">·</span>
+    NY Jets <span class="sep">·</span>
+    Crossed Keys Estate <span class="sep">·</span>
+    350+ weddings <span class="sep">·</span>
+    12 years deep
+  </p>
+</div>
+
+<!-- SESSION RULES -->
+<div class="rules">
+  <div class="rules-head">Session rules</div>
+  <div class="rules-grid">
+    <div class="rule-card">
+      <span class="rule-card-icon">▸ IN</span>
+      <div class="rule-card-title">First access</div>
+      <div class="rule-card-text">Every story hits your inbox before it goes anywhere else. No feed. No algorithm.</div>
+    </div>
+    <div class="rule-card">
+      <span class="rule-card-icon">▸ DAILY</span>
+      <div class="rule-card-title">Behind the cut</div>
+      <div class="rule-card-text">The process, the failures, the 4 AM edits nobody sees. The stuff that didn't make the timeline.</div>
+    </div>
+    <div class="rule-card">
+      <span class="rule-card-icon">▸ OUT</span>
+      <div class="rule-card-title">No engagement bait</div>
+      <div class="rule-card-text">Straight to your inbox. No tricks, no growth hacks. Just the work and the stories behind it.</div>
+    </div>
+  </div>
+</div>
+
+<!-- BOTTOM CTA -->
+<div class="bottom">
+  <p class="bottom-prompt">
+    You're not subscribing to a newsletter.<br>
+    <strong>You're getting a seat in the edit suite.</strong>
+  </p>
+  <div class="cta-wrap">
+    <a class="cta-btn cta-ghost" href="https://tonedad.beehiiv.com/subscribe" target="_blank" rel="noopener">I'm in →</a>
+  </div>
+  <p class="cta-fine" style="margin-top: 14px;">Unsubscribe anytime · but you won't</p>
+</div>
+
+<!-- FOOTER -->
+<div class="foot">
+  <span>© 2026 <a href="/">tone.dad</a></span>
+  <span><a href="https://instagram.com/tone.dad" target="_blank" rel="noopener">@tone.dad</a></span>
+</div>
+
+<script>
+/* ── Timeline animation on scroll ── */
+(function(){
+  var tl = document.getElementById('timeline');
+  if (!tl || !('IntersectionObserver' in window)) return;
+  var fill = document.getElementById('tlFill');
+  var head = document.getElementById('tlHead');
+  var m1 = document.getElementById('tm1');
+  new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) {
+        fill.classList.add('is-on');
+        head.classList.add('is-on');
+        m1.classList.add('is-active');
+      }
+    });
+  }, { threshold: 0.5 }).observe(tl);
+})();
+
+/* ── Clip fade-in on scroll ── */
+(function(){
+  var items = document.querySelectorAll('.clip, .credits, .rules, .bottom');
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(function(c){ c.style.opacity = '1'; });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  items.forEach(function(c){
+    c.style.opacity = '0';
+    c.style.transform = 'translateY(14px)';
+    c.style.transition = 'opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1)';
+    io.observe(c);
+  });
+})();
+</script>
+
+</body>
+</html>

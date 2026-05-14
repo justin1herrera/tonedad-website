@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notes from the Edit Suite — tone.dad</title>
+<meta name="description" content="Stories from the edit suite. Weddings, the Jets years, Avid DiVa, and other things I keep meaning to write down. By Justin Herrera.">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://www.tone.dad/notes">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.tone.dad/notes">
+<meta property="og:title" content="Notes from the Edit Suite — tone.dad">
+<meta property="og:description" content="Stories from the edit suite. Weddings, the Jets years, Avid DiVa, and things I keep meaning to write down.">
+<meta property="og:image" content="https://www.tone.dad/media/og-share.jpg">
+<meta property="og:site_name" content="tone.dad">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Notes from the Edit Suite — tone.dad">
+<meta name="twitter:description" content="Stories from the edit suite. Weddings, the Jets years, Avid DiVa, and things I keep meaning to write down.">
+<meta name="twitter:image" content="https://www.tone.dad/media/og-share.jpg">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:        #F2EDE2;
+  --bg-2:      #EBE3D2;
+  --ink:       #1B1714;
+  --ink-soft:  #4A3F35;
+  --muted:     #7A6D5C;
+  --rule:      #C9BDA3;
+  --rule-soft: #DCD1B7;
+
+  --tag-music: #B5421F;
+  --tag-jets:  #0B5C3D;
+  --tag-life:  #4F5E3F;
+  --tag-craft: #2A4666;
+  --tag-faith: #8A6A2C;
+
+  --serif:  'Fraunces', 'Times New Roman', serif;
+  --mono:   'JetBrains Mono', ui-monospace, monospace;
+  --ease:   cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+::selection { background: var(--ink); color: var(--bg); }
+a { color: inherit; text-decoration: none; }
+
+/* grain */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(27,23,20,0.025) 1px, transparent 1px);
+  background-size: 3px 3px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 64px 32px 120px;
+}
+
+/* ============================================================
+   TOP STRIP
+   ============================================================ */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 64px;
+}
+.top-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s var(--ease);
+}
+.top-back:hover { color: var(--ink); }
+.top-back .arrow { display: inline-block; transition: transform 0.3s var(--ease); }
+.top-back:hover .arrow { transform: translateX(-3px); }
+.top-meta { display: flex; gap: 14px; }
+.top-meta .sep { color: var(--rule); }
+
+/* ============================================================
+   MASTHEAD
+   ============================================================ */
+.mast { margin-bottom: 80px; }
+.mast-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.mast-eyebrow::before {
+  content: '';
+  width: 18px;
+  height: 1px;
+  background: var(--muted);
+}
+.mast-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(56px, 9vw, 96px);
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  font-variation-settings: "opsz" 144, "SOFT" 60;
+  margin-bottom: 24px;
+}
+.mast-dek {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  max-width: 56ch;
+  line-height: 1.7;
+}
+.mast-dek em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+/* cursor blink */
+.mast-title::after {
+  content: '_';
+  display: inline-block;
+  margin-left: 0.06em;
+  color: var(--muted);
+  font-style: normal;
+  animation: blink 1s steps(2, end) infinite;
+  font-weight: 300;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+/* ============================================================
+   INDEX
+   ============================================================ */
+.idx-head {
+  display: grid;
+  grid-template-columns: 36px 1fr 90px 100px;
+  gap: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--rule);
+  font-size: 9.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.idx-head .tag { text-align: right; }
+.idx-head .date { text-align: right; }
+
+.idx { list-style: none; }
+.idx-row {
+  display: grid;
+  grid-template-columns: 36px 1fr 90px 100px;
+  gap: 18px;
+  align-items: baseline;
+  padding: 22px 0;
+  border-bottom: 1px dashed var(--rule-soft);
+  position: relative;
+  transition: padding 0.4s var(--ease);
+}
+.idx-row::before {
+  content: '';
+  position: absolute;
+  left: -32px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 1px;
+  background: var(--ink);
+  transition: width 0.4s var(--ease);
+}
+.idx-row:hover { padding-left: 16px; }
+.idx-row:hover::before { width: 24px; }
+
+.idx-row.is-soon {
+  opacity: 0.45;
+  cursor: default;
+}
+.idx-row.is-soon:hover { padding-left: 0; }
+.idx-row.is-soon:hover::before { width: 0; }
+
+.idx-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  padding-top: 4px;
+}
+.idx-body { min-width: 0; }
+.idx-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(20px, 2.4vw, 28px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 6px;
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+}
+.idx-title em { font-style: italic; color: var(--muted); }
+.idx-dek {
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 58ch;
+}
+.idx-dek em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+.idx-tag {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-align: right;
+  padding-top: 8px;
+  white-space: nowrap;
+}
+.idx-row[data-tag="music"] .idx-tag { color: var(--tag-music); }
+.idx-row[data-tag="jets"]  .idx-tag { color: var(--tag-jets); }
+.idx-row[data-tag="life"]  .idx-tag { color: var(--tag-life); }
+.idx-row[data-tag="craft"] .idx-tag { color: var(--tag-craft); }
+.idx-row[data-tag="faith"] .idx-tag { color: var(--tag-faith); }
+
+.idx-date {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: right;
+  color: var(--muted);
+  padding-top: 10px;
+  white-space: nowrap;
+}
+.idx-date.is-soon::before { content: '— —'; color: var(--rule); }
+.idx-date.is-soon { font-size: 9.5px; }
+.idx-row.is-soon .idx-tag { color: var(--muted); opacity: 0.7; }
+
+/* Live badge for story 001 */
+.idx-live {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--tag-music);
+  margin-right: 6px;
+  animation: livePulse 2s ease-in-out infinite;
+}
+@keyframes livePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.foot {
+  margin-top: 96px;
+  padding-top: 28px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.foot-r { display: flex; gap: 16px; }
+.foot-r a { transition: color 0.3s var(--ease); }
+.foot-r a:hover { color: var(--ink); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 720px) {
+  .wrap { padding: 40px 22px 80px; }
+  .top { font-size: 10px; }
+  .top-meta .sep,
+  .top-meta .top-meta-loc { display: none; }
+  .mast { margin-bottom: 56px; }
+  .mast-title { font-size: clamp(48px, 12vw, 72px); }
+  .idx-head { grid-template-columns: 28px 1fr 80px; gap: 12px; }
+  .idx-head .date { display: none; }
+  .idx-row { grid-template-columns: 28px 1fr 80px; gap: 12px; padding: 18px 0; }
+  .idx-row .idx-date { display: none; }
+  .idx-title { font-size: 22px; }
+  .idx-dek { font-size: 11.5px; }
+  .idx-tag { font-size: 8.5px; letter-spacing: 0.18em; }
+  .idx-row:hover { padding-left: 0; }
+  .idx-row::before { display: none; }
+  .foot { flex-direction: column; gap: 12px; align-items: flex-start; }
+}
+</style>
+</head>
+<body data-screen-label="Notes index">
+
+<div class="wrap">
+
+  <!-- TOP -->
+  <div class="top">
+    <a class="top-back" href="/">
+      <span class="arrow">&larr;</span>
+      <span>Back to tone.dad</span>
+    </a>
+    <div class="top-meta">
+      <span>Notes</span>
+      <span class="sep">&middot;</span>
+      <span class="top-meta-loc">Vol. I</span>
+    </div>
+  </div>
+
+  <!-- MASTHEAD -->
+  <header class="mast">
+    <div class="mast-eyebrow">Notes from the edit suite</div>
+    <h1 class="mast-title">Notes.</h1>
+    <p class="mast-dek">
+      Stories I keep meaning to write down. Weddings, the Jets years, the year I lived with <em>Avid DiVa</em>, the time Taylor was on the timeline. <em>One at a time. No schedule.</em>
+    </p>
+  </header>
+
+  <!-- INDEX -->
+  <div class="idx-head">
+    <span class="num">&numero;</span>
+    <span class="ttl">Title</span>
+    <span class="tag">Tag</span>
+    <span class="date">Filed</span>
+  </div>
+
+  <ol class="idx">
+
+    <li>
+      <a class="idx-row is-soon" data-tag="music" href="#001" aria-disabled="true">
+        <span class="idx-num">001</span>
+        <div class="idx-body">
+          <h3 class="idx-title">Blank Space.</h3>
+          <p class="idx-dek">
+            How a Taylor Swift session ended up on a hard drive next to a wedding from <em>Hoboken</em>. The night I learned the timeline doesn't care who you are.
+          </p>
+        </div>
+        <span class="idx-tag">Soon</span>
+        <span class="idx-date is-soon"></span>
+      </a>
+    </li>
+
+    <li>
+      <a class="idx-row is-soon" data-tag="jets" href="#002" aria-disabled="true">
+        <span class="idx-num">002</span>
+        <div class="idx-body">
+          <h3 class="idx-title">The freakin' Jets.</h3>
+          <p class="idx-dek">
+            Five seasons inside <em>1 Jets Drive</em> &mdash; 2010 to 2015. What Rex's locker room actually sounded like, and the Sunday I almost missed the team plane.
+          </p>
+        </div>
+        <span class="idx-tag">Soon</span>
+        <span class="idx-date is-soon"></span>
+      </a>
+    </li>
+
+    <li>
+      <a class="idx-row is-soon" data-tag="craft" href="#003" aria-disabled="true">
+        <span class="idx-num">003</span>
+        <div class="idx-body">
+          <h3 class="idx-title">Ten months with <em>Avid DiVa</em>.</h3>
+          <p class="idx-dek">
+            Dustin Robertson let me live in his Hollywood studio. We cut Mariah, Gaga, Gap. Then we packed up for Palm Springs.
+          </p>
+        </div>
+        <span class="idx-tag">Soon</span>
+        <span class="idx-date is-soon"></span>
+      </a>
+    </li>
+
+    <li>
+      <a class="idx-row is-soon" data-tag="life" href="#004" aria-disabled="true">
+        <span class="idx-num">004</span>
+        <div class="idx-body">
+          <h3 class="idx-title">How I got into weddings.</h3>
+          <p class="idx-dek">
+            I said yes to a favor for a friend. Three hundred and fifty weddings later, I still <em>say yes</em> to the same kind of room.
+          </p>
+        </div>
+        <span class="idx-tag">Soon</span>
+        <span class="idx-date is-soon"></span>
+      </a>
+    </li>
+
+    <li>
+      <a class="idx-row is-soon" data-tag="faith" href="#005" aria-disabled="true">
+        <span class="idx-num">005</span>
+        <div class="idx-body">
+          <h3 class="idx-title">4:42 AM.</h3>
+          <p class="idx-dek">
+            On waking up before the kids do. Coffee, prayer, the first cut of the day, and why the morning stays the most honest hour.
+          </p>
+        </div>
+        <span class="idx-tag">Soon</span>
+        <span class="idx-date is-soon"></span>
+      </a>
+    </li>
+
+  </ol>
+
+  <!-- FOOT -->
+  <div class="foot">
+    <span>&copy; 2026 Justin Herrera</span>
+    <div class="foot-r">
+      <a href="/">tone.dad</a>
+      <a href="mailto:justin@tone.dad">email</a>
+      <a href="https://instagram.com/tone.dad" rel="me" target="_blank">@tone.dad</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

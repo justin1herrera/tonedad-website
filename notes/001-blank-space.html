@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>001 · Blank Space — Notes from the Edit Suite</title>
+<meta name="description" content="Taylor Swift's team called on a Tuesday. By Thursday I was on set at Oheka Castle watching chandeliers get smashed. The untold story from the Blank Space video.">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://www.tone.dad/notes/001-blank-space">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.tone.dad/notes/001-blank-space">
+<meta property="og:title" content="001 · Blank Space — Notes from the Edit Suite">
+<meta property="og:description" content="Taylor Swift's team called on a Tuesday. By Thursday I was on set at Oheka Castle. The story I've never told.">
+<meta property="og:image" content="https://www.tone.dad/media/notes/001/og-001.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="tone.dad">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="001 · Blank Space — Notes from the Edit Suite">
+<meta name="twitter:description" content="Taylor Swift's team called on a Tuesday. By Thursday I was on set at Oheka Castle. The story I've never told.">
+<meta name="twitter:image" content="https://www.tone.dad/media/notes/001/og-001.jpg">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<!-- Article metadata -->
+<meta property="article:published_time" content="2026-04-29">
+<meta property="article:author" content="Justin Herrera">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   001 · BLANK SPACE — STORY WORLD
+   ============================================================
+   Visual: Oheka Castle meets oil painting meets controlled destruction
+   Palette: warm estate cream, deep navy, blood red, gilded gold
+   ============================================================ */
+
+:root {
+  /* Story palette */
+  --s-cream:    #F5F0E6;
+  --s-navy:     #0D1117;
+  --s-navy-mid: #1A2332;
+  --s-ink:      #1B1714;
+  --s-ink-soft: #4A3F35;
+  --s-muted:    #7A6D5C;
+  --s-red:      #8B1A1A;
+  --s-red-glow: #B52A1A;
+  --s-gold:     #C4A46C;
+  --s-gold-dim: #9A8050;
+  --s-rule:     #C9BDA3;
+  --s-rule-soft:#DCD1B7;
+
+  /* Shared tokens */
+  --serif:  'Fraunces', 'Times New Roman', serif;
+  --sans:   'Inter Tight', system-ui, -apple-system, sans-serif;
+  --mono:   'JetBrains Mono', ui-monospace, monospace;
+  --ease:   cubic-bezier(0.22, 1, 0.36, 1);
+  --bounce: cubic-bezier(.34, 1.56, .64, 1);
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--s-cream);
+  color: var(--s-ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+::selection { background: var(--s-red); color: var(--s-cream); }
+a { color: inherit; text-decoration: none; }
+img, video { display: block; max-width: 100%; }
+
+/* ============================================================
+   GRAIN OVERLAY — film texture over everything
+   ============================================================ */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+
+/* ============================================================
+   MEDIA TREATMENT — unified look for all imagery
+   ============================================================ */
+.story-media {
+  filter: saturate(0.85) contrast(1.05) sepia(0.08);
+}
+.story-media-ai {
+  filter: saturate(0.8) contrast(1.08) sepia(0.12);
+}
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+.r {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+}
+.r.is-vis {
+  opacity: 1;
+  transform: translateY(0);
+}
+.r.d1 { transition-delay: 0.08s; }
+.r.d2 { transition-delay: 0.16s; }
+.r.d3 { transition-delay: 0.24s; }
+.r.d4 { transition-delay: 0.32s; }
+
+/* ============================================================
+   § 1 — THE GATE (hero)
+   ============================================================ */
+.gate {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 32px 12vh;
+  background: var(--s-navy);
+  overflow: hidden;
+}
+.gate-video {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.gate-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+  filter: saturate(0.6) contrast(1.1);
+}
+.gate-fade {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    to bottom,
+    rgba(13,17,23,0.6) 0%,
+    rgba(13,17,23,0.2) 40%,
+    rgba(13,17,23,0.7) 100%
+  );
+}
+.gate-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: var(--s-cream);
+}
+.gate-num {
+  display: block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--s-gold);
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: fadeUp 1s var(--ease) 0.3s forwards;
+}
+.gate-title {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(52px, 10vw, 110px);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  color: var(--s-cream);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  margin-bottom: 28px;
+  opacity: 0;
+  animation: fadeUp 1.2s var(--ease) 0.5s forwards;
+}
+.gate-date {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--s-gold-dim);
+  opacity: 0;
+  animation: fadeUp 1s var(--ease) 0.8s forwards;
+}
+.gate-scroll {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, var(--s-gold), transparent);
+  opacity: 0;
+  animation: fadeIn 1s var(--ease) 1.4s forwards;
+}
+.gate-scroll::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -2px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--s-gold);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 0.5; }
+}
+@keyframes scrollPulse {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(12px); opacity: 0.3; }
+}
+
+/* ============================================================
+   TOP NAV — minimal, appears after scroll
+   ============================================================ */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 14px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--s-cream);
+  background: rgba(13,17,23,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(196,164,108,0.15);
+  transform: translateY(-100%);
+  transition: transform 0.5s var(--ease);
+}
+.top-nav.is-vis { transform: translateY(0); }
+.top-nav-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s var(--ease);
+}
+.top-nav-back:hover { color: var(--s-gold); }
+.top-nav-back .arrow {
+  display: inline-block;
+  transition: transform 0.3s var(--ease);
+}
+.top-nav-back:hover .arrow { transform: translateX(-3px); }
+.top-nav-r { color: var(--s-gold-dim); }
+
+/* ============================================================
+   SECTION CONTAINER — shared layout for prose sections
+   ============================================================ */
+.story-section {
+  padding: 96px 32px;
+}
+.story-section .inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--s-muted);
+  margin-bottom: 40px;
+}
+.section-label::before {
+  content: '';
+  width: 18px;
+  height: 1px;
+  background: var(--s-rule);
+}
+.story-prose {
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--s-ink-soft);
+}
+.story-prose p + p { margin-top: 1.4em; }
+.story-prose em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 19px;
+  color: var(--s-ink);
+  letter-spacing: -0.01em;
+  font-variation-settings: "opsz" 24, "SOFT" 70;
+}
+.story-prose strong {
+  font-weight: 600;
+  color: var(--s-ink);
+}
+
+/* ============================================================
+   § 2 — THE CALL
+   ============================================================ */
+.the-call {
+  background: var(--s-cream);
+}
+
+/* Polaroid-style BTS frame */
+.polaroid {
+  display: block;
+  max-width: 380px;
+  margin: 48px auto;
+  padding: 14px 14px 48px;
+  background: #fff;
+  box-shadow:
+    0 2px 8px rgba(27,23,20,0.08),
+    0 12px 40px rgba(27,23,20,0.06);
+  transform: rotate(-1.5deg);
+  transition: transform 0.5s var(--bounce);
+}
+.polaroid:hover { transform: rotate(0deg) scale(1.02); }
+.polaroid img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+.polaroid-caption {
+  display: block;
+  margin-top: 14px;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--s-muted);
+  text-align: center;
+}
+
+/* ============================================================
+   OIL PAINT SECTION BREAK
+   ============================================================ */
+.paint-break {
+  display: block;
+  width: 100%;
+  max-height: 80px;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.9) contrast(1.1);
+}
+
+/* ============================================================
+   § 3 — THE ESTATE (dark panel)
+   ============================================================ */
+.the-estate {
+  position: relative;
+  background: var(--s-navy);
+  color: var(--s-cream);
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Full-bleed atmospheric image */
+.estate-atmos {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 400px;
+  overflow: hidden;
+}
+.estate-atmos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.7) contrast(1.1) sepia(0.1);
+}
+.estate-atmos-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(13,17,23,0.3) 0%,
+    rgba(13,17,23,0) 30%,
+    rgba(13,17,23,0) 60%,
+    rgba(13,17,23,1) 100%
+  );
+}
+
+.the-estate .inner {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 64px 32px 96px;
+}
+.the-estate .section-label { color: var(--s-gold-dim); }
+.the-estate .section-label::before { background: var(--s-gold-dim); }
+.the-estate .story-prose { color: rgba(245,240,230,0.75); }
+.the-estate .story-prose em { color: var(--s-cream); }
+
+/* BTS stills grid */
+.bts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 48px 0;
+}
+.bts-frame {
+  position: relative;
+  background: rgba(255,255,255,0.06);
+  padding: 8px;
+  border-radius: 2px;
+}
+.bts-frame img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+.bts-frame-label {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--s-gold-dim);
+  text-align: center;
+}
+/* masking tape — matches index.html plate-tape aesthetic */
+.bts-tape {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 60px;
+  height: 18px;
+  background: rgba(220,209,183,0.35);
+  border-radius: 1px;
+}
+
+/* ============================================================
+   § 4 — THE CUT
+   ============================================================ */
+.the-cut {
+  background: var(--s-cream);
+}
+
+/* ============================================================
+   § 5 — THE LESSON (pull quote + ambient video)
+   ============================================================ */
+.the-lesson {
+  position: relative;
+  background: var(--s-cream);
+  overflow: hidden;
+}
+.lesson-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  max-width: 500px;
+  opacity: 0.12;
+  filter: blur(1px) saturate(0.5);
+  pointer-events: none;
+}
+.lesson-video video {
+  width: 100%;
+}
+.pull-quote {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 120px 32px;
+  text-align: center;
+}
+.pull-quote blockquote {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(28px, 4.5vw, 48px);
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  color: var(--s-ink);
+  font-variation-settings: "opsz" 72, "SOFT" 60;
+}
+.pull-quote cite {
+  display: block;
+  margin-top: 28px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--s-muted);
+  font-style: normal;
+}
+
+/* ============================================================
+   § 6 — THE SEALED (exclusive envelope)
+   ============================================================ */
+.the-sealed {
+  background: var(--s-cream);
+  padding: 80px 32px;
+}
+.seal-card {
+  max-width: 560px;
+  margin: 0 auto;
+  border: 2px solid var(--s-gold);
+  border-radius: 4px;
+  padding: 48px 40px;
+  position: relative;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(196,164,108,0.04), rgba(245,240,230,0.6));
+}
+.seal-card::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(196,164,108,0.25);
+  border-radius: 2px;
+  pointer-events: none;
+}
+.seal-label {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--s-gold);
+  margin-bottom: 20px;
+  position: relative;
+}
+.seal-label::before,
+.seal-label::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 24px;
+  height: 1px;
+  background: var(--s-gold);
+}
+.seal-label::before { right: calc(100% + 12px); }
+.seal-label::after { left: calc(100% + 12px); }
+
+.seal-tease {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--s-ink);
+  font-variation-settings: "opsz" 24, "SOFT" 70;
+  margin-bottom: 28px;
+}
+.seal-btn {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--s-gold);
+  border: 1px solid var(--s-gold);
+  padding: 12px 32px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.35s var(--ease);
+  background: transparent;
+}
+.seal-btn:hover {
+  background: var(--s-gold);
+  color: var(--s-cream);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(196,164,108,0.3);
+}
+
+/* Sealed content — hidden by default */
+.seal-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.8s var(--ease), opacity 0.6s var(--ease) 0.2s;
+}
+.seal-card.is-open .seal-content {
+  max-height: 600px;
+  opacity: 1;
+}
+.seal-card.is-open .seal-btn { display: none; }
+.seal-card.is-open .seal-label { color: var(--s-red); }
+.seal-card.is-open .seal-label::before,
+.seal-card.is-open .seal-label::after { background: var(--s-red); }
+
+.seal-reveal {
+  padding-top: 28px;
+  border-top: 1px solid var(--s-rule-soft);
+  margin-top: 24px;
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--s-ink-soft);
+  text-align: left;
+}
+.seal-reveal em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--s-ink);
+}
+/* Gold shimmer when opening */
+.seal-card.is-open::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+  background: radial-gradient(ellipse at center, rgba(196,164,108,0.15) 0%, transparent 70%);
+  animation: shimmer 1.5s var(--ease) forwards;
+  pointer-events: none;
+}
+@keyframes shimmer {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* ============================================================
+   § 7 — NEXT UP (tease for 002)
+   ============================================================ */
+.next-up {
+  background: #0A1A12;
+  color: #D4E0D0;
+  padding: 80px 32px;
+}
+.next-up .inner {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+}
+.next-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #4A7A5C;
+  margin-bottom: 24px;
+}
+.next-num {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: #4A7A5C;
+  margin-bottom: 12px;
+}
+.next-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #D4E0D0;
+  font-variation-settings: "opsz" 72, "SOFT" 50;
+  margin-bottom: 16px;
+}
+.next-tease {
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(212,224,208,0.6);
+  max-width: 44ch;
+  margin: 0 auto 32px;
+}
+.next-cta {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #4A7A5C;
+  border: 1px solid rgba(74,122,92,0.4);
+  padding: 12px 28px;
+  border-radius: 3px;
+  transition: all 0.35s var(--ease);
+}
+.next-cta:hover {
+  color: #D4E0D0;
+  border-color: #4A7A5C;
+  background: rgba(74,122,92,0.12);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.story-foot {
+  background: var(--s-navy);
+  padding: 28px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--s-gold-dim);
+}
+.story-foot a { transition: color 0.3s var(--ease); }
+.story-foot a:hover { color: var(--s-cream); }
+.foot-links { display: flex; gap: 16px; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .gate { padding-bottom: 16vh; min-height: 85vh; }
+  .gate-title { font-size: clamp(42px, 12vw, 72px); }
+  .story-section { padding: 64px 22px; }
+  .pull-quote { padding: 80px 22px; }
+  .the-sealed { padding: 56px 22px; }
+  .seal-card { padding: 36px 24px; }
+  .bts-grid { grid-template-columns: 1fr; gap: 20px; }
+  .polaroid { max-width: 280px; margin: 32px auto; }
+  .estate-atmos { height: 45vh; min-height: 300px; }
+  .the-estate .inner { padding: 48px 22px 72px; }
+  .next-up { padding: 56px 22px; }
+  .story-foot { flex-direction: column; gap: 12px; text-align: center; }
+  .top-nav { padding: 12px 18px; font-size: 9px; }
+}
+
+@media (max-width: 480px) {
+  .gate-title { font-size: 38px; }
+  .pull-quote blockquote { font-size: 24px; }
+  .seal-tease { font-size: 17px; }
+  .section-label { font-size: 8.5px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     TOP NAV — appears on scroll
+     ============================================================ -->
+<nav class="top-nav" id="topNav">
+  <a class="top-nav-back" href="/notes">
+    <span class="arrow">&larr;</span>
+    <span>Notes</span>
+  </a>
+  <span class="top-nav-r">001 &middot; Blank Space</span>
+</nav>
+
+<!-- ============================================================
+     § 1 — THE GATE
+     ============================================================ -->
+<section class="gate" data-section="gate">
+  <div class="gate-video">
+    <video src="/media/notes/001/hallway-loop.mp4" muted loop playsinline autoplay preload="metadata"></video>
+  </div>
+  <div class="gate-fade"></div>
+  <div class="gate-content">
+    <span class="gate-num">Notes from the edit suite &middot; 001</span>
+    <h1 class="gate-title">Blank Space.</h1>
+    <span class="gate-date">November 2014 &middot; Oheka Castle, Long Island</span>
+  </div>
+  <div class="gate-scroll"></div>
+</section>
+
+<!-- ============================================================
+     § 2 — THE CALL
+     ============================================================ -->
+<section class="story-section the-call" data-section="call">
+  <div class="inner">
+    <div class="section-label r">The call</div>
+
+    <div class="story-prose r d1">
+      <p>
+        I got a call on a Tuesday. A coordinator I'd worked with once. She needed a PA for Thursday. <em>Two days.</em>
+      </p>
+      <p>
+        I was 26. Steph and I had maybe thirty weddings under our belt. I was still cutting highlights in my basement in Jersey, still figuring out half the keyboard shortcuts in Media Composer.
+      </p>
+      <p>
+        She said Taylor Swift. She said music video. She said Long Island. I said yes before she finished.
+      </p>
+      <p>
+        I didn't tell anyone except Steph. Not because it was confidential. Because I didn't believe it was real. Stuff like this doesn't happen to wedding guys in Morristown.
+      </p>
+    </div>
+
+    <!-- BTS: Justin editing on set with crew -->
+    <figure class="polaroid r d2">
+      <img src="/media/notes/001/bts-editing-onset.jpg" alt="Justin editing on a laptop between setups on the Blank Space set" class="story-media">
+      <span class="polaroid-caption">BTS &middot; Between setups &middot; 2014</span>
+    </figure>
+  </div>
+</section>
+
+<!-- OIL PAINT BREAK -->
+<img class="paint-break" src="/media/notes/001/texture-oil-blood.jpg" alt="" role="presentation" loading="lazy">
+
+<!-- ============================================================
+     § 3 — THE ESTATE (dark panel)
+     ============================================================ -->
+<section class="the-estate" data-section="estate">
+  <div class="estate-atmos r">
+    <img src="/media/notes/001/estate-hallway.jpg" alt="Grand estate hallway, oil painting" class="story-media-ai" loading="lazy">
+    <div class="estate-atmos-fade"></div>
+  </div>
+
+  <div class="inner">
+    <div class="section-label r">The estate</div>
+
+    <div class="story-prose r d1">
+      <p>
+        Oheka Castle. Second-largest private residence ever built in the US. 127,000 square feet of French chateau on Long Island, built in 1919 for a financier whose name nobody on set could spell.
+      </p>
+      <p>
+        I pulled up and thought I had the wrong address. You don't drive <em>to</em> a music video. You drive to a parking lot. But I'm rolling through formal gardens, past stone lions, watching PAs jog across gravel paths that probably cost more than my car.
+      </p>
+      <p>
+        I got my pink wristband, found a corner, and opened my laptop. Joseph Kahn was directing. The man doesn't raise his voice. Doesn't need to. Everyone just knows where to be. Sean O'Pry was by craft services looking like someone who'd never taken a bad photo in his life.
+      </p>
+    </div>
+
+    <!-- BTS stills grid — real photos + AI atmosphere -->
+    <div class="bts-grid r d2">
+      <div class="bts-frame">
+        <div class="bts-tape"></div>
+        <img src="/media/notes/001/bts-avid-table.jpg" alt="Justin at the production table, Avid on screen, pink wristband visible" class="story-media">
+        <span class="bts-frame-label">Avid &middot; Between setups</span>
+      </div>
+      <div class="bts-frame">
+        <div class="bts-tape"></div>
+        <img src="/media/notes/001/chandelier-detail.jpg" alt="Chandelier detail, oil painting" class="story-media-ai">
+        <span class="bts-frame-label">Chandelier &middot; Before</span>
+      </div>
+    </div>
+
+    <div class="story-prose r d3">
+      <p>
+        On the call sheet I was listed as <em>PA &ndash; PER JK.</em> Production assistant, per Joseph Kahn. My phone number one row above the craft service guy. That's the job. You show up, you do whatever needs doing, and you keep your eyes open.
+      </p>
+      <p>
+        And then Taylor walked on set and the energy didn't shift. It <em>organized.</em> Every light, every crystal on every chandelier, every frame had somewhere to be. Kahn shot the whole thing in about two days. Two days to make the video that would break VEVO's 24-hour record and become the fastest to a billion views.
+      </p>
+      <p>
+        Between setups I walked those hallways alone. Marble floors. Gold molding. Paintings hanging crooked from the destruction scenes they'd just shot. A golf club through a classic car. Designer clothes cut to ribbons. Red paint thrown across cream canvas.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- OIL PAINT BREAK -->
+<img class="paint-break" src="/media/notes/001/texture-oil-blood.jpg" alt="" role="presentation" loading="lazy">
+
+<!-- ============================================================
+     § 4 — THE CUT
+     ============================================================ -->
+<section class="story-section the-cut" data-section="cut">
+  <div class="inner">
+    <div class="section-label r">The cut</div>
+
+    <div class="story-prose r d1">
+      <p>
+        Here's the part nobody ever talks about.
+      </p>
+      <p>
+        I went home that night and opened a wedding timeline. Same laptop. Same Avid session. One window had chandeliers shattering in slow motion at a Long Island castle. The other had a first dance at a banquet hall in Hoboken.
+      </p>
+      <p>
+        And you know what? The Hoboken wedding was beautiful too.
+      </p>
+      <p>
+        That's the thing about this work. The timeline doesn't care who you are. Doesn't care if you're Taylor Swift or a bride's cousin's friend. The job is the same. Find the moment. Cut to it. Make it mean something.
+      </p>
+    </div>
+
+    <!-- BTS: Justin editing in Times Square -->
+    <figure class="polaroid r d2" style="transform: rotate(1.5deg);">
+      <img src="/media/notes/001/bts-timessquare.jpg" alt="Justin editing on a MacBook in Times Square at night" class="story-media">
+      <span class="polaroid-caption">Cutting a wedding &middot; Times Square &middot; 2014</span>
+    </figure>
+
+    <div class="story-prose r d3">
+      <p>
+        That week taught me more than any tutorial ever did. Not because the production was bigger. Because I realized the thing I was already doing, sitting alone at 4 AM, moving clips around, trying to make strangers cry at their own wedding, that was the same muscle. Same eye. Same gut feeling when a cut lands right.
+      </p>
+      <p>
+        I was a PA on a Taylor Swift set. But I was also the guy cutting a Hoboken wedding at midnight. <em>Both of those are me.</em> They always have been.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     § 5 — THE LESSON (pull quote + ambient video)
+     ============================================================ -->
+<section class="the-lesson" data-section="lesson">
+  <div class="lesson-video">
+    <video src="/media/notes/001/chandelier-loop.mp4" muted loop playsinline autoplay preload="metadata"></video>
+  </div>
+  <div class="pull-quote r">
+    <blockquote>
+      The timeline doesn't care who you are. Taylor Swift or a bride in Hoboken. Find the moment. Cut to it.
+    </blockquote>
+    <cite>Justin Herrera &middot; Notes from the Edit Suite</cite>
+  </div>
+</section>
+
+<!-- ============================================================
+     § 6 — THE SEALED (exclusive envelope)
+     ============================================================ -->
+<section class="the-sealed" data-section="sealed">
+  <div class="seal-card r" id="sealCard">
+    <span class="seal-label">Sealed &middot; Subscriber Only</span>
+    <p class="seal-tease">
+      There's one thing from that set I've never told anyone. Not Steph. Not my crew. It happened between setups and it changed how I think about all of this.
+    </p>
+    <button class="seal-btn" id="sealBtn">Break the seal &rarr;</button>
+
+    <div class="seal-content">
+      <div class="seal-reveal">
+        <p>
+          <em>This is where your exclusive detail goes, Justin.</em> Something real from the Blank Space set that didn't make the public version of this story. The thing that happened between setups. Write it here and it only shows up when someone clicks the seal or arrives from your beehiiv email.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     § 7 — NEXT UP (002 tease)
+     ============================================================ -->
+<section class="next-up" data-section="next">
+  <div class="inner r">
+    <span class="next-label">Next in the edit suite</span>
+    <span class="next-num">002</span>
+    <h3 class="next-title">The freakin' Jets.</h3>
+    <p class="next-tease">
+      Five NFL seasons on retainer. One team that keeps believing every September. The sideline stories, the Sunday I almost missed the team plane, and what Rex's locker room actually sounded like.
+    </p>
+    <a class="next-cta" href="/subscribe">Subscribe to read &rarr;</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="story-foot">
+  <span>&copy; MMXXVI &middot; Justin Herrera</span>
+  <div class="foot-links">
+    <a href="/">tone.dad</a>
+    <a href="/notes">Notes</a>
+    <a href="/subscribe">Subscribe</a>
+  </div>
+</footer>
+
+<!-- ============================================================
+     SCRIPTS
+     ============================================================ -->
+<script>
+(function() {
+  'use strict';
+
+  // -----------------------------------------------------------
+  // 1. Scroll reveal (IntersectionObserver)
+  // -----------------------------------------------------------
+  const reveals = document.querySelectorAll('.r');
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-vis');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(function(el) { obs.observe(el); });
+  } else {
+    reveals.forEach(function(el) { el.classList.add('is-vis'); });
+  }
+
+  // -----------------------------------------------------------
+  // 2. Top nav — show after scrolling past the gate
+  // -----------------------------------------------------------
+  var topNav = document.getElementById('topNav');
+  var gate = document.querySelector('.gate');
+  if (topNav && gate) {
+    var navObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (!e.isIntersecting) {
+          topNav.classList.add('is-vis');
+        } else {
+          topNav.classList.remove('is-vis');
+        }
+      });
+    }, { threshold: 0 });
+    navObs.observe(gate);
+  }
+
+  // -----------------------------------------------------------
+  // 3. Sealed envelope mechanic
+  // -----------------------------------------------------------
+  var sealCard = document.getElementById('sealCard');
+  var sealBtn = document.getElementById('sealBtn');
+
+  function openSeal() {
+    if (sealCard) sealCard.classList.add('is-open');
+  }
+
+  // Click to open
+  if (sealBtn) {
+    sealBtn.addEventListener('click', openSeal);
+  }
+
+  // Auto-open from beehiiv email link (?s=1)
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('s') === '1') {
+    // Small delay so the user sees it open
+    setTimeout(function() {
+      openSeal();
+      // Scroll to it
+      if (sealCard) {
+        sealCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 800);
+  }
+
+  // -----------------------------------------------------------
+  // 4. Lazy video loading — only play when in viewport
+  // -----------------------------------------------------------
+  var videos = document.querySelectorAll('video');
+  if ('IntersectionObserver' in window) {
+    var vidObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.play().catch(function() {});
+        } else {
+          e.target.pause();
+        }
+      });
+    }, { threshold: 0.1 });
+    videos.forEach(function(v) { vidObs.observe(v); });
+  }
+
+})();
+</script>
+
+</body>
+</html>

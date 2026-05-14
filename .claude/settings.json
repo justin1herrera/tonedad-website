@@ -1,0 +1,51 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(vercel)",
+      "Bash(vercel dev)",
+      "Bash(vercel dev:*)",
+      "Bash(vercel --prod)",
+      "Bash(vercel ls)",
+      "Bash(vercel ls:*)",
+      "Bash(vercel inspect:*)",
+      "Bash(vercel domains)",
+      "Bash(vercel domains:*)",
+      "Bash(vercel project)",
+      "Bash(vercel project:*)",
+      "Bash(npx vercel)",
+      "Bash(npx vercel dev)",
+      "Bash(npx vercel dev:*)",
+      "Bash(npx vercel --prod)",
+      "Bash(npx vercel ls)",
+      "Bash(npx vercel ls:*)",
+      "Bash(npx vercel inspect:*)",
+      "Bash(npx vercel domains)",
+      "Bash(npx vercel domains:*)",
+      "Bash(cp index.html:*)",
+      "Bash(cp subscribe.html:*)",
+      "Bash(cp couples.html:*)",
+      "Bash(ls)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(grep:*)",
+      "Bash(curl -sI https://www.tone.dad)",
+      "Bash(curl -sI https://www.tone.dad/:*)",
+      "Bash(curl -s https://www.tone.dad)",
+      "Bash(curl -s https://www.tone.dad/:*)"
+    ],
+    "deny": [
+      "Bash(rm -rf .vercel)",
+      "Bash(rm -rf .vercel/:*)",
+      "Bash(rm -rf .env.local:*)",
+      "Bash(rm -f index.html)",
+      "Bash(rm index.html)",
+      "Bash(vercel link:*)",
+      "Bash(npx vercel link:*)",
+      "Bash(vercel project rm:*)",
+      "Bash(npx vercel project rm:*)",
+      "Bash(rm -rf tonedad-backups:*)"
+    ]
+  }
+}

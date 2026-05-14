@@ -1,0 +1,19 @@
+# vercel
+.vercel/
+
+# project scratch — keep out of deploy
+_check/
+debug/
+qa/
+reference/
+screenshots/
+uploads/
+site/
+_audit.png
+design-canvas.jsx
+tonedad.html
+
+# os
+.DS_Store
+Thumbs.db
+.vercel

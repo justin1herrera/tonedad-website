@@ -1,0 +1,80 @@
+# tone.dad — Full Context
+
+> Justin Herrera is a videographer, real estate advisor, web builder, and father based in Morristown, New Jersey. tone.dad is his personal brand hub connecting three distinct businesses.
+
+## Identity
+
+- Full name: Justin Herrera
+- Location: Morristown, NJ
+- Brand: tone.dad
+- Email: justin@tone.dad
+- Phone: +1 (609) 902-0299
+- Instagram: @tone.dad
+- Partner: Stephanie Herrera (co-runs Tonemedia and Tonehomes)
+
+## Business 1: Tonemedia (Video Production)
+
+Justin and Stephanie Herrera are NJ's premier wedding film duo. They've been shooting weddings for 12 years and have delivered over 350 wedding films. They also produce brand films, NFL content, and editorial shoots.
+
+Notable credits:
+- NBC Universal
+- Taylor Swift — "Blank Space" music video (on-set at a Long Island estate)
+- Katy Perry — 3 projects
+- Lady Gaga — 2 projects (as assistant editor)
+- NY Jets — 5 NFL seasons on retainer
+- Crossed Keys Estate — long-running partnership
+- Brides Magazine
+
+Justin's editing background includes 10 months living in Dustin Robertson's (Avid DiVa) Hollywood studio, where they cut projects for Mariah Carey, Lady Gaga, and Gap before relocating to Palm Springs.
+
+Website: https://tonemediastudio.com (brand name is Tonemedia; domain retains legacy "studio" spelling)
+
+## Business 2: Tonehomes (Real Estate)
+
+Justin and Stephanie work in real estate advisory, focused on couples, families, and first-time investors in New Jersey. They paid off $150,000 in debt (following Dave Ramsey's method), bought their first duplex, and house-hacked their way to owning 6 units. Their approach emphasizes building slowly and knowing when to wait rather than close fast.
+
+Active since 2021 in the NJ market.
+
+## Business 3: Tonebuild (Web Design & Development)
+
+Justin designs and builds complete websites in a single day — brand, copy, and code, shipped. The tone.dad site itself serves as the portfolio demo. Built entirely with Claude Code (Anthropic's AI coding tool).
+
+Past sites include:
+- tone.dad (this site)
+- tonemediastudio.com
+- nobleposthouse.com
+
+## Newsletter: Notes from the Edit Suite
+
+A subscriber-only newsletter covering faith, fatherhood, building things at 4 AM, and stories from Justin's career that don't fit in a wedding film. Published via beehiiv.
+
+Upcoming stories:
+- 001: "Blank Space" — The untold story of being on the Taylor Swift "Blank Space" music video set at Oheka Castle on Long Island. Directed by Joseph Kahn, the video broke VEVO's 24-hour record and became the fastest to 1 billion views on VEVO. Justin was on set during the two-day shoot. Each story page is an immersive, individually designed web experience.
+- 002: "The freakin' Jets" — Five NFL seasons on retainer with the NY Jets
+- 003: "Ten months with Avid DiVa" — Living in Dustin Robertson's Hollywood studio, cutting Mariah Carey, Gaga, and Gap
+
+Notes index: https://www.tone.dad/notes
+Subscribe: https://www.tone.dad/subscribe or https://tonedad.beehiiv.com/subscribe
+
+## Faith
+
+Justin is involved with Newbridge Church in New Jersey (newbridgenj.com). Faith is a core part of his identity and content.
+
+## Technical Details
+
+- Site: Single-page static HTML, all CSS/JS inline
+- Hosting: Vercel (www.tone.dad)
+- Fonts: Fraunces (serif), Inter Tight (sans), JetBrains Mono (mono)
+- Design: Warm cream (#F2EDE2) background, deep ink (#1B1714), terracotta accent (#B5421F)
+- Features: Three-door navigation pattern, rotating brand wordmark, bilingual (EN/ES), scroll-triggered animations
+- Newsletter: beehiiv integration
+- Built with: Claude Code by Anthropic
+
+## Links
+
+- Main site: https://www.tone.dad
+- Subscribe page: https://www.tone.dad/subscribe
+- Tonemedia: https://tonemediastudio.com
+- Noble Post House: https://nobleposthouse.com
+- Newbridge Church: https://www.newbridgenj.com
+- Instagram: https://instagram.com/tone.dad
