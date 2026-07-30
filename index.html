@@ -1,0 +1,1697 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#2C2622">
+<title>Justin Herrera · NJ Wedding Filmmaker & Morris County Realtor</title>
+<meta name="description" content="Filmmaker & Morris County realtor. 350+ weddings (Tonemedia), NJ real estate (Tonehomes), editing for studios (Noblepost). Credits: Taylor Swift, NBC, NY Jets.">
+<link rel="canonical" href="https://www.tone.dad/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.tone.dad/">
+<meta property="og:title" content="Justin Herrera · NJ Wedding Filmmaker & Morris County Realtor">
+<meta property="og:description" content="Filmmaker & Morris County realtor. 350+ weddings (Tonemedia), NJ real estate (Tonehomes), editing for studios (Noblepost). Credits: Taylor Swift, NBC, NY Jets.">
+<meta property="og:image" content="https://www.tone.dad/media/og-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="tone.dad">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Justin Herrera · NJ Wedding Filmmaker & Morris County Realtor">
+<meta name="twitter:description" content="Filmmaker & Morris County realtor. 350+ weddings (Tonemedia), NJ real estate (Tonehomes), editing for studios (Noblepost). Credits: Taylor Swift, NBC, NY Jets.">
+<meta name="twitter:image" content="https://www.tone.dad/media/og-share.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.tone.dad/#justin",
+  "name": "Justin Herrera",
+  "alternateName": "tone.dad",
+  "url": "https://www.tone.dad/",
+  "image": "https://www.tone.dad/media/og-share.jpg",
+  "jobTitle": "Filmmaker & Licensed Real Estate Agent",
+  "description": "Filmmaker and licensed NJ realtor. 350+ weddings with Tonemedia. Credits include Taylor Swift's Blank Space (on-set editor), Katy Perry, Lady Gaga, NBC, and five seasons with the NY Jets.",
+  "email": "mailto:justin@tone.dad",
+  "telephone": "+1-609-902-0299",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Morris Plains",
+    "addressRegion": "NJ",
+    "addressCountry": "US"
+  },
+  "memberOf": {
+    "@type": "Organization",
+    "name": "Keller Williams Metropolitan"
+  },
+  "knowsAbout": [
+    "wedding videography",
+    "video editing",
+    "post-production",
+    "real estate",
+    "Morris County New Jersey"
+  ],
+  "sameAs": [
+    "https://www.instagram.com/tone.dad/",
+    "https://www.instagram.com/tonemedia/",
+    "https://www.instagram.com/tonehomes/",
+    "https://tonemediastudio.com",
+    "https://nobleposthouse.com",
+    "https://cal.com/tonedad",
+    "https://www.facebook.com/thetonedad"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Tonehomes",
+  "url": "https://www.tone.dad/",
+  "areaServed": ["Morris Plains NJ", "Morristown NJ", "Morris County NJ"],
+  "founder": { "@id": "https://www.tone.dad/#justin" },
+  "parentOrganization": { "@type": "Organization", "name": "Keller Williams Metropolitan" }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400&family=Cormorant+Garamond:ital,wght@0,500;1,400;1,500&display=swap">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+  :root{
+    --black:#2C2622;
+    --ink2:#332C28;
+    --paper:#F5F1E8;        /* warm off-white — carries the parchment DNA */
+    --gray:#99958F;
+    --line:rgba(245,241,232,.13);
+    --gold:#C6A16B;         /* patinated brass, not gift-wrap */
+    --gold-soft:rgba(198,161,107,.13);
+    --gold-line:rgba(198,161,107,.45);
+    --pad:34px;
+    --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+    --sans:'Inter Tight',system-ui,-apple-system,sans-serif;
+    --mono:'Courier New',Courier,monospace;
+    --ease:cubic-bezier(.2,.7,.2,1);
+  }
+
+  html,body{height:100%}
+  body{
+    background:var(--black);
+    color:var(--paper);
+    font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--gold);color:#0A0A0A}
+
+  /* ---------------- ROUTER ---------------- */
+  .view{display:none;min-height:100svh;position:relative;isolation:isolate}
+  .view.active{display:flex;flex-direction:column}
+  .wipe{position:fixed;inset:0;background:var(--black);opacity:0;pointer-events:none;transition:opacity .38s ease;z-index:9999}
+  .wipe.on{opacity:1}
+  /* film-frame "slate" reward on form submit */
+  .slate-fx{position:fixed;inset:0;z-index:9997;display:flex;align-items:center;justify-content:center;gap:13px;pointer-events:none;opacity:0;background:rgba(44,38,34,.55);backdrop-filter:blur(2px)}
+  .slate-fx.go{animation:slatePop 1.05s var(--ease) forwards}
+  .slate-fx .slate-dot{width:16px;height:16px;border-radius:50%;background:var(--gold);box-shadow:0 0 14px 2px rgba(198,161,107,.6)}
+  .slate-fx.go .slate-dot{animation:slateDot 1.05s var(--ease) forwards}
+  .slate-fx .slate-txt{font-family:var(--mono);font-size:1rem;letter-spacing:.28em;text-transform:uppercase;color:var(--paper)}
+  @keyframes slatePop{0%{opacity:0}14%{opacity:1}72%{opacity:1}100%{opacity:0}}
+  @keyframes slateDot{0%,38%{border-radius:50%;transform:scale(1)}54%{border-radius:2px;transform:scale(1.3)}100%{border-radius:2px;transform:scale(1)}}
+
+  /* film grain — exists IN the paper, not painted on top */
+  .grain{position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.09;mix-blend-mode:overlay}
+
+  /* ---------------- SHARED ---------------- */
+  .bar{display:flex;align-items:center;justify-content:space-between;padding:calc(var(--pad) + 6px) calc(var(--pad) + 14px) 0;z-index:5}
+  .wordmark{font-family:var(--serif);font-style:italic;font-weight:500;font-size:1.32rem;color:var(--paper);text-decoration:none;display:inline-flex;align-items:center;gap:9px;letter-spacing:.1px}
+  .wordmark .dot{color:var(--gold)}
+  .wordmark .back{font-family:var(--mono);font-style:normal;font-size:.86rem;letter-spacing:.12em;color:var(--gray);transition:color .25s}
+  .wordmark:hover .back{color:var(--gold)}
+  .backbtn{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.74rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--paper);background:rgba(245,241,232,.03);border:1px solid var(--line);border-radius:100px;padding:10px 18px;cursor:pointer;transition:border-color .25s var(--ease),color .25s var(--ease),transform .25s var(--ease)}
+  .backbtn .ar{font-size:1.05rem;line-height:1;transition:transform .25s var(--ease)}
+  .backbtn:hover,.backbtn:focus-visible{border-color:var(--gold);color:var(--gold);transform:translateX(-2px)}
+  .backbtn:hover .ar,.backbtn:focus-visible .ar{transform:translateX(-3px)}
+  .meta{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;color:var(--gray);display:flex;align-items:center;gap:9px;text-transform:uppercase}
+  .rec{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px 1px rgba(198,161,107,.55);animation:blink 1.6s steps(1) infinite}
+  @keyframes blink{0%,55%{opacity:1}56%,100%{opacity:.18}}
+  .tc{color:var(--paper);letter-spacing:.22em}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--gold);color:#0A0A0A;font-family:var(--mono);font-weight:700;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;padding:15px 28px;border:0;border-radius:2px;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s,background .25s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px -12px rgba(198,161,107,.6)}
+  .btn:active{transform:translateY(0)}
+  .btn-ghost{background:transparent;color:var(--paper);border:1px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold);box-shadow:none;transform:translateY(-2px)}
+  .btn .ar{font-family:var(--mono);transition:transform .25s var(--ease)}
+  .btn:hover .ar{transform:translateX(4px)}
+  button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:5px;border-radius:2px}
+
+  .kicker{font-family:var(--mono);font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+  .door-kicker{font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;opacity:.55;margin-bottom:10px}
+  .trust{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);margin-top:14px;display:flex;align-items:center;gap:7px}
+  .trust::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold);opacity:.6}
+  .ext-link{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid var(--gold-line);border-radius:2px;padding:10px 18px;margin:2px 0 18px;transition:background .25s var(--ease),color .25s,transform .25s}
+  .ext-link:hover{background:var(--gold);color:#0A0A0A;transform:translateY(-2px)}
+  .ext-link .ar{transition:transform .25s var(--ease)}
+  .ext-link:hover .ar{transform:translateX(4px)}
+
+  .field{display:block;margin-bottom:20px}
+  .field label{font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gray);display:block;margin-bottom:9px}
+  .field input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--paper);font-family:var(--sans);font-size:1.05rem;padding:9px 0;outline:none;transition:border-color .3s}
+  .field input:focus{border-color:var(--gold)}
+  .field input::placeholder{color:var(--gray)}
+  .field textarea{width:100%;background:transparent;border:1px solid var(--line);color:var(--paper);font-family:var(--sans);font-size:1rem;line-height:1.5;padding:12px 13px;outline:none;resize:vertical;min-height:84px;border-radius:3px;transition:border-color .3s}
+  .field textarea:focus{border-color:var(--gold)}
+  .field textarea::placeholder{color:var(--gray)}
+  .field.err input,.field.err textarea{border-color:#a8553e}
+  .field .opt-tag{color:var(--gray);text-transform:none;letter-spacing:.04em;font-size:.58rem}
+  .field .err-msg{display:none;color:#c47a63;font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;margin-top:7px}
+  .field.err .err-msg{display:block}
+  .hp-field{position:absolute!important;left:-9999px!important;top:auto!important;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none}
+  .form-msg{display:none;font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;color:#c47a63;margin-top:13px;line-height:1.5}
+  .form-msg.on{display:block}
+  .btn[disabled]{opacity:.55;cursor:default;transform:none;box-shadow:none}
+
+  /* ============================================================
+     HOME
+     ============================================================ */
+  /* hero text legibility over photos */
+  #view-home{text-shadow:0 1px 3px rgba(0,0,0,.62),0 2px 16px rgba(0,0,0,.5)}
+  /* hero carousel — elegant slow crossfade of family photos */
+  #view-home .hero-carousel{position:absolute;inset:0;z-index:-3;overflow:hidden;background:var(--black)}
+  #view-home .slide{position:absolute;inset:0;background-size:cover;background-position:center 32%;
+    filter:saturate(1.12) contrast(1.05) brightness(.98);
+    opacity:0;transform:scale(1.05);transition:opacity 1.6s ease-in-out;will-change:opacity}
+  #view-home .slide.is-active{opacity:1;animation:kenburns 7.5s ease-out forwards}
+  @keyframes kenburns{from{transform:scale(1.05)}to{transform:scale(1.13)}}
+  /* video slide — drone-in; parent filter applies to the video for a matched grade */
+  #view-home .slide.has-video,#view-home .slide.has-video.is-active{transform:none;animation:none;background:var(--black)}
+  #view-home .slide-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 32%}
+  /* lead slide bg — desktop default (family on the street); swapped to portrait on mobile below */
+  #view-home .slide.lead{background-image:url('media/family-street-web.jpg');background-position:center 46%}
+  /* edit-bay frame scrubber */
+  .hero-frames{position:absolute;top:50%;right:calc(var(--pad) + 2px);transform:translateY(-50%);
+    display:flex;flex-direction:column;gap:9px;z-index:3}
+  .hero-frames button{width:2px;height:26px;border:0;padding:0;cursor:pointer;
+    background:rgba(245,241,232,.28);transition:background .45s,height .45s}
+  .hero-frames button.on{background:var(--gold);height:36px}
+  .hero-frames button:hover{background:rgba(245,241,232,.6)}
+
+  #view-home .scrim{position:absolute;inset:0;z-index:-1;
+    background:
+      linear-gradient(180deg,rgba(44,38,34,.35) 0%,rgba(44,38,34,0) 26%,rgba(44,38,34,.5) 60%,rgba(44,38,34,.93) 100%),
+      linear-gradient(80deg,rgba(44,38,34,.82) 0%,rgba(44,38,34,.4) 34%,rgba(44,38,34,0) 64%);}
+  #view-home .scrim::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 220px 56px rgba(0,0,0,.5)}
+
+  .ticks span{position:absolute;width:20px;height:20px;z-index:2;border:1.5px solid rgba(198,161,107,.55);opacity:0;animation:tickIn .7s ease .15s forwards}
+  .ticks .tl{top:var(--pad);left:var(--pad);border-right:0;border-bottom:0}
+  .ticks .tr{top:var(--pad);right:var(--pad);border-left:0;border-bottom:0}
+  .ticks .bl{bottom:var(--pad);left:var(--pad);border-right:0;border-top:0}
+  .ticks .br{bottom:var(--pad);right:var(--pad);border-left:0;border-top:0}
+  @keyframes tickIn{to{opacity:1}}
+
+  .hero-screen{position:relative;min-height:100svh;display:flex;flex-direction:column}
+  .home-spacer{flex:1 1 auto;min-height:80px}
+  .home-content{padding:0 calc(var(--pad) + 14px);z-index:3}
+  .nameplate{border-left:3px solid var(--gold);padding-left:20px;opacity:0;transform:translateY(22px);animation:rise .9s var(--ease) .25s forwards}
+  .name{font-family:var(--serif);font-weight:500;font-size:clamp(2.8rem,7.5vw,6.2rem);line-height:.94;letter-spacing:-.5px}
+  .role{font-family:var(--mono);font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,241,232,.58);margin-top:15px}
+  .tagline{max-width:44ch;margin-top:22px;font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,2.4vw,1.85rem);line-height:1.4;color:rgba(245,241,232,.94);opacity:0;transform:translateY(18px);animation:rise .9s var(--ease) .4s forwards}
+  .credits{margin-top:24px;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;color:var(--gray);display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;opacity:0;animation:fade 1s ease .65s forwards}
+  .credits .lbl{color:rgba(198,161,107,.95)}
+  .cred-row{display:inline-flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .credits .sep{color:rgba(245,241,232,.52)}
+  /* persistent, always-visible Taylor hook CTA (the mobile fix: no hover needed) */
+  .ts-hook{display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:9px;margin-top:15px;max-width:54ch;font-family:var(--serif);font-style:italic;font-size:clamp(1rem,1.5vw,1.18rem);line-height:1.4;color:rgba(245,241,232,.8);text-decoration:none;cursor:pointer;opacity:0;animation:fade 1s ease .85s forwards;transition:color .25s var(--ease)}
+  .ts-hook .ts-hook-cta{font-family:var(--mono);font-style:normal;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);white-space:nowrap;border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .25s,border-color .25s}
+  .ts-hook .ar{display:inline-block;margin-left:1px;transition:transform .25s var(--ease)}
+  .ts-hook:hover,.ts-hook:focus-visible{color:var(--paper)}
+  .ts-hook:hover .ts-hook-cta,.ts-hook:focus-visible .ts-hook-cta{color:#e7c877;border-color:#e7c877}
+  .ts-hook:hover .ar,.ts-hook:focus-visible .ar{transform:translateX(4px)}
+  .cred{position:relative;cursor:pointer;color:var(--paper);border-bottom:1px dotted rgba(198,161,107,.7);transition:color .25s;outline:none}
+  .cred:hover,.cred:focus-visible{color:var(--gold)}
+  .cred-pop{position:absolute;left:0;bottom:calc(100% + 10px);width:max-content;max-width:250px;
+    background:rgba(44,38,34,.94);border:1px solid var(--gold-line);border-radius:3px;padding:9px 11px;
+    font-family:var(--mono);font-size:.62rem;letter-spacing:.02em;line-height:1.55;color:var(--paper);
+    text-transform:none;opacity:0;transform:translateY(6px);pointer-events:none;
+    transition:opacity .25s var(--ease),transform .25s var(--ease);z-index:6;box-shadow:0 12px 30px -12px rgba(0,0,0,.8)}
+  .cred-pop a{color:var(--gold);text-decoration:none;white-space:nowrap}
+  .cred-pop a:hover{text-decoration:underline}
+  .cred:hover .cred-pop,.cred:focus-within .cred-pop,.cred.open .cred-pop{opacity:1;transform:translateY(0);pointer-events:auto}
+  /* keep the rightmost popover from clipping off-screen */
+  .credits .cred:last-of-type .cred-pop{left:auto;right:0}
+  /* Taylor Swift sparkly white logo */
+  .ts-logo{text-decoration:none;border-bottom:1px solid rgba(198,161,107,.5);padding:0 3px 1px}
+  .ts-mark{position:relative;font-family:var(--serif);font-style:italic;font-weight:500;font-size:1.26em;letter-spacing:.01em;text-transform:none;color:#fff;transition:filter .3s var(--ease)}
+  @supports((-webkit-background-clip:text) or (background-clip:text)){
+    .ts-mark{background-image:linear-gradient(105deg,#efece3 0%,#ffffff 44%,#fffaf0 50%,#ffffff 56%,#efece3 100%);background-size:250% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+  }
+  .ts-logo:hover .ts-mark,.ts-logo:focus-visible .ts-mark{animation:tsShimmer 1.3s var(--ease);filter:drop-shadow(0 0 6px rgba(255,255,255,.55))}
+  @keyframes tsShimmer{from{background-position:100% 0}to{background-position:-60% 0}}
+  .ts-logo .spark{position:absolute;font-style:normal;color:#fff;opacity:0;pointer-events:none;text-shadow:0 0 6px rgba(255,255,255,.95),0 0 2px #fff;font-size:.62em;z-index:2}
+  .ts-logo .s1{top:-9px;left:1px}
+  .ts-logo .s2{top:-1px;right:-11px;font-size:.5em}
+  .ts-logo .s3{bottom:-8px;left:34%}
+  .ts-logo .s4{top:-6px;right:28%;font-size:.46em}
+  .ts-logo:hover .spark,.ts-logo:focus-visible .spark{animation:tsTwinkle 1.15s var(--ease) infinite}
+  .ts-logo .s2{animation-delay:.22s}
+  .ts-logo .s3{animation-delay:.5s}
+  .ts-logo .s4{animation-delay:.75s}
+  @keyframes tsTwinkle{0%,100%{opacity:0;transform:scale(.3) rotate(0deg)}45%{opacity:1;transform:scale(1) rotate(18deg)}}
+  .ts-logo.burst .s1{--bx:-16px;--by:-20px}
+  .ts-logo.burst .s2{--bx:22px;--by:-9px}
+  .ts-logo.burst .s3{--bx:-7px;--by:22px}
+  .ts-logo.burst .s4{--bx:18px;--by:18px}
+  .ts-logo.burst .spark{animation:tsBurst .8s var(--ease) forwards}
+  @keyframes tsBurst{0%{opacity:1;transform:translate(0,0) scale(1.25)}100%{opacity:0;transform:translate(var(--bx,0),var(--by,0)) scale(.3) rotate(40deg)}}
+  .ts-logo.burst .ts-mark{animation:tsPulse .5s var(--ease)}
+  @keyframes tsPulse{0%,100%{filter:none}45%{filter:drop-shadow(0 0 10px rgba(255,255,255,.9)) brightness(1.25)}}
+  .jets-logo{border-bottom:none}
+  .jets-mark{display:inline-block;font-family:var(--sans);font-style:italic;text-transform:uppercase;letter-spacing:.02em;color:#2fa36b;-webkit-text-stroke:.3px #2fa36b;transition:color .25s,text-shadow .3s,-webkit-text-stroke-color .25s}
+  .jets-logo:hover .jets-mark,.jets-logo:focus-visible .jets-mark{color:#5fe0a6;-webkit-text-stroke-color:#5fe0a6;text-shadow:0 0 10px rgba(60,220,150,.7),0 0 20px rgba(60,220,150,.35);animation:jetUp .55s var(--ease)}
+  @keyframes jetUp{0%{transform:translateY(0)}34%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+  .nbc-logo{border-bottom:none}
+  .nbc-mark{display:inline-block;font-family:var(--sans);letter-spacing:.16em;color:var(--paper);transition:filter .3s}
+  @supports((-webkit-background-clip:text) or (background-clip:text)){
+    .nbc-logo:hover .nbc-mark,.nbc-logo:focus-visible .nbc-mark{background-image:linear-gradient(100deg,#fcb711,#f37021,#cc004c,#6460aa,#0089d0,#0db14b,#fcb711);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:nbcPeacock 1.4s linear;filter:drop-shadow(0 0 5px rgba(255,255,255,.3))}
+  }
+  @keyframes nbcPeacock{from{background-position:0 0}to{background-position:220% 0}}
+  @media (prefers-reduced-motion:reduce){
+    .door:hover .noble-mark .nm-shine,.door .new-tag,.ts-logo:hover .ts-mark,.ts-logo:hover .spark,.ts-logo.burst .spark,.ts-logo.burst .ts-mark,.jets-logo:hover .jets-mark,.nbc-logo:hover .nbc-mark{animation:none}
+  }
+  @keyframes rise{to{opacity:1;transform:translateY(0)}}
+  @keyframes fade{to{opacity:1}}
+
+  .offerings{position:relative;z-index:3;background:linear-gradient(180deg,rgba(44,38,34,0) 0%,rgba(44,38,34,.5) 40%,rgba(44,38,34,.74) 100%)}
+  .doors{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);margin:28px calc(var(--pad) + 14px) calc(var(--pad) + 6px);z-index:3}
+  .door{position:relative;padding:22px 22px 22px 0;text-decoration:none;color:var(--paper);display:flex;flex-direction:column;gap:8px;cursor:pointer;background:none;border:0;text-align:left;font:inherit;opacity:0;transform:translateY(14px);animation:rise .8s var(--ease) forwards;transition:background .3s}
+  .door-peek{position:relative;display:block;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:3px;margin-bottom:4px;background:var(--black);border:1px solid var(--line)}
+  .door-peek img,.door-peek video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .door-peek img{filter:saturate(1.04) contrast(1.02);transition:transform .5s var(--ease)}
+  .door-peek video{opacity:0;transition:opacity .45s var(--ease)}
+  .door:hover .door-peek video,.door:focus-visible .door-peek video{opacity:1}
+  .door:hover .door-peek img,.door:focus-visible .door-peek img{transform:scale(1.05)}
+  .noble-mark{display:grid;place-items:center;background:radial-gradient(130% 130% at 50% 32%,#ffffff 0%,#f2eee4 100%)}
+  .noble-mark .nm-lockup{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:9px;padding:0 8%}
+  .noble-mark .nm-word{font-family:var(--serif);font-weight:500;font-size:clamp(1.15rem,3.3vw,1.85rem);letter-spacing:.09em;color:#0A0A0A;line-height:1;white-space:nowrap}
+  .noble-mark .nm-tag{font-family:var(--mono);font-size:.5rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(44,38,34,.55)}
+  .noble-mark .nm-shine{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(105deg,transparent 42%,rgba(198,161,107,.18) 50%,transparent 58%);transform:translateX(-130%)}
+  .door:hover .noble-mark .nm-shine,.door:focus-visible .noble-mark .nm-shine{animation:nmShine 1.15s var(--ease)}
+  @keyframes nmShine{from{transform:translateX(-130%)}to{transform:translateX(130%)}}
+  .door + .door{padding-left:24px;border-left:1px solid var(--line)}
+  .door:nth-child(1){animation-delay:.8s}.door:nth-child(2){animation-delay:.9s}.door:nth-child(3){animation-delay:1s}.door:nth-child(4){animation-delay:1.1s}
+  .door .num{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;color:var(--gold);display:flex;gap:8px;align-items:center}
+  .door .soon{color:var(--gray);border:1px solid var(--line);padding:1px 7px;border-radius:20px;font-size:.56rem;letter-spacing:.12em}
+  .door .free-tag{color:#0A0A0A;background:var(--gold);border:1px solid var(--gold);padding:1px 7px;border-radius:20px;font-size:.56rem;letter-spacing:.12em;font-weight:700}
+  .door .new-tag{color:var(--gold);background:transparent;border:1px solid var(--gold);padding:1px 7px;border-radius:20px;font-size:.56rem;letter-spacing:.12em;font-weight:700;animation:newTagPulse 2.4s ease-in-out infinite}
+  @keyframes newTagPulse{0%,100%{box-shadow:0 0 0 0 rgba(198,161,107,0)}50%{box-shadow:0 0 12px 1px rgba(198,161,107,.45)}}
+  /* tone.notes door — "NEW POST" corner ribbon (Notes pencil-red, deliberate pop against the gold) */
+  .door-ribbon{position:absolute;top:0;left:0;z-index:3;width:116px;height:116px;overflow:hidden;pointer-events:none}
+  .door-ribbon span{position:absolute;top:19px;left:-34px;width:150px;transform:rotate(-45deg);background:#c23b22;color:#fff;text-align:center;font-family:var(--mono);font-weight:600;font-size:9.5px;letter-spacing:.14em;padding:5px 0;box-shadow:0 3px 8px rgba(0,0,0,.35)}
+  /* Noblepost tile: drop the legacy white card background + border so the photo goes full-bleed */
+  .door-peek.noble-mark{background:var(--black);border-color:transparent}
+  /* Announcement bar — new tone.notes post */
+  .announce{position:relative;z-index:30;display:flex;align-items:center;justify-content:center;gap:14px;background:linear-gradient(90deg,#1b1611,#2C2622 50%,#1b1611);border-bottom:1px solid rgba(198,161,107,.32);padding:9px 44px 9px 16px}
+  .announce-link{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--paper);width:100%;max-width:1080px;justify-content:center}
+  .announce-tag{flex:none;background:#c23b22;color:#fff;font-family:var(--mono);font-size:.56rem;font-weight:700;letter-spacing:.16em;padding:4px 9px;border-radius:3px;animation:annPulse 2.2s ease-in-out infinite}
+  @keyframes annPulse{0%,100%{box-shadow:0 0 0 0 rgba(194,59,34,.55)}60%{box-shadow:0 0 0 6px rgba(194,59,34,0)}}
+  .announce-txt{font-family:var(--serif);font-size:1rem;color:var(--paper);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .announce-txt b{font-weight:600;font-style:italic}
+  .announce-sub{font-family:var(--mono);font-size:.62rem;letter-spacing:.03em;color:var(--gold);margin-left:9px}
+  .announce-cta{flex:none;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
+  .announce-cta .ar{display:inline-block;transition:transform .3s var(--ease)}
+  .announce-link:hover .announce-cta .ar{transform:translateX(4px)}
+  .announce-x{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--gray);font-size:1.15rem;line-height:1;cursor:pointer;padding:4px 9px}
+  .announce-x:hover{color:var(--paper)}
+  @media(max-width:640px){.announce-sub,.announce-cta{display:none}.announce-txt{font-size:.86rem;white-space:normal}.announce{padding:8px 40px 8px 12px}}
+  .door .title{font-family:var(--serif);font-weight:500;font-size:1.65rem;line-height:1.05;display:flex;align-items:center;gap:10px}
+  .door .arrow{font-family:var(--mono);font-size:1rem;color:var(--gold);opacity:1;transform:translateX(0);transition:all .35s var(--ease);animation:arrow-nudge 1.9s ease-in-out infinite}
+  @keyframes arrow-nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}
+  .door .desc{font-size:.88rem;line-height:1.45;color:rgba(245,241,232,.72);max-width:26ch}
+  .door .underline{position:absolute;left:0;bottom:-1px;height:2px;width:28px;background:var(--gold);opacity:.7;transition:width .4s var(--ease),opacity .4s var(--ease)}
+  .door + .door .underline{left:24px}
+  .door:hover .arrow,.door:focus-visible .arrow{transform:translateX(4px);animation:none}
+  .door:hover .underline,.door:focus-visible .underline{width:52px;opacity:1}
+  .door:hover .desc,.door:focus-visible .desc{color:rgba(245,241,232,.9)}
+
+  /* ---- flywheel: wedding → house proof, on the homepage ---- */
+  .th-clip img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.08) contrast(1.03)}
+  .flywheel{position:relative;z-index:3;background:var(--black);border-top:1px solid var(--line);padding:clamp(38px,7vw,72px) calc(var(--pad) + 14px)}
+  .flywheel-intro{max-width:720px;margin:0 auto clamp(22px,4vw,34px);text-align:center;font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,2.5vw,1.7rem);line-height:1.45;color:rgba(245,241,232,.92)}
+  .flywheel-row{display:flex;align-items:center;justify-content:center;gap:clamp(12px,2.6vw,26px);max-width:1000px;margin:0 auto}
+  .flywheel-row .th-clip{flex:1 1 0;min-width:0}
+  .fw-arc{flex:0 0 auto;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;text-align:center;line-height:1.5}
+
+  /* ============================================================
+     TONEMEDIA — immersive reel + elegant inquiry
+     ============================================================ */
+  #view-tonemedia{background:var(--black);align-items:stretch}
+  #view-tonemedia .tm-glow{position:absolute;inset:0;z-index:-1;background:radial-gradient(52% 60% at 28% 50%,rgba(198,161,107,.08),transparent 70%)}
+  .tm-stage{flex:1;display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(30px,6vw,90px);align-items:center;padding:10px calc(var(--pad) + 14px) var(--pad);max-width:1280px;margin:0 auto;width:100%}
+
+  .reel{position:relative;aspect-ratio:9/16;height:min(78vh,700px);margin:0 auto;overflow:hidden;border:1px solid var(--line);border-radius:4px;box-shadow:0 40px 90px -25px rgba(0,0,0,.9)}
+  .reel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .reel-vig{position:absolute;inset:0;box-shadow:inset 0 0 120px 24px rgba(0,0,0,.55);pointer-events:none}
+  .reel-bar{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;display:flex;align-items:center;gap:12px;background:linear-gradient(0deg,rgba(0,0,0,.78),transparent);pointer-events:none}
+  .reel-tc{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;color:var(--paper);white-space:nowrap}
+  .reel-prog{flex:1;height:2px;background:rgba(245,241,232,.2);border-radius:2px;overflow:hidden}
+  .reel-prog i{display:block;height:100%;width:0;background:var(--gold);animation:prog 12s linear infinite}
+  @keyframes prog{from{width:0}to{width:100%}}
+  .reel-tag{position:absolute;top:14px;left:14px;font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--paper);background:rgba(44,38,34,.55);padding:5px 9px;border-radius:2px;backdrop-filter:blur(3px)}
+
+  .tm-form{max-width:440px}
+  .tm-h{font-family:var(--serif);font-weight:500;font-size:clamp(2.3rem,4vw,3.2rem);line-height:1.02;margin:16px 0 12px;letter-spacing:-.4px}
+  .tm-sub{color:rgba(245,241,232,.66);font-size:1rem;line-height:1.55;margin-bottom:18px;max-width:40ch}
+  .tm-proof{display:flex;align-items:center;gap:10px;margin-bottom:18px;font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;color:var(--gray)}
+  .tm-proof .stars{color:var(--gold);letter-spacing:.1em}
+  .pricing{margin:0 0 14px;border:1px solid var(--line);border-radius:4px;overflow:hidden;text-align:left}
+  .pricing .tier{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:13px 16px;transition:background .25s}
+  .pricing .tier + .tier{border-top:1px solid var(--line)}
+  .pricing .tier:hover{background:var(--gold-soft)}
+  .pricing .t-name{font-family:var(--serif);font-style:italic;font-weight:500;font-size:1.08rem;color:var(--paper);line-height:1.2}
+  .pricing .t-meta{display:block;font-family:var(--mono);font-style:normal;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-top:5px}
+  .pricing .t-price{font-family:var(--mono);font-weight:700;font-size:1.05rem;color:var(--gold);white-space:nowrap}
+  .pricenote{font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;color:var(--gray);margin:0 0 26px;line-height:1.6}
+  .np-reveal .pricing,.np-reveal .pricenote{max-width:460px;margin-left:auto;margin-right:auto}
+  .np-reveal .pricenote{text-align:center}
+  .tm-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .tm-step{display:none}
+  .tm-step.on{display:block;animation:fade .45s ease}
+  .tm-nav{display:flex;align-items:center;gap:16px;margin-top:8px}
+  .tm-progress{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;color:var(--gray)}
+  .tm-link{background:none;border:0;color:var(--gray);font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;text-decoration:underline;text-underline-offset:3px;transition:color .25s}
+  .tm-link:hover{color:var(--gold)}
+  .tm-done{display:none;flex-direction:column;gap:10px;animation:fade .6s ease forwards}
+  .tm-done .tm-h{margin-top:0}
+
+  /* ============================================================
+     NOBLEPOST — pain funnel, desk-time counter, freebie
+     ============================================================ */
+  #view-noblepost{background:var(--ink2);align-items:center;justify-content:flex-start}
+  .np-top{position:absolute;top:calc(var(--pad) + 6px);left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:0 calc(var(--pad) + 14px);z-index:5}
+  .np-counter{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;color:var(--gray);display:flex;align-items:center;gap:9px;text-transform:uppercase}
+  .np-counter b{color:var(--paper);font-weight:700;letter-spacing:.18em}
+  .np-counter.back b{color:var(--gold)}
+
+  .np-wrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;max-width:680px;padding:90px calc(var(--pad) + 14px) var(--pad);text-align:center;margin:0 auto}
+  .np-prog{display:flex;gap:6px;margin-bottom:42px}
+  .np-prog span{width:34px;height:3px;border-radius:3px;background:var(--line);transition:background .4s}
+  .np-prog span.on{background:var(--gold)}
+
+  .np-step{width:100%;animation:fade .45s ease}
+  .np-q{font-family:var(--serif);font-weight:500;font-size:clamp(1.9rem,3.6vw,2.8rem);line-height:1.1;margin-bottom:34px;letter-spacing:-.3px}
+  .opt{display:block;width:100%;text-align:left;background:transparent;border:1px solid var(--line);color:var(--paper);font-family:var(--sans);font-size:1.05rem;padding:18px 22px;border-radius:3px;cursor:pointer;margin-bottom:12px;transition:border-color .25s,background .25s,transform .25s}
+  .opt:hover{border-color:var(--gold);background:var(--gold-soft);transform:translateX(5px)}
+
+  .np-intro,.np-reveal{display:none}
+  .np-intro.on,.np-reveal.on{display:block;animation:fade .5s ease}
+  .np-eyebrow{font-family:var(--mono);font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+  .np-big{font-family:var(--serif);font-weight:500;font-size:clamp(2.3rem,5vw,3.7rem);line-height:1.05;letter-spacing:-.5px;margin-bottom:18px}
+  .np-lead{color:rgba(245,241,232,.66);font-size:1.05rem;line-height:1.6;max-width:44ch;margin:0 auto 28px}
+  .np-number{font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,2vw,1.5rem);line-height:1.4;color:var(--gold);max-width:40ch;margin:0 auto 30px}
+  .np-proof{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;color:var(--gray);margin:0 auto 30px;max-width:46ch;line-height:1.7}
+  .np-free{border:1px solid var(--line);border-radius:6px;padding:28px;max-width:460px;margin:0 auto;text-align:left;background:rgba(245,241,232,.015)}
+  .np-free .tag{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  .np-free h4{font-family:var(--serif);font-weight:500;font-size:1.4rem;margin-bottom:6px;line-height:1.15}
+  .np-free p{color:var(--gray);font-size:.9rem;line-height:1.5;margin-bottom:22px}
+  .np-done{display:none;animation:fade .6s ease}
+
+  /* ============================================================
+     TONEHOMES — realtor lead path
+     ============================================================ */
+  #view-tonehomes{background:var(--black);align-items:stretch}
+  #view-tonehomes .th-glow{position:absolute;inset:0;z-index:-1;background:radial-gradient(52% 60% at 72% 50%,rgba(198,161,107,.08),transparent 70%)}
+  .th-stage{flex:1;display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(30px,6vw,84px);align-items:center;padding:10px calc(var(--pad) + 14px) var(--pad);max-width:1240px;margin:0 auto;width:100%}
+  .th-reels{display:flex;flex-direction:column;gap:22px;width:100%;max-width:560px;margin:0 auto}
+  .th-arc{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+  .th-arc::before,.th-arc::after{content:"";flex:1;height:1px;background:var(--gold-line)}
+  .th-units{font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;color:var(--gray);margin:0 0 22px}
+  .th-ig{margin-top:4px}
+  .th-ig-h{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);margin-bottom:10px}
+  .th-ig-h::before{content:"";flex:1;height:1px;background:var(--line);order:2}
+  .th-ig-h .follow{order:3;color:var(--gold);text-decoration:none;letter-spacing:.16em;transition:color .25s var(--ease)}
+  .th-ig-h .follow:hover{color:var(--paper)}
+  .th-ig-grid .tile.is-video::after{content:"";position:absolute;right:8px;bottom:8px;width:20px;height:20px;border-radius:50%;background:rgba(44,38,34,.55) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 6.8v10.4L18 12z" fill="%23F5F1E8" fill-opacity=".9"/></svg>') center/12px no-repeat;backdrop-filter:blur(2px);opacity:.75}
+  .th-ig-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .th-ig-grid a{display:block;text-decoration:none}
+  .th-ig-grid .tile{display:block;position:relative;aspect-ratio:1/1;overflow:hidden;border:1px solid var(--line);border-radius:3px}
+  .th-ig-grid img{width:100%;height:100%;object-fit:cover;filter:saturate(.85);transition:transform .5s var(--ease),filter .5s var(--ease)}
+  .th-ig-grid a:hover img{transform:scale(1.04);filter:saturate(1)}
+  .th-ig-grid .cap{display:block;margin-top:7px;font-family:var(--mono);font-size:.52rem;letter-spacing:.09em;text-transform:uppercase;color:var(--gray);line-height:1.5}
+  .th-ig-grid .cap b{display:block;font-weight:400;color:var(--gold)}
+  .th-clip{position:relative;aspect-ratio:16/9;margin:0;overflow:hidden;border:1px solid var(--line);border-radius:4px;box-shadow:0 30px 70px -28px rgba(0,0,0,.9)}
+  .th-clip video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.08) contrast(1.03)}
+  .th-clip::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 80px 16px rgba(0,0,0,.4);pointer-events:none}
+  .th-slate{position:absolute;left:12px;bottom:12px;z-index:2;display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;color:var(--paper);background:rgba(44,38,34,.6);padding:6px 10px;border-radius:2px;backdrop-filter:blur(3px)}
+  .th-who{position:absolute;top:12px;left:12px;z-index:2;font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);background:rgba(44,38,34,.6);padding:6px 10px;border-radius:2px;backdrop-filter:blur(3px)}
+  .th-wrap{max-width:480px}
+  .th-eyebrow{font-family:var(--mono);font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+  .th-h{font-family:var(--serif);font-weight:400;font-size:clamp(2.1rem,3.6vw,3.1rem);line-height:1.04;letter-spacing:-.4px;margin-bottom:18px}
+  .th-h em{font-style:italic;font-weight:500;color:var(--gold)}
+  .th-sub{color:rgba(245,241,232,.66);font-size:1rem;line-height:1.6;margin-bottom:22px}
+  .th-value{font-family:var(--serif);font-style:italic;font-size:1.12rem;line-height:1.45;color:rgba(245,241,232,.9);margin-bottom:26px}
+  .th-trust{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;color:var(--gray);margin:14px 0 0;line-height:1.7}
+  .th-lead-h{font-family:var(--serif);font-weight:500;font-size:1.32rem;line-height:1.2;color:var(--paper);margin:0 0 10px}
+  .th-intent-lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gray);display:block;margin-bottom:10px}
+  .th-intent{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:20px}
+  .th-intent button{flex:1 1 auto;background:transparent;border:1px solid var(--line);color:var(--paper);font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:11px 14px;border-radius:3px;cursor:pointer;transition:border-color .25s,background .25s,color .25s}
+  .th-intent button:hover{border-color:var(--gold)}
+  .th-intent button.on{border-color:var(--gold);background:var(--gold);color:#0A0A0A}
+  .th-row{display:flex;gap:14px}
+  .th-row .field{flex:1}
+  .th-form .btn{width:100%}
+  .th-done{display:none;color:var(--gold);font-family:var(--mono);font-size:.82rem;letter-spacing:.12em;margin-top:8px;animation:fade .5s ease}
+
+  /* ============================================================
+     HELP ME WITH VIDEO — cal.com scheduler
+     ============================================================ */
+  #view-hire{background:var(--black);align-items:stretch}
+  #view-hire .th-glow{position:absolute;inset:0;z-index:-1;background:radial-gradient(54% 60% at 50% 32%,rgba(198,161,107,.08),transparent 72%)}
+  .hire-wrap{flex:1;display:flex;flex-direction:column;width:100%;max-width:940px;margin:0 auto;padding:6px calc(var(--pad) + 14px) var(--pad)}
+  .hire-h{font-family:var(--serif);font-weight:500;font-size:clamp(2.1rem,4vw,3rem);line-height:1.04;letter-spacing:-.4px;margin:14px 0 12px}
+  .hire-h em{font-style:italic;color:var(--gold)}
+  .hire-sub{color:rgba(245,241,232,.66);font-size:1.02rem;line-height:1.55;max-width:56ch;margin-bottom:22px}
+  .hire-watch{font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
+  .yt-facade{position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:0 0 26px;border:1px solid var(--line);border-radius:6px;overflow:hidden;cursor:pointer;background:var(--black)}
+  .yt-facade img,.yt-facade iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;display:block}
+  .yt-facade .yt-play{position:absolute;inset:0;margin:auto;width:64px;height:64px;border-radius:50%;background:rgba(198,161,107,.94);display:grid;place-items:center;transition:transform .25s var(--ease),box-shadow .25s;box-shadow:0 8px 30px -8px rgba(0,0,0,.7)}
+  .yt-facade .yt-play::after{content:"";border-left:20px solid #0A0A0A;border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:5px}
+  .yt-facade:hover .yt-play{transform:scale(1.08)}
+  .yt-facade.loaded .yt-play{display:none}
+  .hire-book{max-width:520px;border:1px solid var(--line);border-radius:6px;padding:28px 30px;background:rgba(245,241,232,.02)}
+  .hire-book-line{font-family:var(--serif);font-style:italic;font-size:1.15rem;line-height:1.5;color:rgba(245,241,232,.85);margin:0 0 20px}
+  .hire-fallback{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;color:var(--gray);margin-top:14px}
+  .hire-fallback a{color:var(--gold);text-decoration:none}
+  .hire-fallback a:hover{text-decoration:underline}
+
+  /* ============ CREDITS / PROOF BAND (home, below the doors) ============ */
+  .proof{position:relative;z-index:3;background:var(--black);border-top:1px solid var(--gold-line);padding:clamp(46px,7vw,82px) 0 clamp(44px,6vw,68px);text-shadow:none}
+  /* Résumé band: the words lead. A small, incidental clip of the edit desk sits beside them, not a hero shot. */
+  .proof-intro{padding:clamp(34px,5vw,58px) calc(var(--pad) + 14px);margin:0 auto clamp(26px,4vw,38px);display:grid;grid-template-columns:.92fr 1.08fr;align-items:center;gap:clamp(20px,3vw,28px) clamp(40px,6vw,80px);max-width:1280px}
+  .proof-intro>.kicker{grid-column:1/-1}
+  .proof-copy{min-width:0}
+  .proof-line{font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,2.6vw,1.68rem);line-height:1.34;color:var(--paper);margin:12px 0 0;max-width:44ch}
+  .proof-line b{font-style:normal;font-weight:500;color:var(--gold)}
+  .proof-cred{font-family:var(--serif);font-style:italic;font-size:clamp(1.05rem,2vw,1.32rem);line-height:1.44;color:rgba(245,241,232,.9);margin:16px 0 0}
+  .proof-cred b{font-style:normal;font-weight:500;color:var(--gold)}
+  .proof-panel{position:relative;margin:0;width:100%;border:1px solid var(--gold-line);border-radius:0;overflow:hidden;aspect-ratio:16/9;background:var(--black);box-shadow:0 16px 38px -24px rgba(0,0,0,.8)}
+  /* NLE bezel: inner border channel */
+  .proof-panel::before{content:"";position:absolute;inset:3px;border:1px solid rgba(198,161,107,.07);pointer-events:none;z-index:3}
+  /* full, clear clip of the edit desk; credits sit over it with a legibility scrim + glow */
+  .proof-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 32%;display:block;filter:saturate(.9) contrast(1.03) brightness(.82)}
+  .proof-panel::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,16,14,.85) 0%,rgba(20,16,14,.55) 34%,rgba(20,16,14,.12) 66%,rgba(20,16,14,0) 100%),linear-gradient(180deg,rgba(20,16,14,0) 64%,rgba(20,16,14,.55) 100%);pointer-events:none}
+  /* NLE timecode readout */
+  .pm-tc{position:absolute;right:12px;bottom:14px;font-family:var(--mono);font-size:.52rem;letter-spacing:.08em;color:rgba(245,241,232,.52);text-shadow:0 0 6px rgba(198,161,107,.14);pointer-events:none;z-index:3}
+  /* NLE transport bar */
+  .pm-transport{position:absolute;bottom:0;left:0;width:100%;height:10px;z-index:3;pointer-events:none}
+  /* the "credit list on a script" overlay — title-page credit block, glowing over the clip */
+  .proof-credits{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;gap:clamp(8px,2vw,12px);padding:clamp(18px,7%,28px);padding-top:clamp(36px,9%,48px)}
+  /* NLE header label */
+  .pc-eyebrow{position:absolute;top:10px;left:clamp(18px,7%,28px);font-family:var(--mono);font-size:.44rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);text-shadow:0 0 12px rgba(198,161,107,.4),0 1px 8px rgba(0,0,0,.6);z-index:3}
+  .pc-rule{position:absolute;top:26px;left:0;right:0;width:100%;height:1px;background:rgba(198,161,107,.10);box-shadow:none;z-index:3}
+  .pc-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:clamp(8px,1.9vw,12px)}
+  .pc-list li{font-family:var(--mono);font-size:clamp(.62rem,1.3vw,.76rem);letter-spacing:.14em;text-transform:uppercase;line-height:1;color:var(--paper);text-shadow:0 1px 12px rgba(0,0,0,.7),0 0 4px rgba(0,0,0,.6);position:relative;cursor:default}
+  .pc-list li span{color:var(--gold)}
+  /* credit tooltips */
+  .pc-tip{position:absolute;left:calc(100% + 14px);top:50%;transform:translateY(-50%);white-space:nowrap;font-family:var(--mono);font-size:clamp(.56rem,1.1vw,.66rem);letter-spacing:.06em;text-transform:none;color:var(--paper);opacity:0;pointer-events:none;transition:opacity .3s var(--ease);background:rgba(44,38,34,.82);padding:4px 9px;border-radius:2px;border:1px solid var(--gold-line);text-shadow:none;box-shadow:0 4px 12px rgba(0,0,0,.4)}
+  .pc-list li:hover .pc-tip,.pc-list li:focus-within .pc-tip{opacity:1}
+  @media (max-width:680px){.pc-tip{display:none}}
+  .pc-credit-link{color:var(--paper);text-decoration:none;transition:color .25s}
+  .pc-credit-link:hover,.pc-credit-link:focus-visible{color:var(--gold)}
+  /* Taylor — the rare one; brighter gold with a breathing glow */
+  .pc-list li .pc-star{color:#E7C877;text-decoration:none;cursor:pointer;text-shadow:0 0 11px rgba(231,200,119,.55),0 0 24px rgba(198,161,107,.3),0 1px 12px rgba(0,0,0,.7);animation:pcStar 3.4s ease-in-out infinite;transition:color .25s}
+  a.pc-star:hover,a.pc-star:focus-visible{color:#F3E2A8;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+  /* touch devices have no hover — keep a subtle underline so it reads as tappable */
+  @media (hover:none){a.pc-star{text-decoration:underline;text-decoration-color:rgba(231,200,119,.55);text-underline-offset:4px;text-decoration-thickness:1px}}
+  @keyframes pcStar{0%,100%{text-shadow:0 0 10px rgba(231,200,119,.5),0 0 20px rgba(198,161,107,.24),0 1px 12px rgba(0,0,0,.7)}50%{text-shadow:0 0 18px rgba(231,200,119,.92),0 0 40px rgba(198,161,107,.5),0 1px 12px rgba(0,0,0,.7)}}
+  .faves{padding:0 calc(var(--pad) + 14px);margin-top:clamp(36px,5vw,58px)}
+  .faves-head{display:flex;align-items:baseline;justify-content:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+  .faves-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .fave-pair{display:flex;flex-direction:column;text-decoration:none;color:inherit}
+  .fave-tile{position:relative;display:block;aspect-ratio:16/9;max-width:none;margin:0;border:1px solid var(--line);border-radius:4px;overflow:hidden;cursor:pointer;background:var(--black);transition:border-color .4s var(--ease),transform .4s var(--ease),box-shadow .4s var(--ease)}
+  .fave-tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.03) brightness(.98);transition:filter .55s var(--ease),transform .7s var(--ease)}
+  .fave-tile.fave-screen img{filter:saturate(.9) contrast(1.04) brightness(.9)}
+  .fave-tile:hover,.fave-tile:focus-visible{border-color:var(--gold-line);transform:translateY(-3px);box-shadow:0 18px 40px -20px rgba(0,0,0,.75)}
+  .fave-tile:hover img,.fave-tile:focus-visible img{filter:saturate(1.05) contrast(1.02) brightness(1.03);transform:scale(1.03)}
+  .fave-tile.fave-screen:hover img,.fave-tile.fave-screen:focus-visible img{filter:saturate(1.02) contrast(1.03) brightness(.95);transform:scale(1.03)}
+  .fave-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(44,38,34,0) 60%,rgba(44,38,34,.3) 100%);pointer-events:none}
+  .fave-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;width:44px;height:44px;border-radius:50%;border:1px solid rgba(245,241,232,.55);background:rgba(44,38,34,.18);box-shadow:0 2px 14px rgba(0,0,0,.35);display:grid;place-items:center;opacity:0;transition:opacity .35s var(--ease),border-color .35s var(--ease)}
+  .fave-play::after{content:"";border-left:13px solid var(--paper);border-top:8px solid transparent;border-bottom:8px solid transparent;margin-left:3px}
+  .vid-facade video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;display:block;background:#000}
+  .fave-arrow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;width:44px;height:44px;border-radius:50%;border:1px solid rgba(245,241,232,.55);background:rgba(44,38,34,.18);box-shadow:0 2px 14px rgba(0,0,0,.35);display:grid;place-items:center;opacity:0;font-family:var(--mono);font-size:1.2rem;color:var(--paper);transition:opacity .35s var(--ease),border-color .35s var(--ease),transform .35s var(--ease)}
+  .fave-tile:hover .fave-arrow,.fave-pair:focus-visible .fave-arrow{opacity:1;border-color:rgba(198,161,107,.72)}
+  .fave-cap .ar,.fave-blurb .ar{color:var(--gold)}
+  .story-tile img{filter:saturate(.92) contrast(1.02) brightness(.94)}
+  .story-cap{opacity:.9}
+  .story-badge{position:absolute;top:11px;left:12px;z-index:2;font-family:var(--mono);font-size:.54rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);background:rgba(44,38,34,.55);padding:4px 8px;border:1px solid var(--gold-line)}
+  .story-ad{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;justify-content:center;gap:7px;padding:14px clamp(12px,2.6vw,18px);background:linear-gradient(0deg,rgba(44,38,34,.93),rgba(44,38,34,.82));opacity:0;pointer-events:none;transition:opacity .4s var(--ease)}
+  .story-pair:hover .story-ad,.story-pair:focus-visible .story-ad,.story-pair:focus-within .story-ad{opacity:1}
+  .fave-tile.loaded .story-ad{display:none}
+  /* touch devices: hide the hover overlay entirely — captions below tiles are enough */
+  @media (hover:none){
+    .story-ad{display:none}
+  }
+  .story-ad-lede{font-family:var(--mono);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0}
+  .story-ad-facts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:5px}
+  .story-ad-facts li{font-family:var(--serif);font-style:italic;font-size:clamp(.82rem,1.3vw,1rem);line-height:1.22;color:var(--paper);padding-left:13px;position:relative}
+  .story-ad-facts li::before{content:"·";position:absolute;left:0;color:var(--gold);font-style:normal}
+  .story-ad-cta{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:3px}
+  .fave-tile:hover .fave-play,.fave-tile:focus-visible .fave-play{opacity:1;border-color:rgba(198,161,107,.72)}
+  .fave-cap{font-family:var(--serif);font-style:italic;font-size:clamp(.82rem,1vw,.98rem);line-height:1.3;color:var(--paper);opacity:.62;margin:11px 2px 0}
+  .fave-blurb{font-family:var(--mono);font-size:.62rem;letter-spacing:.03em;line-height:1.5;color:rgba(245,241,232,.52);margin:5px 2px 0}
+  .fave-tile.loaded .fave-scrim,.fave-tile.loaded .fave-play{display:none}
+  .fave-tile.loaded ~ .fave-cap,.fave-tile.loaded ~ .fave-blurb{display:none}
+
+  /* ============ NEWSLETTER (home, after selected work) ============ */
+  .signup{position:relative;z-index:3;background:var(--black);border-top:1px solid var(--gold-line);padding:clamp(36px,5vw,56px) calc(var(--pad) + 14px)}
+  .signup-inner{max-width:560px;margin:0 auto}
+  .signup-h{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(1.1rem,2.2vw,1.4rem);line-height:1.3;color:var(--paper);margin:10px 0 0}
+  .signup-sub{font-family:var(--sans);font-size:.88rem;line-height:1.55;color:rgba(245,241,232,.68);margin:12px 0 0;max-width:46ch}
+  .signup-form{margin-top:20px}
+  .signup-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  .signup-input{flex:1 1 240px;min-width:0;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--paper);font-family:var(--sans);font-size:1.1rem;padding:12px 0;outline:none;transition:border-color .3s}
+  .signup-input:focus{border-color:var(--gold)}
+  .signup-input::placeholder{color:var(--gray)}
+  .signup-row .btn{flex:0 0 auto}
+  .signup-optional{margin-top:14px}
+  .signup-seg-label{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gray);margin:22px 0 9px}
+  .signup-select{position:relative;max-width:340px}
+  .signup-select::after{content:'\25BE';position:absolute;right:2px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:.8rem;pointer-events:none}
+  .signup-select select{width:100%;appearance:none;-webkit-appearance:none;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--paper);font-family:var(--sans);font-size:1.05rem;padding:11px 22px 11px 0;outline:none;cursor:pointer;color-scheme:dark;transition:border-color .3s}
+  .signup-select select:focus{border-color:var(--gold)}
+  .signup-done{margin-top:26px}
+  .signup-done-h{font-family:var(--serif);font-style:italic;font-size:clamp(1.35rem,3vw,1.7rem);color:var(--gold);margin:0}
+  .signup-done-sub{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;color:var(--gray);margin:9px 0 0}
+  .signup-fine{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);margin:22px 0 0}
+
+  /* ---- mini capture (home, under the doors) — reuses signup styles ---- */
+  .mini-capture{position:relative;z-index:3;margin:0 calc(var(--pad) + 14px);padding:20px 0 calc(var(--pad) + 6px);border-top:1px solid var(--line);max-width:560px;opacity:0;transform:translateY(14px);animation:rise .8s var(--ease) 1.2s forwards}
+  .mini-capture-label{font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gray);margin-bottom:2px}
+  .mini-capture-row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .mini-capture-done{font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--gold);margin-top:10px}
+  @media (max-width:760px){
+    .mini-capture-row .btn{width:100%;justify-content:center}
+  }
+  @media (max-width:640px){
+    .faves-grid{grid-template-columns:1fr 1fr;gap:16px 12px}
+    .fave-cap{font-size:.78rem;opacity:.82;margin:8px 0 0}
+    .fave-blurb{display:none}
+    .story-badge{font-size:.46rem;padding:3px 6px;top:8px;left:8px}
+    .story-ad{padding:10px}
+    .story-ad-lede{font-size:.5rem}
+    .story-ad-facts li{font-size:.76rem}
+    .story-ad-facts li:nth-child(n+2){display:none}
+    .story-ad-cta{font-size:.5rem}
+  }
+  @media (max-width:400px){
+    .faves-grid{grid-template-columns:1fr;gap:22px}
+    .fave-cap{font-size:.88rem;margin:10px 0 0}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .fave-tile img,.fave-tile:hover img,.fave-tile:focus-visible img{transition:none;transform:none}
+    .fave-tile:hover,.fave-tile:focus-visible{transform:none}
+    .fave-play{transition:none}
+  }
+
+  /* ---------------- RESPONSIVE ---------------- */
+  @media (max-width:980px){
+    .doors{grid-template-columns:repeat(2,1fr);column-gap:28px}
+    .door,.door + .door{border-left:0;padding-left:0}
+    .door:nth-child(n+3){border-top:1px solid var(--line);padding-top:18px}
+    .door .underline,.door + .door .underline{left:0}
+  }
+  @media (max-width:880px){
+    .tm-stage,.th-stage{grid-template-columns:1fr;gap:34px;padding-top:0}
+    /* mobile: unwrap the reels column so the IG strip can reorder BELOW the C&N story text */
+    .th-reels{display:contents}
+    .th-ig{order:1}
+    .th-ig-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+    .th-ig-grid .cap{font-size:.56rem}
+    .reel{height:min(56vh,460px)}
+    .tm-form,.th-wrap{max-width:none;margin:0 auto}
+    .th-reels{max-width:none}
+  }
+  @media (max-width:760px){
+    :root{--pad:18px}
+    .doors{grid-template-columns:1fr;margin-top:24px}
+    .door{padding:18px 0 !important;border-left:0 !important}
+    .door + .door{border-top:1px solid var(--line)}
+    .door .underline,.door + .door .underline{left:0}
+    .door .desc{max-width:none}
+    .home-spacer{min-height:48px}
+    /* phone = sort first: credits + Taylor hook repeat in the proof band below; shorter peeks so both money doors clear the fold */
+    .credits,.ts-hook{display:none}
+    .door-peek{aspect-ratio:21/9}
+    /* Noblepost is a designed card (heads top, lockup center, tag bottom) — 21:9 guillotines it. Give it its native ratio so it shows whole. */
+    .door-peek.noble-mark{aspect-ratio:900/562}
+    .tm-row{grid-template-columns:1fr;gap:0}
+    .th-notify{flex-direction:column;align-items:stretch}
+    .th-row{flex-direction:column;gap:0}
+    .np-top{position:static;padding:calc(var(--pad) + 6px) calc(var(--pad) + 14px) 0}
+    .np-wrap{padding-top:24px}
+    /* phones: no scrubber, and the carousel holds ONE still frame (no auto-advance / no drone clip) */
+    .hero-frames{display:none}
+    /* mobile readability: dim slides + deepen scrim behind the text */
+    #view-home .slide{filter:saturate(1.04) contrast(.98) brightness(.8)}
+    /* rest on a clean warm gradient — welcoming, no photo, easy on the eyes */
+    #view-home .slide.lead{background-image:radial-gradient(120% 78% at 50% 16%,rgba(210,175,120,.28) 0%,rgba(210,175,120,0) 46%);background-color:#221d19;filter:none}
+    #view-home .slide.is-active{animation:none}
+    #view-home .slide.has-video{display:none}
+    #view-home .scrim{background:linear-gradient(180deg,rgba(44,38,34,.3) 0%,rgba(44,38,34,.14) 26%,rgba(44,38,34,.55) 60%,rgba(44,38,34,.94) 100%)}
+    .name{text-shadow:0 2px 18px rgba(0,0,0,.6)}
+    .tagline{text-shadow:0 1px 10px rgba(0,0,0,.7)}
+    /* mobile readability bumps over photos */
+    .credits{font-size:.62rem;flex-direction:column;align-items:flex-start;gap:6px}
+    .ts-hook{margin-top:12px;gap:6px}
+    .credits .lbl{color:var(--gold)}
+    .cred-row{flex-wrap:nowrap;gap:7px}
+    .door .desc{color:rgba(245,241,232,.78)}
+    /* proof band on phones: stack; the small clip stays small and sits under the copy */
+    .proof-intro{grid-template-columns:1fr;gap:20px;padding:clamp(30px,7vw,44px) var(--pad)}
+    .proof-copy{max-width:none}
+    .proof-panel{width:min(560px,92vw);aspect-ratio:16/9;border-radius:4px;background:url("media/resume-panel.jpg") center 32%/cover no-repeat}
+    /* phones: still poster instead of the looping résumé clip; freeze the reel progress bar */
+    .proof-vid{display:none}
+    .reel-prog i{animation:none;width:0}
+    /* flywheel stacks on phones */
+    .flywheel{padding:clamp(30px,7vw,44px) var(--pad)}
+    .flywheel-row{flex-direction:column;gap:16px}
+    /* hide NLE chrome on mobile — keep it clean */
+    .pm-tc,.pm-transport,.proof-panel::before{display:none}
+    .pc-eyebrow{position:static;font-size:clamp(.46rem,1vw,.55rem);letter-spacing:.26em}
+    .pc-rule{position:static;width:24px;top:auto;left:auto;right:auto;background:var(--gold-line);box-shadow:0 0 8px rgba(198,161,107,.35)}
+    .proof-credits{justify-content:center;padding-top:clamp(18px,7%,28px)}
+    .pc-list li{font-size:clamp(.66rem,1.6vw,.78rem)}
+    .signup-input{flex-basis:100%}
+    .signup-row .btn{width:100%;justify-content:center}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none !important;transition:none !important}
+    .nameplate,.tagline,.credits,.ts-hook,.door,.ticks span{opacity:1 !important;transform:none !important}
+    #view-home .slide.is-active{opacity:1 !important}
+    /* still frame instead of the looping clip */
+    .proof-vid{display:none}
+    /* reduced-motion: show poster as bg since ::before is used for NLE bezel */
+    .proof-panel{background:url("media/resume-panel.jpg") center 32%/cover no-repeat}
+    .proof-vid{opacity:0}
+  }
+</style>
+</head>
+<body>
+
+<!-- =================== ANNOUNCEMENT BAR =================== -->
+<div class="announce" id="announce">
+  <a class="announce-link" href="/notes/002-steph-was-right">
+    <span class="announce-tag">NEW POST</span>
+    <span class="announce-txt"><b>She saw a studio. I saw a basement.</b><span class="announce-sub">The Tonehomes origin story — one house, two units.</span></span>
+    <span class="announce-cta">Read it <span class="ar" aria-hidden="true">→</span></span>
+  </a>
+  <button class="announce-x" id="announceX" type="button" aria-label="Dismiss announcement">&times;</button>
+</div>
+<script>
+(function(){var a=document.getElementById('announce'),x=document.getElementById('announceX');if(!a||!x)return;
+  try{if(sessionStorage.getItem('ann-002')==='x'){a.style.display='none';return;}}catch(e){}
+  x.addEventListener('click',function(){a.style.display='none';try{sessionStorage.setItem('ann-002','x');}catch(e){}});})();
+</script>
+
+<!-- =================== HOME =================== -->
+<section class="view active" id="view-home">
+ <div class="hero-screen">
+  <div class="hero-carousel" aria-hidden="true">
+    <div class="slide is-active lead"></div>
+    <div class="slide has-video">
+      <video class="slide-vid" muted loop playsinline preload="none" data-poster="media/dronein-poster.jpg">
+        <source src="media/dronein-web.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="slide" data-bg="media/scene-01-walking-web.jpg"></div>
+    <div class="slide" data-bg="media/family-blanket-web.jpg"></div>
+  </div>
+  <div class="hero-frames" id="heroFrames" aria-label="Chapters">
+    <button class="on" data-i="0" aria-label="Family"></button>
+    <button data-i="1" aria-label="The films"></button>
+    <button data-i="2" aria-label="The life"></button>
+    <button data-i="3" aria-label="Family"></button>
+  </div>
+  <div class="scrim"></div>
+  <div class="ticks" aria-hidden="true"><span class="tl"></span><span class="tr"></span><span class="bl"></span><span class="br"></span></div>
+
+  <header class="bar">
+    <a href="#" class="wordmark">tone<span class="dot">.</span>dad</a>
+    <div class="meta" aria-hidden="true"><span class="rec"></span><span>REC</span><span class="tc" id="tc">00:00:00:00</span></div>
+  </header>
+
+  <div class="home-spacer"></div>
+
+  <div class="home-content">
+    <div class="nameplate">
+      <h1 class="name">Justin Herrera</h1>
+      <p class="role">Filmmaker · Founder · Dad</p>
+    </div>
+    <p class="tagline">Getting married? I'll make the film. Looking for a home in New Jersey? I'll help you find it. Either way — glad you're here.</p>
+    <p class="credits"><span class="lbl">SHAMELESS NAME-DROP</span><span class="cred-row"><a class="cred ts-logo" href="/notes/001-blank-space" aria-label="Taylor Swift, read the story"><span class="ts-mark">Taylor Swift</span><i class="spark s1" aria-hidden="true">✦</i><i class="spark s2" aria-hidden="true">✧</i><i class="spark s3" aria-hidden="true">✦</i><i class="spark s4" aria-hidden="true">⋆</i></a><span class="sep">/</span><span class="cred jets-logo" tabindex="0" role="button" aria-label="New York Jets"><span class="jets-mark">New York Jets</span><span class="cred-pop">Five seasons with the Jets. I handle the highlights, they handle the heartbreak. #JetUp</span></span><span class="sep">/</span><span class="cred nbc-logo" tabindex="0" role="button" aria-label="NBC"><span class="nbc-mark">NBC</span><span class="cred-pop">Current gig: still cutting for NBC. Yes, that NBC.</span></span></span></p>
+    <a class="ts-hook" href="/notes/001-blank-space"><span class="ts-hook-lead">My actual phone is in Taylor Swift's Blank Space.</span> <span class="ts-hook-cta">Read the story <span class="ar" aria-hidden="true">→</span></span></a>
+  </div>
+
+  <div class="offerings">
+  <nav class="doors" aria-label="Where to next">
+    <a class="door" href="https://tonemediastudio.com?utm_source=tonedad&utm_medium=hub&utm_campaign=door" target="_blank" rel="noopener">
+      <span class="door-peek" aria-hidden="true"><img src="media/peek-tonemedia-fd.jpg" alt="First dance at a New Jersey wedding — still from a Tonemedia wedding film" loading="lazy"><video muted loop playsinline preload="none" data-src="media/peek-tonemedia-fd.mp4"></video></span>
+      <span class="underline"></span>
+      <span class="num">01</span>
+      <span class="title">Tonemedia <span class="arrow">→</span></span>
+      <span class="desc">Getting married? That's my lane.</span>
+    </a>
+    <button class="door" data-go="view-tonehomes">
+      <span class="door-peek" aria-hidden="true"><img src="media/peek-tonehomes-couple.jpg" alt="Couple outside their new home in Morris County, NJ — Tonehomes real estate" loading="lazy"><video muted loop playsinline preload="none" data-src="media/peek-tonehomes-couple.mp4"></video></span>
+      <span class="underline"></span>
+      <span class="num">02</span>
+      <span class="title">Tonehomes <span class="arrow">→</span></span>
+      <span class="desc">Buying or selling in NJ? I'll walk it with you. Morris County and beyond.</span>
+    </button>
+    <a class="door" href="/notes">
+      <span class="door-peek" aria-hidden="true"><img src="media/peek-notes.jpg" alt="Taylor Swift holding a phone in the Blank Space video — read the story"><video muted loop playsinline preload="none" data-src="media/blank-space-stairs.mp4"></video><span class="door-ribbon"><span>NEW POST</span></span></span>
+      <span class="underline"></span>
+      <span class="num">03</span>
+      <span class="title">tone.notes <span class="arrow">→</span></span>
+      <span class="desc">The stories behind the work. That's my phone in her hand.</span>
+    </a>
+    <a class="door" href="https://nobleposthouse.com?utm_source=tonedad&utm_medium=hub&utm_campaign=door" target="_blank" rel="noopener">
+      <span class="door-peek noble-mark" aria-hidden="true"><img src="media/peek-noblepost-card.jpg" alt="Bride and groom laughing — Noblepost, wedding editing for busy studios" loading="lazy"><span class="nm-shine"></span></span>
+      <span class="underline"></span>
+      <span class="num">04</span>
+      <span class="title">Noblepost <span class="arrow">→</span></span>
+      <span class="desc">Your backlog, gone.</span>
+    </a>
+  </nav>
+  <form class="mini-capture" id="mc-form" novalidate aria-label="Get the stories by email">
+    <div class="hp-field" aria-hidden="true"><label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
+    <p class="mini-capture-label">Neither door? Take the stories instead.</p>
+    <div class="mini-capture-row">
+      <input type="email" id="mc-email" class="signup-input" placeholder="you@email.com" aria-label="Your email" autocomplete="email" required>
+      <button type="submit" class="btn">Subscribe <span class="ar" aria-hidden="true">&rarr;</span></button>
+    </div>
+    <p class="form-msg" id="mc-msg">That email looks off. Try again.</p>
+    <p class="mini-capture-done" id="mc-done" hidden>You're in. First up: the file from the Blank Space shoot.</p>
+  </form>
+  </div>
+ </div><!-- /.hero-screen -->
+
+  <!-- ============ FLYWHEEL — wedding → house, proven before you pick a door ============ -->
+  <section class="flywheel" aria-label="From wedding film to house keys">
+    <p class="flywheel-intro">Same clients, four years apart. First I filmed the wedding. Then I found them the house.</p>
+    <div class="flywheel-row">
+      <figure class="th-clip" aria-label="Craig and Nicole's wedding, 2022">
+        <video muted loop playsinline preload="none" poster="media/cn-wedding-poster.jpg">
+          <source src="media/cn-wedding-web.mp4" type="video/mp4">
+        </video>
+        <span class="th-who">Craig &amp; Nicole</span>
+        <figcaption class="th-slate"><span class="rec"></span>2022 · Tonemedia filmed the wedding</figcaption>
+      </figure>
+      <div class="fw-arc">Four years<br>later →</div>
+      <figure class="th-clip" aria-label="Craig and Nicole's new house, 2026">
+        <video muted loop playsinline preload="none" poster="media/cn-house-poster.jpg">
+          <source src="media/cn-house-web.mp4" type="video/mp4">
+        </video>
+        <figcaption class="th-slate"><span class="rec"></span>2026 · Tonehomes found the home</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ CREDITS / PROOF BAND ============ -->
+  <section class="proof" aria-label="Selected credits and favorite films">
+    <div class="proof-intro">
+      <span class="kicker">The résumé, briefly</span>
+      <figure class="proof-panel">
+        <video class="proof-vid" src="media/resume-panel.mp4" poster="media/resume-panel.jpg" autoplay muted loop playsinline preload="metadata"></video>
+        <figcaption class="proof-credits">
+          <span class="pc-eyebrow">Selected Credits</span>
+          <span class="pc-rule"></span>
+          <ul class="pc-list">
+            <li><a class="pc-star" href="/notes/001-blank-space" title="Read the story — on-set editor on Blank Space">Taylor Swift</a><span class="pc-tip">On-set editor, Blank Space</span></li>
+            <li>Katy Perry<span class="pc-tip">Contracted 3× for remix edits</span></li>
+            <li>Lady Gaga<span class="pc-tip">Asst. editor — Born This Way, Alejandro</span></li>
+            <li>The Jets<span class="pc-tip">Video editor, 5 seasons (Rex Ryan era)</span></li>
+            <li><a class="pc-credit-link" href="https://www.youtube.com/watch?v=d2GKP_W5-c8" target="_blank" rel="noopener">NBC</a><span class="pc-tip">Currently: EPK for Anna Pigeon</span></li>
+          </ul>
+        </figcaption>
+        <span class="pm-tc" aria-hidden="true">01:04:32:14</span>
+        <svg class="pm-transport" viewBox="0 0 600 10" preserveAspectRatio="none" aria-hidden="true">
+          <line x1="0" y1="5" x2="600" y2="5" stroke="rgba(198,161,107,0.14)" stroke-width="0.75"/>
+          <line x1="138" y1="1" x2="138" y2="9" stroke="rgba(198,161,107,0.38)" stroke-width="1"/>
+        </svg>
+      </figure>
+      <div class="proof-copy">
+        <p class="proof-line">Dad by day, editor by way-too-late-at-night. I've cut for Taylor, Katy, NBC &mdash; and I'll be honest, the weddings I do hit different. Big names validate the technical skill. Real weddings validate the heart. (Also, I edit faster than I dad-joke, which isn't saying much.)</p>
+      </div>
+    </div>
+
+    <div class="faves">
+      <div class="faves-head">
+        <span class="kicker">Selected work</span>
+      </div>
+      <div class="faves-grid">
+        <a class="fave-pair story-pair" href="/notes/001-blank-space" aria-label="Read the story: on-set editor on Taylor Swift's Blank Space">
+          <div class="fave-tile story-tile">
+            <img src="media/reel-blankspace.jpg" alt="Behind the scenes on Taylor Swift's Blank Space music video at Oheka Castle" loading="lazy">
+            <span class="fave-scrim" aria-hidden="true"></span>
+            <span class="story-badge" aria-hidden="true">Notes · 001</span>
+            <div class="story-ad" aria-hidden="true">
+              <p class="story-ad-lede">On the "Blank Space" set</p>
+              <ul class="story-ad-facts">
+                <li>My actual phone is in the video.</li>
+                <li>Taylor watched my cut, then showed her mom.</li>
+              </ul>
+              <span class="story-ad-cta">The full story →</span>
+            </div>
+          </div>
+          <p class="fave-cap story-cap">Taylor Swift, Blank Space</p>
+          <p class="fave-blurb">My actual phone is in it. Read the story <span class="ar">→</span></p>
+        </a>
+        <div class="fave-pair story-pair">
+          <div class="fave-tile vid-facade" data-vid="media/reel-sprout.mp4" role="button" tabindex="0" aria-label="Play: Sprout, remixed and cut">
+            <img src="media/reel-sprout.jpg" alt="Still from Justin Herrera's Sprout network remix edit" loading="lazy">
+            <span class="fave-scrim" aria-hidden="true"></span>
+            <span class="fave-play" aria-hidden="true"></span>
+            <div class="story-ad" aria-hidden="true">
+              <p class="story-ad-lede">The Sprout remix</p>
+              <ul class="story-ad-facts">
+                <li>They had me remix the whole catalog — fifteen cuts.</li>
+                <li>This is the one I actually saved.</li>
+              </ul>
+              <span class="story-ad-cta">Play it →</span>
+            </div>
+          </div>
+          <p class="fave-cap">Sprout, remixed and cut</p>
+          <p class="fave-blurb">I remixed the song. It sparked fifteen network remixes.</p>
+        </div>
+        <div class="fave-pair story-pair">
+          <div class="fave-tile vid-facade" data-vid="media/reel-usa.mp4" role="button" tabindex="0" aria-label="Play: USA Network, the Must Watch List">
+            <img src="media/reel-usa.jpg" alt="Frame from Justin Herrera's USA Network Must Watch marathon promo" loading="lazy">
+            <span class="fave-scrim" aria-hidden="true"></span>
+            <span class="fave-play" aria-hidden="true"></span>
+            <div class="story-ad" aria-hidden="true">
+              <p class="story-ad-lede">USA · Must Watch</p>
+              <ul class="story-ad-facts">
+                <li>My first promo cut for the USA movie marathon.</li>
+                <li>I watched these as a kid. Then I made one. Full circle.</li>
+              </ul>
+              <span class="story-ad-cta">Play the promo →</span>
+            </div>
+          </div>
+          <p class="fave-cap">USA Network, the Must Watch List</p>
+          <p class="fave-blurb">My first edit for USA Network.</p>
+        </div>
+        <div class="fave-pair story-pair">
+          <div class="fave-tile vid-facade" data-vid="media/reel-teenage-dream.mp4" role="button" tabindex="0" aria-label="Play: Katy Perry, Teenage Dream — Tommie Sunshine MegaSix Smash-Up">
+            <img src="media/reel-teenage-dream.jpg" alt="Frame from the Katy Perry MegaSix Smash-Up video remix" loading="lazy">
+            <span class="fave-scrim" aria-hidden="true"></span>
+            <span class="fave-play" aria-hidden="true"></span>
+            <div class="story-ad" aria-hidden="true">
+              <p class="story-ad-lede">The MegaSix Smash-Up</p>
+              <ul class="story-ad-facts">
+                <li>They contracted me to remix all six #1s — in video.</li>
+                <li>The effects have not aged well. Sorry.</li>
+              </ul>
+              <span class="story-ad-cta">Play it →</span>
+            </div>
+          </div>
+          <p class="fave-cap">Katy Perry, the MegaSix Smash-Up</p>
+          <p class="fave-blurb">Six of her #1s in one remix. Never done before.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section class="signup" aria-label="Subscribe to the newsletter">
+    <div class="signup-inner">
+      <span class="kicker">Occasional emails</span>
+      <h2 class="signup-h">The stuff that never makes the cut.</h2>
+      <p class="signup-sub">Notes on the work — from my inbox to yours. No feed, no algorithm.</p>
+      <form class="signup-form" id="nl-form" novalidate>
+    <div class="hp-field" aria-hidden="true"><label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
+        <div class="signup-row">
+          <input type="email" id="nl-email" class="signup-input" placeholder="you@email.com" aria-label="Your email" autocomplete="email" required>
+          <button type="submit" class="btn">Subscribe <span class="ar" aria-hidden="true">&rarr;</span></button>
+        </div>
+        <div class="signup-row signup-optional">
+          <input type="text" id="nl-name" class="signup-input" placeholder="Full name" aria-label="Full name" autocomplete="name" required>
+          <input type="tel" id="nl-phone" class="signup-input" placeholder="Phone (optional)" aria-label="Phone (optional)" autocomplete="tel" inputmode="tel">
+        </div>
+        <label class="signup-seg-label" for="nl-seg">So I know who I'm writing to</label>
+        <div class="signup-select">
+          <select id="nl-seg" aria-label="What brings you here?">
+            <option value="">What brings you here?</option>
+            <option value="wedding">I'm getting married</option>
+            <option value="homes">I'm buying or selling a home</option>
+            <option value="learn">I want to get better at video</option>
+            <option value="noblepost">I shoot weddings too</option>
+            <option value="website">I need a website update</option>
+          </select>
+        </div>
+        <p class="form-msg" id="nl-msg">That email looks off. Try again.</p>
+      </form>
+      <div class="signup-done" id="nl-done" hidden>
+        <p class="signup-done-h">You're in. Check your inbox.</p>
+        <p class="signup-done-sub">The first thing I send is the file from the Blank Space shoot.</p>
+      </div>
+      <p class="signup-fine">Always free. Never for everyone.</p>
+    </div>
+  </section>
+</section>
+
+<!-- =================== TONEMEDIA =================== -->
+<section class="view" id="view-tonemedia">
+  <div class="tm-glow"></div>
+  <header class="bar">
+    <button class="backbtn" data-go="view-home" aria-label="Back to home"><span class="ar" aria-hidden="true">←</span> Back</button>
+    <div class="meta"><span class="rec"></span><span>Tonemedia</span></div>
+  </header>
+
+  <div class="tm-stage">
+    <div class="reel" aria-label="Wedding reel">
+      <video muted loop playsinline preload="none" poster="media/tonemedia-reel-poster.jpg">
+        <source src="media/tonemedia-reel-web.mp4" type="video/mp4">
+      </video>
+      <div class="reel-vig"></div>
+      <div class="reel-tag">Reel · 9:16</div>
+      <div class="reel-bar"><span class="reel-tc" id="reel-tc">0:00 / 0:12</span><span class="reel-prog"><i></i></span></div>
+    </div>
+
+    <div class="tm-form">
+      <!-- LIVE: multi-step inquiry (commitment escalation, ≤3 fields/step) -->
+      <div class="tm-live">
+        <p class="kicker">Film inquiry</p>
+        <p class="door-kicker">NJ Wedding Films · Tonemedia</p>
+        <h2 class="tm-h">Let's film your day.</h2>
+        <a class="ext-link" href="https://tonemediastudio.com?utm_source=tonedad&utm_medium=hub&utm_campaign=door" target="_blank" rel="noopener">See the full studio · tonemediastudio.com <span class="ar">→</span></a>
+        <p class="tm-sub">Twelve years, 350 weddings, a perfect record I'd like to keep. Tell me about yours. Let's start with your date.</p>
+        <p class="tm-proof"><span class="stars">★★★★★</span> <span class="cup" data-to="350">350</span> weddings · <span class="cup" data-to="12">12</span> years · zero bad reviews</p>
+
+        <form id="tm-form" novalidate>
+    <div class="hp-field" aria-hidden="true"><label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
+          <div class="tm-step on" data-step="1">
+            <div class="tm-row">
+              <div class="field"><label>Wedding date</label><input type="text" id="tm-date" placeholder="Oct 2026 or 'TBD'" autocomplete="off"><span class="err-msg">when's the day (a guess is fine)?</span></div>
+              <div class="field"><label>You + your person</label><input type="text" id="tm-names" placeholder="Alex & Sam" autocomplete="name"><span class="err-msg">who am I writing back to?</span></div>
+            </div>
+            <div class="field"><label>Email</label><input type="email" id="tm-email" placeholder="you@email.com" autocomplete="email" inputmode="email"><span class="err-msg">need a real email to reach you</span></div>
+            <div class="tm-nav">
+              <button type="button" class="btn" id="tm-next">Check my date <span class="ar">→</span></button>
+              <span class="tm-progress">Step 1 of 2</span>
+            </div>
+          </div>
+          <div class="tm-step" data-step="2">
+            <div class="field"><label>Where <span class="opt-tag">(optional)</span></label><input type="text" id="tm-where" placeholder="Venue or just a city · TBD works"></div>
+            <div class="field"><label>Tell me about you two <span class="opt-tag">(optional)</span></label><textarea id="tm-about" placeholder="How'd you meet? What's the day gonna feel like? Anything I should know."></textarea></div>
+            <div class="field"><label>Phone <span class="opt-tag">(only if you'd rather I text)</span></label><input type="tel" id="tm-phone" placeholder="(optional)" autocomplete="tel" inputmode="tel"></div>
+            <div class="tm-nav">
+              <button type="submit" class="btn">Send it to Justin <span class="ar">→</span></button>
+              <button type="button" class="tm-link" id="tm-back">Back</button>
+            </div>
+            <p class="trust">No spam, ever. I read every one of these myself, back to you within a day</p>
+          </div>
+        </form>
+        <p class="form-msg" id="tm-msg">That didn't go through. Try again, or just email me directly.</p>
+      </div>
+
+      <div class="tm-done">
+        <p class="kicker">Received</p>
+        <h2 class="tm-h">Got it.</h2>
+        <p class="tm-sub">You'll hear from me within a day, and yes, it'll actually be me. In the meantime, keep an eye on your inbox.</p>
+        <button class="btn btn-ghost" data-go="view-home">Back home</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== NOBLEPOST =================== -->
+<section class="view" id="view-noblepost">
+  <div class="np-top">
+    <button class="backbtn" data-go="view-home" aria-label="Back to home"><span class="ar" aria-hidden="true">←</span> Back</button>
+    <div class="np-counter" id="np-counter"><span id="np-counter-label">Desk time</span> <b id="np-clock">00:00</b></div>
+  </div>
+
+  <div class="np-wrap">
+    <!-- intro -->
+    <div class="np-intro on" id="np-intro">
+      <p class="np-eyebrow">Noblepost · for studios</p>
+      <h2 class="np-big">How much of your life does editing eat?</h2>
+      <p class="np-lead">Be honest. Four taps, sixty seconds, then I'll do the math and show you the way out.</p>
+      <button class="btn" onclick="npStart()">Take the 60-second offload check <span class="ar">→</span></button>
+      <p style="margin-top:22px"><a class="ext-link" href="https://nobleposthouse.com" target="_blank" rel="noopener">See the full service · nobleposthouse.com <span class="ar">→</span></a></p>
+    </div>
+
+    <!-- questions -->
+    <div class="np-step" id="np-step" style="display:none">
+      <div class="np-prog" id="np-prog" aria-hidden="true"></div>
+      <h3 class="np-q" id="np-q"></h3>
+      <div id="np-opts"></div>
+    </div>
+
+    <!-- reveal + freebie -->
+    <div class="np-reveal" id="np-reveal">
+      <p class="np-eyebrow">Here's the way out</p>
+      <p class="door-kicker">Wedding Editing for Studios · Noblepost</p>
+      <h2 class="np-big">You didn't buy a camera<br>to live in a timeline.</h2>
+      <p class="np-number" id="np-number"></p>
+      <p class="np-lead">Noblepost edits. Ships under your name. No watermarks, no Noblepost branding, first draft before your next shoot. Post for studios who'd rather be behind the lens.</p>
+      <p class="np-proof">Every edit runs through my team, then lands on my desk in New Jersey for the final pass before it ships under your name. Nothing goes out I haven't watched.</p>
+
+      <div class="pricing">
+        <div class="tier">
+          <span class="t-name">The highlight<span class="t-meta">4-6 min · first cut in 2 weeks</span></span>
+          <span class="t-price">$500</span>
+        </div>
+        <div class="tier">
+          <span class="t-name">Highlight + the formalities<span class="t-meta">ceremony · vows · toasts · 2 weeks later</span></span>
+          <span class="t-price">$800</span>
+        </div>
+      </div>
+      <p class="pricenote">Introductory rates while I fill the calendar. Want the playbook first? Grab the free kit below.</p>
+
+      <div class="np-free" id="np-free">
+        <p class="tag">Free · The Offload Kit</p>
+        <h4>My intake brief, editor handoff workflow, and footage-naming checklist.</h4>
+        <p>The exact system I use to take a wedding off a plate cleanly. Ships under your name, your couples never know I existed. Yours, no strings.</p>
+        <div class="field"><label>Email</label><input type="email" id="np-email" placeholder="studio@email.com" autocomplete="email" inputmode="email"><span class="err-msg">need a real email to send the kit</span></div>
+        <button class="btn" onclick="npSubmit()">Send me the kit <span class="ar">→</span></button>
+        <p class="trust">One email. The kit. No spam, no sales-bro calls.</p>
+        <p class="form-msg" id="np-msg">That didn't send. Give it another go in a sec.</p>
+      </div>
+
+      <div class="np-done" id="np-done">
+        <p class="np-eyebrow">On its way</p>
+        <h3 class="np-q" style="margin-bottom:18px">Kit's in your inbox.</h3>
+        <p class="np-lead" style="margin-bottom:28px">Now go shoot something instead of culling it.</p>
+        <button class="btn btn-ghost" data-go="view-home">Back home</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== TONEHOMES =================== -->
+<section class="view" id="view-tonehomes">
+  <div class="th-glow"></div>
+  <header class="bar">
+    <button class="backbtn" data-go="view-home" aria-label="Back to home"><span class="ar" aria-hidden="true">←</span> Back</button>
+    <div class="meta"><span class="rec"></span><span>Tonehomes</span></div>
+  </header>
+
+  <div class="th-stage">
+    <div class="th-reels">
+      <figure class="th-clip" aria-label="Craig and Nicole's wedding, 2022">
+        <video muted loop playsinline preload="none" poster="media/cn-wedding-poster.jpg">
+          <source src="media/cn-wedding-web.mp4" type="video/mp4">
+        </video>
+        <span class="th-who">Craig &amp; Nicole</span>
+        <figcaption class="th-slate"><span class="rec"></span>2022 · Tonemedia filmed the wedding</figcaption>
+      </figure>
+      <div class="th-arc">Four years later</div>
+      <figure class="th-clip" aria-label="Craig and Nicole's new house, 2026">
+        <video muted loop playsinline preload="none" poster="media/cn-house-poster.jpg">
+          <source src="media/cn-house-web.mp4" type="video/mp4">
+        </video>
+        <figcaption class="th-slate"><span class="rec"></span>2026 · Tonehomes found the home</figcaption>
+      </figure>
+
+      <div class="th-ig">
+        <p class="th-ig-h"><span>Our own timeline &middot; @tonehomes</span><a class="follow" href="https://www.instagram.com/tonehomes/" target="_blank" rel="noopener">Follow <span aria-hidden="true">&nearr;</span></a></p>
+        <div class="th-ig-grid">
+          <a href="https://www.instagram.com/p/CO_yo6HrkPk/" target="_blank" rel="noopener">
+            <span class="tile"><img src="media/ig-duplex2017.jpg" alt="Justin and Steph in front of their first duplex, 2017" loading="lazy"></span>
+            <span class="cap"><b>2017</b>the first duplex</span>
+          </a>
+          <a href="https://www.instagram.com/p/DCOzagHPGaa/" target="_blank" rel="noopener">
+            <span class="tile"><img src="media/ig-westernave.jpg" alt="The finished Western Ave kitchen after the renovation, Steph at the counter" loading="lazy"></span>
+            <span class="cap"><b>2019</b>the western ave reno</span>
+          </a>
+          <a href="https://www.instagram.com/p/CO1R2Qdj9i-/" target="_blank" rel="noopener">
+            <span class="tile is-video"><img src="media/ig-stephdoor.jpg" alt="Steph at the door of the finished fixer-upper" loading="lazy"></span>
+            <span class="cap"><b>2020</b>the pandemic fixer-upper</span>
+          </a>
+          <a href="https://www.instagram.com/p/CWL4YAqLY1V/" target="_blank" rel="noopener">
+            <span class="tile"><img src="media/ig-sold4.jpg" alt="The Herrera family holding a SOLD sign at unit number four, Morristown" loading="lazy"></span>
+            <span class="cap"><b>2021</b>unit no. 4, sold</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="th-wrap">
+      <p class="th-eyebrow">03 · Real estate</p>
+      <p class="door-kicker">Morris County Real Estate · Tonehomes</p>
+      <h2 class="th-h">First the wedding.<br>Then the <em>keys</em>.</h2>
+      <p class="th-sub">That's Craig and Nicole. I filmed their wedding in 2022, then helped them into their home in 2026. Some of my clients I met behind a camera like that. Most I'm meeting for the first time. You don't need a wedding video to work with me, you just need to be thinking about a move.</p>
+      <p class="th-value">I'm a licensed realtor right here in Morris County. I'd rather grow with your family for the next twenty years than close one deal and vanish. Same eye I bring to film, a lot fewer surprises.</p>
+      <p class="th-units">Morris Plains &amp; Morristown &middot; I don&rsquo;t just sell this market, I own in it.</p>
+      <div class="th-form" id="th-form">
+        <p class="th-lead-h">Thinking about a move?</p>
+        <span class="th-intent-lbl">I'm looking to</span>
+        <div class="th-intent" id="th-intent" role="group" aria-label="What are you looking to do?">
+          <button type="button" data-intent="Buying">Buying</button>
+          <button type="button" data-intent="Selling">Selling</button>
+          <button type="button" data-intent="Both">Both</button>
+          <button type="button" data-intent="Just curious">Just curious</button>
+        </div>
+        <div class="th-row">
+          <div class="field"><label>Name</label><input type="text" id="th-name" placeholder="First & last" autocomplete="name"><span class="err-msg">who am I reaching out to?</span></div>
+          <div class="field"><label>Email</label><input type="email" id="th-email" placeholder="you@email.com" autocomplete="email" inputmode="email"><span class="err-msg">need a real email to reach you</span></div>
+        </div>
+        <div class="field"><label>Phone <span class="opt-tag">(optional)</span></label><input type="tel" id="th-phone" placeholder="(973) 555-0142" autocomplete="tel" inputmode="tel"></div>
+        <button class="btn" onclick="thSubmit()">Let's talk <span class="ar">→</span></button>
+      </div>
+      <p class="th-trust">No spam, we don't sell your list. We filmed weddings for twelve years, we know how to behave.</p>
+      <p class="form-msg" id="th-msg">That didn't go through. Try again in a moment.</p>
+      <p class="th-done" id="th-done">Got it. I'll reach out personally, usually same day.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =================== HELP ME WITH VIDEO (cal.com) =================== -->
+<section class="view" id="view-hire">
+  <div class="th-glow"></div>
+  <header class="bar">
+    <button class="backbtn" data-go="view-home" aria-label="Back to home"><span class="ar" aria-hidden="true">←</span> Back</button>
+    <div class="meta"><span class="rec"></span><span>Learn video</span></div>
+  </header>
+  <div class="hire-wrap">
+    <p class="kicker">Learn video with me</p>
+    <p class="door-kicker">Free Video Coaching · Learn with Tone</p>
+    <h2 class="hire-h">Shoot weddings? Stuck on an edit? <em>Bring it.</em></h2>
+    <p class="hire-sub">Thirty free minutes for wedding filmmakers. Bring a rough cut, a color problem, a workflow that's eating your week — we'll work it on screen together. No pitch, no course at the end. Just twelve years of reps, on the house.</p>
+    <p class="hire-watch">A real lesson, on the house</p>
+    <div class="yt-facade" data-yt="GUW_Z2NhGjQ" role="button" tabindex="0" aria-label="Play: Wedding Ceremony Musts (Pro Tips)">
+      <img src="media/learn-poster.jpg" alt="Justin teaching a video lesson" loading="lazy">
+      <span class="yt-play" aria-hidden="true"></span>
+    </div>
+    <p class="hire-watch">Then grab 30 free minutes (or 5, your call)</p>
+    <div class="hire-book">
+      <p class="hire-book-line">Bring a question, a rough cut, or nothing at all. We'll figure it out together.</p>
+      <button type="button" class="btn" data-cal-link="tonedad/tonebuild" data-cal-config='{"layout":"month_view","theme":"dark"}'>Pick a time <span class="ar" aria-hidden="true">→</span></button>
+      <p class="hire-fallback">Popup being shy? <a href="https://cal.com/tonedad/tonebuild" target="_blank" rel="noopener">Open my calendar →</a></p>
+    </div>
+  </div>
+</section>
+
+<div class="slate-fx" id="slateFx" aria-hidden="true"><span class="slate-dot"></span><span class="slate-txt">Clip saved</span></div>
+<div class="wipe" id="wipe"></div>
+<svg class="grain" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+
+<script>
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- cal.com embed (lazy — only loads when "Help me with video" opens) ---------- */
+  var calInit = false;
+  function initCal(){
+    if(calInit) return; calInit = true;
+    (function (C, A, L) { var p = function (a, ar) { a.q.push(ar); }; var d = C.document; C.Cal = C.Cal || function () { var cal = C.Cal; var ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { var api = function () { p(api, arguments); }; var namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", {origin:"https://cal.com"});
+    /* popup binds to [data-cal-link] on click — no always-mounted iframe */
+    Cal("ui", { theme:"dark", styles:{ branding:{ brandColor:"#C6A16B" } }, hideEventTypeDetails:true, layout:"month_view" });
+  }
+
+  /* ---------- count-up numbers (fires when a view opens) ---------- */
+  function runCountUps(scope){
+    (scope||document).querySelectorAll('.cup').forEach(function(el){
+      var to = parseInt(el.getAttribute('data-to'),10) || 0;
+      if(reduce){ el.textContent = to; return; }
+      el.textContent = '0';
+      var start = null, dur = 900;
+      function step(ts){
+        if(start===null) start = ts;
+        var t = Math.min(1,(ts-start)/dur);
+        var e = 1 - Math.pow(1-t,3);
+        el.textContent = Math.round(e*to);
+        if(t<1){ requestAnimationFrame(step); } else { el.textContent = to; }
+      }
+      requestAnimationFrame(step);
+    });
+  }
+
+  /* ---------- film-frame reward on successful submit ---------- */
+  function slateFlash(){
+    var fx = document.getElementById('slateFx');
+    if(!fx || reduce) return;
+    fx.classList.remove('go'); void fx.offsetWidth; fx.classList.add('go');
+  }
+
+  /* ---------- ROUTER ---------- */
+  var wipe = document.getElementById('wipe');
+  function show(id){
+    var swap = function(){
+      document.querySelectorAll('.view').forEach(function(v){v.classList.remove('active')});
+      var active = document.getElementById(id);
+      active.classList.add('active');
+      window.scrollTo(0,0);
+      /* pause videos in views we left; play the lead video in tonemedia/tonehomes */
+      document.querySelectorAll('.view').forEach(function(v){
+        if(v!==active) v.querySelectorAll('video').forEach(function(x){ try{x.pause();}catch(e){} });
+      });
+      if((id==='view-tonemedia' || id==='view-tonehomes') && !window.matchMedia('(max-width:760px)').matches){
+        active.querySelectorAll('video').forEach(function(vid){ var p = vid.play(); if(p && p.catch) p.catch(function(){}); });
+      }
+      if(id==='view-noblepost') npReset();
+      if(id==='view-hire'){ initCal(); }
+      runCountUps(active);
+      wipe.classList.remove('on');
+    };
+    if(reduce){ swap(); return; }
+    wipe.classList.add('on');
+    setTimeout(swap, 380);
+  }
+  document.querySelectorAll('[data-go]').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      if(b.classList.contains('door') && window.va){ try{ va('event',{name:'door_click',data:{door:b.dataset.go.replace('view-','')}}); }catch(err){} }
+      show(b.dataset.go);
+    });
+  });
+  /* outbound: the Tonemedia studio link (the UTM-tagged door out) */
+  document.querySelectorAll('a[href^="https://tonemediastudio.com"]').forEach(function(a){
+    a.addEventListener('click', function(){ if(window.va){ try{ va('event',{name:'outbound_click',data:{door:'tonemedia'}}); }catch(err){} } });
+  });
+  /* outbound: the Noblepost door goes straight to the new site */
+  document.querySelectorAll('a[href^="https://nobleposthouse.com"]').forEach(function(a){
+    a.addEventListener('click', function(){ if(window.va){ try{ va('event',{name:'outbound_click',data:{door:'noblepost'}}); }catch(err){} } });
+  });
+
+  /* ---------- HERO CAROUSEL (elegant crossfade) ---------- */
+  (function(){
+    var slides = document.querySelectorAll('#view-home .slide');
+    var bars = document.querySelectorAll('#heroFrames button');
+    if(slides.length < 2) return;
+    var isMobile = window.matchMedia('(max-width:760px)');
+    var i = 0, timer = null, DUR = 5500;
+    function set(n){
+      n = (n + slides.length) % slides.length;
+      if(n === i) return;
+      var oldV = slides[i].querySelector('video'); if(oldV) oldV.pause();
+      slides[i].classList.remove('is-active');
+      if(bars[i]) bars[i].classList.remove('on');
+      i = n;
+      var s = slides[i];
+      if(s.dataset.bg){ s.style.backgroundImage = "url('"+s.dataset.bg+"')"; s.removeAttribute('data-bg'); }
+      s.classList.remove('is-active'); void s.offsetWidth; /* restart ken burns */
+      s.classList.add('is-active');
+      var newV = s.querySelector('video');
+      if(newV){ try{ newV.currentTime = 0; }catch(e){} var p = newV.play(); if(p && p.catch) p.catch(function(){}); }
+      if(bars[i]) bars[i].classList.add('on');
+    }
+    function start(){ if(reduce || isMobile.matches) return; stop(); timer = setInterval(function(){ set(i+1); }, DUR); }
+    function stop(){ if(timer){ clearInterval(timer); timer = null; } }
+    bars.forEach(function(b){ b.addEventListener('click', function(){ set(+b.dataset.i); start(); }); });
+    /* after first paint, quietly preload the remaining slides so transitions are seamless */
+    window.addEventListener('load', function(){
+      if(isMobile.matches) return; /* phones hold slide 0 — skip preloading the other slides + clip */
+      setTimeout(function(){
+        document.querySelectorAll('#view-home .slide[data-bg]').forEach(function(s){
+          s.style.backgroundImage = "url('"+s.dataset.bg+"')"; s.removeAttribute('data-bg');
+        });
+        var dv = document.querySelector('#view-home video[data-poster]');
+        if(dv){ dv.poster = dv.dataset.poster; dv.removeAttribute('data-poster'); }
+      }, 400);
+    });
+    start();
+  })();
+
+  /* ---------- flywheel clips: play on desktop when scrolled into view; posters on phones ---------- */
+  (function(){
+    if(reduce || window.matchMedia('(max-width:760px)').matches) return;
+    var vids = document.querySelectorAll('.flywheel video');
+    if(!vids.length || !('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ var p = e.target.play(); if(p && p.catch) p.catch(function(){}); }
+        else { try{ e.target.pause(); }catch(err){} }
+      });
+    }, {threshold:0.25});
+    vids.forEach(function(v){ io.observe(v); });
+  })();
+
+  /* ---------- door previews (hover peek, desktop only; poster shows on touch) ---------- */
+  (function(){
+    if(reduce) return;
+    if(window.matchMedia('(hover: none)').matches) return;
+    document.querySelectorAll('#view-home .door').forEach(function(d){
+      var v = d.querySelector('.door-peek video');
+      if(!v) return;
+      var play = function(){
+        if(!v.src && v.dataset.src){ v.src = v.dataset.src; }
+        var p = v.play(); if(p && p.catch) p.catch(function(){});
+      };
+      var stop = function(){ try{ v.pause(); }catch(e){} };
+      d.addEventListener('mouseenter', play);
+      d.addEventListener('mouseleave', stop);
+      d.addEventListener('focus', play);
+      d.addEventListener('blur', stop);
+    });
+  })();
+
+  /* ---------- YouTube facade (click to load, keeps homepage fast) ---------- */
+  (function(){
+    document.querySelectorAll('.yt-facade').forEach(function(f){
+      var load = function(){
+        if(f.classList.contains('loaded')) return;
+        var ifr = document.createElement('iframe');
+        ifr.src = 'https://www.youtube-nocookie.com/embed/'+f.dataset.yt+'?autoplay=1&rel=0&modestbranding=1';
+        ifr.setAttribute('allow','autoplay; encrypted-media; picture-in-picture');
+        ifr.setAttribute('allowfullscreen','');
+        ifr.title = 'Video lesson';
+        var img = f.querySelector('img'); if(img) img.remove();
+        f.appendChild(ifr); f.classList.add('loaded');
+      };
+      f.addEventListener('click', load);
+      f.addEventListener('keydown', function(e){ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); load(); } });
+    });
+  })();
+
+  /* ---------- local-video facade (self-hosted reels, click to play with sound) ---------- */
+  (function(){
+    document.querySelectorAll('.vid-facade').forEach(function(f){
+      var load = function(){
+        if(f.classList.contains('loaded')) return;
+        var v = document.createElement('video');
+        v.src = f.dataset.vid;
+        v.controls = true; v.autoplay = true; v.playsInline = true;
+        v.setAttribute('playsinline','');
+        var img = f.querySelector('img'); if(img) img.remove();
+        f.appendChild(v); f.classList.add('loaded');
+        var p = v.play(); if(p && p.catch) p.catch(function(){});
+      };
+      f.addEventListener('click', load);
+      f.addEventListener('keydown', function(e){ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); load(); } });
+    });
+  })();
+
+  /* ---------- credit easter eggs (hover or click) ---------- */
+  (function(){
+    var creds = document.querySelectorAll('.cred');
+    if(!creds.length) return;
+    function closeAll(except){ creds.forEach(function(c){ if(c!==except) c.classList.remove('open'); }); }
+    function tsBurst(c){ if(!c.classList.contains('ts-logo')) return; c.classList.remove('burst'); void c.offsetWidth; c.classList.add('burst'); setTimeout(function(){ c.classList.remove('burst'); }, 850); }
+    creds.forEach(function(c){
+      var isTs = c.classList.contains('ts-logo');
+      var openOrGo = function(){
+        if(isTs){ tsBurst(c); setTimeout(function(){ location.href = '/notes/001-blank-space'; }, 480); return; }
+        closeAll(c); c.classList.toggle('open');
+      };
+      c.addEventListener('click', function(e){
+        if(isTs){ e.preventDefault(); openOrGo(); return; } /* Taylor: sparkle-burst, then navigate */
+        if(e.target.tagName === 'A') return; /* let any story link navigate */
+        e.preventDefault(); openOrGo();
+      });
+      c.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openOrGo(); }
+      });
+    });
+    document.addEventListener('click', function(e){
+      var inside = false; creds.forEach(function(c){ if(c.contains(e.target)) inside = true; });
+      if(!inside) closeAll(null);
+    });
+  })();
+
+  /* ---------- HERO TIMECODE (24fps) ---------- */
+  (function(){
+    var el = document.getElementById('tc');
+    if(reduce){ el.textContent='00:12:04:18'; return; }
+    var f=0, pad=function(n){return String(n).padStart(2,'0')};
+    setInterval(function(){
+      f++; el.textContent = pad(Math.floor(f/86400)%24)+':'+pad(Math.floor(f/1440)%60)+':'+pad(Math.floor(f/24)%60)+':'+pad(f%24);
+    },1000/24);
+  })();
+
+  /* ---------- REEL TIMECODE ---------- */
+  (function(){
+    var el=document.getElementById('reel-tc');
+    if(!el) return;
+    if(reduce){ el.textContent='0:08 / 0:12'; return; }
+    var s=0; setInterval(function(){ s=(s+1)%13; el.textContent='0:'+String(s).padStart(2,'0')+' / 0:12'; },1000);
+  })();
+
+  /* ---------- shared form helpers ---------- */
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  function clearErr(el){ var f=el.closest('.field'); if(f) f.classList.remove('err'); }
+  function flagErr(el){ var f=el.closest('.field'); if(f) f.classList.add('err'); el.focus(); }
+  function val(id){ var e=document.getElementById(id); return e?e.value.trim():''; }
+  function setBusy(btn,on){
+    if(!btn) return;
+    if(on){ btn.dataset._html=btn.innerHTML; btn.disabled=true; btn.innerHTML='Sending…'; }
+    else { btn.disabled=false; if(btn.dataset._html) btn.innerHTML=btn.dataset._html; }
+  }
+  var PAGE_T0 = Date.now();
+  function hpValue(){
+    var els = document.querySelectorAll('.hp-field input');
+    for(var i=0;i<els.length;i++){ var v=(els[i].value||'').trim(); if(v) return v; }
+    return '';
+  }
+  function postSubscribe(data){
+    data.hp = hpValue();
+    data.t  = Date.now() - PAGE_T0;
+    return fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){ return r.json().catch(function(){return {};}).then(function(j){ return {ok:r.ok && j && j.success===true}; }); })
+      .catch(function(){ return {ok:false}; });
+  }
+
+  /* ---------- TONEMEDIA — multi-step inquiry ---------- */
+  (function(){
+    var steps = document.querySelectorAll('#view-tonemedia .tm-step');
+    var next = document.getElementById('tm-next');
+    var back = document.getElementById('tm-back');
+    var form = document.getElementById('tm-form');
+    function go(n){ steps.forEach(function(s){ s.classList.toggle('on', +s.dataset.step===n); }); }
+    /* clear errors as the user types */
+    ['tm-date','tm-names','tm-email'].forEach(function(id){
+      var el=document.getElementById(id); if(el) el.addEventListener('input',function(){clearErr(el);});
+    });
+    if(next) next.addEventListener('click', function(){
+      var date=document.getElementById('tm-date'), names=document.getElementById('tm-names'), email=document.getElementById('tm-email');
+      if(!date.value.trim()){ flagErr(date); return; }
+      if(!names.value.trim()){ flagErr(names); return; }
+      if(!EMAIL_RE.test(email.value.trim())){ flagErr(email); return; }
+      go(2);
+      var w=document.getElementById('tm-where'); if(w) w.focus();
+    });
+    if(back) back.addEventListener('click', function(){ go(1); });
+    if(form) form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var btn=form.querySelector('button[type=submit]');
+      var msg=document.getElementById('tm-msg'); if(msg) msg.classList.remove('on');
+      var date=val('tm-date'),names=val('tm-names'),where=val('tm-where'),about=val('tm-about'),phone=val('tm-phone');
+      setBusy(btn,true);
+      postSubscribe({
+        source:'tonemedia', email:val('tm-email'),
+        q1:'Date: '+date, q2:'Couple: '+names,
+        q3: where?('Where: '+where):'',
+        detail: [phone?('Tel: '+phone):'', about?('Note: '+about):''].filter(Boolean).join(' · ')
+      }).then(function(res){
+        setBusy(btn,false);
+        if(res.ok){
+          slateFlash();
+          document.querySelector('#view-tonemedia .tm-live').style.display='none';
+          document.querySelector('#view-tonemedia .tm-done').style.display='flex';
+        } else if(msg){ msg.classList.add('on'); }
+      });
+    });
+  })();
+
+  /* ---------- NEWSLETTER (homepage inline subscribe) ---------- */
+  (function(){
+    var form=document.getElementById('nl-form');
+    if(!form) return;
+    var email=document.getElementById('nl-email'), msg=document.getElementById('nl-msg'), done=document.getElementById('nl-done'), seg=document.getElementById('nl-seg'), name=document.getElementById('nl-name'), phone=document.getElementById('nl-phone');
+    var SEG_LABEL={ wedding:'Getting married', homes:'Buying/selling a home', learn:'Learning video', noblepost:'I shoot weddings', website:'Website update' };
+    var SEG_COPY={
+      wedding:'First thing I send: the wedding-day timeline, built from 350 weddings.',
+      homes:'First thing I send: how rice and beans for three years turned into six doors.',
+      learn:'First thing I send: three rules that outlast any camera — and 30 free minutes with me.',
+      noblepost:'First thing I send: how to hand off an edit and keep your name on it.',
+      website:'First thing I send: the sites I’ve built (this one included) and how to get a real number.'
+    };
+    if(email) email.addEventListener('input',function(){ if(msg) msg.classList.remove('on'); });
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var btn=form.querySelector('button[type=submit]');
+      if(msg) msg.classList.remove('on');
+      var v=((email&&email.value)||'').trim();
+      if(!EMAIL_RE.test(v)){ if(msg){ msg.textContent='That email looks off. Try again.'; msg.classList.add('on'); } if(email) email.focus(); return; }
+      var segVal=(seg&&seg.value)||'';
+      var nameVal=((name&&name.value)||'').trim(), phoneVal=((phone&&phone.value)||'').trim();
+      if(!/\S+\s+\S+/.test(nameVal)){ if(msg){ msg.textContent='Full name too — it’s only fair.'; msg.classList.add('on'); } if(name) name.focus(); return; }
+      setBusy(btn,true);
+      postSubscribe({ source:'homepage-inline', email:v, segment: segVal||undefined, q1: segVal?('Segment: '+(SEG_LABEL[segVal]||segVal)):undefined, q2:'Name: '+nameVal, detail: phoneVal?('Tel: '+phoneVal):undefined }).then(function(res){
+        setBusy(btn,false);
+        if(res.ok){
+          if(segVal && SEG_COPY[segVal]){ var sub=done&&done.querySelector('.signup-done-sub'); if(sub) sub.textContent=SEG_COPY[segVal]; }
+          slateFlash(); form.style.display='none'; if(done) done.hidden=false;
+        }
+        else if(msg){ msg.textContent='Something glitched. Try once more.'; msg.classList.add('on'); }
+      });
+    });
+  })();
+
+  /* ---------- MINI CAPTURE (home, under the doors) ---------- */
+  (function(){
+    var form=document.getElementById('mc-form');
+    if(!form) return;
+    var email=document.getElementById('mc-email'), msg=document.getElementById('mc-msg'), done=document.getElementById('mc-done');
+    if(email) email.addEventListener('input',function(){ if(msg) msg.classList.remove('on'); });
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var btn=form.querySelector('button[type=submit]');
+      if(msg) msg.classList.remove('on');
+      var v=((email&&email.value)||'').trim();
+      if(!EMAIL_RE.test(v)){ if(msg){ msg.textContent='That email looks off. Try again.'; msg.classList.add('on'); } if(email) email.focus(); return; }
+      setBusy(btn,true);
+      postSubscribe({ source:'homepage-top', email:v }).then(function(res){
+        setBusy(btn,false);
+        if(res.ok){
+          slateFlash();
+          var lbl=form.querySelector('.mini-capture-label'), row=form.querySelector('.mini-capture-row');
+          if(lbl) lbl.style.display='none'; if(row) row.style.display='none';
+          if(done) done.hidden=false;
+        }
+        else if(msg){ msg.textContent='Something glitched. Try once more.'; msg.classList.add('on'); }
+      });
+    });
+  })();
+
+  /* ---------- NOBLEPOST FUNNEL ---------- */
+  var nobleSteps = [
+    {q:"How many weddings did you shoot last season?", a:["1-10","11-25","26-50","50+"], vol:[[1,10],[11,25],[26,50],[50,80]]},
+    {q:"How many hours go into one wedding edit, start to delivered?", a:["10-20","20-40","40+","I've lost count"], hrs:[[10,20],[20,40],[40,60],[35,55]]},
+    {q:"When did you last deliver late?", a:["This month","Last quarter","Always behind","Never, somehow"]},
+    {q:"What's editing actually costing you?", a:["My weekends","Time at home","New bookings","My sanity"]}
+  ];
+  var ni=0, npTimer=null, npSeconds=0, npAnswers=[];
+  var counterEl=document.getElementById('np-clock'), counterWrap=document.getElementById('np-counter'), counterLbl=document.getElementById('np-counter-label');
+
+  function fmt(s){ return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0'); }
+  function npStartTimer(){
+    if(reduce){ counterEl.textContent='12:40'; return; }
+    npTimer=setInterval(function(){ npSeconds++; counterEl.textContent=fmt(npSeconds); },1000);
+  }
+  function npReset(){
+    ni=0; npSeconds=0; npAnswers=[];
+    if(npTimer){clearInterval(npTimer); npTimer=null;}
+    counterWrap.classList.remove('back'); counterLbl.textContent='Desk time'; counterEl.textContent='00:00';
+    document.getElementById('np-intro').classList.add('on');
+    document.getElementById('np-reveal').classList.remove('on');
+    document.getElementById('np-step').style.display='none';
+    document.getElementById('np-free').style.display='block';
+    document.getElementById('np-done').style.display='none';
+  }
+  function npStart(){
+    document.getElementById('np-intro').classList.remove('on');
+    document.getElementById('np-step').style.display='block';
+    npStartTimer();
+    npRender();
+  }
+  function npRender(){
+    var step=nobleSteps[ni];
+    document.getElementById('np-q').textContent=step.q;
+    var prog=''; for(var i=0;i<nobleSteps.length;i++){ prog+='<span class="'+(i<=ni?'on':'')+'"></span>'; }
+    document.getElementById('np-prog').innerHTML=prog;
+    var opts=document.getElementById('np-opts'); opts.innerHTML='';
+    step.a.forEach(function(ans,ai){
+      var b=document.createElement('button'); b.className='opt'; b.textContent=ans;
+      b.onclick=function(){ npAnswers[ni]=ai; npNext(); }; opts.appendChild(b);
+    });
+  }
+  function npNext(){
+    ni++;
+    if(ni<nobleSteps.length){ npRender(); }
+    else { npReveal(); }
+  }
+  /* honest range from coarse buckets — volume(Q1) × hours/edit(Q2) */
+  function npHours(){
+    var v=nobleSteps[0].vol[npAnswers[0]||0], h=nobleSteps[1].hrs[npAnswers[1]||0];
+    var round=function(n){ return Math.round(n/10)*10; };
+    var low=round(v[0]*h[0]), high=round(v[1]*h[1]);
+    var weekends=Math.round(((low+high)/2)/16);
+    return {low:low, high:high, weekends:weekends};
+  }
+  function npReveal(){
+    document.getElementById('np-step').style.display='none';
+    document.getElementById('np-reveal').classList.add('on');
+    if(npTimer){clearInterval(npTimer); npTimer=null;}
+    var n=npHours();
+    var numEl=document.getElementById('np-number');
+    if(numEl) numEl.textContent='Based on that, you\'re spending roughly '+n.low+'-'+n.high+' hours a year in the edit bay. About '+n.weekends+' weekends, gone.';
+    counterLbl.textContent='Time back'; counterWrap.classList.add('back');
+    if(reduce){ counterEl.textContent='00:00'; return; }
+    var down=setInterval(function(){
+      npSeconds=Math.max(0, npSeconds-Math.ceil(npSeconds/8)-1);
+      counterEl.textContent=fmt(npSeconds);
+      if(npSeconds<=0){ counterEl.textContent='00:00'; clearInterval(down); }
+    },60);
+  }
+  function npSubmit(){
+    var email=document.getElementById('np-email');
+    if(!EMAIL_RE.test(email.value.trim())){ flagErr(email); return; }
+    var btn=document.querySelector('#np-free .btn');
+    var msg=document.getElementById('np-msg'); if(msg) msg.classList.remove('on');
+    var lbl=function(qi){ var s=nobleSteps[qi], ai=npAnswers[qi]; return (s && ai!=null)?s.a[ai]:''; };
+    var n=npHours();
+    setBusy(btn,true);
+    postSubscribe({
+      source:'noblepost', email:email.value.trim(),
+      q1:'Weddings/yr: '+lbl(0), q2:'Hrs/edit: '+lbl(1), q3:'Last late: '+lbl(2), q4:'Costing: '+lbl(3),
+      detail:'Est ~'+n.low+'-'+n.high+'h/yr'
+    }).then(function(res){
+      setBusy(btn,false);
+      if(res.ok){ slateFlash(); document.getElementById('np-free').style.display='none'; document.getElementById('np-done').style.display='block'; }
+      else if(msg){ msg.classList.add('on'); }
+    });
+  }
+  (function(){var e=document.getElementById('np-email'); if(e) e.addEventListener('input',function(){clearErr(e);});})();
+
+  /* ---------- TONEHOMES — realtor lead form ---------- */
+  var thIntent = '';
+  (function(){
+    /* intent button group — one-tap select */
+    var group=document.getElementById('th-intent');
+    if(group) group.querySelectorAll('button').forEach(function(b){
+      b.addEventListener('click', function(){
+        thIntent=b.dataset.intent;
+        group.querySelectorAll('button').forEach(function(x){ x.classList.toggle('on', x===b); });
+      });
+    });
+    /* clear errors as the user types */
+    ['th-name','th-email'].forEach(function(id){
+      var el=document.getElementById(id); if(el) el.addEventListener('input',function(){clearErr(el);});
+    });
+  })();
+  function thSubmit(){
+    var name=document.getElementById('th-name'), email=document.getElementById('th-email'), phone=document.getElementById('th-phone');
+    if(!name.value.trim()){ flagErr(name); return; }
+    if(!EMAIL_RE.test(email.value.trim())){ flagErr(email); return; }
+    var intent = thIntent || 'Not specified';
+    var btn=document.querySelector('#view-tonehomes .th-form .btn');
+    var msg=document.getElementById('th-msg'); if(msg) msg.classList.remove('on');
+    setBusy(btn,true);
+    postSubscribe({
+      source:'tonehomes-realtor', email:email.value.trim(),
+      q1:'Intent: '+intent, q2:'Name: '+name.value.trim(),
+      detail: phone.value.trim()?('Tel: '+phone.value.trim()):''
+    }).then(function(res){
+      setBusy(btn,false);
+      if(res.ok){
+        slateFlash();
+        document.getElementById('th-form').style.display='none';
+        document.getElementById('th-done').style.display='block';
+      }
+      else if(msg){ msg.classList.add('on'); }
+    });
+  }
+</script>
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

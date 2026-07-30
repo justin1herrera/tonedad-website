@@ -1,0 +1,971 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notes from the Edit Suite — tone.dad</title>
+<meta name="description" content="Stories from the edit suite. Weddings, the Jets years, Avid DiVa, the houses Steph and I rebuild, and other things I keep meaning to write down. By Justin Herrera.">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://www.tone.dad/notes">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.tone.dad/notes">
+<meta property="og:title" content="Notes from the Edit Suite — tone.dad">
+<meta property="og:description" content="Stories from the edit suite. Weddings, the Jets years, Avid DiVa, the houses we rebuild, and things I keep meaning to write down.">
+<meta property="og:image" content="https://www.tone.dad/media/og-share.jpg">
+<meta property="og:site_name" content="tone.dad">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Notes from the Edit Suite — tone.dad">
+<meta name="twitter:description" content="Stories from the edit suite. Weddings, the Jets years, Avid DiVa, the houses we rebuild, and things I keep meaning to write down.">
+<meta name="twitter:image" content="https://www.tone.dad/media/og-share.jpg">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:        #f3f0e8;
+  --bg-2:      #ece6d8;
+  --ink:       #0e0e0e;
+  --ink-soft:  #2a2a26;
+  --muted:     #5a5a54;
+  --rule:      #cdc9bf;
+  --rule-soft: #ddd9cf;
+  --draft:     #2f5a78;
+
+  --tag-music: #B5421F;
+  --tag-jets:  #0B5C3D;
+  --tag-life:  #4F5E3F;
+  --tag-craft: #2A4666;
+  --tag-faith: #8A6A2C;
+  --tag-gear:  #3D4F52;
+  --tag-homes: #8A5A33;
+
+  --serif:  'Cormorant Garamond', 'Times New Roman', Times, Georgia, serif;
+  --mono:   'JetBrains Mono', ui-monospace, monospace;
+  --ease:   cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+::selection { background: var(--ink); color: var(--bg); }
+a { color: inherit; text-decoration: none; }
+
+/* grain */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(23,20,16,0.028) 1px, transparent 1px);
+  background-size: 3px 3px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 64px 32px 120px;
+}
+
+/* ============================================================
+   TOP STRIP
+   ============================================================ */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 64px;
+}
+.top-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s var(--ease);
+}
+.top-back:hover { color: var(--ink); }
+.top-back .arrow { display: inline-block; transition: transform 0.3s var(--ease); }
+.top-back:hover .arrow { transform: translateX(-3px); }
+.top-meta { display: flex; gap: 14px; }
+.top-meta .sep { color: #9B875B; }
+
+/* ============================================================
+   MASTHEAD
+   ============================================================ */
+.mast { margin-bottom: 72px; }
+.mast-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--draft);
+  margin-bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.mast-eyebrow::before {
+  content: '';
+  width: 18px;
+  height: 1px;
+  background: var(--draft);
+}
+.mast-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(56px, 9vw, 96px);
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  font-variation-settings: "opsz" 144, "SOFT" 60;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  min-height: 1em; /* hold the line while the typewriter has it empty */
+}
+.mast-dek {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  max-width: 56ch;
+  line-height: 1.7;
+}
+.mast-dek em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+/* byline */
+.mast-byline {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule-soft);
+}
+.mast-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: saturate(0.8);
+}
+.mast-byline-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.mast-author {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.mast-count {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+/* cursor blink */
+.mast-title::after {
+  content: '_';
+  display: inline-block;
+  margin-left: 0.06em;
+  color: var(--muted);
+  font-style: normal;
+  animation: blink 1s steps(2, end) infinite;
+  font-weight: 300;
+}
+@keyframes blink { 50% { opacity: 0; } }
+.mast-title.typing::after { animation: none; opacity: 1; } /* cursor holds solid while typing, blinks on pauses */
+
+/* ============================================================
+   PULL QUOTE (between masthead and index)
+   ============================================================ */
+.pull {
+  position: relative;
+  margin: 0 0 72px;
+  padding: 0 0 0 28px;
+  border-left: 2px solid var(--rule);
+}
+.pull-text {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(22px, 3.4vw, 32px);
+  line-height: 1.32;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  font-variation-settings: "opsz" 72, "SOFT" 70;
+}
+.pull-cite {
+  display: block;
+  margin-top: 14px;
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ============================================================
+   SECTION RULE
+   ============================================================ */
+.section-rule {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 38px;
+}
+.section-rule::before,
+.section-rule::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+.section-label {
+  font-family: var(--mono);
+  color: var(--draft);
+  font-size: 9.5px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* ============================================================
+   ENTRIES — editorial card layout
+   ============================================================ */
+.entries { list-style: none; display: flex; flex-direction: column; gap: 0; }
+
+.entries-aside { list-style: none; }
+
+/* --- Featured entry (lead) --- */
+.entry-featured {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 56px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid var(--rule);
+}
+.entry-featured .entry-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 2px;
+  filter: saturate(0.85) contrast(1.02);
+  transition: filter 0.5s var(--ease);
+}
+.entry-featured:hover .entry-img {
+  filter: saturate(1) contrast(1);
+}
+.entry-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+.entry-num {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+.entry-tag {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border: 1px solid;
+  border-radius: 1px;
+}
+.entry-tag[data-tag="music"] { color: var(--tag-music); border-color: var(--tag-music); }
+.entry-tag[data-tag="jets"]  { color: var(--tag-jets); border-color: var(--tag-jets); }
+.entry-tag[data-tag="life"]  { color: var(--tag-life); border-color: var(--tag-life); }
+.entry-tag[data-tag="craft"] { color: var(--tag-craft); border-color: var(--tag-craft); }
+.entry-tag[data-tag="faith"] { color: var(--tag-faith); border-color: var(--tag-faith); }
+.entry-tag[data-tag="gear"]  { color: var(--tag-gear); border-color: var(--tag-gear); }
+.entry-tag[data-tag="homes"] { color: var(--tag-homes); border-color: var(--tag-homes); }
+.entry-date {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.entry-live {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: livePulse 2s ease-in-out infinite;
+}
+@keyframes livePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.entry-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(32px, 4.6vw, 48px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  margin-bottom: 12px;
+}
+.entry-excerpt {
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  max-width: 58ch;
+}
+.entry-excerpt em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+.entry-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.3s var(--ease);
+}
+.entry-cta .ar { transition: transform 0.3s var(--ease); }
+.entry-featured:hover .entry-cta { color: var(--ink); }
+.entry-featured:hover .entry-cta .ar { transform: translateX(4px); }
+
+.entry-featured.is-second { margin-bottom: 48px; padding-bottom: 48px; }
+.entry-featured.is-second .entry-img { aspect-ratio: 21/9; }
+.entry-featured.is-second .entry-title { font-size: clamp(26px, 3.4vw, 36px); }
+.entry-featured.is-second .entry-excerpt { font-size: 12.5px; }
+
+.entry-deck {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(17px, 2vw, 20px);
+  line-height: 1.45;
+  color: var(--ink-soft);
+  margin: 10px 0 14px;
+}
+
+/* lead flag on the newest published note */
+.entry-flag {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--ink);
+  padding: 3px 8px;
+  border-radius: 1px;
+}
+
+/* --- Inline photo break --- */
+.photo-break {
+  margin: 8px 0 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.photo-break img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  border-radius: 2px;
+  filter: saturate(0.7);
+}
+.photo-caption {
+  grid-column: 1 / -1;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.06em;
+  color: #7A6A48;
+  text-align: center;
+  margin-top: -4px;
+}
+
+/* --- Standard entries (003–007) --- */
+.entry-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: start;
+  padding: 32px 0;
+  border-bottom: 1px dashed var(--rule-soft);
+  text-decoration: none;
+  color: inherit;
+  transition: padding 0.4s var(--ease);
+}
+.entry-row:hover { padding-left: 6px; }
+.entry-img-wrap {
+  position: relative;
+  width: 140px;
+  height: 100px;
+}
+.entry-row .entry-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+  filter: saturate(0.75);
+  transition: filter 0.4s var(--ease);
+}
+.entry-row:hover .entry-img { filter: saturate(1); }
+/* lil vid per entry — footage wakes up on hover, like scrubbing a bin clip */
+.entry-img-wrap video,
+.entry-media video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.45s var(--ease);
+  pointer-events: none;
+}
+.entry-row:hover .entry-img-wrap video,
+.entry-featured:hover .entry-media video { opacity: 1; }
+.entry-media { position: relative; display: block; }
+.entry-row .entry-title {
+  font-size: clamp(20px, 2.6vw, 28px);
+  margin-bottom: 6px;
+}
+.entry-row .entry-excerpt {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Soon entries — on the timeline, moving through the pipeline */
+.entry-row.is-soon { cursor: default; }
+.entry-row.is-soon:hover { padding-left: 0; }
+.entry-row.is-soon .entry-img { filter: saturate(0) brightness(0.9); opacity: 0.8; }
+.entry-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.status-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  animation: livePulse 2s ease-in-out infinite;
+}
+.entry-row[data-tag="music"] .status-dot { background: var(--tag-music); }
+.entry-row[data-tag="jets"]  .status-dot { background: var(--tag-jets); }
+.entry-row[data-tag="life"]  .status-dot { background: var(--tag-life); }
+.entry-row[data-tag="craft"] .status-dot { background: var(--tag-craft); }
+.entry-row[data-tag="faith"] .status-dot { background: var(--tag-faith); }
+.entry-row[data-tag="gear"]  .status-dot { background: var(--tag-gear); }
+.entry-row[data-tag="homes"] .status-dot { background: var(--tag-homes); }
+
+/* ============================================================
+   DROP CAP (for the featured entry excerpt)
+   ============================================================ */
+.drop-cap::first-letter {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  float: left;
+  font-size: 3.4em;
+  line-height: 0.78;
+  margin: 4px 8px 0 -2px;
+  color: var(--ink);
+  font-variation-settings: "opsz" 144, "SOFT" 40;
+}
+
+/* ============================================================
+   COLOPHON
+   ============================================================ */
+.colophon-rule { margin-top: 96px; }
+.colophon {
+  display: grid;
+  grid-template-columns: minmax(0, 58ch) 150px;
+  gap: 36px;
+  align-items: end;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  line-height: 1.75;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+}
+.colophon-photo { margin: 0; }
+.colophon-photo img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: 2px;
+  filter: saturate(0.9);
+}
+.colophon-photo figcaption {
+  font-size: 9.5px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-top: 8px;
+  line-height: 1.5;
+}
+.colophon a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--rule);
+  transition: text-decoration-color 0.3s var(--ease);
+}
+.colophon a:hover { text-decoration-color: var(--ink-soft); }
+/* the one highlighter mark on the page — flags the line worth remembering */
+.colophon a.hl {
+  position: relative;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.colophon a.hl:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--ink-soft);
+}
+.colophon a.hl::before {
+  content: '';
+  position: absolute;
+  left: -0.14em;
+  right: -0.22em; /* more overshoot where the hand lifts the marker */
+  top: 0.08em;
+  bottom: -0.04em;
+  background: #F3CE3B;
+  opacity: 0.82;
+  mix-blend-mode: multiply;
+  border-radius: 1px 4px 2px 5px / 3px 1px 4px 2px;
+  transform: rotate(-0.7deg);
+  z-index: -1;
+}
+.colophon-sign {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-align: right;
+  margin-top: 18px;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.foot {
+  margin-top: 96px;
+  padding-top: 28px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.foot-l { display: flex; flex-direction: column; gap: 6px; }
+.foot-r { display: flex; gap: 16px; }
+.foot-r a { transition: color 0.3s var(--ease); }
+.foot-r a:hover { color: var(--ink); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 720px) {
+  .wrap { padding: 40px 22px 80px; }
+  .top { font-size: 10px; }
+  .top-meta .sep,
+  .top-meta .top-meta-loc { display: none; }
+  .mast { margin-bottom: 48px; }
+  .mast-title { font-size: clamp(54px, 13vw, 78px); }
+  .pull { margin-bottom: 48px; }
+  .pull-text { font-size: clamp(20px, 5vw, 26px); }
+  .photo-break { grid-template-columns: 1fr; gap: 10px; margin: 0 0 36px; }
+  .entry-featured { margin-bottom: 40px; padding-bottom: 40px; }
+  .entry-title { font-size: clamp(26px, 7vw, 36px); }
+  .entry-row { gap: 16px; padding: 24px 0; }
+  .entry-row .entry-title { font-size: 20px; }
+  .entry-row .entry-excerpt { font-size: 11.5px; }
+  .entry-row:hover { padding-left: 0; }
+  .colophon { grid-template-columns: 1fr; gap: 24px; }
+  .colophon-photo { max-width: 180px; }
+  .foot { flex-direction: column; gap: 12px; align-items: flex-start; }
+}
+@media (max-width: 480px) {
+  .mast-byline { gap: 10px; }
+  .mast-avatar { width: 36px; height: 36px; }
+}
+</style>
+</head>
+<body data-screen-label="Notes index">
+
+<div class="wrap">
+
+  <!-- TOP -->
+  <div class="top">
+    <a class="top-back" href="/">
+      <span class="arrow">&larr;</span>
+      <span>Back to tone.dad</span>
+    </a>
+    <div class="top-meta">
+      <span>Notes</span>
+      <span class="sep">&middot;</span>
+      <span class="top-meta-loc">Vol. I</span>
+      <span class="sep">&middot;</span>
+      <span class="top-meta-loc">Est. 2026</span>
+    </div>
+  </div>
+
+  <!-- MASTHEAD -->
+  <header class="mast">
+    <div class="mast-eyebrow">Notes from the edit suite</div>
+    <h1 class="mast-title"><span id="mastType">Notes.</span></h1>
+    <p class="mast-dek">
+      Stories I keep meaning to write down. Weddings, the Jets years, the year I lived with <em>Avid DiVa</em>, the houses Steph and I have been rebuilding since 2019. <em>One at a time. No schedule.</em>
+    </p>
+    <div class="mast-byline">
+      <img class="mast-avatar" src="/media/justin-portrait.jpg" alt="Justin Herrera">
+      <div class="mast-byline-text">
+        <span class="mast-author">Justin Herrera</span>
+        <span class="mast-count">7 entries · 2 published</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- PULL QUOTE -->
+  <blockquote class="pull">
+    <p class="pull-text">It&rsquo;s the hardest project we&rsquo;ve taken on. It&rsquo;s also the only one I&rsquo;d do again tomorrow.</p>
+    <cite class="pull-cite">&mdash; from Notes 002</cite>
+  </blockquote>
+
+  <!-- SECTION RULE -->
+  <div class="section-rule">
+    <span class="section-label">Published</span>
+  </div>
+
+  <!-- ENTRIES -->
+  <ol class="entries">
+
+    <!-- 002 — FEATURED -->
+    <li>
+      <a class="entry-featured" href="/notes/002-steph-was-right">
+        <span class="entry-media"><img class="entry-img" src="/media/notes/002-western/hero.jpg" alt="The Western Ave kitchen after renovation" loading="lazy"><video muted loop playsinline preload="none" data-src="/media/notes/002-western/walkthrough-2018-web.mp4"></video></span>
+        <div class="entry-meta">
+          <span class="entry-flag">Latest</span>
+          <span class="entry-num">002</span>
+          <span class="entry-tag" data-tag="homes"><span class="entry-live"></span> Home</span>
+          <span class="entry-date">July 2026</span>
+        </div>
+        <h3 class="entry-title">She saw a studio. I saw a basement.</h3>
+        <p class="entry-deck">She sees what a room could be. I price it.</p>
+        <p class="entry-excerpt drop-cap">A single family in Morristown nobody wanted, the basement I would have left alone, and the two months that made it two homes. <em>With the whole sheet.</em></p>
+        <span class="entry-cta">Read the story <span class="ar">&rarr;</span></span>
+      </a>
+    </li>
+
+    <!-- 001 — FEATURED -->
+    <li>
+      <a class="entry-featured is-second" href="/notes/001-blank-space">
+        <span class="entry-media"><img class="entry-img" src="/media/reel-blankspace.jpg" alt="Taylor Swift, Blank Space — on set at Oheka Castle" loading="lazy"><video muted loop playsinline preload="none" data-src="/media/blank-space-stairs.mp4"></video></span>
+        <div class="entry-meta">
+          <span class="entry-num">001</span>
+          <span class="entry-tag" data-tag="music"><span class="entry-live"></span> Music</span>
+          <span class="entry-date">May 2026</span>
+        </div>
+        <h3 class="entry-title">Blank Space.</h3>
+        <p class="entry-excerpt drop-cap">Oheka Castle, September 2014. A music video shoot, a moment at the monitor, and the call about Prague I said no to. <em>The honest version.</em></p>
+        <span class="entry-cta">Read the story <span class="ar">&rarr;</span></span>
+      </a>
+    </li>
+
+    <!-- PHOTO BREAK -->
+    <li class="entries-aside">
+    <div class="photo-break">
+      <img src="/media/blank-space-phone.jpg" alt="My phone on the monitor cart during the Blank Space shoot" loading="lazy">
+      <img src="/media/notes/002-western/steph-baseboard.jpg" alt="Steph cutting baseboard on the miter saw at Western Ave" loading="lazy">
+      <span class="photo-caption">Left: my phone in the Blank Space video. Right: Steph running baseboard on Western Ave.</span>
+    </div>
+    <div class="section-rule">
+      <span class="section-label">On the Timeline</span>
+    </div>
+    </li>
+
+    <!-- 003 -->
+    <li>
+      <div class="entry-row is-soon is-next" data-tag="jets">
+        <div>
+          <div class="entry-meta">
+            <span class="entry-num">003</span>
+            <span class="entry-tag" data-tag="jets">Jets</span>
+            <span class="entry-status"><span class="status-dot"></span>Fine cut</span>
+          </div>
+          <h3 class="entry-title">The freakin' Jets.</h3>
+          <p class="entry-excerpt">Five seasons inside <em>1 Jets Drive</em> &mdash; 2010 to 2015. What Rex's locker room actually sounded like, and the Sunday I almost missed the team plane.</p>
+        </div>
+      </div>
+    </li>
+
+    <!-- 004 -->
+    <li>
+      <div class="entry-row is-soon" data-tag="craft">
+        <div>
+          <div class="entry-meta">
+            <span class="entry-num">004</span>
+            <span class="entry-tag" data-tag="craft">Craft</span>
+            <span class="entry-status">Rough cut</span>
+          </div>
+          <h3 class="entry-title">Ten months with <em>Avid DiVa</em>.</h3>
+          <p class="entry-excerpt">Dustin Robertson let me live in his Hollywood studio. We cut Mariah, Gaga, Gap. Then we packed up for Palm Springs.</p>
+        </div>
+      </div>
+    </li>
+
+    <!-- 005 -->
+    <li>
+      <div class="entry-row is-soon" data-tag="life">
+        <div>
+          <div class="entry-meta">
+            <span class="entry-num">005</span>
+            <span class="entry-tag" data-tag="life">Life</span>
+            <span class="entry-status">String-out</span>
+          </div>
+          <h3 class="entry-title">How I got into weddings.</h3>
+          <p class="entry-excerpt">I said yes to a favor for a friend. Three hundred and fifty weddings later, I still <em>say yes</em> to the same kind of room.</p>
+        </div>
+      </div>
+    </li>
+
+    <!-- 006 -->
+    <li>
+      <div class="entry-row is-soon" data-tag="gear">
+        <div>
+          <div class="entry-meta">
+            <span class="entry-num">006</span>
+            <span class="entry-tag" data-tag="gear">Gear</span>
+            <span class="entry-status">Logged</span>
+          </div>
+          <h3 class="entry-title">The LUMIX S1 II.</h3>
+          <p class="entry-excerpt">Fifteen years of buying cameras that promised to fix my footage. Turns out the fix was <em>one camera, actually used.</em> This is the one I stopped switching from.</p>
+        </div>
+      </div>
+    </li>
+
+    <!-- 007 -->
+    <li>
+      <div class="entry-row is-soon" data-tag="life">
+        <div>
+          <div class="entry-meta">
+            <span class="entry-num">007</span>
+            <span class="entry-tag" data-tag="life">Life</span>
+            <span class="entry-status">Ingesting</span>
+          </div>
+          <h3 class="entry-title">Fourth place.</h3>
+          <p class="entry-excerpt">Before the wedding, before the kids, there was a Dance Dance Revolution machine and a couples sync tournament. Steph and I got fourth place. <em>It was love.</em></p>
+        </div>
+      </div>
+    </li>
+
+  </ol>
+
+  <!-- COLOPHON -->
+  <div class="section-rule colophon-rule">
+    <span class="section-label">Colophon</span>
+  </div>
+  <div class="colophon">
+    <div class="colophon-text">
+      <p>Notes is written and cut by me, Justin Herrera &mdash; wedding filmmaker, broadcast editor, dad. Entries move through the same pipeline as my films: logged, string-out, rough cut, fine cut, published. No schedule, no algorithm. If you&rsquo;re trying to get better at video yourself, I keep <a class="hl" href="https://cal.com/tonedad/tonebuild">a free half hour</a> on my calendar for exactly that.</p>
+      <p class="colophon-sign">Justin.</p>
+    </div>
+    <figure class="colophon-photo">
+      <img src="/media/justin-cafe.jpg" alt="Justin Herrera at a caf&eacute; table, laptop open, iced coffee in reach" loading="lazy">
+      <figcaption>Office hours. The coffee is load-bearing.</figcaption>
+    </figure>
+  </div>
+
+  <!-- FOOT -->
+  <div class="foot">
+    <div class="foot-l">
+      <span>A production of tone.dad.</span>
+      <span>&copy; 2026 Justin Herrera</span>
+    </div>
+    <div class="foot-r">
+      <a href="/">tone.dad</a>
+      <a href="mailto:justin@tone.dad">email</a>
+      <a href="https://instagram.com/tone.dad" rel="me" target="_blank">@tone.dad</a>
+    </div>
+  </div>
+
+</div>
+
+<script>
+/* Masthead typewriter: types "Ntoes.", notices, fixes it, tries a few
+   other names for this page, gives up, settles on "Notes." */
+(function(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var span = document.getElementById('mastType');
+  if (!span) return;
+  var h1 = span.parentElement;
+  var sleep = function(ms){ return new Promise(function(r){ setTimeout(r, ms); }); };
+  var jitter = function(base){ return base + (Math.random() - 0.5) * base * 0.7; };
+
+  async function type(text, speed){
+    h1.classList.add('typing');
+    for (var i = 0; i < text.length; i++){
+      span.textContent += text[i];
+      await sleep(jitter(speed));
+    }
+    h1.classList.remove('typing');
+  }
+  async function erase(count, speed){
+    h1.classList.add('typing');
+    for (var i = 0; i < count; i++){
+      span.textContent = span.textContent.slice(0, -1);
+      await sleep(jitter(speed));
+    }
+    h1.classList.remove('typing');
+  }
+
+  async function run(){
+    span.textContent = '';
+    await sleep(500);
+    await type('Ntoes.', 90);         /* the typo */
+    await sleep(900);                  /* ...he notices */
+    await erase(5, 55);                /* back to "N" */
+    await type('otes.', 90);           /* fixed */
+    await sleep(1800);
+    await erase(6, 45);
+    await type('Brain Dump.', 85);
+    await sleep(1600);
+    await erase(11, 45);
+    await type('Dear Diary', 85);
+    await sleep(700);
+    await type('—', 90);          /* "Dear Diary—" */
+    await sleep(500);                  /* ...nope. */
+    await erase(11, 30);               /* fast erase = embarrassment */
+    await sleep(300);
+    await type('Notes.', 95);          /* and it stays */
+  }
+  run();
+})();
+
+/* Media that lives on the deployed site but not in the working tree renders as a
+   broken-image glyph locally. Collapse it instead of showing the glyph; in
+   production the files resolve and this never fires. */
+(function(){
+  document.querySelectorAll('img').forEach(function(img){
+    img.addEventListener('error', function(){
+      var fig = img.closest('.photo-break, .colophon-photo, .entry-media, .mast-byline');
+      if (img.classList.contains('mast-avatar')) { img.style.display = 'none'; return; }
+      if (fig && fig.classList.contains('photo-break')) { img.style.visibility = 'hidden'; return; }
+      img.style.display = 'none';
+    }, { once: true });
+  });
+})();
+
+/* lil vids — the footage wakes up on hover (desktop only; stills on touch) */
+(function(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(hover: none)').matches) return;
+  document.querySelectorAll('.entry-row, .entry-featured').forEach(function(row){
+    var v = row.querySelector('video');
+    if (!v) return;
+    var play = function(){
+      if (!v.src && v.dataset.src) v.src = v.dataset.src;
+      var p = v.play(); if (p && p.catch) p.catch(function(){});
+    };
+    var stop = function(){ try { v.pause(); } catch(e){} };
+    row.addEventListener('mouseenter', play);
+    row.addEventListener('mouseleave', stop);
+  });
+})();
+
+/* touch devices have no hover — so the footage plays itself. When a card scrolls
+   into view the clip fades up and loops muted, one at a time (pause + hide the
+   last one), which keeps it to a single stream on cellular. */
+(function(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!window.matchMedia('(hover: none)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var current = null;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      var v = en.target.querySelector('video');
+      if (!v) return;
+      if (en.isIntersecting){
+        if (current && current !== v){ try { current.pause(); } catch(e){} current.style.opacity = ''; }
+        current = v;
+        if (!v.src && v.dataset.src) v.src = v.dataset.src;
+        v.style.opacity = 1;
+        var p = v.play(); if (p && p.catch) p.catch(function(){});
+      } else {
+        try { v.pause(); } catch(e){}
+        v.style.opacity = '';
+        if (current === v) current = null;
+      }
+    });
+  }, { threshold: 0.6 });
+  document.querySelectorAll('.entry-row, .entry-featured').forEach(function(row){
+    if (row.querySelector('video')) io.observe(row);
+  });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

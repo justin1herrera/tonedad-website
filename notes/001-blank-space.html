@@ -1,0 +1,1478 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>On-set editor on Taylor Swift's 'Blank Space.' Then I said no to Prague. · Justin Herrera</title>
+<meta name="description" content="September 2014. Oheka Castle. On-set editor on Taylor Swift's 'Blank Space' music video. And why I still said no to Prague." />
+<meta name="robots" content="index, follow" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<!-- Canonical -->
+<link rel="canonical" href="https://www.tone.dad/notes/001-blank-space" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.tone.dad/notes/001-blank-space" />
+<meta property="og:title" content="On-set editor on Taylor Swift's 'Blank Space.' Then I said no to Prague." />
+<meta property="og:description" content="September 2014. Oheka Castle. On-set editor on Taylor Swift's 'Blank Space' music video. And why I still said no to Prague." />
+<meta property="og:image" content="https://www.tone.dad/media/notes/001/og-001.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="tone.dad" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="On-set editor on Taylor Swift's 'Blank Space.' Then I said no to Prague." />
+<meta name="twitter:description" content="September 2014. Oheka Castle. On-set editor on Taylor Swift's 'Blank Space.' And why I still said no to Prague." />
+<meta name="twitter:image" content="https://www.tone.dad/media/notes/001/og-001.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  /* ============================================================
+     "On-set editor on Taylor Swift's 'Blank Space.' Then I said no to Prague." — Notes No. 001
+     NYT × MKBHD editorial DNA, dark-mode capable.
+     ============================================================ */
+  :root {
+    --paper: #f3f0e8;
+    --paper-warm: #ece6d8;
+    --ink: #0e0e0e;
+    --ink-soft: #2a2a26;
+    --hush: #5a5a54;
+    --hush-soft: #8a8a82;
+    --rule: #cdc9bf;
+    --rule-strong: #b8b3a3;
+    --gold: #c9a84c;
+    --gold-soft: rgba(201, 168, 76, .42);
+    --press: #7a2a1a;
+    --serif: "Cormorant Garamond", "Times New Roman", Times, Georgia, serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    background-color: var(--paper);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .045 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    background-size: 240px 240px;
+    background-repeat: repeat;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 20px;
+    line-height: 1.62;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+
+  /* ---------- reading progress bar ---------- */
+  .progress-bar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 2.5px;
+    width: 100%;
+    background: transparent;
+    z-index: 100;
+    pointer-events: none;
+  }
+  .progress-bar::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: var(--progress, 0%);
+    background: var(--gold);
+    transition: width .12s linear;
+  }
+
+  /* ---------- top nav ---------- */
+  .topnav {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    z-index: 10;
+    padding: 22px clamp(20px, 4vw, 48px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .26em;
+    text-transform: uppercase;
+    color: rgba(243, 240, 232, .82);
+  }
+  .topnav a { text-decoration: none; transition: color .2s ease; }
+  .topnav a:hover { color: var(--paper); }
+
+  /* ---------- HERO ----------
+     Hero is ALWAYS dark-image-with-light-text regardless of system
+     light/dark mode. Use fixed cream values (not var(--paper)) so
+     text stays readable when the rest of the page inverts. */
+  .hero {
+    position: relative;
+    height: clamp(420px, 78vh, 720px);
+    overflow: hidden;
+    margin-bottom: 0;
+    color: #ede8da;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 45%;
+    filter: brightness(.62) contrast(1.08) saturate(.88);
+  }
+  /* Inline diptych — two photos side-by-side as one figure */
+  figure.inset-split .split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    background: #000;
+    margin: 0;
+  }
+  figure.inset-split .split-tile {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    background: #000;
+  }
+  figure.inset-split .split-tile img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  figure.inset-split .tile-jk img {
+    object-position: center 38%;
+    transform: scale(1.18);
+    transform-origin: center 38%;
+  }
+  figure.inset-split .tile-justin img {
+    object-position: 30% 22%;
+    transform: scale(1.45);
+    transform-origin: 30% 22%;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+      rgba(14,14,14,.45) 0%,
+      rgba(14,14,14,.18) 28%,
+      rgba(14,14,14,.55) 56%,
+      rgba(14,14,14,.82) 78%,
+      rgba(14,14,14,.94) 100%);
+  }
+  .hero-overlay {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: clamp(40px, 9vh, 88px) clamp(24px, 4vw, 48px);
+    z-index: 2;
+    text-align: center;
+  }
+  .hero-kicker {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, .8);
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(34px, 6.2vw, 78px);
+    line-height: 1.02;
+    letter-spacing: -.013em;
+    margin: 0 auto 18px;
+    max-width: 18ch;
+    text-wrap: balance;
+    color: #ede8da;
+    text-shadow:
+      0 2px 28px rgba(0, 0, 0, .9),
+      0 1px 4px rgba(0, 0, 0, .85);
+  }
+  .hero-subtitle {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(16px, 1.8vw, 22px);
+    color: rgba(237, 232, 218, .92);
+    max-width: 32ch;
+    margin: 0 auto;
+    letter-spacing: .003em;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, .8);
+  }
+
+  /* ---------- BYLINE ---------- */
+  .byline {
+    max-width: 720px;
+    margin: clamp(36px, 6vh, 56px) auto 0;
+    padding: 0 clamp(20px, 4vw, 32px);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--hush);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 6px 14px;
+    line-height: 1.7;
+  }
+  .byline .author { color: var(--ink); font-weight: 500; }
+  .byline .sep { color: var(--rule); }
+  .byline .read-time { color: var(--gold); }
+
+  /* "the receipts" proof block, right after the hero */
+  .receipts { margin: 30px 0 6px; padding: 26px 0 2px; border-top: 1px solid var(--rule); }
+  .receipts-lead { font-family: var(--serif); font-style: italic; font-size: 1.34rem; line-height: 1.4; color: var(--ink); margin: 0 0 20px; }
+  .receipt { margin: 0; }
+  .receipt img, .receipt video { width: 100%; height: auto; display: block; border: 1px solid var(--rule-strong); background: #0e0e0e; }
+  .receipt figcaption { font-family: var(--mono); font-size: 11px; letter-spacing: .05em; line-height: 1.5; color: var(--hush); margin-top: 9px; }
+  .receipt-doc video { aspect-ratio: 16 / 9; object-fit: cover; object-position: center; }
+  .receipts-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
+  .receipts-pair .receipt img { aspect-ratio: 4 / 5; object-fit: cover; object-position: center; }
+  @media (max-width: 460px) {
+    .receipts-lead { font-size: 1.2rem; }
+    .receipts-pair { gap: 11px; }
+    .receipt figcaption { font-size: 10px; }
+  }
+
+  /* ---------- ARTICLE PROSE ---------- */
+  .prose {
+    max-width: 720px;
+    margin: clamp(48px, 7vh, 80px) auto;
+    padding: 0 clamp(22px, 4vw, 36px);
+  }
+  .prose section { scroll-margin-top: 24px; }
+  .prose section + section { margin-top: clamp(44px, 6vh, 72px); }
+
+  .prose h2 {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 clamp(20px, 3vh, 32px);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .prose h2::before {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .prose p {
+    font-family: var(--serif);
+    font-size: clamp(18px, 1.5vw, 21px);
+    line-height: 1.62;
+    color: var(--ink-soft);
+    margin: 0 0 1.15em;
+    text-wrap: pretty;
+  }
+  .prose p:last-child { margin-bottom: 0; }
+
+  /* the one highlighter mark in the piece — circling the keeper take before locking the cut */
+  .prose p mark.hl {
+    background: none;
+    color: inherit;
+    position: relative;
+    white-space: nowrap;
+  }
+  .prose p mark.hl::before {
+    content: '';
+    position: absolute;
+    left: -0.12em;
+    right: -0.2em; /* more overshoot where the hand lifts the marker */
+    top: 0.1em;
+    bottom: -0.02em;
+    background: #EAC53E;
+    opacity: 0.8;
+    mix-blend-mode: multiply;
+    border-radius: 1px 4px 2px 5px / 3px 1px 4px 2px;
+    transform: rotate(-0.8deg);
+    z-index: -1;
+  }
+
+  /* drop cap on first paragraph of the first section */
+  .prose section:first-of-type p:first-of-type::first-letter {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 4.4em;
+    line-height: .82;
+    float: left;
+    padding: .04em .12em 0 0;
+    color: var(--ink);
+  }
+
+  .prose em { font-style: italic; }
+  .prose strong { font-weight: 600; color: var(--ink); }
+  .prose p a {
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(201, 168, 76, .4);
+    transition: color .2s ease, border-bottom-color .2s ease;
+  }
+  .prose p a:hover {
+    color: var(--ink);
+    border-bottom-color: var(--ink);
+  }
+  /* Stealth link — for clues. Visually identical to surrounding
+     text. Only reveals on hover via a subtle mustard shift. */
+  .prose p a.vault-link {
+    color: inherit;
+    border-bottom: none;
+    cursor: pointer;
+  }
+  .prose p a.vault-link:hover {
+    color: var(--gold);
+    border-bottom: none;
+  }
+
+  /* Polaroid easter egg — tucked at the end of the article.
+     Visible to anyone scrolling to the bottom; the "13" reads
+     as Taylor's signature number, the polaroid format is the
+     1989-era visual cue. Whole card links to /vault. */
+  .polaroid-egg {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 138px;
+    padding: 10px 10px 16px;
+    background: #faf6e8;
+    box-shadow:
+      0 1px 0 rgba(26,26,24,.04),
+      0 14px 24px -14px rgba(26,26,24,.32),
+      0 4px 8px -6px rgba(26,26,24,.16);
+    transform: rotate(-1.6deg);
+    margin: clamp(56px, 9vh, 96px) auto clamp(14px, 2vh, 24px);
+    text-decoration: none;
+    color: var(--ink);
+    position: relative;
+    opacity: .82;
+    transition: transform .5s cubic-bezier(.2,.7,.2,1), opacity .35s ease, box-shadow .5s ease;
+  }
+  .polaroid-egg:hover { opacity: 1; }
+  .polaroid-egg .mark {
+    font-family: "Caveat", "Marker Felt", "Comic Sans MS", cursive;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -.01em;
+    color: var(--ink);
+    margin: 4px 0 2px;
+  }
+  .polaroid-egg .stamp {
+    font-family: var(--mono);
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--hush);
+    margin-top: 4px;
+  }
+  /* Tiny mustard tape strip in the top corner — adds the
+     "pinned to the wall" feel without being a literal pin. */
+  .polaroid-egg::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 30%;
+    width: 40%;
+    height: 10px;
+    background: rgba(217, 185, 92, .42);
+    transform: rotate(-1deg);
+    pointer-events: none;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .polaroid-egg:hover {
+      transform: rotate(-.6deg) scale(1.04);
+      box-shadow:
+        0 1px 0 rgba(26,26,24,.06),
+        0 28px 50px -20px rgba(26,26,24,.5),
+        0 8px 16px -8px rgba(26,26,24,.28);
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    .polaroid-egg { background: #2a2520; color: var(--ink); }
+    .polaroid-egg .mark { color: var(--ink); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .polaroid-egg { transition: none; }
+  }
+
+  /* ---------- PULL QUOTE ---------- */
+  .pull {
+    margin: clamp(40px, 6vh, 64px) 0;
+    padding: clamp(24px, 4vh, 36px) 0 clamp(24px, 4vh, 36px) clamp(20px, 3vw, 36px);
+    border-left: 3px solid var(--gold);
+    position: relative;
+  }
+  .pull p {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(24px, 3.2vw, 36px);
+    line-height: 1.22;
+    color: var(--ink);
+    margin: 0;
+    max-width: 22ch;
+    text-wrap: balance;
+  }
+  .pull .attribution {
+    margin-top: 18px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-style: normal;
+    letter-spacing: .26em;
+    text-transform: uppercase;
+    color: var(--hush);
+  }
+
+  /* ---------- PULL + MOMENT layout ----------
+     2-col on desktop: quote left, looping clip right. Stacks
+     on mobile with the moment beneath the quote. */
+  .pull-with-moment {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 44%);
+    gap: clamp(24px, 3vw, 44px);
+    align-items: center;
+    margin: clamp(40px, 6vh, 64px) 0;
+  }
+  .pull-with-moment .pull { margin: 0; }
+
+  /* ---------- MOMENT chrome ----------
+     Reusable pattern. Dark plate, blinking REC dot, mustard
+     accent. Same visual language as the cr-moment on the
+     newsletter and the final-cut slate up top. */
+  .moment {
+    position: relative;
+    margin: 0;
+    background: #0a0a0a;
+    overflow: hidden;
+    border: 1px solid rgba(217, 185, 92, .18);
+    box-shadow: 0 18px 32px -16px rgba(0, 0, 0, .45);
+  }
+  .moment video,
+  .moment img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: contrast(1.06) saturate(1.06);
+  }
+  .moment-hud {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    color: #d9b95c;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .8);
+  }
+  .moment-rec {
+    width: 7px;
+    height: 7px;
+    background: #ff2a2a;
+    border-radius: 50%;
+    display: inline-block;
+    animation: moment-blink 1.4s ease-in-out infinite;
+  }
+  .moment-tag {
+    margin-left: auto;
+    color: #ede6d2;
+    background: rgba(14, 14, 14, .62);
+    padding: 4px 8px;
+    border-left: 2px solid #d9b95c;
+  }
+  @keyframes moment-blink {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: .22; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .moment-rec { animation: none; }
+  }
+  @media (max-width: 760px) {
+    .pull-with-moment {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+  }
+
+  /* ---------- PHOTO INSETS ---------- */
+  figure.inset {
+    margin: clamp(28px, 4vh, 44px) 0;
+  }
+  figure.inset img,
+  figure.inset video {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: contrast(1.02) saturate(.92);
+  }
+  figure.inset figcaption {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--hush);
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid var(--rule);
+  }
+
+  /* Jets last-day figure: caption + subscribe button overlaid INSIDE
+     the image, bottom corners. Symmetrical bottom-left/bottom-right.
+     The .jets-frame wraps img+caption so the caption stays pinned to
+     the image even when the button drops below it on mobile. */
+  figure.jets-final { position: relative; }
+  figure.jets-final .jets-frame { position: relative; display: block; }
+  figure.jets-final figcaption {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    margin: 0;
+    padding: 6px 10px 5px;
+    border-top: none;
+    background: rgba(14, 14, 14, .62);
+    color: rgba(243, 240, 232, .96);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .55);
+    backdrop-filter: blur(2px);
+  }
+  .jets-subscribe {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px 8px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid rgba(14, 14, 14, .18);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .28);
+    transition: background .25s ease, color .25s ease, transform .25s ease;
+  }
+  .jets-subscribe:hover {
+    background: var(--ink);
+    color: var(--paper);
+    transform: translateY(-1px);
+  }
+
+  /* ---------- hidden-detail subscribe popup (theme-aware: works in light + dark) ---------- */
+  .hd-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(8, 7, 6, .72);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+  }
+  .hd-overlay.open { opacity: 1; visibility: visible; }
+  .hd-modal {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    background: var(--paper);
+    color: var(--ink);
+    border: 1px solid var(--rule);
+    border-top: 3px solid var(--gold);
+    padding: 34px 30px 30px;
+    box-shadow: 0 30px 80px -24px rgba(0, 0, 0, .7);
+    transform: translateY(12px) scale(.985);
+    transition: transform .3s cubic-bezier(.2, .7, .2, 1);
+    font-family: var(--serif);
+  }
+  .hd-overlay.open .hd-modal { transform: none; }
+  .hd-kicker {
+    display: block;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+  .hd-line {
+    font-style: italic;
+    font-size: 1.34rem;
+    line-height: 1.4;
+    margin: 0 0 14px;
+    color: var(--ink);
+  }
+  .hd-sub {
+    font-family: var(--sans);
+    font-style: normal;
+    font-size: .82rem;
+    line-height: 1.5;
+    color: var(--hush);
+    margin: 0 0 22px;
+  }
+  .hd-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 20px 12px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--ink);
+    transition: background .25s ease, color .25s ease, transform .25s ease;
+  }
+  .hd-btn:hover { background: var(--gold); color: var(--ink); border-color: var(--gold); transform: translateY(-1px); }
+
+  /* inline email capture (no bounce to another site) */
+  .hd-form { display: flex; flex-direction: column; gap: 10px; margin-top: 2px; }
+  .hd-input {
+    width: 100%;
+    padding: 13px 14px;
+    font-family: var(--sans);
+    font-size: 16px;               /* 16px avoids iOS zoom-on-focus */
+    color: var(--ink);
+    background: transparent;
+    border: 1px solid var(--rule-strong);
+    border-radius: 0;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .hd-input::placeholder { color: var(--hush-soft); }
+  .hd-input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 2px rgba(201, 168, 76, .18); }
+  .hd-form .hd-btn { width: 100%; justify-content: center; cursor: pointer; }
+  .hd-form .hd-btn[disabled] { opacity: .55; cursor: default; }
+  .hd-msg { margin: 14px 0 0; font-family: var(--sans); font-size: .85rem; line-height: 1.45; }
+  .hd-msg.ok { font-family: var(--serif); font-style: italic; font-size: 1.16rem; color: var(--gold); }
+  .hd-msg.err { color: var(--press); }
+  .hd-close {
+    position: absolute;
+    top: 10px; right: 12px;
+    width: 32px; height: 32px;
+    display: grid; place-items: center;
+    background: transparent;
+    border: 0;
+    color: var(--hush);
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    transition: color .2s ease;
+  }
+  .hd-close:hover { color: var(--ink); }
+
+  /* eye-candy still: Taylor holding the phone, with a handwritten pointer */
+  .hd-modal { max-height: 92vh; overflow: hidden auto; }
+  .hd-photo {
+    position: relative;
+    margin: 6px -30px 22px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    overflow: hidden;
+    aspect-ratio: 714 / 299;
+    background: #0e0e0e;
+  }
+  .hd-photo img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center;
+    display: block;
+  }
+  /* the ring + arrow + "my actual phone" are baked into the annotated image (device-proof) */
+
+  /* subtle inline trigger where the story pauses */
+  .hd-trigger-wrap { margin: 4px 0 6px; text-align: center; }
+  .hd-trigger {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold-soft);
+    padding-bottom: 3px;
+    cursor: pointer;
+    transition: border-color .2s ease;
+  }
+  .hd-trigger:hover { border-color: var(--gold); }
+
+  @media (max-width: 460px) {
+    .hd-overlay { padding: 16px; }
+    .hd-modal { padding: 30px 22px 26px; min-width: 0; max-width: 100%; }
+    .hd-line { font-size: 1.16rem; }
+    .hd-btn { width: 100%; justify-content: center; }
+    .hd-photo { margin-left: -22px; margin-right: -22px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hd-overlay, .hd-modal { transition: none; }
+  }
+  @media (max-width: 540px) {
+    /* caption stays overlaid bottom-left — it now owns the row alone */
+    figure.jets-final figcaption {
+      bottom: 10px;
+      left: 10px;
+      font-size: 9.5px;
+      padding: 6px 9px 5px;
+    }
+    /* subscribe drops out of the overlay into a full-width tap bar below
+       the photo — fixes the right-edge clip + caption collision, and
+       gives a proper ~44px tap target */
+    .jets-subscribe {
+      position: static;
+      bottom: auto;
+      right: auto;
+      width: 100%;
+      justify-content: center;
+      margin-top: 10px;
+      padding: 13px 14px;
+      font-size: 11px;
+      box-shadow: none;
+      border: 1px solid rgba(14, 14, 14, .2);
+    }
+  }
+
+  /* ---------- FINAL CUT SLATE ----------
+     "Watch the final cut" link styled as a film slate plate.
+     Fixed dark styling (matches the hero) in both light + dark
+     mode — a slate isn't supposed to be paper-coloured. */
+  .final-cut {
+    display: block;
+    margin: clamp(44px, 7vh, 68px) 0;
+    padding: clamp(22px, 3.4vh, 32px) clamp(22px, 3.4vw, 32px);
+    background: #0e0e0e;
+    color: #ede6d2;
+    text-decoration: none;
+    position: relative;
+    border: 1px solid rgba(237, 230, 210, .08);
+    box-shadow: 0 26px 46px -22px rgba(14, 14, 14, .55);
+    transition: transform .35s cubic-bezier(.2,.6,.2,1), box-shadow .35s ease;
+    overflow: hidden;
+  }
+  /* The still — phone shot from the music video, framed inside
+     the slate with a HUD overlay and a small "the phone — mine"
+     tag in the bottom-left. */
+  .final-cut-still {
+    position: relative;
+    margin: calc(-1 * clamp(22px, 3.4vh, 32px)) calc(-1 * clamp(22px, 3.4vw, 32px)) clamp(22px, 3.5vh, 32px);
+    background: #000;
+    overflow: hidden;
+  }
+  .final-cut-still img,
+  .final-cut-still video {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: contrast(1.06) saturate(1.08);
+  }
+  /* Bottom-left tag — calls out that the phone in the shot
+     is Justin's actual phone. Mustard rule for the accent. */
+  .final-cut-mine {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    color: #ede6d2;
+    background: rgba(14, 14, 14, .72);
+    padding: 5px 9px 5px 7px;
+    border-left: 2px solid #d9b95c;
+    backdrop-filter: blur(2px);
+  }
+  /* film cropmarks pinned to the still's corners */
+  .final-cut-still::before,
+  .final-cut-still::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-color: #d9b95c;
+    border-style: solid;
+    pointer-events: none;
+  }
+  .final-cut-still::before { top: 6px;    left: 6px;  border-width: 1px 0 0 1px; }
+  .final-cut-still::after  { bottom: 6px; right: 6px; border-width: 0 1px 1px 0; }
+
+  .final-cut-hud {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    color: #d9b95c;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+  }
+  .hud-rec {
+    width: 8px;
+    height: 8px;
+    background: #ff2a2a;
+    border-radius: 50%;
+    display: inline-block;
+    animation: hud-blink 1.4s ease-in-out infinite;
+  }
+  @keyframes hud-blink {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: .22; }
+  }
+  .hud-tc {
+    margin-left: auto;
+    color: #c5b88c;
+    font-feature-settings: "tnum" 1;
+  }
+
+  .final-cut-body {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: clamp(26px, 4.4vh, 40px);
+  }
+  .final-cut-kicker {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(36px, 5.4vw, 58px);
+    line-height: .98;
+    letter-spacing: -.012em;
+    color: #ede6d2;
+  }
+  .final-cut-credit {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    color: #a39c87;
+  }
+
+  .final-cut-cta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(18px, 1.8vw, 22px);
+    color: #ede6d2;
+    padding-top: clamp(20px, 3vh, 28px);
+    border-top: 1px solid rgba(237, 230, 210, .14);
+  }
+  .final-cut-cta .play-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background: #d9b95c;
+    color: #0e0e0e;
+    border-radius: 50%;
+    font-size: 11px;
+    padding-left: 3px;
+    transition: transform .35s cubic-bezier(.2,.6,.2,1), background .35s ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .final-cut:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 30px 56px -20px rgba(14, 14, 14, .65);
+    }
+    .final-cut:hover .play-arrow {
+      transform: scale(1.08);
+      background: #f0cf66;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hud-rec { animation: none; }
+    .final-cut, .final-cut .play-arrow { transition: none; }
+  }
+
+  /* full-bleed paint break between sections */
+  .paint-break {
+    width: 100%;
+    height: 6px;
+    margin: clamp(40px, 6vh, 64px) 0;
+    background-image: var(--break, url('/media/notes/001/texture-oil-cream.jpg'));
+    background-size: cover;
+    background-position: center;
+    opacity: .35;
+  }
+
+  /* ---------- TRIVIA / ASIDE ---------- */
+  .trivia {
+    margin: clamp(28px, 4vh, 40px) 0;
+    padding: 22px clamp(20px, 3vw, 28px);
+    border-left: 2px solid var(--gold);
+    background: rgba(201, 168, 76, .06);
+  }
+  .trivia .eyebrow {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 10px;
+  }
+  .trivia p {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: clamp(15px, 1.15vw, 17px);
+    color: var(--hush);
+    line-height: 1.55;
+  }
+  .trivia strong { color: var(--ink); font-weight: 500; }
+  .trivia em { font-style: italic; color: var(--ink); }
+
+  /* ---------- CTA BLOCK ---------- */
+  .cta-block {
+    background: var(--ink);
+    color: var(--paper);
+    padding: clamp(48px, 7vh, 88px) clamp(24px, 4vw, 48px);
+    text-align: center;
+    margin-top: clamp(56px, 8vh, 96px);
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-block::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='gn'><feTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .96  0 0 0 0 .94  0 0 0 0 .90  0 0 0 .12 0'/></filter><rect width='100%' height='100%' filter='url(%23gn)'/></svg>");
+    mix-blend-mode: overlay;
+    opacity: .35;
+    pointer-events: none;
+  }
+  .cta-block > * { position: relative; z-index: 1; }
+  .cta-block .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: #5fb487;
+    margin-bottom: 18px;
+  }
+  .cta-block h3 {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(34px, 4.5vw, 60px);
+    line-height: 1.02;
+    margin: 0 0 16px;
+    letter-spacing: -.01em;
+  }
+  .cta-block .cta-line {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(17px, 1.4vw, 20px);
+    color: rgba(243, 240, 232, .78);
+    margin: 0 auto 32px;
+    max-width: 40ch;
+    line-height: 1.5;
+  }
+  .cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: #125740;
+    color: #ede6d2;
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 1px;
+    transition: background .2s ease, color .2s ease, transform .2s ease;
+  }
+  .cta-link:hover {
+    background: #ede6d2;
+    color: #125740;
+    transform: translateY(-1px);
+  }
+  .cta-link .arrow { font-family: var(--serif); font-size: 16px; }
+
+  /* ---------- FOOTER ---------- */
+  footer.foot {
+    padding: clamp(32px, 5vh, 48px) clamp(20px, 4vw, 32px);
+    text-align: center;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--hush);
+    border-top: 1px solid var(--rule);
+  }
+  footer.foot a {
+    color: var(--ink);
+    text-decoration: none;
+    transition: color .2s ease;
+  }
+  footer.foot a:hover { color: var(--gold); }
+  footer.foot .row { margin: 6px 0; }
+  footer.foot .sig {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: .005em;
+    text-transform: none;
+    color: var(--hush);
+    margin-top: 14px;
+  }
+
+  /* ---------- fade-in on scroll ---------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .8s cubic-bezier(.2,.7,.3,1), transform .9s cubic-bezier(.2,.7,.3,1);
+    will-change: opacity, transform;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ---------- DARK MODE ---------- */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #161412;
+      --paper-warm: #1f1c18;
+      --ink: #ede6d2;
+      --ink-soft: #c8c0ac;
+      --hush: #908774;
+      --hush-soft: #6e6655;
+      --rule: #3a352e;
+      --rule-strong: #4a4438;
+      --gold: #d9b95c;
+      --gold-soft: rgba(217, 185, 92, .35);
+    }
+    body {
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='nd'><feTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 .95  0 0 0 0 .85  0 0 0 .05 0'/></filter><rect width='100%' height='100%' filter='url(%23nd)'/></svg>");
+    }
+    /* hero stays close to its default; the gradient already
+       darkens the title region. No extra brightness drop here. */
+    .hero-bg { filter: brightness(.58) contrast(1.08) saturate(.85); }
+    .cta-block { background: #0a0908; }
+    .cta-block .cta-line { color: rgba(237, 230, 210, .75); }
+    .cta-link {
+      background: #125740;
+      color: #ede6d2;
+    }
+    .cta-link:hover {
+      background: var(--paper-warm);
+      color: #5fb487;
+    }
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 600px) {
+    .hero h1 { max-width: 14ch; }
+    .pull p { font-size: clamp(22px, 5vw, 28px); }
+    /* stack the byline so the long credit doesn't run off the edge;
+       drop the separators that would otherwise strand on their own line */
+    .byline {
+      font-size: 10.5px;
+      letter-spacing: .18em;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .byline .sep { display: none; }
+  }
+
+  /* ---------- REDUCED MOTION ---------- */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      transition: none !important;
+      animation: none !important;
+    }
+    .reveal { opacity: 1; transform: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="hero">
+    <img class="hero-bg" src="/media/notes/001/hero-estate.jpg" alt="Oheka Castle at dusk. The exterior of the Long Island mansion where the Blank Space music video was shot in September 2014." />
+    <nav class="topnav">
+      <a href="/notes">← Notes</a>
+      <a href="/">tone.dad</a>
+    </nav>
+    <div class="hero-overlay">
+      <p class="hero-kicker">Notes from the Edit Suite · No. 001</p>
+      <h1>On-set editor on Taylor Swift's &lsquo;Blank Space.&rsquo;</h1>
+      <p class="hero-subtitle">Why this was my last music video.</p>
+    </div>
+  </header>
+
+  <div class="byline">
+    <span class="author">Justin Herrera</span>
+    <span class="sep">·</span>
+    <span>On-set editor, "Blank Space" (2014)</span>
+    <span class="sep">·</span>
+    <span class="read-time">4 min read</span>
+  </div>
+
+  <article class="prose">
+    <!-- hi swiftie. three? try thirteen. /vault -->
+
+    <aside class="receipts reveal" aria-label="Proof">
+      <p class="receipts-lead">I know how it sounds. So, the receipts.</p>
+      <figure class="receipt receipt-doc">
+        <video muted autoplay loop playsinline preload="metadata" aria-label="An editing timeline with the Blank Space footage, on set at Oheka Castle.">
+          <source src="/media/notes/002/bts_video.mp4" type="video/mp4">
+        </video>
+        <figcaption>The Blank Space footage, live on my timeline. Oheka Castle, 2014.</figcaption>
+      </figure>
+      <div class="receipts-pair">
+        <figure class="receipt">
+          <img src="/media/notes/002/with-joseph-kahn.jpg" alt="Justin reviewing edits at a laptop with director Joseph Kahn." loading="lazy">
+          <figcaption>At the monitor with director Joseph Kahn.</figcaption>
+        </figure>
+        <figure class="receipt">
+          <img src="/media/notes/002/on-set-editing.jpg" alt="Justin editing on set at Oheka Castle in 2014." loading="lazy">
+          <figcaption>Editing between setups. Oheka Castle, 2014.</figcaption>
+        </figure>
+      </div>
+    </aside>
+
+    <a class="final-cut reveal" href="https://www.youtube.com/watch?v=e-ORhEE9VVg" target="_blank" rel="noopener" aria-label="Watch the Blank Space music video on YouTube">
+      <div class="final-cut-still">
+        <video class="final-cut-loop"
+               muted autoplay loop playsinline preload="metadata"
+               poster="/media/blank-space-phone.jpg"
+               aria-label="Looping clip from the Blank Space music video. The scream, the golf-club, the wrecked car.">
+          <source src="/media/blank-space-rage.mp4" type="video/mp4">
+        </video>
+        <div class="final-cut-hud">
+          <span class="hud-rec" aria-hidden="true"></span>
+          <span class="hud-label">REC</span>
+          <span class="hud-tc">TRT 4:33:13</span>
+        </div>
+      </div>
+      <div class="final-cut-body">
+        <span class="final-cut-kicker">Blank Space</span>
+        <span class="final-cut-credit">Taylor Swift &times; Joseph Kahn &middot; 2014</span>
+      </div>
+      <div class="final-cut-cta">
+        <span>watch the final cut</span>
+        <span class="play-arrow" aria-hidden="true">&#9654;</span>
+      </div>
+    </a>
+
+    <section>
+      <h2>§ 1 &middot; The Call</h2>
+      <p>September 2014. Jil Hardin called. We'd worked together a year earlier on a Lady Gaga video, alongside an editor named Dustin Robertson (<em>AVIDDIVA</em>). She needed an on-set cutter. Joseph Kahn's usual guy, <a href="https://instagram.com/chancler" target="_blank" rel="noopener">Chancler Haynes</a>, wasn't available. They needed someone fast.</p>
+      <p>I was a staff editor at the New York Jets. Most days I was logging touchdowns and finding the right angle on a sack. At 26, still figuring it all out.</p>
+
+      <figure class="inset inset-split reveal">
+        <div class="split-grid">
+          <div class="split-tile tile-jk">
+            <img src="/media/notes/002/jk-times-square.jpg" alt="Director Joseph Kahn editing on a laptop in Times Square at night, headphones on, surrounded by neon billboards." loading="lazy" />
+          </div>
+          <div class="split-tile tile-justin">
+            <img src="/media/notes/002/justin-times-square.jpg" alt="Justin Herrera in Times Square at night, Panasonic billboard behind him." loading="lazy" />
+          </div>
+        </div>
+        <figcaption>Times Square · Joseph Kahn and me · the music-video circuit, 2014</figcaption>
+      </figure>
+
+      <p>Project codename: <a class="vault-link" href="/vault"><em>"Project Maverick."</em></a> A few days' notice. I said yes before I knew what it was.</p>
+    </section>
+
+    <div class="paint-break reveal" style="--break: url('/media/notes/001/texture-oil-cream.jpg');"></div>
+
+    <section>
+      <h2>§ 2 &middot; The Day</h2>
+
+      <figure class="inset reveal">
+        <img src="/media/notes/002/with-joseph-kahn.jpg" alt="Justin reviewing edits on a laptop with director Joseph Kahn on the Blank Space set." loading="lazy" />
+        <figcaption>On the laptop with Joseph Kahn (Toxic &middot; Without Me &middot; Bad Blood)</figcaption>
+      </figure>
+
+      <p>Oheka Castle. Huntington, Long Island. Early call.</p>
+      <p>Someone waved my 2002 Mustang through the production gate. My dad had given me that car as a wedding gift a few months earlier. Steph and I had just gotten back from our honeymoon. A PA jogged over and asked if the Mustang was for the video. I awkwardly said no, and parked.</p>
+
+      <figure class="inset reveal">
+        <img src="/media/notes/002/the-mustang.png" alt="The black Ford Mustang Justin's dad gave him as a wedding gift in 2014." loading="lazy" />
+        <figcaption>The Mustang · they thought it was for the shoot. it wasn&rsquo;t.</figcaption>
+      </figure>
+
+      <p>I didn't know it was Taylor Swift until I pulled up.</p>
+      <p>Inside: Joseph Kahn directing. Taylor on her seventh costume change before noon. I kept my head down and my drive plugged in.</p>
+
+      <figure class="inset reveal">
+        <img src="/media/notes/002/on-set-editing.jpg" alt="Justin editing on set at Oheka Castle. MacBook open on a wooden table, blue road cases, plants in the corner." loading="lazy" />
+        <figcaption>Editing between setups · Oheka Castle, 2014</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>§ 3 &middot; The Cut</h2>
+      <p>Halfway through the day, Joseph called me over. Someone wanted to see what I'd cut.</p>
+
+      <figure class="inset reveal">
+        <video muted autoplay loop playsinline preload="metadata" aria-label="Behind-the-scenes clip from the Blank Space shoot at Oheka Castle, September 2014.">
+          <source src="/media/notes/002/bts_video.mp4" type="video/mp4">
+        </video>
+        <figcaption>BTS · Oheka Castle · September 2014</figcaption>
+      </figure>
+
+      <p>Taylor sat down at my monitor. She watched it. She said something kind. I was starstruck. The specifics don't matter because I don't trust my own memory after eleven years.</p>
+      <p>At the end of the shoot, I went to her trailer. She lent me her laptop, a grey MacBook, so I could transfer the file. <strong>BS-RoughCut.mp4.</strong> I was so locked in on the status bar that I didn't even think to look at her wallpaper. She loved it. Hugged me. Thanked me.</p>
+      <p>I went back to the Mustang. That's all I remember about the next ten minutes.</p>
+
+      <p>Three things I can tell you:</p>
+      <p>My actual phone is in the video. The scene where she's lying in Sean O'Pry's lap. That's my phone. Joseph just grabbed it.</p>
+      <p>The deer were CGI. The horse was real on set. She stood on a table next to it and the artists composited the rest. The dogs were real.</p>
+      <p>The car-wrecking scene was CGI too, which meant Taylor had to act out destroying a hood with nothing there. She nailed it. Somewhere there are bloopers from that.</p>
+
+      <div class="pull-with-moment">
+        <blockquote class="pull">
+          <p>"Taylor watched the cut. Then she showed her mom."</p>
+          <div class="attribution">On set &middot; September 2014</div>
+        </blockquote>
+        <figure class="moment" aria-label="Looping clip. Taylor walking down the Oheka castle steps with Sean O'Pry.">
+          <video class="moment-video" muted autoplay loop playsinline preload="metadata">
+            <source src="/media/blank-space-stairs.mp4" type="video/mp4">
+          </video>
+          <div class="moment-hud">
+            <span class="moment-rec" aria-hidden="true"></span>
+            <span>MOMENT 003</span>
+            <span class="moment-tag">Oheka steps</span>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <p class="hd-trigger-wrap" data-hd-anchor>
+      <a class="hd-trigger" href="https://tonedad.beehiiv.com/subscribe" target="_blank" rel="noopener" data-hd-open>Psst. There is a hidden detail in this video &rarr;</a>
+    </p>
+
+    <div class="paint-break reveal" style="--break: url('/media/notes/001/texture-oil-blood.jpg');"></div>
+
+    <section>
+      <h2>§ 4 &middot; Prague</h2>
+      <p>The next spring, Joseph called again. Maybelline campaign. Gigi Hadid in front of the camera, Joseph behind it. NYC. I showed up.</p>
+
+      <figure class="inset reveal">
+        <img src="/media/notes/002/maybelline-timeline.jpg" alt="Avid Media Composer timeline cutting the Maybelline campaign with Gigi Hadid. Timestamp 5:23 AM." loading="lazy" />
+        <figcaption>5:23 AM &middot; the Maybelline cut &middot; NYC, May 2015</figcaption>
+      </figure>
+
+      <figure class="inset reveal">
+        <img src="/media/notes/002/maybelline-jk-watching.jpg" alt="Joseph Kahn in a hooded jacket and headphones, reviewing Justin's cut at the laptop on set." loading="lazy" />
+        <figcaption>Joseph at the laptop, again &middot; same setup as Oheka</figcaption>
+      </figure>
+
+      <p>Then he called again. Liquor commercial. Prague. Two weeks.</p>
+      <p>I said no.</p>
+
+      <p>He called again a couple weeks after that. Same shoot, different start date.</p>
+      <p>I said no.</p>
+      <p>Here's where the story is supposed to end with me taking the offer and changing my life. It doesn't. I had a commitment to the Jets. I had a nervous system that had only just stopped vibrating from the Oheka day. I wasn't ready to be the guy whose phone rang for <em>Prague</em>.</p>
+      <p>Maybe that was the right call. Maybe it wasn't. But it was my call.</p>
+    </section>
+
+    <section>
+      <h2>§ 5 &middot; The Pivot</h2>
+      <p>A few years later I left broadcast for good. Left music videos behind too. Started <strong>Tonemedia</strong>: wedding and brand films out of north Jersey. Then <strong>Noblepost</strong>: post-production for filmmakers who needed their weekends back.</p>
+      <p>Nothing strategic about the name. Someone at the Jets started calling me <strong>Tonetime</strong> in 2012. A san<em>Tonio</em> Holmes thing that stuck. Alex Darcey rolled it into <strong>Tonemedia</strong>. I just printed the business cards.</p>
+      <p>People ask if I regret saying no to Prague.</p>
+      <p>I have three kids under five. A wife I actually see. Two companies we built together. The regret would've been saying yes.</p>
+      <p>If you're a young editor and someone calls with a <a class="vault-link" href="/vault"><em>"Project Maverick"</em></a>, say yes to the day. That's a gift. But you don't owe anyone your whole life because one famous person was kind to you for an hour.</p>
+      <p>So, why was Blank Space my last music video? The honest answer is that the glamour of that world wore off. What grew in its place was the weddings.</p>
+      <p>Smaller rooms, no red carpet. But the films were mine. No notes from a label, nobody waiting in Prague, just a couple and a story and me deciding exactly how it should feel. That freedom turned out to be the whole thing. I would rather <mark class="hl">own a small story</mark> than rent a piece of a famous one.</p>
+
+      <p><strong>The freakin' Jets.</strong> Blank Space was the last music video I ever cut. Ended with a bang. But the real story was the Jets. 2010 to 2015. A ride. Eleven months after my last day there, I quit and chased the next thing.</p>
+      <p><em>That one's coming. But <a href="/notes/002-steph-was-right">Issue 002</a> is about a house: what Steph saw in a basement nobody wanted, and what it has paid us every month since.</em></p>
+
+      <figure class="inset reveal jets-final">
+        <span class="jets-frame">
+          <img src="/media/notes/002/jets-last-day.jpg" alt="Justin on his last day at the New York Jets, standing with packed boxes from his editing desk." loading="lazy" />
+          <figcaption>Last day at the Jets &middot; 2014</figcaption>
+        </span>
+        <a class="jets-subscribe" href="https://tonedad.beehiiv.com/subscribe" target="_blank" rel="noopener">
+          subscribe <span aria-hidden="true">&rarr;</span>
+        </a>
+      </figure>
+    </section>
+
+  </article>
+
+  <footer class="foot">
+    <div class="row"><a href="/notes">← back to notes</a></div>
+    <div class="row"><a href="/">written from tone.dad</a></div>
+    <div class="sig">Justin, in Morris Plains</div>
+  </footer>
+
+  <div class="hd-overlay" id="hdPopup" role="dialog" aria-modal="true" aria-labelledby="hdLine">
+    <div class="hd-modal">
+      <button type="button" class="hd-close" data-hd-close aria-label="Close">&times;</button>
+      <figure class="hd-photo">
+        <img src="/media/blank-space-phone-annotated.jpg" alt="Taylor Swift in the Blank Space music video holding out a phone, annotated with a note that reads: my actual phone." loading="lazy" />
+      </figure>
+      <span class="hd-kicker">Off the record</span>
+      <p class="hd-line" id="hdLine">The phone is the secret everyone knows. The better stuff never left my hard drive.</p>
+      <p class="hd-sub">Drop your email and the whole file from that day is the first thing I send you. Lady Gaga, the Jets, and the wedding stories are next.</p>
+      <form class="hd-form" novalidate>
+        <div class="hp-field" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none"><label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
+        <input type="text" class="hd-input hd-name" placeholder="Full name" aria-label="Full name" autocomplete="name" required>
+        <input type="email" class="hd-input" placeholder="you@email.com" aria-label="Your email" autocomplete="email" required>
+        <button type="submit" class="hd-btn">Send me the detail <span aria-hidden="true">&rarr;</span></button>
+      </form>
+      <p class="hd-msg" role="status" hidden></p>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      // Reading progress bar
+      var bar = document.querySelector('.progress-bar');
+      function updateProgress() {
+        if (!bar) return;
+        var doc = document.documentElement;
+        var max = doc.scrollHeight - window.innerHeight;
+        var ratio = max > 0 ? Math.min(100, Math.max(0, (window.scrollY / max) * 100)) : 0;
+        bar.style.setProperty('--progress', ratio.toFixed(2) + '%');
+      }
+      window.addEventListener('scroll', updateProgress, { passive: true });
+      window.addEventListener('resize', updateProgress, { passive: true });
+      updateProgress();
+
+      // Reveal on scroll for images + paint breaks
+      var reduceMotion = window.matchMedia &&
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var revealables = document.querySelectorAll('.reveal');
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        revealables.forEach(function (el) { el.classList.add('in'); });
+      } else {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
+        revealables.forEach(function (el) { io.observe(el); });
+      }
+
+      // Hidden-detail subscribe popup: click-to-open, plus a gentle auto-open once per session
+      var NOTE_T0 = Date.now();   // page-load stamp — proves the signup came from this page
+      var hdOverlay = document.getElementById('hdPopup');
+      if (hdOverlay) {
+        var hdOpen = function (e) { if (e) e.preventDefault(); hdOverlay.classList.add('open'); };
+        var hdClose = function () { hdOverlay.classList.remove('open'); };
+        document.querySelectorAll('[data-hd-open]').forEach(function (t) { t.addEventListener('click', hdOpen); });
+        hdOverlay.querySelectorAll('[data-hd-close]').forEach(function (c) { c.addEventListener('click', hdClose); });
+        hdOverlay.addEventListener('click', function (e) { if (e.target === hdOverlay) hdClose(); });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hdClose(); });
+
+        // inline email capture -> same serverless endpoint the homepage uses
+        var hdForm = hdOverlay.querySelector('.hd-form');
+        var hdMsg = hdOverlay.querySelector('.hd-msg');
+        if (hdForm) {
+          hdForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var nameInput = hdForm.querySelector('.hd-name');
+            var input = hdForm.querySelector('.hd-input[type=email]');
+            var name = ((nameInput && nameInput.value) || '').trim();
+            var email = ((input && input.value) || '').trim();
+            if (!/\S+\s+\S+/.test(name)) {
+              if (hdMsg) { hdMsg.hidden = false; hdMsg.className = 'hd-msg err'; hdMsg.textContent = 'Full name too — it’s only fair.'; }
+              if (nameInput) nameInput.focus();
+              return;
+            }
+            if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+              if (hdMsg) { hdMsg.hidden = false; hdMsg.className = 'hd-msg err'; hdMsg.textContent = 'That email looks off. Try again.'; }
+              return;
+            }
+            var sb = hdForm.querySelector('.hd-btn');
+            if (sb) { sb.disabled = true; sb.textContent = 'Sending...'; }
+            var hpEl = hdForm.querySelector('.hp-field input');
+            fetch('/api/subscribe', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                email: email, source: 'note-blankspace', q2: 'Name: ' + name,
+                hp: ((hpEl && hpEl.value) || '').trim(),   // honeypot — humans leave it empty
+                t: Date.now() - NOTE_T0                    // ms from page load; bots posting direct send none
+              })
+            }).then(function (r) { return r.ok ? r.json() : Promise.reject(r); })
+              .then(function () {
+                hdForm.hidden = true;
+                if (hdMsg) { hdMsg.hidden = false; hdMsg.className = 'hd-msg ok'; hdMsg.textContent = 'Check your inbox. The detail is on its way.'; }
+              })
+              .catch(function () {
+                if (sb) { sb.disabled = false; sb.innerHTML = 'Send me the detail <span aria-hidden="true">&rarr;</span>'; }
+                if (hdMsg) { hdMsg.hidden = false; hdMsg.className = 'hd-msg err'; hdMsg.textContent = 'Something glitched. Try once more.'; }
+              });
+          });
+        }
+
+        var hdSeen = false;
+        try { hdSeen = sessionStorage.getItem('hd001') === '1'; } catch (err) {}
+        if (!hdSeen && !reduceMotion) {
+          var hdArt = document.querySelector('.prose');
+          var hdFire = function () {
+            if (!hdArt) return;
+            var top = hdArt.getBoundingClientRect().top + window.scrollY;
+            var oneThird = top + hdArt.offsetHeight / 3;   // fire ~1/3 down the article
+            if (window.scrollY + window.innerHeight * 0.5 >= oneThird) {
+              hdOpen();
+              try { sessionStorage.setItem('hd001', '1'); } catch (err) {}
+              window.removeEventListener('scroll', hdFire);
+            }
+          };
+          window.addEventListener('scroll', hdFire, { passive: true });
+        }
+      }
+    })();
+  </script>
+</body>
+</html>

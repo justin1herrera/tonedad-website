@@ -1,0 +1,55 @@
+# Dev-only artifacts — never part of the live site
+.claude
+.git
+
+# In-tree working snapshots (rollback copies, not served pages)
+snapshots
+*-prev-*.html
+index-prev-*.html
+index-linktree-*.html
+build-prev-*.html
+newsletter-prev-*.html
+notes/*-prev-*.html
+
+# Stray scratch files
+-----------.txt
+higgs-ad-brief.md
+brand-style.md
+ad-kit
+media/_originals
+media/tonedad-logo-refs
+node_modules
+
+# Unpublished draft pages — take off the live site
+build.html
+tonehomes.html
+v2.html
+linktree.html
+_pstest.html
+cutting_room_re-edit.html
+
+# Untracked scratch / OS junk
+tone-dad-fix-pack.md
+.DS_Store
+
+# Note 002 staging folder — finished files were copied into notes/ and media/.
+# This is the 206 MB source drop (incl. uploads/ camera originals); never deploy it.
+002
+
+# Retired media (old link-tree/v2 design — unreferenced). NOTE: brand-dad.jpg is KEPT (newsletter OG).
+media/blank-space-rage.jpg
+media/brady-tkachuk.jpg
+media/brand-dad.mp4
+media/brand-homes.jpg
+media/brand-homes.mp4
+media/brand-media.jpg
+media/brand-media.mp4
+media/credit-brady.mp4
+media/credit-katy.mp4
+media/credit-maybelline.mp4
+media/katy-perry.jpg
+media/maybelline-gigi.jpg
+media/tonehomes-craignicole.mp4
+media/tonehomes-driving.mp4
+media/tonemedia-main-logo-color-5-rgb-900px-w-72ppi.png
+media/veil-hero.mp4

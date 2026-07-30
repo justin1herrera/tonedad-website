@@ -1,0 +1,1947 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>We filmed your wedding. Now let's find your home. · tone.dad</title>
+<meta name="description" content="Justin and Steph Herrera filmed your wedding. Now they help couples find their first home in New Jersey. Tonemedia meets Tonehomes — same couple, full circle.">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://www.tone.dad/couples">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.tone.dad/couples">
+<meta property="og:title" content="We filmed your wedding. Now let's find your home.">
+<meta property="og:description" content="Justin and Steph shot 350+ weddings. Then couples started asking about houses. Same trust, new door. Tonemedia × Tonehomes.">
+<meta property="og:image" content="https://www.tone.dad/media/og-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="tone.dad">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="We filmed your wedding. Now let's find your home.">
+<meta name="twitter:description" content="350+ weddings filmed. Then couples started asking about houses. Same trust, new door.">
+<meta name="twitter:image" content="https://www.tone.dad/media/og-share.jpg">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   TOKENS — same system as index.html
+   ============================================================ */
+:root {
+  --bg:        #F2EDE2;
+  --bg-2:      #EBE3D2;
+  --ink:       #1B1714;
+  --ink-soft:  #4A3F35;
+  --muted:     #685D4F;
+  --rule:      #C9BDA3;
+  --rule-soft: #DCD1B7;
+
+  --terra:     #B5421F;   /* Tonemedia terracotta */
+  --terra-bg:  #E9D8C2;
+  --sage:      #4F5E3F;   /* Tonehomes sage */
+  --sage-bg:   #DEDFC7;
+  --sage-deep: #3A4A2D;
+
+  --serif:  'Fraunces', 'Times New Roman', serif;
+  --sans:   'Inter Tight', system-ui, -apple-system, sans-serif;
+  --mono:   'JetBrains Mono', ui-monospace, monospace;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+::selection { background: var(--ink); color: var(--bg); }
+a { color: inherit; text-decoration: none; }
+
+/* grain overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(27,23,20,0.025) 1px, transparent 1px);
+  background-size: 3px 3px;
+  pointer-events: none;
+  z-index: 100;
+}
+
+/* ============================================================
+   TOP STRIP
+   ============================================================ */
+.top {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 44px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: rgba(242, 237, 226, 0.0);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  transition: background 0.5s var(--ease), backdrop-filter 0.5s var(--ease);
+}
+.top.scrolled {
+  background: rgba(242, 237, 226, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.top-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s var(--ease);
+}
+.top-back:hover { color: var(--ink); }
+.top-back .arrow { display: inline-block; transition: transform 0.3s var(--ease); }
+.top-back:hover .arrow { transform: translateX(-3px); }
+.top-brand {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  font-variation-settings: "opsz" 144, "SOFT" 60;
+}
+.top-brand .dot {
+  display: inline-block;
+  width: 4px; height: 4px;
+  background: var(--ink);
+  border-radius: 50%;
+  margin: 0 2px;
+  vertical-align: middle;
+  transform: translateY(-0.12em);
+}
+
+/* ============================================================
+   HERO — the hook
+   ============================================================ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 120px 44px 80px;
+  position: relative;
+}
+
+.hero-eyebrow {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.hero-eyebrow::before, .hero-eyebrow::after {
+  content: "";
+  width: 24px; height: 1px;
+  background: var(--rule);
+}
+
+.hero-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(42px, 7vw, 88px);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  max-width: 14ch;
+  margin-bottom: 32px;
+  text-wrap: balance;
+}
+.hero-title .terra { color: var(--terra); }
+.hero-title .sage { color: var(--sage); }
+
+.hero-sub {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  max-width: 48ch;
+  line-height: 1.7;
+}
+.hero-sub em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  color: var(--ink);
+}
+
+/* scroll indicator */
+.hero-scroll {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  animation: scrollFloat 2.5s ease-in-out infinite;
+}
+.hero-scroll-line {
+  width: 1px;
+  height: 28px;
+  background: linear-gradient(to bottom, var(--rule), transparent);
+}
+@keyframes scrollFloat {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
+/* ============================================================
+   THE TIMELINE — the story of how this happened
+   ============================================================ */
+.timeline {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 80px 44px 120px;
+}
+
+/* the vertical thread */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 44px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--terra) 15%,
+    var(--terra) 45%,
+    var(--sage) 55%,
+    var(--sage) 85%,
+    transparent 100%
+  );
+}
+
+.tl-node {
+  position: relative;
+  padding-left: 56px;
+  margin-bottom: 72px;
+}
+.tl-node:last-child { margin-bottom: 0; }
+
+/* dot on the line */
+.tl-node::before {
+  content: '';
+  position: absolute;
+  left: 38px;
+  top: 8px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 2px solid var(--terra);
+  background: var(--bg);
+  z-index: 2;
+  transition: background 0.5s var(--ease), border-color 0.5s var(--ease);
+}
+.tl-node.is-home::before {
+  border-color: var(--sage);
+}
+.tl-node.is-bridge::before {
+  border-color: var(--ink);
+  background: var(--ink);
+  width: 17px;
+  height: 17px;
+  left: 36px;
+  top: 6px;
+}
+
+.tl-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.tl-node:not(.is-home) .tl-tag { color: var(--terra); }
+.tl-node.is-home .tl-tag { color: var(--sage); }
+.tl-node.is-bridge .tl-tag { color: var(--ink); }
+
+.tl-headline {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(24px, 3.2vw, 38px);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  margin-bottom: 14px;
+}
+.tl-headline em {
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 80;
+}
+.tl-node:not(.is-home) .tl-headline em { color: var(--terra); }
+.tl-node.is-home .tl-headline em { color: var(--sage); }
+
+.tl-body {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  max-width: 48ch;
+}
+.tl-body em {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--ink);
+  font-size: 17px;
+}
+
+/* ============================================================
+   THE BRIDGE — the color shift moment
+   ============================================================ */
+.bridge {
+  position: relative;
+  padding: 100px 44px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* gradient background that shifts terracotta → sage */
+.bridge::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    var(--terra-bg) 0%,
+    var(--bg) 30%,
+    var(--bg) 70%,
+    var(--sage-bg) 100%
+  );
+  z-index: -1;
+}
+
+.bridge-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 48px;
+}
+.bridge-rule {
+  width: 80px;
+  height: 1px;
+}
+.bridge-rule-terra { background: var(--terra); }
+.bridge-rule-sage { background: var(--sage); }
+.bridge-x {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 28px;
+  color: var(--muted);
+  font-variation-settings: "opsz" 144, "SOFT" 80;
+}
+
+.bridge-headline {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(32px, 5vw, 64px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  max-width: 16ch;
+  margin: 0 auto 24px;
+}
+
+.bridge-sub {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 52ch;
+  margin: 0 auto;
+}
+.bridge-sub em {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--ink);
+  font-size: 18px;
+}
+
+/* ============================================================
+   WHAT COUPLES GET — the dual offering
+   ============================================================ */
+.offering {
+  padding: 96px 44px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.offering-head {
+  text-align: center;
+  margin-bottom: 72px;
+}
+.offering-eyebrow {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+.offering-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(28px, 3.6vw, 48px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+}
+.offering-title em {
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 80;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+.card {
+  position: relative;
+  padding: 36px 32px 32px;
+  border: 1px solid var(--rule);
+  border-top-width: 3px;
+  transition:
+    transform 0.55s var(--ease),
+    box-shadow 0.55s var(--ease);
+  overflow: hidden;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 24px 48px -16px rgba(27,23,20,0.18),
+    0 8px 16px -8px rgba(27,23,20,0.12);
+}
+
+.card-terra { border-top-color: var(--terra); background: var(--terra-bg); }
+.card-sage  { border-top-color: var(--sage);  background: var(--sage-bg); }
+
+.card-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+.card-terra .card-num { color: var(--terra); }
+.card-sage  .card-num { color: var(--sage); }
+
+.card-name {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+.card-role {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+
+.card-list {
+  list-style: none;
+}
+.card-list li {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--rule-soft);
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+.card-list li:last-child { border-bottom: 0; }
+.card-list .tick {
+  flex-shrink: 0;
+  font-size: 12px;
+}
+.card-terra .tick { color: var(--terra); }
+.card-sage  .tick { color: var(--sage); }
+
+.card-list em {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--ink);
+  font-size: 15.5px;
+}
+
+/* The bridge card — spans full width */
+.card-bridge {
+  grid-column: 1 / -1;
+  border-top-color: var(--ink);
+  background: var(--ink);
+  color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 36px 40px;
+}
+.card-bridge-text {
+  flex: 1;
+}
+.card-bridge-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(242, 237, 226, 0.49);
+  margin-bottom: 12px;
+}
+.card-bridge-headline {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(22px, 2.8vw, 34px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--bg);
+  font-variation-settings: "opsz" 144, "SOFT" 60;
+  margin-bottom: 10px;
+}
+.card-bridge-sub {
+  font-size: 14px;
+  color: rgba(242, 237, 226, 0.6);
+  max-width: 52ch;
+  line-height: 1.6;
+}
+.card-bridge-sub em {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--bg);
+  font-size: 15.5px;
+}
+
+.card-bridge-arrow {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border: 1.5px solid rgba(242, 237, 226, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: rgba(242, 237, 226, 0.5);
+  transition: border-color 0.3s var(--ease), color 0.3s var(--ease), transform 0.4s var(--ease);
+}
+.card-bridge:hover .card-bridge-arrow {
+  border-color: var(--terra);
+  color: var(--terra);
+  transform: rotate(-12deg) scale(1.05);
+}
+
+/* ============================================================
+   PROOF — the numbers
+   ============================================================ */
+.proof {
+  padding: 0 44px 96px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.proof-cell {
+  padding: 28px 24px;
+  border-right: 1px solid var(--rule);
+}
+.proof-cell:last-child { border-right: 0; }
+.proof-num {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(32px, 3.4vw, 52px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-variation-settings: "opsz" 144, "SOFT" 60;
+}
+.proof-num em { font-style: italic; }
+.proof-num.terra { color: var(--terra); }
+.proof-num.sage  { color: var(--sage); }
+.proof-label {
+  margin-top: 10px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ============================================================
+   THE QUOTE — real couple testimonial placeholder
+   ============================================================ */
+.quote-band {
+  background: var(--ink);
+  color: var(--bg);
+  padding: 96px 44px;
+  text-align: center;
+}
+.quote-mark {
+  font-family: var(--serif);
+  font-size: 64px;
+  line-height: 1;
+  color: var(--terra);
+  margin-bottom: 24px;
+}
+.quote-text {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(22px, 3vw, 36px);
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--bg);
+  font-variation-settings: "opsz" 144, "SOFT" 60;
+  max-width: 28ch;
+  margin: 0 auto 24px;
+}
+.quote-credit {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(242, 237, 226, 0.49);
+}
+
+/* ============================================================
+   CTA — the ask
+   ============================================================ */
+.cta-section {
+  padding: 96px 44px;
+  text-align: center;
+  position: relative;
+}
+/* subtle gradient background: sage on left, terra on right */
+.cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(222, 223, 199, 0.4), transparent 60%),
+    radial-gradient(ellipse at 80% 50%, rgba(233, 216, 194, 0.4), transparent 60%);
+  z-index: -1;
+}
+
+.cta-eyebrow {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+.cta-headline {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(32px, 4.5vw, 58px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  max-width: 16ch;
+  margin: 0 auto 16px;
+}
+.cta-sub {
+  font-size: 15px;
+  color: var(--ink-soft);
+  max-width: 48ch;
+  margin: 0 auto 36px;
+  line-height: 1.6;
+}
+.cta-sub em {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--ink);
+  font-size: 17px;
+}
+
+.cta-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 28px;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  border: 0;
+  cursor: pointer;
+  transition: transform 0.4s var(--ease), background 0.3s var(--ease);
+  text-decoration: none;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn .arr {
+  width: 24px; height: 1px;
+  position: relative;
+  transition: width 0.3s var(--ease);
+}
+.btn .arr::after {
+  content: "";
+  position: absolute;
+  right: 0; top: 50%;
+  width: 7px; height: 7px;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  transform: translateY(-50%) rotate(45deg);
+}
+.btn:hover .arr { width: 36px; }
+
+.btn-terra {
+  background: var(--terra);
+  color: var(--bg);
+}
+.btn-terra:hover { background: var(--ink); }
+.btn-terra .arr { background: var(--bg); }
+.btn-terra .arr::after { border-color: var(--bg); }
+
+.btn-sage {
+  background: var(--sage);
+  color: var(--bg);
+}
+.btn-sage:hover { background: var(--ink); }
+.btn-sage .arr { background: var(--bg); }
+.btn-sage .arr::after { border-color: var(--bg); }
+
+.cta-note {
+  margin-top: 28px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+/* ============================================================
+   FOOTER — minimal
+   ============================================================ */
+.foot {
+  padding: 28px 44px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.foot a { transition: color 0.3s var(--ease); }
+.foot a:hover { color: var(--ink); }
+.foot-links { display: flex; gap: 22px; }
+
+/* ============================================================
+   PHOTO STRIP — real wedding + home photos
+   ============================================================ */
+.photo-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin: 0;
+}
+.photo-strip-cell {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  position: relative;
+}
+.photo-strip-cell img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.85) contrast(1.04);
+  transition: transform 0.8s var(--ease), filter 0.5s var(--ease);
+}
+.photo-strip-cell:hover img {
+  transform: scale(1.04);
+  filter: saturate(1) contrast(1.02);
+}
+.photo-strip-cell::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(27,23,20,0.2) 100%);
+  pointer-events: none;
+}
+.photo-strip-label {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(242, 237, 226, 0.85);
+  background: rgba(27, 23, 20, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 5px 10px;
+  z-index: 2;
+}
+
+/* ============================================================
+   REVEAL ANIMATION
+   ============================================================ */
+.r {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+.r.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.r.d1 { transition-delay: 0.08s; }
+.r.d2 { transition-delay: 0.18s; }
+.r.d3 { transition-delay: 0.30s; }
+.r.d4 { transition-delay: 0.44s; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 800px) {
+  .top { padding: 14px 22px; }
+  .hero { padding: 100px 24px 64px; min-height: 90vh; }
+  .hero-title { font-size: clamp(36px, 10vw, 56px); }
+  .timeline { padding: 60px 24px 80px; }
+  .timeline::before { left: 24px; }
+  .tl-node { padding-left: 44px; }
+  .tl-node::before { left: 18px; }
+  .tl-node.is-bridge::before { left: 16px; }
+  .bridge { padding: 72px 24px; }
+  .offering { padding: 72px 24px; }
+  .cards { grid-template-columns: 1fr; }
+  .card-bridge { flex-direction: column; gap: 24px; text-align: center; padding: 32px 24px; }
+  .card-bridge-arrow { display: none; }
+  .proof { padding: 0 24px 72px; }
+  .proof-grid { grid-template-columns: repeat(2, 1fr); }
+  .proof-cell { border-right: 0; border-bottom: 1px solid var(--rule); }
+  .proof-cell:nth-child(odd) { border-right: 1px solid var(--rule); }
+  .proof-cell:nth-last-child(-n+2) { border-bottom: 0; }
+  .quote-band { padding: 64px 24px; }
+  .cta-section { padding: 64px 24px; }
+  .cta-btns { flex-direction: column; }
+  .photo-strip { grid-template-columns: 1fr; }
+  .foot { flex-direction: column; gap: 12px; padding: 22px 24px; }
+}
+
+/* ============================================================
+   HERO GLYPHS — floating video/image pills inline in headline
+   ============================================================ */
+.hero-glyph {
+  display: inline-block;
+  vertical-align: middle;
+  width: clamp(60px, 6.5vw, 100px);
+  height: clamp(50px, 5.4vw, 84px);
+  border-radius: 10px;
+  margin: 0 0.14em;
+  background: #1a1a16;
+  position: relative;
+  border: 2.5px solid rgba(255,255,255,0.45);
+  box-shadow:
+    0 6px 24px -6px rgba(27,23,20,.40),
+    0 2px 8px -4px rgba(27,23,20,.20);
+  transition: transform 0.55s cubic-bezier(.34,1.56,.64,1), box-shadow 0.55s cubic-bezier(.34,1.56,.64,1);
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 2;
+  will-change: transform;
+}
+.hero-glyph img, .hero-glyph video {
+  width: 100%; height: 100%;
+  display: block;
+  object-fit: cover;
+  pointer-events: none;
+  filter: saturate(0.8) contrast(1.08);
+  transition: filter 0.5s var(--ease), transform 0.5s var(--ease);
+}
+/* Ken Burns drift on static images */
+.hero-glyph img {
+  animation: glyphKB 14s ease-in-out infinite alternate;
+}
+@keyframes glyphKB {
+  from { transform: scale(1.12) translate(3%, 2%); }
+  to   { transform: scale(1.22) translate(-3%, -3%); }
+}
+/* color wash tint */
+.hero-glyph::before {
+  content: "";
+  position: absolute; inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.18;
+  mix-blend-mode: color;
+}
+/* vignette */
+.hero-glyph::after {
+  content: "";
+  position: absolute; inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(10,10,8,.45) 100%);
+}
+.hero-glyph:hover {
+  z-index: 4;
+  box-shadow: 0 8px 20px -6px rgba(27,23,20,.50);
+  border-color: rgba(255,255,255,0.7);
+}
+.hero-glyph:hover img, .hero-glyph:hover video {
+  filter: saturate(1.15) contrast(1.06) brightness(1.04);
+}
+.hero-glyph:hover::before { opacity: 0.05; }
+
+.hero-glyph-1 {
+  animation: glyphFloat1 6s ease-in-out infinite;
+}
+.hero-glyph-1::before { background: #C15839; }
+@keyframes glyphFloat1 {
+  0%, 100% { transform: translateY(-0.14em) rotate(-3deg); }
+  50%      { transform: translateY(-0.22em) rotate(-2.2deg); }
+}
+.hero-glyph-2 {
+  animation: glyphFloat2 6s ease-in-out infinite;
+  animation-delay: -2s;
+}
+.hero-glyph-2::before { background: #3d6b4a; }
+@keyframes glyphFloat2 {
+  0%, 100% { transform: translateY(-0.10em) rotate(3.5deg); }
+  50%      { transform: translateY(-0.20em) rotate(2.5deg); }
+}
+.hero-glyph:hover { animation: none; transform: translateY(-0.22em) rotate(0deg); }
+
+@media (max-width: 720px) {
+  .hero-glyph {
+    width: 48px; height: 40px;
+    margin: 0 0.10em;
+    border-width: 2px;
+    border-radius: 8px;
+  }
+}
+
+/* ============================================================
+   RING → KEY SVG — the visual metaphor in the bridge
+   ============================================================ */
+.ring-key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin: 0 auto 48px;
+  max-width: 400px;
+}
+.ring-key svg {
+  width: 100%;
+  height: auto;
+}
+.rk-ring, .rk-key, .rk-line {
+  transition: all 0.8s var(--ease);
+}
+.rk-ring {
+  fill: none;
+  stroke: var(--terra);
+  stroke-width: 2.5;
+}
+.rk-key {
+  fill: none;
+  stroke: var(--sage);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.rk-line {
+  fill: none;
+  stroke: var(--rule);
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+}
+/* draw-in on scroll */
+.rk-draw {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  transition: stroke-dashoffset 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.ring-key.in .rk-draw {
+  stroke-dashoffset: 0;
+}
+
+/* ============================================================
+   TIMELINE ICONS — camera & house inline in nodes
+   ============================================================ */
+.tl-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+.tl-icon svg {
+  width: 20px;
+  height: 20px;
+}
+.tl-icon-terra {
+  background: rgba(181, 66, 31, 0.1);
+  color: var(--terra);
+}
+.tl-icon-sage {
+  background: rgba(79, 94, 63, 0.1);
+  color: var(--sage);
+}
+.tl-icon-ink {
+  background: rgba(27, 23, 20, 0.08);
+  color: var(--ink);
+}
+
+/* ============================================================
+   CARD CONNECTOR — dashed arc between the two cards
+   ============================================================ */
+.card-connector {
+  position: relative;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1 / -1;
+  margin: -12px 0;
+}
+.card-connector svg {
+  width: 100%;
+  max-width: 400px;
+  height: 48px;
+}
+.cc-arc {
+  fill: none;
+  stroke: var(--rule);
+  stroke-width: 1.5;
+  stroke-dasharray: 6 4;
+}
+.cc-dot {
+  r: 4;
+  fill: var(--bg);
+  stroke-width: 2;
+}
+.cc-dot-terra { stroke: var(--terra); }
+.cc-dot-sage  { stroke: var(--sage); }
+.cc-label {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  fill: var(--muted);
+}
+
+/* ============================================================
+   SCROLL-DRIVEN BODY TINT — terracotta → sage shift
+   ============================================================ */
+.body-tint {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.8s ease, background 1.2s ease;
+}
+.body-tint-terra {
+  background: radial-gradient(ellipse at 50% 30%, rgba(233, 216, 194, 0.35), transparent 70%);
+}
+.body-tint-sage {
+  background: radial-gradient(ellipse at 50% 70%, rgba(222, 223, 199, 0.35), transparent 70%);
+}
+
+/* ============================================================
+   PHOTO STRIP ENHANCEMENTS — cross-fade color tint on hover
+   ============================================================ */
+.photo-strip-cell .tint-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.12;
+  transition: opacity 0.6s var(--ease);
+  mix-blend-mode: color;
+}
+.photo-strip-cell:hover .tint-overlay { opacity: 0.03; }
+.tint-terra { background: var(--terra); }
+.tint-sage  { background: var(--sage); }
+.tint-blend { background: linear-gradient(135deg, var(--terra), var(--sage)); }
+
+/* ============================================================
+   QUOTE BAND — floating ring icon
+   ============================================================ */
+.quote-ring {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--ink);
+  border: 3px solid var(--terra);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quote-ring svg {
+  width: 24px;
+  height: 24px;
+  color: var(--terra);
+}
+.quote-band { position: relative; }
+
+/* ============================================================
+   CTA FLOATING SHAPES — decorative
+   ============================================================ */
+.cta-deco {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.12;
+}
+.cta-deco-1 {
+  top: 20%;
+  left: 8%;
+  width: 80px;
+  height: 80px;
+  border: 2px solid var(--terra);
+  border-radius: 50%;
+  animation: decoFloat 8s ease-in-out infinite;
+}
+.cta-deco-2 {
+  bottom: 18%;
+  right: 10%;
+  width: 48px;
+  height: 48px;
+  border: 2px solid var(--sage);
+  transform: rotate(45deg);
+  animation: decoFloat 8s ease-in-out infinite;
+  animation-delay: -3s;
+}
+.cta-deco-3 {
+  top: 35%;
+  right: 15%;
+  width: 6px;
+  height: 6px;
+  background: var(--terra);
+  border-radius: 50%;
+  animation: decoFloat 6s ease-in-out infinite;
+  animation-delay: -1s;
+}
+.cta-deco-4 {
+  bottom: 30%;
+  left: 12%;
+  width: 6px;
+  height: 6px;
+  background: var(--sage);
+  border-radius: 50%;
+  animation: decoFloat 6s ease-in-out infinite;
+  animation-delay: -4s;
+}
+@keyframes decoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.cta-deco-2 {
+  animation-name: decoFloat2;
+}
+@keyframes decoFloat2 {
+  0%, 100% { transform: rotate(45deg) translateY(0); }
+  50% { transform: rotate(45deg) translateY(-12px); }
+}
+
+/* ============================================================
+   COUPLE STORIES — real case studies with photos & video
+   ============================================================ */
+.stories {
+  padding: 0 44px 96px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.stories-head {
+  text-align: center;
+  margin-bottom: 64px;
+}
+.stories-eyebrow {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.stories-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(28px, 3.6vw, 48px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+}
+.stories-title em {
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 80;
+}
+
+/* individual story card */
+.story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-bottom: 48px;
+  border: 1px solid var(--rule);
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.5s var(--ease);
+}
+.story:hover {
+  box-shadow: 0 24px 56px -20px rgba(27,23,20,0.16);
+}
+.story:last-child { margin-bottom: 0; }
+
+/* flip layout for second story */
+.story-flip { direction: rtl; }
+.story-flip > * { direction: ltr; }
+
+/* media side */
+.story-media {
+  position: relative;
+  min-height: 380px;
+  background: var(--ink);
+  overflow: hidden;
+}
+.story-media-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.85) contrast(1.05);
+  transition: transform 1.2s var(--ease);
+}
+.story:hover .story-media-img {
+  transform: scale(1.04);
+}
+
+/* video loop overlay */
+.story-video-wrap {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 140px;
+  height: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,0.5);
+  box-shadow: 0 8px 24px -8px rgba(0,0,0,0.4);
+  z-index: 3;
+  transition: transform 0.5s cubic-bezier(.34,1.56,.64,1), box-shadow 0.5s var(--ease);
+}
+.story:hover .story-video-wrap {
+  transform: translateY(-4px) rotate(-2deg);
+  box-shadow: 0 12px 32px -8px rgba(0,0,0,0.5);
+}
+.story-video-wrap video {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.85) contrast(1.06);
+}
+/* video label tab */
+.story-video-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  padding: 16px 8px 5px;
+  font-family: var(--mono);
+  font-size: 7.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+}
+
+/* polaroid tape */
+.story-tape {
+  position: absolute;
+  width: 72px; height: 18px;
+  background: rgba(232, 215, 175, 0.82);
+  border: 1px solid rgba(122, 109, 92, 0.28);
+  box-shadow: 0 1px 2px rgba(27,23,20,0.1);
+  z-index: 4;
+  pointer-events: none;
+}
+.story-tape-tl { top: -8px; left: 20px; transform: rotate(-5deg); }
+.story-tape-br { bottom: -6px; right: 24px; transform: rotate(4deg); }
+
+/* gradient overlay on media */
+.story-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, rgba(27,23,20,0.3) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* status badge on media */
+.story-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 5;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+.story-badge-sold {
+  background: var(--terra);
+  color: var(--bg);
+}
+.story-badge-active {
+  background: var(--sage);
+  color: var(--bg);
+  animation: badgePulse 2.5s ease-in-out infinite;
+}
+@keyframes badgePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.75; }
+}
+
+/* content side */
+.story-content {
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.story-terra .story-content { background: var(--terra-bg); }
+.story-sage  .story-content { background: var(--sage-bg); }
+
+.story-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.story-terra .story-tag { color: var(--terra); }
+.story-sage  .story-tag { color: var(--sage); }
+
+.story-names {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(24px, 2.8vw, 34px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  font-variation-settings: "opsz" 144, "SOFT" 60;
+  margin-bottom: 8px;
+}
+
+.story-role {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.story-role-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+}
+.story-terra .story-role-dot { background: var(--terra); }
+.story-sage  .story-role-dot { background: var(--sage); }
+
+.story-text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  max-width: 44ch;
+  margin-bottom: 24px;
+}
+.story-text em {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--ink);
+  font-size: 16.5px;
+}
+
+/* timeline micro-strip */
+.story-timeline {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.story-tl-step {
+  padding: 8px 14px;
+  border: 1px dashed var(--rule-soft);
+  border-right: 0;
+  white-space: nowrap;
+}
+.story-tl-step:last-child { border-right: 1px dashed var(--rule-soft); }
+.story-tl-step.is-active {
+  border-style: solid;
+  font-weight: 500;
+}
+.story-terra .story-tl-step.is-active {
+  color: var(--terra);
+  border-color: var(--terra);
+  background: rgba(181,66,31,0.06);
+}
+.story-sage .story-tl-step.is-active {
+  color: var(--sage);
+  border-color: var(--sage);
+  background: rgba(79,94,63,0.06);
+}
+
+/* arrow between steps */
+.story-tl-arrow {
+  font-size: 10px;
+  color: #8C7A52;
+  padding: 0 2px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 800px) {
+  .stories { padding: 0 24px 72px; }
+  .story { grid-template-columns: 1fr; }
+  .story-flip { direction: ltr; }
+  .story-media { min-height: 260px; }
+  .story-content { padding: 28px 24px; }
+  .story-video-wrap { width: 110px; height: 78px; bottom: 12px; right: 12px; }
+  .story-timeline { flex-wrap: wrap; }
+  .story-tl-step { font-size: 8px; padding: 6px 10px; }
+}
+
+@media (max-width: 800px) {
+  .card-connector { display: none; }
+  .cta-deco { display: none; }
+  .ring-key { max-width: 280px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- SCROLL-DRIVEN TINTS -->
+<div class="body-tint body-tint-terra" id="tintTerra"></div>
+<div class="body-tint body-tint-sage" id="tintSage"></div>
+
+<!-- TOP STRIP -->
+<div class="top" id="topBar">
+  <a class="top-back" href="/">
+    <span class="arrow">&larr;</span>
+    <span>tone.dad</span>
+  </a>
+  <span class="top-brand">tone<span class="dot"></span>couples</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow r">Tonemedia &times; Tonehomes</div>
+  <h1 class="hero-title r d1">
+    We filmed your <span class="hero-glyph hero-glyph-1" aria-hidden="true"><video src="/media/korey-casey-shadowbrook.mp4" muted loop playsinline autoplay preload="auto"></video></span> <span class="terra">wedding.</span>
+    Now let's find your <span class="hero-glyph hero-glyph-2" aria-hidden="true"><img src="/media/justin-steph-livingroom.jpg" alt="" /></span> <span class="sage">home.</span>
+  </h1>
+  <p class="hero-sub r d2">
+    350+ weddings filmed. Same couple behind the camera and at the closing table. <em>Full circle.</em>
+  </p>
+  <div class="hero-scroll">
+    <span>The story</span>
+    <span class="hero-scroll-line"></span>
+  </div>
+</section>
+
+<!-- PHOTO STRIP — wedding → home transition -->
+<div class="photo-strip">
+  <div class="photo-strip-cell">
+    <span class="tint-overlay tint-terra"></span>
+    <img src="/media/wed-01.jpg" alt="Wedding ceremony moment" loading="lazy" />
+    <span class="photo-strip-label">Ceremony</span>
+  </div>
+  <div class="photo-strip-cell">
+    <span class="tint-overlay tint-blend"></span>
+    <img src="/media/justin-steph-walking.jpg" alt="Justin and Steph Herrera walking together" loading="lazy" />
+    <span class="photo-strip-label">Justin &amp; Steph</span>
+  </div>
+  <div class="photo-strip-cell">
+    <span class="tint-overlay tint-sage"></span>
+    <img src="/media/justin-steph-livingroom.jpg" alt="Justin and Steph in a home" loading="lazy" />
+    <span class="photo-strip-label">Home</span>
+  </div>
+</div>
+
+<!-- TIMELINE — how this naturally happened -->
+<div class="timeline">
+
+  <div class="tl-node r">
+    <div class="tl-icon tl-icon-terra"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+    <span class="tl-tag">2013 · The beginning</span>
+    <h3 class="tl-headline">We started <em>shooting weddings.</em></h3>
+    <p class="tl-body">
+      Steph and I didn't have a business plan. We had a camera, a laptop, and a couple who said yes. Twelve years later we've delivered over 350 films. We know what your first dance looks like from behind the monitor. We know the toast your dad almost couldn't finish. <em>We were there.</em>
+    </p>
+  </div>
+
+  <div class="tl-node r">
+    <div class="tl-icon tl-icon-terra"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+    <span class="tl-tag">2018 · The pattern</span>
+    <h3 class="tl-headline">Then the <em>texts started.</em></h3>
+    <p class="tl-body">
+      Couples we filmed would reach out a year or two later. Not about video. About houses. "You and Steph bought that duplex, right? We're looking but don't know where to start." It kept happening. The same couples. The same question. <em>They already trusted us.</em>
+    </p>
+  </div>
+
+  <div class="tl-node is-bridge r">
+    <div class="tl-icon tl-icon-ink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+    <span class="tl-tag">The realization</span>
+    <h3 class="tl-headline">We already knew <em>their story.</em></h3>
+    <p class="tl-body">
+      Think about it. We'd spent 12 hours on the most important day of their lives. We knew their families, their priorities, how they made decisions together. Most agents meet you cold. <em>We'd already been in the room.</em>
+    </p>
+  </div>
+
+  <div class="tl-node is-home r">
+    <div class="tl-icon tl-icon-sage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+    <span class="tl-tag">2021 · Tonehomes</span>
+    <h3 class="tl-headline">So we <em>opened the second door.</em></h3>
+    <p class="tl-body">
+      We paid off $150K in debt. Bought our first duplex. House-hacked our way to six units. Learned the long game by living it. Now we help the couples we filmed do the same thing. First home, first investment, first "what's next." <em>Same trust. New door.</em>
+    </p>
+  </div>
+
+  <div class="tl-node is-home r">
+    <div class="tl-icon tl-icon-sage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg></div>
+    <span class="tl-tag">Today · Full circle</span>
+    <h3 class="tl-headline">Wedding film to <em>front door.</em></h3>
+    <p class="tl-body">
+      Your listing film? I shoot that myself. Steph stages the room and redraws the floor plan. The couple who trusted us with their wedding day now trusts us with the biggest purchase of their lives. <em>That part still gets me.</em>
+    </p>
+  </div>
+
+</div>
+
+<!-- THE BRIDGE — visual moment -->
+<section class="bridge r">
+  <!-- RING → KEY SVG -->
+  <div class="ring-key r" id="ringKey">
+    <svg viewBox="0 0 360 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Wedding ring (left) -->
+      <circle cx="55" cy="40" r="22" class="rk-ring" />
+      <circle cx="55" cy="40" r="15" class="rk-ring" stroke-width="1" opacity="0.4" />
+      <!-- Connecting dashed line -->
+      <line x1="80" y1="40" x2="280" y2="40" class="rk-line rk-draw" />
+      <!-- House key (right) -->
+      <g class="rk-key">
+        <circle cx="310" cy="40" r="14" />
+        <circle cx="310" cy="40" r="8" stroke-width="1.5" opacity="0.5" />
+        <line x1="296" y1="40" x2="264" y2="40" />
+        <line x1="270" y1="40" x2="270" y2="50" />
+        <line x1="278" y1="40" x2="278" y2="48" />
+      </g>
+      <!-- Labels -->
+      <text x="55" y="72" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" letter-spacing="2" fill="#685D4F" text-transform="uppercase">RING</text>
+      <text x="305" y="72" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" letter-spacing="2" fill="#685D4F" text-transform="uppercase">KEY</text>
+    </svg>
+  </div>
+
+  <div class="bridge-line">
+    <span class="bridge-rule bridge-rule-terra"></span>
+    <span class="bridge-x">&times;</span>
+    <span class="bridge-rule bridge-rule-sage"></span>
+  </div>
+  <h2 class="bridge-headline">
+    Same couple. Same trust. Two doors.
+  </h2>
+  <p class="bridge-sub">
+    Tonemedia and Tonehomes aren't two separate businesses. They're two chapters of the same relationship. <em>The wedding was chapter one. The house is chapter two.</em>
+  </p>
+</section>
+
+<!-- COUPLE STORIES — real case studies -->
+<section class="stories">
+  <div class="stories-head r">
+    <div class="stories-eyebrow">Real couples · Real doors</div>
+    <h2 class="stories-title">They trusted us with the wedding. <em>Then the house.</em></h2>
+  </div>
+
+  <!-- STORY 1 — 2017 couple, SOLD -->
+  <div class="story story-terra r">
+    <div class="story-media">
+      <span class="story-tape story-tape-tl"></span>
+      <span class="story-badge story-badge-sold">Sold</span>
+      <img class="story-media-img" src="/media/michelle-freddy.jpg" alt="Couple 1 — wedding day, 2017" />
+      <div class="story-video-wrap">
+        <video src="/media/clip-new.mp4" muted loop playsinline autoplay preload="metadata"></video>
+        <span class="story-video-label">Wedding film</span>
+      </div>
+    </div>
+    <div class="story-content">
+      <span class="story-tag">Couple 01 · 2017</span>
+      <h3 class="story-names">Placeholder Names</h3>
+      <div class="story-role">
+        <span class="story-role-dot"></span>
+        Wedding 2017 · Sold 2022
+      </div>
+      <p class="story-text">
+        We filmed their wedding in 2017. Five years later they called us again. Not for a video. They'd outgrown the apartment and needed to sell. Steph staged the living room. I shot the listing film. They got two offers in the first week. <em>Same couple, different door.</em>
+      </p>
+      <div class="story-timeline">
+        <span class="story-tl-step">2017 · Wedding</span>
+        <span class="story-tl-arrow">&rarr;</span>
+        <span class="story-tl-step">2020 · The call</span>
+        <span class="story-tl-arrow">&rarr;</span>
+        <span class="story-tl-step is-active">2022 · Sold</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STORY 2 — 2022 couple, BUYING -->
+  <div class="story story-sage story-flip r">
+    <div class="story-media">
+      <span class="story-tape story-tape-br"></span>
+      <span class="story-badge story-badge-active">Active</span>
+      <img class="story-media-img" src="/media/kathryn-alex.jpg" alt="Couple 2 — wedding day, 2022" />
+      <div class="story-video-wrap">
+        <video src="/media/korey-casey-shadowbrook.mp4" muted loop playsinline autoplay preload="metadata"></video>
+        <span class="story-video-label">Wedding film</span>
+      </div>
+    </div>
+    <div class="story-content">
+      <span class="story-tag">Couple 02 · 2022</span>
+      <h3 class="story-names">Placeholder Names</h3>
+      <div class="story-role">
+        <span class="story-role-dot"></span>
+        Wedding 2022 · Buying now
+      </div>
+      <p class="story-text">
+        We shot their wedding last year. They just texted us about buying their first place. They're looking at duplexes in Morris County. We're showing them the same house-hack math that worked for us. <em>Chapter two is starting right now.</em>
+      </p>
+      <div class="story-timeline">
+        <span class="story-tl-step">2022 · Wedding</span>
+        <span class="story-tl-arrow">&rarr;</span>
+        <span class="story-tl-step">2025 · The text</span>
+        <span class="story-tl-arrow">&rarr;</span>
+        <span class="story-tl-step is-active">Now · Looking</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT COUPLES GET -->
+<section class="offering">
+  <div class="offering-head r">
+    <div class="offering-eyebrow">What Tonemedia couples get</div>
+    <h2 class="offering-title">Two doors. <em>One team.</em></h2>
+  </div>
+
+  <div class="cards">
+
+    <!-- CARD: Tonemedia -->
+    <div class="card card-terra r">
+      <div class="card-num">I.</div>
+      <div class="card-name">Tonemedia</div>
+      <div class="card-role">The film side</div>
+      <ul class="card-list">
+        <li><span class="tick">&#10038;</span> Full wedding film. 12 hours on set. <em>Delivered.</em></li>
+        <li><span class="tick">&#10038;</span> Highlight reel, ceremony edit, full speeches</li>
+        <li><span class="tick">&#10038;</span> Brand films, NFL content, editorial when you're ready</li>
+        <li><span class="tick">&#10038;</span> <em>Noble Posthouse</em> handles the cut, same team</li>
+      </ul>
+    </div>
+
+    <!-- CARD: Tonehomes -->
+    <div class="card card-sage r d1">
+      <div class="card-num">II.</div>
+      <div class="card-name">Tonehomes</div>
+      <div class="card-role">The home side</div>
+      <ul class="card-list">
+        <li><span class="tick">&#10038;</span> First-time buyer consultations. <em>No rush.</em></li>
+        <li><span class="tick">&#10038;</span> Steph stages the room, redraws the floor plan</li>
+        <li><span class="tick">&#10038;</span> I shoot the listing film. <em>That part comes free.</em></li>
+        <li><span class="tick">&#10038;</span> House-hack coaching. We'll show you the math.</li>
+      </ul>
+    </div>
+
+    <!-- CONNECTOR ARC -->
+    <div class="card-connector r d1">
+      <svg viewBox="0 0 400 48" preserveAspectRatio="xMidYMid meet">
+        <path d="M 40 4 Q 200 52 360 4" class="cc-arc" />
+        <circle cx="40" cy="4" class="cc-dot cc-dot-terra" />
+        <circle cx="360" cy="4" class="cc-dot cc-dot-sage" />
+        <text x="200" y="38" text-anchor="middle" class="cc-label">SAME COUPLE</text>
+      </svg>
+    </div>
+
+    <!-- BRIDGE CARD — the cross-sell -->
+    <a class="card card-bridge r d2" href="/#homes">
+      <div class="card-bridge-text">
+        <div class="card-bridge-label">The Tonemedia Couples Promise</div>
+        <h3 class="card-bridge-headline">We filmed the wedding. The listing film is on us.</h3>
+        <p class="card-bridge-sub">
+          Every Tonemedia wedding couple gets a complimentary listing film when they buy or sell through Tonehomes. <em>Same eye. Same edit. No extra cost.</em>
+        </p>
+      </div>
+      <div class="card-bridge-arrow">&rarr;</div>
+    </a>
+
+  </div>
+</section>
+
+<!-- PROOF — the numbers -->
+<div class="proof">
+  <div class="proof-grid r">
+    <div class="proof-cell">
+      <div class="proof-num terra"><em>350</em>+</div>
+      <div class="proof-label">Weddings<br>delivered</div>
+    </div>
+    <div class="proof-cell">
+      <div class="proof-num terra">12</div>
+      <div class="proof-label">Years behind<br>a camera</div>
+    </div>
+    <div class="proof-cell">
+      <div class="proof-num sage"><em>6</em></div>
+      <div class="proof-label">Units owned &amp;<br>house-hacked</div>
+    </div>
+    <div class="proof-cell">
+      <div class="proof-num sage">NJ</div>
+      <div class="proof-label">Morris &amp; Essex<br>county focus</div>
+    </div>
+  </div>
+</div>
+
+<!-- QUOTE -->
+<section class="quote-band r">
+  <div class="quote-ring">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+  </div>
+  <div class="quote-mark">&ldquo;</div>
+  <p class="quote-text">
+    They shot our wedding. Two years later they helped us find our first house. Nobody else would've gotten what we were looking for that fast.
+  </p>
+  <div class="quote-credit">Tonemedia couple · NJ · 2024</div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <!-- decorative floating shapes -->
+  <span class="cta-deco cta-deco-1"></span>
+  <span class="cta-deco cta-deco-2"></span>
+  <span class="cta-deco cta-deco-3"></span>
+  <span class="cta-deco cta-deco-4"></span>
+
+  <div class="cta-eyebrow r">Ready?</div>
+  <h2 class="cta-headline r d1">Let's talk about<br>what's next.</h2>
+  <p class="cta-sub r d2">
+    Whether you need a film, a home, or both. We're the same Justin and Steph either way. <em>Pick a door.</em>
+  </p>
+  <div class="cta-btns r d3">
+    <a class="btn btn-terra" href="https://tonemediastudio.com" target="_blank" rel="noopener">
+      <span>Book a film</span>
+      <span class="arr"></span>
+    </a>
+    <a class="btn btn-sage" href="/#homes">
+      <span>Talk about a home</span>
+      <span class="arr"></span>
+    </a>
+  </div>
+  <p class="cta-note r d4">Or just text me. (609) 902-0299. I answer.</p>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <span>&copy; 2026 Justin Herrera</span>
+  <div class="foot-links">
+    <a href="/">tone.dad</a>
+    <a href="https://tonemediastudio.com" target="_blank" rel="noopener">Tonemedia</a>
+    <a href="https://instagram.com/tone.dad" target="_blank" rel="noopener">@tone.dad</a>
+  </div>
+</footer>
+
+<script>
+// ============================================================
+// TOP BAR — blur on scroll
+// ============================================================
+const topBar = document.getElementById('topBar');
+window.addEventListener('scroll', () => {
+  topBar.classList.toggle('scrolled', window.scrollY > 24);
+}, { passive: true });
+
+// ============================================================
+// REVEAL — IntersectionObserver
+// ============================================================
+const revealEls = document.querySelectorAll('.r');
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      revealObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+revealEls.forEach(el => revealObs.observe(el));
+
+// ============================================================
+// SCROLL-DRIVEN BODY TINT — terracotta top → sage bottom
+// ============================================================
+(function() {
+  const tintTerra = document.getElementById('tintTerra');
+  const tintSage  = document.getElementById('tintSage');
+  if (!tintTerra || !tintSage) return;
+
+  const update = () => {
+    const scrollY = window.scrollY;
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = Math.min(scrollY / docH, 1);
+
+    // terra fades in early (0–30%), peaks, fades out (30–60%)
+    const terraOpacity = pct < 0.15 ? pct / 0.15 :
+                         pct < 0.35 ? 1 :
+                         pct < 0.55 ? 1 - (pct - 0.35) / 0.2 : 0;
+
+    // sage fades in mid (40–60%), holds
+    const sageOpacity = pct < 0.4  ? 0 :
+                        pct < 0.6  ? (pct - 0.4) / 0.2 :
+                        pct < 0.85 ? 1 :
+                        1 - (pct - 0.85) / 0.15;
+
+    tintTerra.style.opacity = (terraOpacity * 0.6).toFixed(3);
+    tintSage.style.opacity  = (sageOpacity * 0.6).toFixed(3);
+  };
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+
+// ============================================================
+// LAZY VIDEO — play/pause story videos when in viewport
+// ============================================================
+(function() {
+  const vids = document.querySelectorAll('.story-video-wrap video');
+  if (!vids.length) return;
+
+  const vidObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.play().catch(() => {});
+      } else {
+        e.target.pause();
+      }
+    });
+  }, { threshold: 0.2 });
+
+  vids.forEach(v => {
+    v.pause(); // start paused
+    vidObs.observe(v);
+  });
+})();
+
+// ============================================================
+// RING-KEY SVG — draw on scroll into view
+// ============================================================
+(function() {
+  const ringKey = document.getElementById('ringKey');
+  if (!ringKey) return;
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        ringKey.classList.add('in');
+        obs.unobserve(ringKey);
+      }
+    });
+  }, { threshold: 0.3 });
+  obs.observe(ringKey);
+})();
+</script>
+
+</body>
+</html>

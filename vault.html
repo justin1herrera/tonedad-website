@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>vault no. 001 — tone.dad</title>
+<meta name="description" content="A small archive for those who decode." />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="canonical" href="https://www.tone.dad/vault" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Caveat:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cream:       #f4ecdb;
+    --cream-warm:  #ece1c7;
+    --baby:        #b8d2e4;
+    --ink:         #1a1a18;
+    --hush:        #5e5848;
+    --rule:        #d8cfb8;
+    --mustard:     #d9b95c;
+    --gold:        #7F6726;
+    --serif: "Cormorant Garamond", "Times New Roman", Georgia, serif;
+    --hand:  "Caveat", "Marker Felt", "Comic Sans MS", cursive;
+    --mono:  "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: clamp(28px, 6vh, 60px) clamp(20px, 5vw, 60px) clamp(60px, 10vh, 120px);
+    background-color: var(--cream);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .035 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    color: var(--ink);
+    font-family: var(--serif);
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .frame { max-width: 680px; margin: 0 auto; }
+
+  .topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--hush);
+    margin-bottom: clamp(48px, 8vh, 80px);
+  }
+  .topnav a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color .3s ease, color .3s ease;
+  }
+  .topnav a:hover { border-color: var(--mustard); color: var(--ink); }
+
+  /* ---------- HERO ---------- */
+  .hero { text-align: center; margin-bottom: clamp(60px, 10vh, 110px); }
+  .kicker {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 22px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(56px, 11vw, 120px);
+    line-height: .96;
+    letter-spacing: -.018em;
+    margin: 0 0 18px;
+  }
+  .hero-sub {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(17px, 2vw, 22px);
+    color: var(--hush);
+    margin: 0;
+    max-width: 36ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ---------- SECTION HEADS ---------- */
+  section { margin-bottom: clamp(64px, 10vh, 100px); }
+  h2 {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--hush);
+    margin: 0 0 36px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--mustard);
+  }
+
+  /* ---------- CRACKED LIST ---------- */
+  .cracked {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: crack;
+  }
+  .cracked li {
+    counter-increment: crack;
+    margin-bottom: 38px;
+    padding-left: 62px;
+    position: relative;
+  }
+  .cracked li:last-child { margin-bottom: 0; }
+  .cracked li::before {
+    content: counter(crack, upper-alpha);
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 40px;
+    height: 40px;
+    background: var(--mustard);
+    color: var(--ink);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+  .cracked h3 {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 600;
+    font-size: clamp(20px, 2.4vw, 26px);
+    line-height: 1.1;
+    margin: 0 0 10px;
+    color: var(--ink);
+  }
+  .cracked p {
+    margin: 0;
+    font-size: 16.5px;
+    line-height: 1.55;
+    color: var(--hush);
+  }
+  .cracked code {
+    font-family: var(--mono);
+    font-size: 13px;
+    background: var(--cream-warm);
+    padding: 2px 7px;
+    border-radius: 3px;
+    color: var(--ink);
+    border: 1px solid var(--rule);
+  }
+
+  /* ---------- POLAROID ---------- */
+  .polaroid {
+    background: #faf6e8;
+    padding: 14px 14px 58px;
+    box-shadow:
+      0 1px 0 rgba(26,26,24,.04),
+      0 28px 52px -24px rgba(26,26,24,.38),
+      0 6px 12px -8px rgba(26,26,24,.22);
+    max-width: 440px;
+    margin: 48px auto 0;
+    position: relative;
+    transition: transform .6s cubic-bezier(.2,.7,.2,1);
+  }
+  .polaroid-a { transform: rotate(-1.6deg); }
+  .polaroid-b { transform: rotate(2.1deg); margin-top: 64px; }
+  .polaroid-c { transform: rotate(-2.4deg); margin-top: 64px; }
+  @media (hover: hover) and (pointer: fine) {
+    .polaroid-a:hover { transform: rotate(-.4deg) scale(1.02); }
+    .polaroid-b:hover { transform: rotate(.6deg)  scale(1.02); }
+    .polaroid-c:hover { transform: rotate(-.8deg) scale(1.02); }
+  }
+  .polaroid img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: saturate(.96) contrast(1.05);
+  }
+  .polaroid figcaption {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: var(--hand);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--ink);
+    padding: 0 16px;
+    line-height: 1.1;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    margin-top: clamp(64px, 10vh, 110px);
+    padding-top: 28px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--hush);
+  }
+  footer a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--mustard);
+    align-self: flex-start;
+    padding-bottom: 1px;
+  }
+  footer a:hover { border-color: var(--ink); }
+  footer .sig {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--hush);
+  }
+
+  /* ---------- DARK MODE ---------- */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --cream:      #1a1714;
+      --cream-warm: #25201b;
+      --baby:       #4a6a82;
+      --ink:        #ede6d2;
+      --hush:       #a39c87;
+      --rule:       #3a352e;
+    }
+    body {
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='nd'><feTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 .95  0 0 0 0 .85  0 0 0 .045 0'/></filter><rect width='100%' height='100%' filter='url(%23nd)'/></svg>");
+    }
+    .polaroid { background: #2a2520; }
+    .polaroid figcaption { color: #ede6d2; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .polaroid { transition: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="frame">
+
+    <nav class="topnav">
+      <a href="/notes/001-blank-space">&larr; back to the note</a>
+      <a href="/">tone.dad</a>
+    </nav>
+
+    <header class="hero">
+      <p class="kicker">tone.dad &middot; vault no. 001</p>
+      <h1>you found it.</h1>
+      <p class="hero-sub">four clues. one of them &mdash; minimum &mdash; got you here.</p>
+    </header>
+
+    <section>
+      <h2>what you cracked</h2>
+      <ol class="cracked">
+        <li>
+          <h3>The polaroid</h3>
+          <p>A little card stuck at the end of the article. Handwritten <em>&ldquo;track 13.&rdquo;</em> If you grew up unwrapping the 1989 deluxe edition, that polaroid looked familiar on purpose.</p>
+        </li>
+        <li>
+          <h3>The frame stamp</h3>
+          <p>The slate at the top read <code>TRT 4:33:13</code>. The :13 isn&rsquo;t a real frame count &mdash; it&rsquo;s a 13. Her number. If you caught that, you were already looking.</p>
+        </li>
+        <li>
+          <h3>The codename</h3>
+          <p><em>&ldquo;Project Maverick&rdquo;</em> was a live link both times it appeared in the note. No underline. Just a color shift on hover. The kind of thing only a curious cursor finds.</p>
+        </li>
+        <li>
+          <h3>The whisper</h3>
+          <p>An HTML comment near the top of the article: <code>&lt;!-- hi swiftie. three? try thirteen. /vault --&gt;</code>. The view-source crowd. Respect.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>from the vault</h2>
+      <figure class="polaroid polaroid-a">
+        <img src="/media/blank-space-phone.jpg" alt="Taylor Swift in the Blank Space music video, holding the phone Justin handed to Joseph Kahn on set." />
+        <figcaption>tone&rsquo;s phone. handed to JK. ended up here.</figcaption>
+      </figure>
+      <figure class="polaroid polaroid-b">
+        <img src="/media/vault-jets-iphone.jpg" alt="A gold iPhone 6 held up in front of New York Jets helmets in the team offices, 2014." />
+        <figcaption>this is the iPhone i replaced my Samsung with. (still don&rsquo;t know why i didn&rsquo;t save the Galaxy.)</figcaption>
+      </figure>
+      <figure class="polaroid polaroid-c">
+        <img src="/media/vault-mustang-selfie.jpg" alt="Justin in the backseat on the way to set, holding the camera up for a selfie." />
+        <figcaption>embarrassing selfie. driving to set. didn&rsquo;t know yet.</figcaption>
+      </figure>
+    </section>
+
+    <footer>
+      <span>vault drops continue. don&rsquo;t say where you got this.</span>
+      <a href="/notes/001-blank-space">&larr; back to the note</a>
+      <span class="sig">&mdash; tone</span>
+    </footer>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+# vercel
+.vercel/
+
+# project scratch — keep out of deploy
+_check/
+debug/
+qa/
+reference/
+screenshots/
+uploads/
+site/
+_audit.png
+design-canvas.jsx
+tonedad.html
+
+# os
+.DS_Store
+Thumbs.db
+.vercel
+
+# agent logs (may contain secrets) — never back up
+.claude/
+# stray scratch
+-----------.txt
+.env*
+
+# node deps (from vercel analytics) — never commit
+node_modules/
+# finder duplicates
+* 2.png
+* 2.html
+* 2.jpg
+
+# Heavy source masters & non-live assets — archive-only, never in the clean master
+media/_originals/
+media/tonedad-logo-refs/
+ad-kit/
+snapshots/
+*-prev-*.html
+index-prev-*.html
+
+# Dev scratch
+higgs-ad-brief.md
+brand-style.md
+tone-dad-fix-pack.md
+welcome-email-backup-*.html
+
+# Unpublished draft pages (not part of the live site)
+build.html
+tonehomes.html
+v2.html
+linktree.html
+_pstest.html
+cutting_room_re-edit.html
+
+# Retired media (old design). NOTE: brand-dad.jpg is KEPT (newsletter OG image).
+media/blank-space-rage.jpg
+media/brady-tkachuk.jpg
+media/brand-dad.mp4
+media/brand-homes.jpg
+media/brand-homes.mp4
+media/brand-media.jpg
+media/brand-media.mp4
+media/credit-brady.mp4
+media/credit-katy.mp4
+media/credit-maybelline.mp4
+media/katy-perry.jpg
+media/maybelline-gigi.jpg
+media/tonehomes-craignicole.mp4
+media/tonehomes-driving.mp4
+media/tonemedia-main-logo-color-5-rgb-900px-w-72ppi.png
+media/veil-hero.mp4
+.env*.local
+
+# Note 002 staging drop — finished files already copied into notes/ and media/
+002/

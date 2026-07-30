@@ -1,0 +1,849 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#F5F1E8" />
+<title>Tonepost — notes from the edit suite, by Justin Herrera</title>
+<meta name="description" content="I'm Tone. I like to post. Honest letters from inside the work — the cuts, the marriage, the kid, the houses I can't afford yet." />
+<link rel="canonical" href="https://www.tone.dad/newsletter" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.tone.dad/newsletter" />
+<meta property="og:title" content="Tonepost — notes from the edit suite" />
+<meta property="og:description" content="I'm Tone. I like to post. Honest letters from inside the work." />
+<meta property="og:image" content="https://www.tone.dad/media/brand-dad.jpg" />
+<meta property="og:site_name" content="tone.dad" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Tonepost — notes from the edit suite" />
+<meta name="twitter:description" content="I'm Tone. I like to post. Honest letters from inside the work." />
+<meta name="twitter:image" content="https://www.tone.dad/media/brand-dad.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  /* ============================================================
+     TONEPOST — notes from the edit suite
+     A personal essay publication. Broadsheet treatment, cream paper,
+     ink + brand gold. Sister to /index in voice and family.
+     ============================================================ */
+  :root {
+    --ink: #0e0e0e;
+    --ink-soft: #2a2a26;
+    --paper: #f3f0e8;
+    --paper-warm: #ece6d8;
+    --hush: #5a5a54;
+    --hush-soft: #8a8a82;
+    --rule: #cdc9bf;
+    --rule-strong: #b8b3a3;
+    --accent: #1f2a3a;
+    --gold: #C9A84C;
+    --serif: "Cormorant Garamond", "Times New Roman", Times, serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+    --max: 920px;
+    --max-wide: 1180px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    background-color: var(--paper);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .045 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    background-size: 240px 240px;
+    background-repeat: repeat;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 19px;
+    line-height: 1.55;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    padding: clamp(20px, 4vw, 56px);
+  }
+
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+
+  /* ---------- shared utilities ---------- */
+  .col {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: clamp(44px, 6vh, 80px) clamp(0px, 2vw, 16px);
+  }
+  .col + .col { border-top: 4px double var(--rule); }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--hush);
+    margin: 0 0 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 32px;
+    height: 0;
+    border-top: 1px solid currentColor;
+    background: none;
+  }
+
+  .g-dot { color: var(--gold); margin: 0 .02em; font-weight: 500; }
+
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 26px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 0;
+    transition: background .2s ease, transform .2s ease;
+  }
+  .cta:hover, .cta:focus-visible {
+    background: var(--accent);
+    transform: translateY(-1px);
+  }
+  .cta .arrow { font-family: var(--serif); font-size: 16px; }
+
+  /* ============================================================
+     TONEPOST focus block (broadsheet)
+     ============================================================ */
+  .cr-focus {
+    background: #F5F1E8;
+    padding: clamp(40px, 5vh, 56px) clamp(24px, 4vw, 44px) clamp(36px, 4vh, 48px);
+    margin: clamp(20px, 3vh, 32px) auto;
+    max-width: 1100px;
+    border-radius: 0;
+    color: #1a1a1a;
+    font-family: var(--serif);
+  }
+  .cr-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: .2em;
+    color: #6b6b6b;
+    margin-bottom: clamp(28px, 4vh, 44px);
+    text-transform: uppercase;
+  }
+  .cr-topbar-link { color: inherit; text-decoration: none; transition: color .25s ease; }
+  .cr-topbar-link:hover { color: #1a1a1a; }
+
+  .cr-masthead {
+    border-top: 4px solid #0e0e0e;
+    border-bottom: 1px solid #0e0e0e;
+    padding: clamp(22px, 3.5vh, 32px) 0;
+    text-align: center;
+  }
+  .cr-masthead-underrule {
+    height: 2px;
+    background: var(--gold);
+    margin-bottom: clamp(14px, 2vh, 22px);
+  }
+  .cr-editor {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .26em;
+    color: #0e0e0e;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .cr-name {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(68px, 11vw, 110px);
+    line-height: 0.92;
+    margin-bottom: 8px;
+    letter-spacing: -0.03em;
+  }
+  .cr-the {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .28em;
+    color: #6b6b6b;
+    margin-bottom: clamp(14px, 2vh, 22px);
+    text-transform: uppercase;
+  }
+  .cr-strap {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(14.5px, 1.32vw, 17.5px);
+    line-height: 1.55;
+    max-width: 560px;
+    margin: 0 auto;
+    color: #2a2a26;
+  }
+  .cr-strap .joke {
+    display: block;
+    margin-bottom: 12px;
+    font-family: "Caveat", cursive;
+    font-size: clamp(17px, 1.6vw, 21px);
+    font-weight: 400;
+    letter-spacing: 0;
+    color: #0e0e0e;
+    transform: rotate(-0.8deg);
+  }
+  .cr-strap em { font-style: normal; font-weight: 600; }
+
+  .cr-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .2em;
+    color: #6b6b6b;
+    padding: 16px 0 clamp(28px, 4vh, 40px);
+  }
+  .cr-meta-dot { color: #968B6B; }
+
+  /* ----- two-column grid ----- */
+  .cr-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: clamp(24px, 4vh, 36px);
+  }
+
+  /* ----- LEFT: Feature card (dark) ----- */
+  .cr-feature {
+    background: #1a1a1a;
+    color: #F5F1E8;
+    padding: clamp(22px, 3vh, 32px) clamp(22px, 2.4vw, 30px);
+    border-radius: 0;
+    border-left: 3px solid #C9A84C;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(18px, 2.5vh, 26px);
+  }
+  .cr-moment {
+    margin: 0;
+    position: relative;
+    background: #0a0a0a;
+    overflow: hidden;
+    border: 1px solid rgba(201, 184, 122, .18);
+  }
+  .cr-moment img,
+  .cr-moment video {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    object-position: 26% center;
+  }
+  .cr-moment-hud {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    color: #c9b87a;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .8);
+  }
+  .cr-moment-rec {
+    width: 7px;
+    height: 7px;
+    background: #ff2a2a;
+    border-radius: 50%;
+    display: inline-block;
+    animation: cr-blink 1.4s ease-in-out infinite;
+  }
+  .cr-moment-tag {
+    margin-left: auto;
+    color: #ede6d2;
+    background: rgba(14, 14, 14, .6);
+    padding: 4px 8px;
+    border-left: 2px solid #c9b87a;
+  }
+  @keyframes cr-blink {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: .22; }
+  }
+
+  .cr-feature-body { display: flex; flex-direction: column; gap: 14px; }
+  .cr-feature-eye {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .22em;
+    color: #c9b87a;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  .cr-feature-quote-mark {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 62px;
+    line-height: .6;
+    color: #c9b87a;
+    margin: 0;
+  }
+  .cr-feature-quote {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(16.5px, 1.65vw, 21px);
+    line-height: 1.5;
+    margin: 0;
+  }
+  .cr-feature-title {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(24px, 2.65vw, 31px);
+    line-height: 1.2;
+    margin: 0;
+  }
+  .cr-feature-rule { height: 1px; background: #c9b87a; margin: 4px 0; }
+  .cr-feature-cta {
+    align-self: flex-start;
+    background: #c9b87a;
+    color: #1a1a1a;
+    padding: 10px 16px;
+    font-family: var(--serif);
+    font-size: 11.5px;
+    letter-spacing: .18em;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background .25s ease, color .25s ease;
+    border-radius: 0;
+  }
+  .cr-feature-cta:hover { background: #f0d685; color: #0a0a0a; transform: translateY(-4px); }
+
+  /* ----- RIGHT: Currently / Issue 002 teaser ----- */
+  .cr-currently {
+    background: #F5F1E8;
+    padding: clamp(22px, 3vh, 32px);
+    border-radius: 0;
+    border: none;
+    border-top: 3px solid #0e0e0e;
+    box-shadow: 0 2px 0 0 #0e0e0e;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: clamp(20px, 3vh, 28px);
+  }
+  .cr-currently-eye {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .22em;
+    color: #6b6b6b;
+    margin: 0 0 12px;
+    text-transform: uppercase;
+  }
+  .cr-currently-title {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(24px, 2.65vw, 31px);
+    line-height: 1.2;
+    margin: 0 0 10px;
+  }
+  .cr-currently-body {
+    font-family: var(--serif);
+    font-size: clamp(14.5px, 1.21vw, 16.5px);
+    line-height: 1.65;
+    color: #444;
+    margin: 0;
+  }
+  .cr-currently-body em { font-style: italic; color: #1a1a1a; }
+  .cr-currently-form { display: flex; gap: 8px; }
+  .cr-currently-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 13px;
+    border: 1px solid #c9b87a;
+    background: #F5F1E8;
+    font-family: var(--serif);
+    font-size: 14.5px;
+    border-radius: 2px;
+    color: #1a1a1a;
+  }
+  .cr-currently-form input:focus { outline: 1px solid #c9b87a; outline-offset: 0; }
+  .cr-currently-form button {
+    background: #1a1a1a;
+    color: #F5F1E8;
+    border: none;
+    padding: 10px 15px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .18em;
+    border-radius: 2px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background .25s ease;
+  }
+  .cr-currently-form button:hover { background: #2a2a26; }
+  .cr-currently-cta {
+    display: inline-block;
+    background: #1a1a1a;
+    color: #F5F1E8;
+    text-decoration: none;
+    padding: 12px 22px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .18em;
+    border-radius: 2px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background .25s ease;
+  }
+  .cr-currently-cta:hover { background: #2a2a26; transform: translateY(-4px); }
+
+  /* ----- WHAT THIS IS — text left, portrait right ----- */
+  .cr-what {
+    border-top: 1px solid #d4ccb8;
+    padding-top: clamp(24px, 3.5vh, 32px);
+    margin-bottom: clamp(24px, 3.5vh, 32px);
+    display: grid;
+    grid-template-columns: 1fr minmax(220px, 280px);
+    gap: clamp(24px, 3.5vw, 48px);
+    align-items: start;
+  }
+  .cr-what-copy { min-width: 0; }
+  .cr-what-eye {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .22em;
+    color: #6b6b6b;
+    margin: 0 0 14px;
+    text-transform: uppercase;
+  }
+  .cr-what-head {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(29px, 3.95vw, 42px);
+    line-height: 1.2;
+    margin: 0 0 18px;
+  }
+  .cr-what-head em { font-style: normal; font-weight: 600; }
+  .cr-what-body {
+    font-family: var(--serif);
+    font-size: clamp(15.5px, 1.32vw, 17.5px);
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 0 12px;
+  }
+  .cr-what-body:last-child { margin-bottom: 0; }
+
+  .cr-portrait { margin: 0; background: #1a1a1a; position: relative; }
+  .cr-portrait img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: 56% 28%;
+    filter: contrast(1.04) saturate(.96);
+  }
+  .cr-portrait figcaption {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .22em;
+    color: #6b6b6b;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+
+  /* ----- THREE BRAND CALLOUTS ----- */
+  .cr-brands {
+    border-top: 1px solid #1a1a1a;
+    border-bottom: 1px solid #1a1a1a;
+    padding: clamp(18px, 2.5vh, 26px) 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: clamp(16px, 2.2vw, 28px);
+  }
+  .cr-brand-mid {
+    border-left: 1px solid #d4ccb8;
+    border-right: 1px solid #d4ccb8;
+    padding: 0 clamp(16px, 2vw, 24px);
+  }
+  .cr-brand-name {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .18em;
+    color: #6b6b6b;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+  .cr-brand-line {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(14.5px, 1.15vw, 16.5px);
+    line-height: 1.45;
+  }
+  .cr-brand-line a { text-decoration: none; transition: color .25s; }
+  .cr-brand-line a:hover { color: var(--gold); }
+
+  /* ============================================================
+     JETS variant — Issue 002 teaser
+     ============================================================ */
+  .cr-currently.cr-jets {
+    background: #0e5a30;
+    border: 1px solid rgba(255, 255, 255, .18);
+    color: #f3f0e8;
+    position: relative;
+    overflow: hidden;
+  }
+  .cr-currently.cr-jets::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: repeating-linear-gradient(90deg, #ffffff 0 14px, transparent 14px 22px);
+    opacity: .65;
+  }
+  .cr-currently.cr-jets .cr-currently-eye { color: #ffffff; opacity: .9; letter-spacing: .26em; }
+  .cr-currently.cr-jets .cr-currently-title { color: #ffffff; }
+  .cr-currently.cr-jets .cr-currently-body { color: rgba(243, 240, 232, .82); }
+  .cr-currently.cr-jets .cr-currently-body em { color: #ffffff; font-weight: 500; }
+  .cr-currently.cr-jets .cr-currently-form input {
+    background: rgba(255, 255, 255, .12);
+    border: 1px solid rgba(255, 255, 255, .35);
+    color: #f3f0e8;
+  }
+  .cr-currently.cr-jets .cr-currently-form input::placeholder { color: rgba(243, 240, 232, .88); }
+  .cr-currently.cr-jets .cr-currently-form input:focus { outline: 1px solid #ffffff; background: rgba(255, 255, 255, .18); }
+  .cr-currently.cr-jets .cr-currently-form button { background: #ffffff; color: #0e5a30; font-weight: 700; }
+  .cr-currently.cr-jets .cr-currently-form button:hover { background: #f3f0e8; color: #093d20; }
+  .cr-currently.cr-jets .cr-currently-cta { background: #ffffff; color: #0e5a30; font-weight: 700; }
+  .cr-currently.cr-jets .cr-currently-cta:hover { background: #f3f0e8; color: #093d20; }
+  .cr-moment-jets { border-color: rgba(255, 255, 255, .25); }
+  .cr-moment-jets .cr-moment-hud { color: #ffffff; }
+  .cr-moment-jets .cr-moment-tag { background: rgba(0, 0, 0, .55); color: #ffffff; border-left-color: #ffffff; }
+
+  /* ---------- SERVICES card (post-production) ---------- */
+  .services {
+    background: var(--ink);
+    color: var(--paper);
+    padding: clamp(36px, 6vh, 60px) clamp(24px, 3vw, 48px);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+  }
+  .services::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='gn'><feTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .96  0 0 0 0 .94  0 0 0 0 .90  0 0 0 .12 0'/></filter><rect width='100%' height='100%' filter='url(%23gn)'/></svg>");
+    background-size: 200px 200px;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    opacity: .5;
+  }
+  .services > * { position: relative; z-index: 1; }
+  .services .eyebrow { color: var(--hush-soft); }
+  .services h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(26px, 3vw, 38px);
+    line-height: 1.1;
+    color: var(--paper);
+    margin: 0 0 18px;
+    max-width: 22ch;
+  }
+  .services h3 em { font-style: italic; color: var(--paper-warm); }
+  .services p {
+    font-family: var(--serif);
+    font-size: clamp(17px, 1.3vw, 20px);
+    line-height: 1.55;
+    color: var(--paper-warm);
+    max-width: 56ch;
+    margin: 0 0 14px;
+  }
+  .services-intro {
+    display: grid;
+    grid-template-columns: 1fr minmax(280px, 42%);
+    gap: clamp(24px, 3.5vw, 44px);
+    align-items: start;
+  }
+  .services-intro-copy { min-width: 0; }
+  .services-intro-copy h3 { max-width: none; }
+  .services-still { margin: 0; position: relative; }
+  .services-still img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: 28% 55%;
+    border: 1px solid rgba(243, 240, 232, .14);
+    filter: contrast(1.02);
+  }
+  .services-still figcaption {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--hush-soft);
+    margin-top: 10px;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(20px, 3vw, 36px);
+    margin: clamp(22px, 3vh, 32px) 0;
+    padding-top: clamp(22px, 3vh, 28px);
+    border-top: 1px solid rgba(243, 240, 232, .18);
+  }
+  .services-grid .cell h4 {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .26em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--paper-warm);
+    margin: 0 0 8px;
+  }
+  .services-grid .cell p {
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--paper-warm);
+    margin: 0;
+  }
+  .services .cta {
+    background: var(--paper);
+    color: var(--ink);
+    margin-top: 4px;
+  }
+  .services .cta:hover, .services .cta:focus-visible { background: var(--paper-warm); }
+
+  /* ---------- footer ---------- */
+  footer.foot {
+    max-width: var(--max-wide);
+    margin: clamp(40px, 6vh, 80px) auto 0;
+    padding-top: clamp(20px, 3vh, 32px);
+    border-top: 5px double var(--ink);
+    text-align: center;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--hush);
+  }
+  footer.foot a { text-decoration: none; transition: color .2s ease; }
+  footer.foot a:hover { color: var(--ink); }
+  footer.foot .sig {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--hush);
+    margin-top: 14px;
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 860px) {
+    .services-intro { grid-template-columns: 1fr; gap: 24px; }
+    .services-still { max-width: 360px; margin: 0 auto; }
+  }
+  @media (max-width: 760px) {
+    .cr-grid { grid-template-columns: 1fr; }
+    .cr-brands { grid-template-columns: 1fr; gap: 14px; }
+    .cr-brand-mid {
+      border-left: none;
+      border-right: none;
+      border-top: 1px solid #d4ccb8;
+      border-bottom: 1px solid #d4ccb8;
+      padding: 14px 0;
+    }
+    .cr-what { grid-template-columns: 1fr; gap: 24px; }
+    .cr-portrait { max-width: 320px; margin: 0 auto; }
+  }
+  @media (max-width: 600px) {
+    .services-grid { grid-template-columns: 1fr; gap: 20px; }
+  }
+  @media (max-width: 560px) {
+    body { font-size: 18px; }
+    .cr-name { font-size: 14vw; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+    .cr-moment video { display: none; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ============== TONEPOST — focus block ============== -->
+  <section class="cr-focus">
+
+    <div class="cr-topbar">
+      <a class="cr-topbar-link" href="/">&larr; TONE.DAD</a>
+      <span>TONEPOST</span>
+    </div>
+
+    <header class="cr-masthead">
+      <div class="cr-editor">EDITOR &mdash; JUSTIN HERRERA</div>
+      <div class="cr-name">Tonepost</div>
+      <div class="cr-the">Notes from the Edit Suite</div>
+      <p class="cr-strap">
+        <span class="joke">(I&rsquo;m Tone. I like to post. That&rsquo;s it. That&rsquo;s the brand.)</span>
+        On-set editor for Taylor Swift&rsquo;s <em>Blank Space</em>. 350+ weddings filmed.
+        Letters from inside the work &mdash; when there&rsquo;s something honest to say.
+      </p>
+    </header>
+    <div class="cr-masthead-underrule"></div>
+
+    <div class="cr-meta">
+      <span>VOL. I</span><span class="cr-meta-dot">&middot;</span>
+      <span>ISSUE NO. 001</span><span class="cr-meta-dot">&middot;</span>
+      <span>EST. 2026</span><span class="cr-meta-dot">&middot;</span>
+      <span>MORRIS PLAINS, NJ</span>
+    </div>
+
+    <div class="cr-grid">
+
+      <!-- LEFT — Feature card: Issue 001 -->
+      <article class="cr-feature">
+        <figure class="cr-moment" aria-label="Moment 001 — the phone in her hand. Blank Space, 2014.">
+          <img src="/media/blank-space-phone.jpg" alt="Taylor Swift in the Blank Space music video, holding the phone Justin handed to director Joseph Kahn on set." />
+          <div class="cr-moment-hud">
+            <span class="cr-moment-rec" aria-hidden="true"></span>
+            <span>MOMENT 001</span>
+            <span class="cr-moment-tag">tone&rsquo;s phone</span>
+          </div>
+        </figure>
+
+        <div class="cr-feature-body">
+          <p class="cr-feature-eye">&#9656; THE FEATURE &middot; ISSUE 001</p>
+          <div class="cr-feature-quote-mark" aria-hidden="true">&ldquo;</div>
+          <p class="cr-feature-quote">
+            That&rsquo;s my phone in her hand. She hugged me at the end. Her director called about Prague &mdash; twice. I said no. I went to work for the Jets instead. Realized none of it was me. Turns out I just wanted to film weddings.
+          </p>
+          <p class="cr-feature-title">Blank Space.</p>
+          <div class="cr-feature-rule"></div>
+          <a class="cr-feature-cta" href="/notes/001-blank-space">READ THE STORY &rarr;</a>
+        </div>
+      </article>
+
+      <!-- RIGHT — Issue 002 teaser (Jets) -->
+      <aside class="cr-currently cr-jets">
+        <figure class="cr-moment cr-moment-jets" aria-label="Moment 002 — the Mustang at 1 Jets Drive.">
+          <img src="/media/jets-mustang-drive.jpg" alt="Justin's black Mustang parked outside the New York Jets training facility at 1 Jets Drive, Florham Park, NJ." />
+          <div class="cr-moment-hud">
+            <span class="cr-moment-rec" aria-hidden="true"></span>
+            <span>MOMENT 002</span>
+            <span class="cr-moment-tag">1 Jets Drive</span>
+          </div>
+        </figure>
+        <div>
+          <p class="cr-currently-eye">&#9656; ISSUE 002 &middot; COMING</p>
+          <p class="cr-currently-title">The freakin&rsquo; Jets.</p>
+          <p class="cr-currently-body">
+            Before Blank Space was the sideline. Three years on staff at MetLife &mdash; touchdowns logged, losing seasons survived, a nickname (<em>Tonetime</em>) that wouldn&rsquo;t leave. The good, the bad, and the ugly. (The ugly first.)
+          </p>
+        </div>
+        <a class="cr-currently-cta" href="https://tonedad.beehiiv.com/subscribe" target="_blank" rel="noopener">ON THE LIST &rarr;</a>
+      </aside>
+
+    </div>
+
+    <div class="cr-what">
+      <div class="cr-what-copy">
+        <p class="cr-what-eye">&#9656; WHAT THIS IS</p>
+        <h2 class="cr-what-head">From <em>inside</em> the work.</h2>
+        <p class="cr-what-body">
+          Three companies. One camera. A calendar that mostly lies to me. Three under 5 at home. I make this look easier than it is. It isn&rsquo;t.
+        </p>
+        <p class="cr-what-body">
+          Things I&rsquo;ve been meaning to share, now that I have a minute (I don&rsquo;t, at all). The deal that almost happened, the edit that didn&rsquo;t, the rate I should have charged. No schedule, no funnel, no course. Just a guy thinking out loud on the internet, hoping any of it helps somebody else too.
+        </p>
+      </div>
+      <figure class="cr-portrait">
+        <img src="/media/justin-portrait.jpg" alt="Justin Herrera at a laptop with an iced coffee, smiling, in a window-lit cafe." />
+        <figcaption>Justin Herrera &middot; Morris Plains, NJ</figcaption>
+      </figure>
+    </div>
+
+    <div class="cr-brands">
+      <div class="cr-brand">
+        <div class="cr-brand-name">TONEMEDIA</div>
+        <div class="cr-brand-line"><a href="https://tonemediastudio.com" target="_blank" rel="noopener">Wedding films, NJ + NYC. Booking 2026 &rarr;</a></div>
+      </div>
+      <div class="cr-brand cr-brand-mid">
+        <div class="cr-brand-name">TONE.DAD</div>
+        <div class="cr-brand-line"><a href="/">The parent brand. All four under one roof &rarr;</a></div>
+      </div>
+      <div class="cr-brand">
+        <div class="cr-brand-name">TONEHOMES</div>
+        <div class="cr-brand-line"><a href="https://instagram.com/tone.dad" target="_blank" rel="noopener">Real estate, eventually, allegedly &rarr;</a></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============== SERVICES (post-production studio) ============== -->
+  <section class="col">
+    <div class="services">
+      <div class="services-intro">
+        <div class="services-intro-copy">
+          <p class="eyebrow">For wedding filmmakers + brands</p>
+          <h3>the part nobody got into <em>film</em> for.</h3>
+          <p>The studio takes wedding edits, brand films, and recap deliverables off your plate. fast turnarounds, color &amp; sound included, your aesthetic preserved (we&rsquo;re not heroes about it). local pickup if you&rsquo;re in north jersey, fully remote if you&rsquo;re not.</p>
+        </div>
+        <figure class="services-still">
+          <img src="/media/noblepost-couple.jpg" alt="Black-and-white still from a wedding film — a couple walking hand-in-hand past hydrangeas." />
+          <figcaption>from a wedding film &middot; still</figcaption>
+        </figure>
+      </div>
+
+      <div class="services-grid">
+        <div class="cell">
+          <h4>Wedding films</h4>
+          <p>highlight + feature edits, ceremony trims, social cutdowns. built for studios doing 20+ weddings a year (and the ones who think they&rsquo;ll get there).</p>
+        </div>
+        <div class="cell">
+          <h4>Brand &amp; commercial</h4>
+          <p>brand films, recap edits, social packages, polish passes for when your rough cut isn&rsquo;t quite rough enough. color and sound included.</p>
+        </div>
+        <div class="cell">
+          <h4>Local — north Jersey</h4>
+          <p>pickup &amp; drop-off within ~30 miles of Morris Plains. same-week turnaround on most jobs. (yes, even your friend&rsquo;s friend&rsquo;s wedding.)</p>
+        </div>
+        <div class="cell">
+          <h4>Remote — anywhere</h4>
+          <p>frame.io for review, encrypted transfer, async approvals. the whole process happens without a single zoom call.</p>
+        </div>
+      </div>
+
+      <a class="cta" href="https://nobleposthouse.com/about" target="_blank" rel="noopener">
+        let us take it <span class="arrow">&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="foot">
+    <div><a href="/">&larr; back to tone<span class="g-dot">.</span>dad</a></div>
+    <div class="sig">&mdash; Justin, in Morris Plains</div>
+  </footer>
+
+</body>
+</html>
