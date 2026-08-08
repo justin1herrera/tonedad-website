@@ -34,7 +34,10 @@ tone-dad-fix-pack.md
 
 # Note 002 staging folder — finished files were copied into notes/ and media/.
 # This is the 206 MB source drop (incl. uploads/ camera originals); never deploy it.
-002
+# Leading slash anchors this to the repo root. Unanchored `002` also matched
+# media/notes/002/, which note 001 serves — an unanchored rule here would strip
+# those nine live assets off the next deploy.
+/002/
 
 # Retired media (old link-tree/v2 design — unreferenced). NOTE: brand-dad.jpg is KEPT (newsletter OG).
 media/blank-space-rage.jpg

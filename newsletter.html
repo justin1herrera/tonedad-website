@@ -501,16 +501,17 @@
   .cr-brand-line a:hover { color: var(--gold); }
 
   /* ============================================================
-     JETS variant — Issue 002 teaser
+     WESTERN AVE variant — Issue 002 teaser
+     Blueprint blue (#2f5a78) is note 002's own --draft accent.
      ============================================================ */
-  .cr-currently.cr-jets {
-    background: #0e5a30;
+  .cr-currently.cr-western {
+    background: #2f5a78;
     border: 1px solid rgba(255, 255, 255, .18);
     color: #f3f0e8;
     position: relative;
     overflow: hidden;
   }
-  .cr-currently.cr-jets::before {
+  .cr-currently.cr-western::before {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0;
@@ -518,24 +519,39 @@
     background: repeating-linear-gradient(90deg, #ffffff 0 14px, transparent 14px 22px);
     opacity: .65;
   }
-  .cr-currently.cr-jets .cr-currently-eye { color: #ffffff; opacity: .9; letter-spacing: .26em; }
-  .cr-currently.cr-jets .cr-currently-title { color: #ffffff; }
-  .cr-currently.cr-jets .cr-currently-body { color: rgba(243, 240, 232, .82); }
-  .cr-currently.cr-jets .cr-currently-body em { color: #ffffff; font-weight: 500; }
-  .cr-currently.cr-jets .cr-currently-form input {
+  .cr-currently.cr-western .cr-currently-eye { color: #ffffff; opacity: .9; letter-spacing: .26em; }
+  .cr-currently.cr-western .cr-currently-title { color: #ffffff; }
+  .cr-currently.cr-western .cr-currently-body { color: rgba(243, 240, 232, .82); }
+  .cr-currently.cr-western .cr-currently-body em { color: #ffffff; font-weight: 500; }
+  .cr-currently.cr-western .cr-currently-form input {
     background: rgba(255, 255, 255, .12);
     border: 1px solid rgba(255, 255, 255, .35);
     color: #f3f0e8;
   }
-  .cr-currently.cr-jets .cr-currently-form input::placeholder { color: rgba(243, 240, 232, .88); }
-  .cr-currently.cr-jets .cr-currently-form input:focus { outline: 1px solid #ffffff; background: rgba(255, 255, 255, .18); }
-  .cr-currently.cr-jets .cr-currently-form button { background: #ffffff; color: #0e5a30; font-weight: 700; }
-  .cr-currently.cr-jets .cr-currently-form button:hover { background: #f3f0e8; color: #093d20; }
-  .cr-currently.cr-jets .cr-currently-cta { background: #ffffff; color: #0e5a30; font-weight: 700; }
-  .cr-currently.cr-jets .cr-currently-cta:hover { background: #f3f0e8; color: #093d20; }
-  .cr-moment-jets { border-color: rgba(255, 255, 255, .25); }
-  .cr-moment-jets .cr-moment-hud { color: #ffffff; }
-  .cr-moment-jets .cr-moment-tag { background: rgba(0, 0, 0, .55); color: #ffffff; border-left-color: #ffffff; }
+  .cr-currently.cr-western .cr-currently-form input::placeholder { color: rgba(243, 240, 232, .88); }
+  .cr-currently.cr-western .cr-currently-form input:focus { outline: 1px solid #ffffff; background: rgba(255, 255, 255, .18); }
+  .cr-currently.cr-western .cr-currently-form button { background: #ffffff; color: #2f5a78; font-weight: 700; }
+  .cr-currently.cr-western .cr-currently-form button:hover { background: #f3f0e8; color: #1f3f52; }
+  .cr-currently.cr-western .cr-currently-cta { background: #ffffff; color: #2f5a78; font-weight: 700; }
+  .cr-currently.cr-western .cr-currently-cta:hover { background: #f3f0e8; color: #1f3f52; }
+  /* Secondary link to the published note — the primary CTA stays the subscribe link */
+  .cr-currently-read {
+    display: inline-block;
+    margin-top: 14px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgba(243, 240, 232, .82);
+    border-bottom: 1px solid rgba(243, 240, 232, .34);
+    padding-bottom: 3px;
+    transition: color .25s ease, border-color .25s ease;
+  }
+  .cr-currently-read:hover { color: #ffffff; border-bottom-color: #ffffff; }
+  .cr-moment-western { border-color: rgba(255, 255, 255, .25); }
+  .cr-moment-western .cr-moment-hud { color: #ffffff; }
+  .cr-moment-western .cr-moment-tag { background: rgba(0, 0, 0, .55); color: #ffffff; border-left-color: #ffffff; }
 
   /* ---------- SERVICES card (post-production) ---------- */
   .services {
@@ -743,22 +759,23 @@
         </div>
       </article>
 
-      <!-- RIGHT — Issue 002 teaser (Jets) -->
-      <aside class="cr-currently cr-jets">
-        <figure class="cr-moment cr-moment-jets" aria-label="Moment 002 — the Mustang at 1 Jets Drive.">
-          <img src="/media/jets-mustang-drive.jpg" alt="Justin's black Mustang parked outside the New York Jets training facility at 1 Jets Drive, Florham Park, NJ." />
+      <!-- RIGHT — Issue 002 teaser (Western Ave) -->
+      <aside class="cr-currently cr-western">
+        <figure class="cr-moment cr-moment-western" aria-label="Moment 002 — the first walkthrough at Western Ave, 12 September 2018.">
+          <img src="/media/notes/002-western/walkthrough-2018.jpg" alt="The front porch of 144 Western Ave in Morristown on the first walkthrough — green painted steps, white storm door standing open, overgrown shrubs on both sides." />
           <div class="cr-moment-hud">
             <span class="cr-moment-rec" aria-hidden="true"></span>
             <span>MOMENT 002</span>
-            <span class="cr-moment-tag">1 Jets Drive</span>
+            <span class="cr-moment-tag">Western Ave</span>
           </div>
         </figure>
         <div>
-          <p class="cr-currently-eye">&#9656; ISSUE 002 &middot; COMING</p>
-          <p class="cr-currently-title">The freakin&rsquo; Jets.</p>
+          <p class="cr-currently-eye">&#9656; ISSUE 002 &middot; OUT NOW</p>
+          <p class="cr-currently-title">She saw a studio. I saw a basement.</p>
           <p class="cr-currently-body">
-            Before Blank Space was the sideline. Three years on staff at MetLife &mdash; touchdowns logged, losing seasons survived, a nickname (<em>Tonetime</em>) that wouldn&rsquo;t leave. The good, the bad, and the ugly. (The ugly first.)
+            Morristown, 2018. She walked through a house nobody wanted and saw rooms. I saw a lower level and a calculator. We closed at $354,000, put $15,000 into the half nobody sees, and turned one house into two units. A tenant has covered most of the mortgage since March 2019. (<em>She was right.</em>)
           </p>
+          <a class="cr-currently-read" href="/notes/002-steph-was-right">Read Issue 002 &rarr;</a>
         </div>
         <a class="cr-currently-cta" href="https://tonedad.beehiiv.com/subscribe" target="_blank" rel="noopener">ON THE LIST &rarr;</a>
       </aside>

@@ -69,14 +69,14 @@ body {
 ::selection { background: var(--ink); color: var(--bg); }
 a { color: inherit; text-decoration: none; }
 
-/* grain */
+/* Paper fibre, not a dot grid. The 3px radial grid read as a screen pattern;
+   turbulence reads as stock. Same filter the notes themselves use. */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image:
-    radial-gradient(rgba(23,20,16,0.028) 1px, transparent 1px);
-  background-size: 3px 3px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='p'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .09  0 0 0 0 .08  0 0 0 0 .06  0 0 0 .05 0'/></filter><rect width='100%' height='100%' filter='url(%23p)'/></svg>");
+  background-size: 180px 180px;
   pointer-events: none;
   z-index: 1;
 }
@@ -87,6 +87,25 @@ body::before {
   max-width: 760px;
   margin: 0 auto;
   padding: 64px 32px 120px;
+}
+/* The margin rule off a legal pad — one hairline down the content edge,
+   faded in and out so it never announces itself. Desktop only; on a phone
+   there isn't gutter enough for it to be anything but a stripe. */
+.wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 13px;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0,
+    rgba(181, 66, 31, 0.15) 90px,
+    rgba(181, 66, 31, 0.15) calc(100% - 170px),
+    transparent 100%
+  );
+  pointer-events: none;
 }
 
 /* ============================================================
@@ -119,7 +138,29 @@ body::before {
 /* ============================================================
    MASTHEAD
    ============================================================ */
-.mast { margin-bottom: 72px; }
+.mast { margin-bottom: 72px; position: relative; }
+/* Feint ruling behind the masthead only — notebook lines that fade out
+   before the eye decides they're a pattern. Not the whole page; that would
+   be a stationery store. */
+.mast::before {
+  content: '';
+  position: absolute;
+  inset: -10px -24px 34px -24px;
+  z-index: -1;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 27px,
+    rgba(47, 90, 120, 0.055) 27px 28px
+  );
+  /* 28px cycle matches the dek's line-height so the ruling runs with the
+     text rather than against it; the offset lands it under the baseline.
+     Decorative, not baseline-locked — at this alpha a pixel or two of
+     drift is invisible, and chasing it exactly isn't worth the CSS. */
+  background-position: 0 12px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 26%, #000 58%, transparent 94%);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 26%, #000 58%, transparent 94%);
+  pointer-events: none;
+}
 .mast-eyebrow {
   font-size: 10px;
   letter-spacing: 0.32em;
@@ -149,19 +190,20 @@ body::before {
   white-space: nowrap;
   min-height: 1em; /* hold the line while the typewriter has it empty */
 }
+/* Running prose is serif. Mono stays for labels, meta and datelines —
+   at 13px over 180+ characters it was a squint, and its 56ch measure
+   stopped at 57% of the wrap while the pull quote below ran to 88%,
+   which is what put the hole in the right side of the masthead. */
 .mast-dek {
-  font-family: var(--mono);
-  font-size: 13px;
-  letter-spacing: 0.04em;
+  font-family: var(--serif);
+  font-size: 17.5px;
+  letter-spacing: 0;
   color: var(--ink-soft);
-  max-width: 56ch;
-  line-height: 1.7;
+  max-width: 60ch;
+  line-height: 1.6;
 }
 .mast-dek em {
-  font-family: var(--serif);
   font-style: italic;
-  font-size: 16px;
-  letter-spacing: -0.01em;
   color: var(--ink);
 }
 
@@ -262,6 +304,7 @@ body::before {
 }
 .section-label {
   font-family: var(--mono);
+  font-weight: 400; /* these are h2 for document outline — undo the UA bold */
   color: var(--draft);
   font-size: 9.5px;
   letter-spacing: 0.32em;
@@ -357,16 +400,16 @@ body::before {
   margin-bottom: 12px;
 }
 .entry-excerpt {
-  font-family: var(--mono);
-  font-size: 13px;
-  line-height: 1.7;
+  font-family: var(--serif);
+  font-size: 17.5px;
+  line-height: 1.6;
   color: var(--ink-soft);
-  max-width: 58ch;
+  max-width: 60ch;
 }
 .entry-excerpt em {
   font-family: var(--serif);
   font-style: italic;
-  font-size: 15px;
+  font-size: inherit;
   color: var(--ink);
   letter-spacing: -0.005em;
 }
@@ -413,19 +456,27 @@ body::before {
 }
 
 /* --- Inline photo break --- */
+/* Two frames with opposite proportions — a 2.39:1 still and a 0.56:1
+   portrait — so they can't share a box. Forcing both to 3/2 cropped the
+   phone out of Taylor's hand (it sits at 14-20% across, her face at
+   67-80%; a 3/2 cover keeps only the middle 63%, so the phone goes
+   first) and took 63% of the height off Steph's. Columns are weighted to
+   each frame instead, which lands both at the same height. */
 .photo-break {
   margin: 8px 0 48px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2.39fr 0.75fr;
   gap: 12px;
+  align-items: start;
 }
 .photo-break img {
   width: 100%;
-  aspect-ratio: 3/2;
   object-fit: cover;
   border-radius: 2px;
   filter: saturate(0.7);
 }
+.photo-break img:first-of-type  { aspect-ratio: 714 / 299; } /* native — uncropped, phone intact */
+.photo-break img:nth-of-type(2) { aspect-ratio: 3 / 4; }
 .photo-caption {
   grid-column: 1 / -1;
   font-family: var(--mono);
@@ -449,6 +500,8 @@ body::before {
   transition: padding 0.4s var(--ease);
 }
 .entry-row:hover { padding-left: 6px; }
+/* Rows carrying art get a thumbnail column; rows without stay full width. */
+.entry-row.has-thumb { grid-template-columns: 140px 1fr; gap: 20px; }
 .entry-img-wrap {
   position: relative;
   width: 140px;
@@ -484,12 +537,24 @@ body::before {
   margin-bottom: 6px;
 }
 .entry-row .entry-excerpt {
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.55;
 }
 
-/* Soon entries — on the timeline, moving through the pipeline */
-.entry-row.is-soon { cursor: default; }
+/* Soon entries — on the timeline, moving through the pipeline.
+   Five of these run under two finished notes, and at full weight they ate
+   a quarter of the page teasing things you can't click. Compacted so the
+   published work carries the scroll and these read as a contents list. */
+.entry-row.is-soon { cursor: default; padding: 18px 0; }
+.entry-row.is-soon .entry-title { font-size: clamp(18px, 2vw, 21px); margin-bottom: 4px; }
+.entry-row.is-soon .entry-excerpt {
+  font-size: 14.5px;
+  max-width: 56ch;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 .entry-row.is-soon:hover { padding-left: 0; }
 .entry-row.is-soon .entry-img { filter: saturate(0) brightness(0.9); opacity: 0.8; }
 .entry-status {
@@ -630,6 +695,8 @@ body::before {
    ============================================================ */
 @media (max-width: 720px) {
   .wrap { padding: 40px 22px 80px; }
+  .wrap::before { display: none; }   /* no gutter for a margin rule on a phone */
+  .mast::before { inset: -8px -14px 28px -14px; }
   .top { font-size: 10px; }
   .top-meta .sep,
   .top-meta .top-meta-loc { display: none; }
@@ -641,6 +708,9 @@ body::before {
   .entry-featured { margin-bottom: 40px; padding-bottom: 40px; }
   .entry-title { font-size: clamp(26px, 7vw, 36px); }
   .entry-row { gap: 16px; padding: 24px 0; }
+  /* 140px of thumb leaves the text column too narrow on a phone */
+  .entry-row.has-thumb { grid-template-columns: 96px 1fr; gap: 14px; }
+  .entry-img-wrap { width: 96px; height: 68px; }
   .entry-row .entry-title { font-size: 20px; }
   .entry-row .entry-excerpt { font-size: 11.5px; }
   .entry-row:hover { padding-left: 0; }
@@ -676,7 +746,7 @@ body::before {
   <!-- MASTHEAD -->
   <header class="mast">
     <div class="mast-eyebrow">Notes from the edit suite</div>
-    <h1 class="mast-title"><span id="mastType">Notes.</span></h1>
+    <h1 class="mast-title"><span id="mastType">tone.notes</span></h1>
     <p class="mast-dek">
       Stories I keep meaning to write down. Weddings, the Jets years, the year I lived with <em>Avid DiVa</em>, the houses Steph and I have been rebuilding since 2019. <em>One at a time. No schedule.</em>
     </p>
@@ -697,7 +767,7 @@ body::before {
 
   <!-- SECTION RULE -->
   <div class="section-rule">
-    <span class="section-label">Published</span>
+    <h2 class="section-label">Published</h2>
   </div>
 
   <!-- ENTRIES -->
@@ -740,16 +810,20 @@ body::before {
     <div class="photo-break">
       <img src="/media/blank-space-phone.jpg" alt="My phone on the monitor cart during the Blank Space shoot" loading="lazy">
       <img src="/media/notes/002-western/steph-baseboard.jpg" alt="Steph cutting baseboard on the miter saw at Western Ave" loading="lazy">
-      <span class="photo-caption">Left: my phone in the Blank Space video. Right: Steph running baseboard on Western Ave.</span>
+      <!-- No "Left / Right" — these stack on a phone, where the labels lie. -->
+      <span class="photo-caption">My phone, in the Blank Space video. Steph, running baseboard on Western Ave.</span>
     </div>
     <div class="section-rule">
-      <span class="section-label">On the Timeline</span>
+      <h2 class="section-label">On the Timeline</h2>
     </div>
     </li>
 
     <!-- 003 -->
     <li>
-      <div class="entry-row is-soon is-next" data-tag="jets">
+      <div class="entry-row is-soon is-next has-thumb" data-tag="jets">
+        <div class="entry-img-wrap">
+          <img class="entry-img" src="/media/jets-field-steph.jpg" alt="Justin in Jets staff kit with a field credential, next to Steph in a Jets tee, on the field at MetLife before kickoff." loading="lazy">
+        </div>
         <div>
           <div class="entry-meta">
             <span class="entry-num">003</span>
@@ -764,7 +838,10 @@ body::before {
 
     <!-- 004 -->
     <li>
-      <div class="entry-row is-soon" data-tag="craft">
+      <div class="entry-row is-soon has-thumb" data-tag="craft">
+        <div class="entry-img-wrap">
+          <img class="entry-img" src="/media/avid-diva-suite.jpg" alt="An edit suite lined with equipment racks and a wall of tape stock, Justin working at the keyboard." loading="lazy">
+        </div>
         <div>
           <div class="entry-meta">
             <span class="entry-num">004</span>
@@ -779,7 +856,10 @@ body::before {
 
     <!-- 005 -->
     <li>
-      <div class="entry-row is-soon" data-tag="life">
+      <div class="entry-row is-soon has-thumb" data-tag="life">
+        <div class="entry-img-wrap">
+          <img class="entry-img" src="/media/michelle-freddy.jpg" alt="A bride and groom hand in hand on the steps outside a glass conservatory at dusk." loading="lazy">
+        </div>
         <div>
           <div class="entry-meta">
             <span class="entry-num">005</span>
@@ -794,7 +874,11 @@ body::before {
 
     <!-- 006 -->
     <li>
-      <div class="entry-row is-soon" data-tag="gear">
+      <div class="entry-row is-soon has-thumb" data-tag="gear">
+        <div class="entry-img-wrap">
+          <img class="entry-img" src="/media/lumix-s1ii.jpg" alt="Close on a Lumix S1 II body and lens, the red record button in the foreground." loading="lazy">
+          <video muted loop playsinline preload="none" data-src="/media/lumix-s1ii-loop.mp4"></video>
+        </div>
         <div>
           <div class="entry-meta">
             <span class="entry-num">006</span>
@@ -809,7 +893,10 @@ body::before {
 
     <!-- 007 -->
     <li>
-      <div class="entry-row is-soon" data-tag="life">
+      <div class="entry-row is-soon has-thumb" data-tag="life">
+        <div class="entry-img-wrap">
+          <img class="entry-img" src="/media/ddr-freestyle.jpg" alt="Justin and Steph mid-routine on a Dance Dance Revolution machine, 2007." loading="lazy">
+        </div>
         <div>
           <div class="entry-meta">
             <span class="entry-num">007</span>
@@ -826,7 +913,7 @@ body::before {
 
   <!-- COLOPHON -->
   <div class="section-rule colophon-rule">
-    <span class="section-label">Colophon</span>
+    <h2 class="section-label">Colophon</h2>
   </div>
   <div class="colophon">
     <div class="colophon-text">
@@ -889,10 +976,10 @@ body::before {
     await sleep(900);                  /* ...he notices */
     await erase(5, 55);                /* back to "N" */
     await type('otes.', 90);           /* fixed */
-    await sleep(1800);
+    await sleep(1250);
     await erase(6, 45);
     await type('Brain Dump.', 85);
-    await sleep(1600);
+    await sleep(1150);
     await erase(11, 45);
     await type('Dear Diary', 85);
     await sleep(700);
@@ -900,7 +987,10 @@ body::before {
     await sleep(500);                  /* ...nope. */
     await erase(11, 30);               /* fast erase = embarrassment */
     await sleep(300);
-    await type('Notes.', 95);          /* and it stays */
+    await type('Notes.', 95);          /* settles for it */
+    await sleep(1150);                 /* ...then remembers the thing has a real name */
+    await erase(6, 40);
+    await type('tone.notes', 80);      /* straightens its tie. this one stays. */
   }
   run();
 })();

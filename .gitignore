@@ -72,5 +72,8 @@ media/tonemedia-main-logo-color-5-rgb-900px-w-72ppi.png
 media/veil-hero.mp4
 .env*.local
 
-# Note 002 staging drop — finished files already copied into notes/ and media/
-002/
+# Note 002 staging drop — finished files already copied into notes/ and media/.
+# Leading slash anchors this to the repo root. Unanchored `002/` also matched
+# media/notes/002/ — nine assets note 001 actually serves — and kept them out
+# of the clean master.
+/002/

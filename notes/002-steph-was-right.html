@@ -1035,20 +1035,26 @@
     .tlx-title { font-size: clamp(22px, 3vw, 30px); }
   }
   /* Mobile: the pinned scroll-scrub is unreliable on phones (address-bar
-     resize fights sticky). Fall back to a static 2×2 contact sheet. */
+     resize fights sticky). Fall back to a static contact sheet. */
   @media (max-width: 760px) {
     .tlx-track { height: auto !important; }
     .tlx-sticky { position: static; height: auto; min-height: 0; padding: 22px 16px 26px; }
     .tlx-inner { height: auto; display: block; }
-    .tlx-stage > picture { display: contents; }
+    /* Must NOT be display:contents here. That promotes *both* children of each
+       <picture> to grid items, and <source> computes to display:block — so a
+       <source> claimed column 1 of every row and shoved all four photos into
+       column 2, leaving the sheet off-centre with a dead left half. */
+    .tlx-stage > picture { display: block; }
     .tlx-stage {
       display: grid; grid-template-columns: 1fr 1fr; gap: 5px;
       aspect-ratio: auto; height: auto; flex: none; margin-top: 16px;
       background: none; border: 0; overflow: visible;
     }
     .tlx-frame {
-      position: static; inset: auto;
-      width: 100%; height: auto; aspect-ratio: 3 / 2;
+      position: static; inset: auto; display: block;
+      /* 2:1 is the native frame. The old 3/2 cover-cropped ~25% of the width,
+         which cut the old kitchen out of the left edge of shot 01. */
+      width: 100%; height: auto; aspect-ratio: 2 / 1;
       opacity: 1 !important; object-fit: cover;
       border: 1px solid var(--rule-strong);
     }
@@ -1056,6 +1062,11 @@
     .tlx-rail { margin-top: 10px; border: 0; padding: 0; }
     .tlx-stop { pointer-events: none; }
     .tlx-stop .s-l { font-size: 8.5px; }
+  }
+  /* Phones: one full-width column. Two-up leaves each 2:1 frame ~169px wide —
+     too small to read the change the sequence exists to show. */
+  @media (max-width: 560px) {
+    .tlx-stage { grid-template-columns: 1fr; gap: 7px; }
   }
   @media (prefers-reduced-motion: reduce) {
     .tlx-track { height: auto !important; }
@@ -1620,19 +1631,6 @@
       </div>
     </section>
 
-    <!-- ============ RECEIPTS ============ -->
-    <aside class="receipts reveal" aria-label="Proof">
-      <p class="receipts-lead">Everyone’s origin story sounds better than it was. So, the paperwork.</p>
-
-      <figure class="receipt">
-        <span class="ph" style="aspect-ratio:2.58/1" data-ph="plans-wall.jpg">
-          <picture><source srcset="../media/notes/002-western/plans-wall.webp" type="image/webp"><img src="../media/notes/002-western/plans-wall.jpg" alt="Four hand-annotated plans in sheet protectors taped to the wall: demo plan, construction plan, kitchen, finish plan." loading="lazy" width="2200" height="853"></picture>
-        </span>
-        <figcaption>Demo · Construction · Kitchen · Finish. Taped up, in that order.</figcaption>
-      </figure>
-
-    </aside>
-
     <aside class="hook reveal">
       <p class="hook-lead">The room we almost didn’t build covers nearly all of the mortgage on its own.</p>
       <p class="hook-num">$1,850 <span class="v">against</span> $1,950</p>
@@ -1740,9 +1738,20 @@
       <h2><span class="callout">03<small>SEC</small></span><span class="lead"></span> <span class="h2-title">Four sheets of paper</span></h2>
       <p>We taped four plans to the wall. Demo. Construction. Kitchen. Finish. One sheet each, in that order, and nothing started until the sheet before it was done being argued about.</p>
       <p>We couldn’t afford to make mistakes in drywall, so we made them on paper. Moved a wall four times on a printout. Put the kitchen sink in three different places. None of it cost anything.</p>
-      <p>They’re not architect’s drawings — printouts in sheet protectors, marked up in pen. Red for what comes out, blue for what stays.</p>
+      <p>They’re not architect’s drawings — printouts in sheet protectors, marked up in pen. Red for what comes out, blue for what stays. Steph drew them. She’s an interior designer by trade, years of it at Gensler in Morristown, drawing rooms for other people. This one was ours.</p>
 
-      <aside class="steph">“Oh, 22. Okay, I got it.”</aside>
+      <!-- ============ RECEIPTS ============ -->
+      <aside class="receipts reveal" aria-label="Proof">
+        <p class="receipts-lead">Everyone’s origin story sounds better than it was. So, the paperwork.</p>
+
+        <figure class="receipt">
+          <span class="ph" style="aspect-ratio:2.58/1" data-ph="plans-wall.jpg">
+            <picture><source srcset="../media/notes/002-western/plans-wall.webp" type="image/webp"><img src="../media/notes/002-western/plans-wall.jpg" alt="Four of Steph's hand-annotated plans in sheet protectors taped to the wall: demo plan, construction plan, kitchen, finish plan." loading="lazy" width="2200" height="853"></picture>
+          </span>
+          <figcaption>Demo · Construction · Kitchen · Finish. Steph’s drawings, taped up in that order.</figcaption>
+        </figure>
+
+      </aside>
 
       <figure class="inset reveal">
         <span class="ph ph-3x2" data-ph="demo-studs.jpg">
@@ -1752,6 +1761,8 @@
       </figure>
 
       <p>Steph ran baseboard. On 21 October she learned the miter saw, which mostly meant learning that 45 and 22 are the only two numbers that matter, and that you mark the other side before you cut.</p>
+
+      <aside class="steph">“Oh, 22. Okay, I got it.”</aside>
 
       <figure class="inset reveal snd" style="max-width:420px;margin-left:auto;margin-right:auto">
         <span class="take-cue" aria-hidden="true"><span class="dot"></span><span class="lbl">Tap for sound</span></span>
