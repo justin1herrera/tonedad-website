@@ -1,0 +1,1859 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tonehomes · Justin &amp; Steph Herrera · Morris County NJ Real Estate</title>
+<meta name="description" content="Morris County real estate representation and renovation planning from a licensed realtor and interior designer. Buy, sell, invest, or rework a home with Tonehomes.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tone.dad/tonehomes">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tone.dad/tonehomes">
+<meta property="og:site_name" content="tone.dad">
+<meta property="og:title" content="Tonehomes · Justin &amp; Steph Herrera · Morris County NJ">
+<meta property="og:description" content="Licensed realtor + interior designer in Morris County, NJ. Buy, sell, invest, or rework a home with Tonehomes.">
+<meta property="og:image" content="https://tone.dad/media/og-tonehomes-v3.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tonehomes · Justin &amp; Steph Herrera">
+<meta name="twitter:description" content="Licensed realtor + interior designer in Morris County, NJ. Buy, sell, invest, or rework a home with Tonehomes.">
+<meta name="twitter:image" content="https://tone.dad/media/og-tonehomes-v3.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["RealEstateAgent", "LocalBusiness"],
+  "@id": "https://tone.dad/tonehomes#business",
+  "name": "Tonehomes",
+  "url": "https://tone.dad/tonehomes",
+  "image": "https://tone.dad/media/og-tonehomes-v3.jpg",
+  "telephone": "+1-609-902-0299",
+  "description": "Morris County real estate representation, property investing guidance, and renovation planning from Justin and Steph Herrera.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Morris Plains",
+    "addressRegion": "NJ",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    {"@type": "AdministrativeArea", "name": "Morris County, New Jersey"},
+    {"@type": "State", "name": "New Jersey"}
+  ],
+  "employee": [
+    {
+      "@type": "Person",
+      "name": "Justin Herrera",
+      "jobTitle": "Licensed real estate salesperson",
+      "worksFor": {"@type": "Organization", "name": "Keller Williams Metropolitan"}
+    },
+    {
+      "@type": "Person",
+      "name": "Steph Herrera",
+      "jobTitle": "Interior designer"
+    }
+  ],
+  "sameAs": ["https://www.instagram.com/tonehomes/"]
+}
+</script>
+<link rel="preload" href="/fonts/tonehomes/cormorant-garamond-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/tonehomes/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/tonehomes/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+<style>
+@font-face {
+  font-family:'Cormorant Garamond'; font-style:normal; font-weight:400 500; font-display:optional;
+  src:url('/fonts/tonehomes/cormorant-garamond-roman-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family:'Cormorant Garamond'; font-style:italic; font-weight:400 500; font-display:optional;
+  src:url('/fonts/tonehomes/cormorant-garamond-italic-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family:'Inter Tight'; font-style:normal; font-weight:400 700; font-display:optional;
+  src:url('/fonts/tonehomes/inter-tight-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family:'JetBrains Mono'; font-style:normal; font-weight:300 500; font-display:optional;
+  src:url('/fonts/tonehomes/jetbrains-mono-latin.woff2') format('woff2');
+}
+
+/* ============================================================
+   TOKENS
+   ============================================================ */
+:root {
+  --black:    #0c1410;
+  --ink:      #F2EDE2;
+  --ink-dim:  rgba(242,237,226,.74);
+  --ink-sub:  rgba(242,237,226,.59);
+  --line:     rgba(242,237,226,.1);
+  --line-hi:  rgba(242,237,226,.2);
+  --gold:     #C88C3C;
+  --gold-dim: rgba(200,136,60,.2);
+  --sage:     #91AD7C;
+  --sage-fill:#5A7248;
+  --sage-hi:  #6e8c58;
+  --terra:    #E07551;
+  --blueprint:#F0EBDF;
+  --blue-line:rgba(90,114,72,.14);
+  --blue-hi:  #5A7248;
+  --serif:    'Cormorant Garamond','Times New Roman',serif;
+  --sans:     'Inter Tight',system-ui,-apple-system,sans-serif;
+  --mono:     'JetBrains Mono',ui-monospace,monospace;
+  --ease:     cubic-bezier(.2,.7,.2,1);
+  --gut:      clamp(22px,5vw,72px);
+}
+
+*  { box-sizing:border-box; margin:0; padding:0 }
+html { scroll-behavior:auto }
+section[id], header[id] { scroll-margin-top:68px }
+body {
+  background: var(--black);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+img, video, picture { display:block; max-width:100% }
+a { color:inherit; text-decoration:none }
+::selection { background:var(--gold); color:var(--black) }
+:where(a,button,input,select,textarea):focus-visible {
+  outline:2px solid var(--gold); outline-offset:3px;
+}
+
+/* film grain */
+body::before {
+  content:''; position:fixed; inset:0; z-index:300;
+  background-image: radial-gradient(rgba(242,237,226,.016) 1px, transparent 1px);
+  background-size: 3px 3px; pointer-events:none;
+}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; justify-content:space-between; align-items:center;
+  padding: 18px var(--gut);
+  background: rgba(12,20,16,0);
+  backdrop-filter: blur(0); -webkit-backdrop-filter: blur(0);
+  transition: background .45s var(--ease), backdrop-filter .45s var(--ease);
+}
+.nav.scrolled {
+  background: rgba(12,20,16,.88);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+}
+.nav-back {
+  display:inline-flex; align-items:center; gap:9px;
+  min-height:44px;
+  font-family:var(--mono); font-size:10px; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--ink-sub); transition:color .3s var(--ease);
+}
+.nav-back:hover { color:var(--ink) }
+.nav-back .ar { transition:transform .3s var(--ease) }
+.nav-back:hover .ar { transform:translateX(-3px) }
+.nav-brand {
+  display:inline-flex; align-items:center; min-height:44px;
+  font-family:var(--serif); font-style:italic; font-size:17px; font-weight:500;
+  letter-spacing:-.02em;
+}
+.nav-cta {
+  font-family:var(--mono); font-size:10px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--gold); border:1px solid var(--gold-dim); padding:8px 16px;
+  transition:background .25s, color .25s, border-color .25s;
+}
+.nav-cta:hover { background:var(--gold); color:var(--black); border-color:var(--gold) }
+@media(max-width:560px) { .nav-cta { display:none } }
+
+/* ============================================================
+   HERO — full-bleed photo/Ken Burns, dark scrim
+   ============================================================ */
+.hero {
+  position:relative; min-height:100svh; overflow:hidden;
+  display:grid; align-items:flex-end;
+  padding:0 var(--gut) clamp(52px,8vh,96px);
+}
+.hero-picture { position:absolute; inset:0 }
+.hero-bg {
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  transform-origin:58% 46%;
+  animation: heroKB 32s var(--ease) infinite alternate;
+  filter: saturate(.88) contrast(1.05) brightness(.68);
+}
+@media(max-width:600px) { .hero-bg { object-position:center center !important } }
+@media(prefers-reduced-motion:reduce) { .hero-bg { animation:none } }
+@keyframes heroKB { from { transform:scale(1) } to { transform:scale(1.08) } }
+.hero-scrim {
+  position:absolute; inset:0;
+  background:
+    linear-gradient(180deg, rgba(12,20,16,.55) 0%, rgba(12,20,16,.05) 28%, rgba(12,20,16,.55) 62%, rgba(12,20,16,.97) 100%),
+    linear-gradient(105deg, rgba(12,20,16,.8) 0%, rgba(12,20,16,.3) 42%, rgba(12,20,16,0) 68%);
+}
+.hero-scrim::after {
+  content:''; position:absolute; inset:0;
+  box-shadow: inset 0 0 280px 72px rgba(0,0,0,.4);
+}
+.hero-content {
+  position:relative; z-index:2; max-width:840px;
+}
+.hero-eye {
+  font-family:var(--mono); font-size:10px; letter-spacing:.32em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:20px;
+  display:flex; align-items:center; gap:14px;
+  opacity:1;
+}
+.hero-eye::before { content:''; width:28px; height:1px; background:var(--gold); opacity:.65 }
+.hero-h {
+  font-family:var(--serif); font-weight:400; font-style:italic;
+  font-size:clamp(2.8rem,7.5vw,7rem); line-height:.93; letter-spacing:-.04em;
+
+  text-shadow:0 2px 40px rgba(0,0,0,.55);
+  margin-bottom:clamp(18px,3vh,30px);
+  opacity:1;
+}
+.hero-h .sage { color:var(--sage) }
+.hero-sub {
+  font-size:clamp(1rem,1.5vw,1.18rem); line-height:1.6; color:var(--ink-dim);
+  max-width:46ch; margin-bottom:clamp(28px,4vh,44px);
+  text-shadow:0 1px 14px rgba(0,0,0,.55);
+  opacity:1;
+}
+.hero-btns {
+  display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+  opacity:1;
+}
+.btn-primary {
+  display:inline-flex; align-items:center; gap:12px;
+  padding:15px 28px; font-family:var(--sans); font-weight:600; font-size:14px;
+  min-height:48px; background:var(--sage-fill); color:var(--ink); border:0; cursor:pointer;
+  transition:background .3s, transform .4s var(--ease);
+}
+.btn-primary:hover { background:var(--sage-hi); transform:translateY(-2px) }
+.btn-ghost {
+  display:inline-flex; align-items:center; gap:10px;
+  padding:14px 26px; font-family:var(--mono); font-size:10px; letter-spacing:.16em;
+  text-transform:uppercase; border:1px solid var(--line-hi); color:var(--ink-dim);
+  transition:border-color .3s, color .3s, transform .4s var(--ease);
+}
+.btn-ghost:hover { border-color:var(--ink-dim); color:var(--ink); transform:translateY(-2px) }
+.hero-scroll {
+  position:absolute; bottom:clamp(20px,4vh,36px); right:var(--gut); z-index:2;
+  display:flex; flex-direction:column; align-items:center; gap:8px;
+  font-family:var(--mono); font-size:9px; letter-spacing:.28em; text-transform:uppercase;
+  color:var(--ink-sub);
+  opacity:1; animation:scrollBob 2.6s ease-in-out 1.2s infinite;
+}
+.hero-scroll-line { width:1px; height:30px; background:linear-gradient(to bottom,var(--line-hi),transparent) }
+@media(max-width:600px) { .hero-scroll { display:none } }
+
+@keyframes fadeUp  { from { opacity:0; transform:translateY(18px) } to { opacity:1; transform:none } }
+@keyframes fadeIn  { from { opacity:0 } to { opacity:1 } }
+@keyframes scrollBob { 0%,100% { transform:translateY(0) } 50% { transform:translateY(8px) } }
+/* ============================================================
+   PROOF STRIP — 4-cell grid
+   ============================================================ */
+.proof-strip {
+  display:grid; grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+}
+.proof-cell {
+  padding:clamp(22px,3.5vw,38px) clamp(18px,2.5vw,34px);
+  border-right:1px solid var(--line);
+}
+.proof-cell:last-child { border-right:0 }
+.proof-num {
+  font-family:var(--serif); font-weight:400; font-style:italic;
+  font-size:clamp(2rem,3.8vw,3.6rem); line-height:1; letter-spacing:-.03em;
+  margin-bottom:8px;
+}
+.proof-num.gold { color:var(--gold) }
+.proof-num.sage { color:var(--sage) }
+.proof-label {
+  font-family:var(--mono); font-size:9.5px; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--ink-sub); line-height:1.6;
+}
+@media(max-width:680px) {
+  .proof-strip { grid-template-columns:1fr 1fr }
+  .proof-cell { border-right:0; border-bottom:1px solid var(--line) }
+  .proof-cell:nth-child(odd) { border-right:1px solid var(--line) }
+  .proof-cell:nth-last-child(-n+2) { border-bottom:0 }
+}
+
+/* ============================================================
+   SHARED SECTION STYLES
+   ============================================================ */
+.section { padding:clamp(64px,9vw,120px) var(--gut) }
+.section-inner  { max-width:960px; margin:0 auto }
+.section-wide   { max-width:1180px; margin:0 auto }
+.section-inner,
+.section-wide,
+.seller-layout > *,
+.beat > *,
+.split > *,
+.proof-section > *,
+.form-inner > * { min-width:0 }
+.eyebrow {
+  font-family:var(--mono); font-size:9.5px; letter-spacing:.32em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:18px; display:flex; align-items:center; gap:14px;
+}
+.eyebrow::before { content:''; width:20px; height:1px; background:var(--gold); opacity:.65 }
+.display {
+  font-family:var(--serif); font-weight:400;
+  font-size:clamp(2rem,4.5vw,4rem); line-height:1.04; letter-spacing:-.03em;
+
+}
+.display em { font-style:italic }
+.display .sage-em { color:var(--sage) }
+.display .gold-em { color:var(--gold) }
+.debt-strike {
+  text-decoration:line-through;
+  text-decoration-color:var(--terra);
+  text-decoration-thickness:2px;
+  color:var(--ink-sub);
+}
+.lede { font-size:clamp(.95rem,1.4vw,1.08rem); line-height:1.7; color:var(--ink-dim); max-width:54ch; margin-top:16px }
+
+/* ============================================================
+   CLIENT-FIRST PATH — offer, roles, process
+   ============================================================ */
+.client-path { border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:rgba(242,237,226,.018) }
+.client-path-head {
+  display:grid; grid-template-columns:minmax(0,1.05fr) minmax(280px,.75fr);
+  gap:clamp(30px,6vw,88px); align-items:end; margin-bottom:clamp(30px,5vw,58px);
+}
+.client-path-head .lede { margin:0 }
+.offer-grid { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--line) }
+.offer {
+  padding:clamp(22px,2.8vw,34px); border-right:1px solid var(--line);
+  display:flex; flex-direction:column; min-height:270px; color:inherit;
+  transition:background .3s var(--ease), box-shadow .3s var(--ease);
+}
+.offer:last-child { border-right:0 }
+.offer:hover,
+.offer:focus-visible { background:rgba(90,114,72,.08); box-shadow:inset 0 -2px 0 var(--sage) }
+.offer:focus-visible { outline:2px solid var(--gold); outline-offset:-2px }
+.offer .n, .process-step .n {
+  font-family:var(--mono); font-size:9px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold);
+}
+.offer h3 {
+  margin-top:20px; font-family:var(--serif); font-size:clamp(1.3rem,2vw,1.75rem);
+  font-weight:400; font-style:italic; line-height:1.08;
+}
+.offer p { margin-top:12px; font-size:.88rem; line-height:1.65; color:var(--ink-dim) }
+.offer .action { margin-top:auto; padding-top:22px; font-family:var(--mono); font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:var(--sage) }
+.offer .who { margin-top:9px; font-family:var(--mono); font-size:8px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-sub) }
+.role-clarity {
+  display:grid; grid-template-columns:1fr 1fr; gap:1px; margin-top:1px; background:var(--line);
+  border:1px solid var(--line); border-top:0;
+}
+.role-clarity > div { background:var(--black); padding:clamp(22px,3vw,34px) }
+.role-clarity h3 { font-family:var(--serif); font-size:1.45rem; font-weight:400; font-style:italic }
+.role-clarity p { margin-top:8px; font-size:.88rem; line-height:1.65; color:var(--ink-dim) }
+.role-clarity strong { color:var(--ink); font-weight:500 }
+.role-disclosure {
+  padding:14px clamp(22px,3vw,34px); border:1px solid var(--line); border-top:0;
+  font-family:var(--mono); font-size:10px; letter-spacing:.06em; line-height:1.65; color:var(--ink-sub);
+}
+.process-block { margin-top:clamp(42px,6vw,72px) }
+.process-head { display:flex; justify-content:space-between; gap:30px; align-items:end; margin-bottom:22px }
+.process-head h3 { font-family:var(--serif); font-size:clamp(1.7rem,3vw,2.6rem); font-weight:400; font-style:italic; line-height:1.08 }
+.process-head p { max-width:48ch; font-size:.88rem; line-height:1.65; color:var(--ink-dim) }
+.process-grid { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--line); border-bottom:1px solid var(--line) }
+.process-step { padding:22px 22px 24px 0 }
+.process-step + .process-step { border-left:1px solid var(--line); padding-left:22px }
+.process-step h4 { margin-top:10px; font-size:.95rem; font-weight:600 }
+.process-step p { margin-top:7px; font-size:.84rem; line-height:1.6; color:var(--ink-dim) }
+.path-cta { margin-top:28px; display:flex; gap:12px; align-items:center; flex-wrap:wrap }
+.path-note { font-family:var(--mono); font-size:8.5px; letter-spacing:.1em; color:var(--ink-sub); line-height:1.6 }
+@media(max-width:900px) {
+  .client-path-head { grid-template-columns:1fr; align-items:start }
+  .offer-grid { grid-template-columns:1fr 1fr }
+  .offer:nth-child(2) { border-right:0 }
+  .offer:nth-child(-n+2) { border-bottom:1px solid var(--line) }
+  .process-grid { grid-template-columns:1fr 1fr }
+  .process-step:nth-child(3) { border-left:0; padding-left:0 }
+  .process-step:nth-child(-n+2) { border-bottom:1px solid var(--line) }
+}
+@media(max-width:580px) {
+  .offer-grid, .role-clarity, .process-grid { grid-template-columns:1fr }
+  .process-block { display:none }
+  .offer { min-height:0; border-right:0; border-bottom:1px solid var(--line) }
+  .offer:last-child { border-bottom:0 }
+  .role-clarity > div + div { border-top:1px solid var(--line) }
+  .process-head { display:block }
+  .process-head p { margin-top:12px }
+  .process-step, .process-step + .process-step { padding:18px 0; border-left:0; border-bottom:1px solid var(--line) }
+  .process-step:last-child { border-bottom:0 }
+}
+@media(max-width:600px) {
+  .process-block { display:none }
+}
+
+/* seller proof */
+.seller-proof { border-top:1px solid var(--line); border-bottom:1px solid var(--line) }
+.seller-head { max-width:760px; margin-bottom:clamp(34px,5vw,58px) }
+.seller-layout { display:grid; grid-template-columns:1fr minmax(300px,.82fr); gap:clamp(28px,5vw,72px); align-items:start }
+.seller-plan { list-style:none; border-top:1px solid var(--line) }
+.seller-plan li { display:grid; grid-template-columns:42px 1fr; gap:14px; padding:18px 0; border-bottom:1px solid var(--line) }
+.seller-plan .n { font-family:var(--mono); font-size:9px; letter-spacing:.16em; color:var(--gold); padding-top:4px }
+.seller-plan h3 { font-family:var(--serif); font-size:1.35rem; font-style:italic; font-weight:400; line-height:1.15 }
+.seller-plan p { margin-top:6px; font-size:.87rem; line-height:1.65; color:var(--ink-dim) }
+.seller-case { border:1px solid var(--line); background:rgba(242,237,226,.025) }
+.seller-case img {
+  display:block; width:100%; height:auto; aspect-ratio:723/575;
+  object-fit:cover; object-position:center;
+  filter:saturate(.9) contrast(1.04) brightness(.88);
+}
+.seller-case-copy { padding:clamp(22px,3vw,32px) }
+.seller-case .case-label { font-family:var(--mono); font-size:8.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold) }
+.seller-case h3 { margin-top:12px; font-family:var(--serif); font-size:clamp(1.5rem,2.4vw,2rem); font-style:italic; font-weight:400; line-height:1.08 }
+.seller-case p { margin-top:12px; font-size:.88rem; line-height:1.7; color:var(--ink-dim) }
+.seller-case .case-meta { display:flex; justify-content:space-between; gap:16px; margin-top:18px; padding-top:14px; border-top:1px solid var(--line); font-family:var(--mono); font-size:8.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-sub) }
+.seller-cta { margin-top:24px }
+@media(max-width:820px) { .seller-layout { grid-template-columns:1fr } .seller-case { max-width:560px } }
+@media(max-width:820px) {
+  .seller-case { width:100% }
+  .seller-plan, .seller-cta { max-width:100% }
+}
+
+/* reveal */
+.r { opacity:0; transform:translateY(26px); transition:opacity .9s var(--ease), transform .9s var(--ease) }
+.r.in { opacity:1; transform:none }
+.r.d1 { transition-delay:.08s }
+.r.d2 { transition-delay:.18s }
+.r.d3 { transition-delay:.28s }
+
+/* dim rule */
+.dim {
+  display:flex; align-items:center; gap:12px;
+  margin:clamp(22px,3vw,36px) 0;
+}
+.dim .bar {
+  position:relative; flex:1; height:1px; background:var(--gold); opacity:.3;
+}
+.dim .bar::before, .dim .bar::after {
+  content:''; position:absolute; top:-4px; width:1px; height:9px; background:var(--gold);
+}
+.dim .bar::before { left:0 } .dim .bar::after { right:0 }
+.dim .val { font-family:var(--mono); font-size:9px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); white-space:nowrap }
+
+/* ============================================================
+   ARC — the story, dark-styled
+   ============================================================ */
+.arc { border-top:1px solid var(--line) }
+.arc-head { max-width:680px; margin-bottom:clamp(32px,5vw,56px) }
+.beats { border-top:1px solid var(--line) }
+.beat {
+  display:grid; grid-template-columns:88px minmax(0,1fr) minmax(0,290px);
+  gap:clamp(14px,2.5vw,38px); padding:clamp(20px,2.5vw,30px) 0;
+  border-bottom:1px solid var(--line); align-items:start;
+}
+.beat .yr {
+  font-family:var(--mono); font-size:10px; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--terra); padding-top:5px;
+}
+.beat h3 {
+  font-family:var(--serif); font-weight:400; font-style:italic;
+  font-size:clamp(1.3rem,2.4vw,2rem); line-height:1.1; letter-spacing:-.02em;
+
+}
+.beat p { margin-top:12px; font-size:.92rem; line-height:1.7; color:var(--ink-dim); max-width:46ch }
+.beat .shot { display:block; text-decoration:none }
+.beat .shot img {
+  width:100%; aspect-ratio:16/9; object-fit:cover;
+  border:1px solid var(--line); filter:saturate(.9) contrast(1.04) brightness(.88);
+  transition:transform .55s var(--ease), filter .55s var(--ease);
+}
+.beat .shot:hover img { transform:scale(1.025); filter:saturate(1) contrast(1.02) brightness(.94) }
+.beat .shot .cap {
+  display:block; padding-top:7px; font-family:var(--mono); font-size:8.5px;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--ink-sub);
+}
+.beat .pull {
+  border-left:1px solid var(--gold); padding-left:clamp(14px,1.6vw,22px);
+  font-family:var(--serif); font-style:italic;
+  font-size:1rem; line-height:1.6; color:var(--ink-dim);
+
+}
+.beat .pull cite {
+  display:block; margin-top:10px; font-family:var(--mono); font-style:normal;
+  font-size:8.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-sub);
+}
+.arc .close {
+  margin-top:clamp(24px,3.5vw,40px);
+  font-family:var(--serif); font-style:italic;
+  font-size:clamp(1.1rem,2vw,1.5rem); line-height:1.5; color:var(--ink-dim);
+  max-width:44ch;
+}
+@media(max-width:820px) {
+  .beat { grid-template-columns:1fr; gap:14px }
+  .beat .yr { padding-top:0 }
+  .beat .shot, .beat .pull, .beat .vid-clip { width:100%; max-width:420px }
+}
+
+/* ============================================================
+   THE SPLIT — Justin & Steph
+   ============================================================ */
+.split-section { border-top:1px solid var(--line) }
+.split {
+  display:grid; grid-template-columns:1.1fr .9fr; gap:clamp(28px,5vw,72px);
+  align-items:center;
+}
+.split .statement {
+  font-family:var(--serif); font-weight:400; font-style:italic;
+  font-size:clamp(1.7rem,3.5vw,3rem); line-height:1.06; letter-spacing:-.02em;
+
+}
+.split .statement .sage-em { color:var(--sage) }
+.split .roles { margin-top:28px; border-top:1px solid var(--line) }
+.split .role {
+  display:grid; grid-template-columns:74px 1fr; gap:18px;
+  padding:14px 0; border-bottom:1px solid var(--line);
+}
+.split .role .n {
+  font-family:var(--mono); font-size:9.5px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--ink-sub); padding-top:3px;
+}
+.split .role .d { font-size:.9rem; line-height:1.6; color:var(--ink-dim) }
+.split figure { margin:0 }
+.split .vid {
+  position:relative; overflow:hidden;
+  border:1px solid var(--line-hi); background:var(--black);
+}
+.split .vid video { display:block; width:100%; aspect-ratio:9/16; object-fit:cover }
+
+/* split visuals — photo + two portraits side by side */
+.split-visuals { display:flex; flex-direction:column; gap:8px; width:min(100%,400px); justify-self:end }
+.split-photo { margin:0 }
+.split-photo img,
+.split-photo video {
+  display:block; width:100%; aspect-ratio:16/9; object-fit:cover;
+  border:1px solid var(--line-hi);
+  filter:saturate(.92) contrast(1.04) brightness(.9);
+}
+.split-photo figcaption,
+.split-portrait figcaption {
+  padding-top:7px; font-family:var(--mono); font-size:8.5px;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--ink-sub);
+}
+.split-portraits { display:grid; grid-template-columns:1fr 1fr; gap:8px }
+.split-portrait { margin:0 }
+.split-portrait img {
+  display:block; width:100%; aspect-ratio:3/4; object-fit:cover;
+  object-position:center 20%;
+  border:1px solid var(--line-hi);
+  filter:saturate(.92) contrast(1.04) brightness(.9);
+}
+@media(max-width:860px) {
+  .split-visuals { justify-self:center; width:100%; max-width:440px }
+}
+.sound-btn {
+  position:absolute; right:10px; bottom:10px; z-index:2; cursor:pointer;
+  background:rgba(12,20,16,.72); color:var(--ink); border:1px solid var(--line-hi);
+  font-family:var(--mono); font-size:9px; letter-spacing:.16em; text-transform:uppercase;
+  padding:7px 12px; backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+  transition:background .3s var(--ease), border-color .3s;
+}
+.sound-btn { min-height:40px; min-width:88px }
+.sound-btn:hover { background:var(--sage-fill); border-color:var(--sage) }
+.split figcaption {
+  padding-top:9px; font-family:var(--mono); font-size:8.5px;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--ink-sub);
+}
+@media(max-width:860px) {
+  .split { grid-template-columns:1fr }
+  .split-visuals { order:-1 }
+}
+
+/* ============================================================
+   WHO WE HELP — four service tiles
+   ============================================================ */
+.services-section { border-top:1px solid var(--line) }
+.services {
+  display:grid; grid-template-columns:repeat(2,1fr);
+  border:1px solid var(--line); margin-top:clamp(36px,5vw,56px);
+}
+.svc {
+  padding:clamp(28px,4vw,48px) clamp(22px,3vw,40px);
+  border-right:1px solid var(--line); border-bottom:1px solid var(--line);
+  text-decoration:none; transition:background .35s var(--ease);
+  position:relative; overflow:hidden;
+}
+.svc::after {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse at 0% 0%, rgba(90,114,72,.1), transparent 60%);
+  opacity:0; transition:opacity .4s var(--ease);
+}
+.svc:hover::after { opacity:1 }
+.svc:nth-child(2n) { border-right:0 }
+.svc:nth-child(n+3) { border-bottom:0 }
+.svc .n {
+  font-family:var(--mono); font-size:10px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--terra); display:block; margin-bottom:12px;
+}
+.svc h3 {
+  font-family:var(--serif); font-weight:400; font-style:italic;
+  font-size:clamp(1.3rem,2.2vw,1.8rem); line-height:1.1; letter-spacing:-.015em;
+  margin-bottom:12px;
+}
+.svc p { font-size:.9rem; line-height:1.65; color:var(--ink-dim); max-width:34ch }
+.svc .who {
+  display:block; margin-top:16px; font-family:var(--mono); font-size:9px;
+  letter-spacing:.18em; text-transform:uppercase; color:var(--ink-sub);
+}
+@media(max-width:760px) {
+  .services { grid-template-columns:1fr }
+  .svc, .svc:nth-child(2n) { border-right:0 }
+  .svc, .svc:nth-child(n+3) { border-bottom:1px solid var(--line) }
+  .svc:last-child { border-bottom:0 }
+}
+
+/* ============================================================
+   PLANS — dark blueprint
+   ============================================================ */
+.plans {
+  border-top:1px solid var(--line);
+  background:var(--blueprint);
+  background-image:
+    linear-gradient(var(--blue-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--blue-line) 1px, transparent 1px),
+    linear-gradient(rgba(90,114,72,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(100,180,220,.08) 1px, transparent 1px);
+  background-size: 26px 26px, 26px 26px, 130px 130px, 130px 130px;
+}
+.plans-head {
+  padding:clamp(44px,6vw,80px) var(--gut) clamp(22px,3vw,36px);
+  display:grid; grid-template-columns:1fr minmax(280px,.85fr);
+  gap:clamp(20px,4vw,56px); align-items:end;
+}
+.plans .eyebrow { color:var(--blue-hi) }
+.plans .eyebrow::before { background:var(--blue-hi) }
+.plans .display { color:#1E2D19 }
+.plans .display em { color:var(--blue-hi); font-style:italic }
+.plans .lede { color:rgba(30,45,25,.58) }
+.plan-grid {
+  display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+  background:var(--blue-line); border-top:1px solid var(--blue-line);
+}
+.plan { background:#EDE8DC; padding:clamp(14px,2vw,22px); display:flex; flex-direction:column }
+.plan img {
+  width:100%; height:clamp(220px,24vw,320px);
+  object-fit:contain; object-position:center top;
+  filter:saturate(.85) contrast(1.1) brightness(.9);
+  box-shadow:0 20px 48px -18px rgba(0,0,0,.8);
+  transition:filter .5s var(--ease);
+}
+.plan:hover img { filter:saturate(1) contrast(1.06) brightness(.96) }
+.plan .meta {
+  margin-top:14px; padding-top:10px; border-top:1px solid var(--blue-line);
+  display:flex; justify-content:space-between; align-items:baseline; gap:8px;
+}
+.plan .step { font-family:var(--mono); font-size:9px; letter-spacing:.18em; text-transform:uppercase; color:var(--blue-hi) }
+.plan .name { font-family:var(--serif); font-style:italic; font-size:18px; color:#1E2D19 }
+.plan .note { margin-top:7px; font-size:13px; line-height:1.55; color:rgba(30,45,25,.55) }
+.plans-foot {
+  padding:clamp(18px,2.5vw,28px) var(--gut) clamp(40px,5.5vw,70px);
+}
+.plans-foot .lede { color:rgba(30,45,25,.58); margin-top:0 }
+.plans-photo-strip { padding:0 var(--gut) clamp(20px,3vw,32px) }
+.plans-photo-strip img { width:100%; max-height:520px; object-fit:cover; object-position:center 40%; border:1px solid var(--blue-line); display:block }
+.plans-single-photo { padding:0 var(--gut) clamp(20px,3vw,32px) }
+.plans-single-photo img { width:100%; max-height:600px; object-fit:cover; object-position:center top; border:1px solid var(--blue-line); display:block }
+.plans .dim .bar { background:var(--blue-hi); opacity:.4 }
+.plans .dim .bar::before, .plans .dim .bar::after { background:var(--blue-hi) }
+.plans .dim .val { color:var(--blue-hi) }
+@media(max-width:900px) {
+  .plan-grid { grid-template-columns:1fr 1fr }
+  .plans-head { grid-template-columns:1fr; gap:18px; align-items:start }
+}
+@media(max-width:520px) { .plan-grid { grid-template-columns:1fr } }
+
+/* ============================================================
+   DEAL SHEET — Western Ave, dark editorial
+   ============================================================ */
+.proof-section {
+  border-top:1px solid var(--line);
+  display:grid; grid-template-columns:1fr minmax(320px,.75fr);
+}
+.proof-narrative { padding:clamp(44px,5.5vw,76px) var(--gut); border-right:1px solid var(--line) }
+.proof-narrative p { margin-top:14px; font-size:.92rem; line-height:1.7; color:var(--ink-dim); max-width:46ch }
+.proof-narrative p.caveat { font-size:.84rem; color:var(--ink-sub); font-style:italic }
+.readmore {
+  display:inline-block; margin-top:24px;
+  font-family:var(--mono); font-size:9.5px; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--gold); border-bottom:1px solid var(--gold-dim); padding-bottom:4px;
+  transition:border-color .3s, color .3s;
+}
+.readmore:hover { border-bottom-color:var(--gold); color:var(--ink) }
+.takes {
+  display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1px; background:var(--line);
+  margin-top:22px;
+}
+.takes figure { position:relative; background:var(--black) }
+.takes img { width:100%; height:90px; object-fit:cover; filter:saturate(.8) brightness(.85) }
+.takes .lab {
+  position:absolute; left:0; bottom:0; background:rgba(12,20,16,.85);
+  font-family:var(--mono); font-size:7.5px; letter-spacing:.14em; text-transform:uppercase;
+  padding:4px 7px; color:var(--ink-sub);
+}
+.sheet { padding:clamp(32px,4.5vw,58px) var(--gut); background:rgba(242,237,226,.028) }
+.sheet-head {
+  display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+  padding-bottom:12px; border-bottom:1px solid var(--line);
+  font-family:var(--mono); font-size:9.5px; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--ink-sub);
+}
+.sheet table { width:100%; border-collapse:collapse; table-layout:fixed; margin-top:4px }
+.sheet td {
+  padding:9px 0; border-bottom:1px solid var(--line);
+  font-family:var(--mono); font-weight:300; font-size:12.5px; color:var(--ink-dim);
+}
+.sheet td:last-child { text-align:right; white-space:nowrap; font-weight:400 }
+.sheet td:first-child { overflow-wrap:anywhere }
+.sheet tr.hi td { color:var(--sage); border-bottom-color:var(--sage); padding-top:13px; padding-bottom:13px }
+.sheet tr.hi td:last-child { font-size:17px; font-weight:500 }
+.sheet-note {
+  padding:14px 18px 18px; border-top:1px solid var(--line);
+  font-family:var(--mono); font-size:11px; line-height:1.65; letter-spacing:.025em; color:var(--ink-dim);
+}
+.titleblock {
+  display:grid; grid-template-columns:repeat(4,1fr);
+  border:1px solid var(--line); border-top:0; margin-top:18px;
+}
+.titleblock div { padding:10px 11px; border-right:1px solid var(--line) }
+.titleblock div:last-child { border-right:0 }
+.titleblock .k {
+  display:block; font-family:var(--mono); font-size:9px; letter-spacing:.17em;
+  text-transform:uppercase; color:var(--ink-sub); margin-bottom:5px;
+}
+.titleblock .v { font-family:var(--mono); font-size:10px; color:var(--ink-dim) }
+@media(max-width:980px) {
+  .proof-section { grid-template-columns:1fr }
+  .proof-narrative { border-right:0; border-bottom:1px solid var(--line) }
+}
+@media(max-width:520px) {
+  .titleblock { grid-template-columns:1fr 1fr }
+  .titleblock div:nth-child(2n) { border-right:0 }
+  .titleblock div:nth-child(-n+2) { border-bottom:1px solid var(--line) }
+}
+
+/* ============================================================
+   RULES — what we'd tell you first
+   ============================================================ */
+.rules-section { border-top:1px solid var(--line) }
+.rules ol { list-style:none; margin-top:clamp(22px,3vw,36px); border-top:1px solid var(--line) }
+.rules li {
+  display:grid; grid-template-columns:44px minmax(160px,1fr) 2fr;
+  gap:clamp(12px,2.4vw,30px); padding:15px 0; border-bottom:1px solid var(--line);
+  align-items:baseline;
+}
+.rules .n { font-family:var(--mono); font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:var(--terra) }
+.rules h3 {
+  font-family:var(--serif); font-weight:400; font-style:italic;
+  font-size:clamp(1.1rem,1.8vw,1.4rem); line-height:1.2;
+
+}
+.rules p { font-size:.88rem; line-height:1.6; color:var(--ink-dim) }
+@media(max-width:760px) {
+  .rules li { grid-template-columns:36px 1fr }
+  .rules p { grid-column:2/-1 }
+}
+
+/* ============================================================
+   CRAIG & NICOLE — dark flywheel
+   ============================================================ */
+.flywheel { border-top:1px solid var(--line) }
+.fw-head { text-align:center; max-width:580px; margin:0 auto clamp(28px,4vw,48px) }
+.fw-head h2 {
+  font-family:var(--serif); font-weight:400; font-style:italic;
+  font-size:clamp(1.8rem,3.8vw,3.2rem); line-height:1.06; letter-spacing:-.025em;
+
+}
+.fw-head h2 .sage-em { color:var(--sage) }
+.fw-head p { margin-top:14px; font-size:.9rem; line-height:1.65; color:var(--ink-dim) }
+.fw-row {
+  display:grid; grid-template-columns:1fr auto 1fr;
+  gap:clamp(12px,2.5vw,30px); align-items:center; max-width:960px; margin:0 auto;
+}
+.fw-clip { position:relative; overflow:hidden; border:1px solid var(--line) }
+.fw-clip img,
+.fw-clip video {
+  width:100%; aspect-ratio:16/9; object-fit:cover;
+  filter:saturate(.9) contrast(1.04) brightness(.86);
+  transition:transform .7s var(--ease);
+  display:block;
+}
+.fw-clip:hover img,
+.fw-clip:hover video { transform:scale(1.03) }
+.fw-clip .slate {
+  position:absolute; left:0; bottom:0; background:rgba(12,20,16,.78);
+  font-family:var(--mono); font-size:8.5px; letter-spacing:.16em; text-transform:uppercase;
+  padding:6px 10px; color:var(--ink-sub); backdrop-filter:blur(4px);
+}
+.fw-arc {
+  font-family:var(--mono); font-size:9px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--gold); text-align:center; line-height:1.9; white-space:nowrap;
+}
+@media(max-width:700px) { .fw-row { grid-template-columns:1fr } .fw-arc { padding:6px 0 } }
+
+/* ============================================================
+   INQUIRY FORM — full CTA
+   ============================================================ */
+.form-section {
+  border-top:1px solid var(--line);
+  position:relative; overflow:hidden;
+}
+.form-section::before {
+  content:''; position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse at 20% 60%, rgba(90,114,72,.1), transparent 55%),
+    radial-gradient(ellipse at 80% 40%, rgba(200,136,60,.07), transparent 55%);
+}
+.form-inner {
+  position:relative; z-index:1;
+  display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,6vw,80px);
+  align-items:start; max-width:1080px; margin:0 auto;
+  padding:clamp(60px,8vw,110px) var(--gut);
+}
+.form-left h2 {
+  font-family:var(--serif); font-weight:400; font-style:italic;
+  font-size:clamp(2rem,4vw,3.6rem); line-height:1.04; letter-spacing:-.03em;
+
+  margin-bottom:16px;
+}
+.form-left p { font-size:.95rem; line-height:1.7; color:var(--ink-dim); max-width:44ch }
+.form-left p em { font-family:var(--serif); font-style:italic; color:var(--ink) }
+.form-left .contact-line {
+  margin-top:32px; padding-top:24px; border-top:1px solid var(--line);
+  font-family:var(--mono); font-size:9.5px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--ink-sub); line-height:1.8;
+}
+.form-left .contact-line a { color:var(--sage); transition:color .3s }
+.form-left .contact-line a:hover { color:var(--ink) }
+
+/* fields */
+.intent-label {
+  font-family:var(--mono); font-size:10px; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--ink-sub); margin-bottom:10px;
+}
+.intent-group { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px }
+.intent-pill {
+  min-height:42px; font-family:var(--mono); font-size:10px; letter-spacing:.13em; text-transform:uppercase;
+  border:1px solid var(--line); color:var(--ink-sub); background:transparent;
+  padding:10px 17px; cursor:pointer;
+  transition:border-color .25s, color .25s, background .25s;
+}
+.intent-pill:hover { border-color:var(--line-hi); color:var(--ink) }
+.intent-pill.selected { border-color:var(--sage); color:var(--ink); background:rgba(90,114,72,.14) }
+.intent-error { display:none; margin:-14px 0 18px; font-family:var(--mono); font-size:9px; letter-spacing:.12em; color:var(--terra) }
+.intent-error.on { display:block }
+.field-row { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px }
+.field { margin-bottom:10px }
+.field label {
+  display:block; font-family:var(--mono); font-size:10px; letter-spacing:.19em;
+  text-transform:uppercase; color:var(--ink-sub); margin-bottom:6px;
+}
+.field .opt { opacity:.55; font-size:8px; letter-spacing:.14em }
+.field input,
+.field select,
+.field textarea {
+  display:block; width:100%; background:rgba(242,237,226,.04);
+  border:1px solid var(--line); color:var(--ink); font-family:var(--sans); font-size:15px;
+  padding:12px 15px; outline:none;
+  transition:border-color .25s, background .25s;
+  -webkit-appearance:none;
+}
+.field select { cursor:pointer; background-image:linear-gradient(45deg,transparent 50%,var(--ink-sub) 50%),linear-gradient(135deg,var(--ink-sub) 50%,transparent 50%); background-position:calc(100% - 18px) 50%,calc(100% - 13px) 50%; background-size:5px 5px,5px 5px; background-repeat:no-repeat; padding-right:38px }
+.field select option { background:var(--black); color:var(--ink) }
+.field textarea { min-height:92px; resize:vertical; line-height:1.5 }
+.field input::placeholder,
+.field textarea::placeholder { color:var(--ink-sub); font-size:14px }
+.field input:focus,
+.field select:focus,
+.field textarea:focus { border-color:var(--sage); background-color:rgba(90,114,72,.05) }
+.field input.err,
+.field select.err,
+.field textarea.err { border-color:var(--terra) }
+.err-msg { font-family:var(--mono); font-size:9px; letter-spacing:.12em; color:var(--terra); display:none; margin-top:5px }
+.field input.err + .err-msg, .field input.err ~ .err-msg,
+.field select.err + .err-msg, .field select.err ~ .err-msg,
+.field textarea.err + .err-msg, .field textarea.err ~ .err-msg { display:block }
+.path-questions[hidden] { display:none }
+.path-questions { margin-bottom:14px; padding:18px; border:1px solid var(--line); background:rgba(90,114,72,.035) }
+.path-questions .field:last-child { margin-bottom:0 }
+.hp-field { position:absolute; left:-9999px; top:-9999px; width:1px; height:1px; overflow:hidden; opacity:0; pointer-events:none }
+.submit-btn {
+  display:flex; align-items:center; justify-content:center; gap:12px;
+  width:100%; padding:16px 28px; margin-top:6px;
+  font-family:var(--sans); font-weight:600; font-size:14px;
+  min-height:50px; background:var(--sage-fill); color:var(--ink); border:0; cursor:pointer;
+  transition:background .3s, transform .4s var(--ease);
+}
+.submit-btn:hover { background:var(--sage-hi); transform:translateY(-2px) }
+.submit-btn:disabled { opacity:.6; cursor:wait; transform:none }
+.form-trust {
+  font-family:var(--mono); font-size:10px; letter-spacing:.08em; color:var(--ink-sub);
+  margin-top:14px; line-height:1.7;
+}
+.form-trust a { color:var(--ink); border-bottom:1px solid var(--line-hi) }
+.form-trust a:hover { border-bottom-color:var(--gold) }
+.form-err-msg { font-family:var(--mono); font-size:9.5px; letter-spacing:.1em; color:var(--terra); margin-top:12px; display:none }
+.form-err-msg.on { display:block }
+.form-done { display:none; padding:clamp(32px,5vw,52px) 0 }
+.form-done.on { display:block }
+.form-done h3 {
+  font-family:var(--serif); font-weight:400; font-style:italic;
+  font-size:clamp(1.8rem,3.5vw,3rem); line-height:1.1; letter-spacing:-.025em;
+  margin-bottom:12px;
+}
+.form-done p { font-size:.9rem; color:var(--ink-dim); line-height:1.7 }
+.mobile-contact { display:none }
+@media(max-width:800px) {
+  .form-inner { grid-template-columns:1fr }
+  .field-row { grid-template-columns:1fr }
+}
+@media(max-width:560px) {
+  body { padding-bottom:62px }
+  .mobile-contact {
+    position:fixed; left:0; right:0; bottom:0; z-index:240;
+    display:grid; grid-template-columns:1fr 1fr; padding:8px; gap:8px;
+    background:rgba(12,20,16,.94); border-top:1px solid var(--line-hi); backdrop-filter:blur(14px);
+  }
+  .mobile-contact a {
+    display:flex; align-items:center; justify-content:center; min-height:44px;
+    font-family:var(--mono); font-size:9px; letter-spacing:.14em; text-transform:uppercase;
+    border:1px solid var(--line-hi);
+  }
+  .mobile-contact a:first-child { background:var(--sage-fill); border-color:var(--sage); color:var(--ink) }
+  body.inquiry-visible .mobile-contact { display:none }
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.foot {
+  border-top:1px solid var(--line); padding:24px var(--gut);
+  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
+  font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--ink-sub);
+}
+.foot a { display:inline-flex; align-items:center; min-height:36px }
+.foot a:hover { color:var(--ink); transition:color .25s }
+.foot-links { display:flex; gap:20px; flex-wrap:wrap }
+
+/* beat video clips */
+.beat .vid-clip { display:block; position:relative }
+.beat .vid-clip video {
+  width:100%; aspect-ratio:4/3; object-fit:cover; display:block;
+  border:1px solid var(--line);
+  filter:saturate(.9) contrast(1.04) brightness(.88);
+}
+.beat .vid-clip .sound-btn { position:absolute; right:10px; bottom:28px }
+.beat .vid-clip .cap {
+  display:block; padding-top:7px; font-family:var(--mono); font-size:8.5px;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--ink-sub);
+}
+
+/* researching moment — full-width cinematic strip */
+.moment {
+  border-top:1px solid var(--line);
+  position:relative; overflow:hidden; background:var(--black);
+}
+.moment-vid {
+  display:block; width:100%; max-height:65vh; object-fit:cover;
+  filter:saturate(.88) contrast(1.05) brightness(.7);
+}
+.moment-scrim {
+  position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(12,20,16,.3) 0%, transparent 30%, transparent 60%, rgba(12,20,16,.6) 100%);
+}
+.moment-cap {
+  position:absolute; left:var(--gut); bottom:clamp(22px,4vh,44px);
+  font-family:var(--mono); font-size:9px; letter-spacing:.28em; text-transform:uppercase;
+  color:var(--ink-sub); display:flex; align-items:center; gap:12px;
+}
+.moment-cap::before { content:''; width:18px; height:1px; background:var(--ink-sub); opacity:.7 }
+
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after { animation-duration:.01ms !important; transition-duration:.01ms !important }
+  .r { opacity:1; transform:none }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="navBar">
+  <a class="nav-back" href="/"><span class="ar">←</span> tone.dad</a>
+  <a class="nav-brand" href="#top" data-track="nav_top" aria-label="Tonehomes — back to top">Tonehomes</a>
+  <a class="nav-cta" href="#inquiry" data-track="nav_inquiry">Tell Justin</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <picture class="hero-picture">
+    <source media="(max-width:600px)" srcset="media/tonehomes/kitchen-hero-800.webp" type="image/webp" width="800" height="1068">
+    <source srcset="media/tonehomes/justin-steph-kitchen.webp" type="image/webp" width="1600" height="1066">
+    <img class="hero-bg" src="media/tonehomes/justin-steph-kitchen.jpg" alt="Justin and Steph Herrera in their Western Ave kitchen" fetchpriority="high" width="1600" height="1066" style="object-position:center 42%">
+  </picture>
+  <div class="hero-scrim"></div>
+  <div class="hero-content">
+    <p class="hero-eye">Morris County Real Estate · Tonehomes</p>
+    <h1 class="hero-h">
+      Buy. Sell. Invest.<br>
+      Or <span class="sage">rework</span> the home<br>
+      you already have.
+    </h1>
+    <p class="hero-sub">Justin represents buyers and sellers. Steph sees what a space could become. We've bought and renovated six properties with our own money—and we'll tell you plainly what we'd do next.</p>
+    <div class="hero-btns">
+      <a class="btn-primary" href="#inquiry" data-track="hero_inquiry">
+        Tell Justin what you're considering
+        <svg width="15" height="10" viewBox="0 0 15 10" fill="none" aria-hidden="true"><path d="M1 5h13M9 1l5 4-5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a class="btn-ghost" href="#work" data-track="hero_services">How we help</a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <span class="hero-scroll-line"></span>
+  </div>
+</header>
+
+<!-- PROOF STRIP -->
+<div class="proof-strip">
+  <div class="proof-cell r">
+    <div class="proof-num sage"><em>6</em></div>
+    <div class="proof-label">Properties bought &amp; renovated</div>
+  </div>
+  <div class="proof-cell r d1">
+    <div class="proof-num sage">2017</div>
+    <div class="proof-label">Investing in Morris County since</div>
+  </div>
+  <div class="proof-cell r d2">
+    <div class="proof-num gold"><em>350</em>+</div>
+    <div class="proof-label">NJ families in our network</div>
+  </div>
+  <div class="proof-cell r d3">
+    <div class="proof-num gold">KW</div>
+    <div class="proof-label">Licensed · Keller Williams Metropolitan</div>
+  </div>
+</div>
+
+<!-- CLIENT-FIRST PATH -->
+<section id="work" class="section client-path">
+  <div class="section-wide">
+    <div class="client-path-head r">
+      <div>
+        <span class="eyebrow">Start here</span>
+        <h2 class="display">What can we help you<br><em>decide?</em></h2>
+      </div>
+      <p class="lede">No finished plan required. Start with the decision in front of you and we'll tell you plainly what we see.</p>
+    </div>
+
+    <div class="offer-grid r">
+      <a class="offer" href="#inquiry" data-path="Buy" data-track="service_buy">
+        <span class="n">01 · Buy</span>
+        <h3>Your next home.</h3>
+        <p>We separate the cosmetic problems from the ones that break the budget. Nobody is rushing you.</p>
+        <span class="action">Start the buying path →</span>
+        <span class="who">First-time · Repeat · Move-up</span>
+      </a>
+      <a class="offer" href="#inquiry" data-path="Sell" data-track="service_sell">
+        <span class="n">02 · Sell</span>
+        <h3>A smarter listing.</h3>
+        <p>Justin handles the sale. Steph identifies what's worth attention before it lists.</p>
+        <span class="action">Start the selling path →</span>
+        <span class="who">Representation · Staging · Film</span>
+      </a>
+      <a class="offer" href="#inquiry" data-path="Invest" data-track="service_invest">
+        <span class="n">03 · Invest</span>
+        <h3>A house that pays you back.</h3>
+        <p>Duplexes, house hacking, second units. We run the numbers before a good-looking kitchen makes the decision for you.</p>
+        <span class="action">Start the investing path →</span>
+        <span class="who">Multi-family · Second units</span>
+      </a>
+      <a class="offer" href="#inquiry" data-path="Rework" data-track="service_rework">
+        <span class="n">04 · Rework</span>
+        <h3>A room with more in it.</h3>
+        <p>Layout, light, and renovation planning. We define the questions, priorities, and scope before work begins.</p>
+        <span class="action">Start the rework path →</span>
+        <span class="who">Planning first · Scope confirmed separately</span>
+      </a>
+    </div>
+
+    <div class="role-clarity r">
+      <div>
+        <h3>Justin · representation + numbers</h3>
+        <p><strong>Licensed realtor at Keller Williams Metropolitan.</strong> Search, sale, negotiations, and the numbers.</p>
+      </div>
+      <div>
+        <h3>Steph · space + design</h3>
+        <p><strong>Interior designer with years at Gensler.</strong> Layout, flow, and finish decisions — and what's worth spending on before you list or after you close.</p>
+      </div>
+    </div>
+    <p class="role-disclosure r">Real estate representation is offered through Keller Williams Metropolitan. Any design or renovation-planning work is discussed and scoped separately before it begins.</p>
+
+    <div class="process-block r">
+      <div class="process-head">
+        <h3>What happens when you reach out.</h3>
+        <p>A first message is a conversation, not a commitment.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-step"><span class="n">01</span><h4>Text or use the form.</h4><p>Give us the short version. Justin answers personally, usually the same day.</p></div>
+        <div class="process-step"><span class="n">02</span><h4>Clarify the decision.</h4><p>Buying, selling, investing, or design—and what would make the next step useful.</p></div>
+        <div class="process-step"><span class="n">03</span><h4>Look at the real thing.</h4><p>A listing, a walkthrough, the room, or the numbers. Advice starts with evidence.</p></div>
+        <div class="process-step"><span class="n">04</span><h4>Choose the right scope.</h4><p>Representation, a design conversation, or an honest recommendation to wait or walk.</p></div>
+      </div>
+      <div class="path-cta">
+        <a class="btn-primary" href="#inquiry" data-track="process_inquiry">Tell Justin what you're considering →</a>
+        <span class="path-note">No agreement is created by sending a message.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SELLER PLAN + PROOF -->
+<section class="section seller-proof" id="seller-plan">
+  <div class="section-wide">
+    <div class="seller-head r">
+      <span class="eyebrow">For sellers · a concrete plan</span>
+      <h2 class="display">Before it becomes a listing,<br>we make a <em>seller plan.</em></h2>
+      <p class="lede">The plan separates work that helps the sale from work that only delays it, then carries the house from the first walkthrough through closing.</p>
+    </div>
+    <div class="seller-layout">
+      <div class="r">
+        <ol class="seller-plan">
+          <li><span class="n">01</span><div><h3>Walk the house and the timing.</h3><p>Justin starts with your goals, likely move date, condition, and relevant local sales—not a generic checklist.</p></div></li>
+          <li><span class="n">02</span><div><h3>Price the prep before approving it.</h3><p>Steph identifies the rooms worth attention. Together we sort must-do repairs from cosmetic work that is unlikely to earn its cost back.</p></div></li>
+          <li><span class="n">03</span><div><h3>Stage and launch the story.</h3><p>Room plan, photography, listing film, copy, showing schedule, and launch date are decided before the listing goes live.</p></div></li>
+          <li><span class="n">04</span><div><h3>Manage the sale through closing.</h3><p>Justin handles showings, offers, terms, inspection, appraisal, and the details between an accepted offer and the keys changing hands.</p></div></li>
+        </ol>
+        <div class="seller-cta">
+          <a class="btn-primary" href="#inquiry" data-path="Sell" data-track="seller_plan_inquiry">Build my seller plan →</a>
+        </div>
+      </div>
+      <figure class="seller-case r d1">
+        <picture>
+          <source srcset="media/tonehomes/fairchild-sold.webp" type="image/webp">
+          <img src="media/tonehomes/fairchild-sold.png" alt="Justin and Steph holding a sold sign at 87 Fairchild" loading="lazy" decoding="async" width="723" height="575">
+        </picture>
+        <figcaption class="seller-case-copy">
+          <span class="case-label">Owner-side case study · 87 Fairchild</span>
+          <h3>Our own money. Our own selling decisions.</h3>
+          <p>We were the owners, so the tradeoffs were not theoretical: what to finish, what to leave alone, and how to present the home. 87 Fairchild sold; that owner-side discipline now shapes the seller plan above.</p>
+          <span class="case-meta"><span>Morris County, NJ</span><span>Sold</span></span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- CRAIG & NICOLE -->
+<section class="section flywheel">
+  <div class="section-wide">
+    <div class="fw-head r">
+      <span class="eyebrow">One relationship · two milestones</span>
+      <h2>First the wedding.<br>Then the <span class="sage-em">keys.</span></h2>
+      <p>We filmed Craig and Nicole's wedding in 2022, then Justin represented them in their home purchase in 2026. The work changes; the relationship carries forward.</p>
+    </div>
+    <div class="fw-row r">
+      <figure class="fw-clip">
+        <video id="cn-wedding-vid" data-poster="media/cn-wedding-poster.webp" muted loop playsinline preload="none" aria-label="Craig and Nicole on their wedding day, 2022">
+          <source src="media/cn-wedding-web.mp4" type="video/mp4">
+        </video>
+        <span class="slate">2022 · Tonemedia filmed the wedding</span>
+      </figure>
+      <div class="fw-arc">Four years<br>later →</div>
+      <figure class="fw-clip">
+        <video id="cn-house-vid" data-poster="media/cn-house-poster.webp" muted loop playsinline preload="none" aria-label="Craig and Nicole outside the home Tonehomes found them, 2026">
+          <source src="media/cn-house-web.mp4" type="video/mp4">
+        </video>
+        <span class="slate">2026 · Tonehomes found the home</span>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- THE ARC — our story -->
+<section id="story" class="section arc">
+  <div class="section-inner">
+    <div class="arc-head r">
+      <span class="eyebrow">How we got here</span>
+      <h2 class="display">It started with <em>getting out</em> of <s class="debt-strike">debt</s>, not getting into a house.</h2>
+      <p class="lede">We're not from money and nobody handed us a portfolio. Here's how it actually went.</p>
+    </div>
+
+    <div class="beats">
+      <div class="beat r">
+        <span class="yr">2016</span>
+        <div>
+          <h3>$150,000 of the kind of debt that takes things from you.</h3>
+          <p>Student loans, a car, and vet bills for a dog we would have paid anything for. It took us three years and it was not glamorous.</p>
+        </div>
+        <blockquote class="pull">"We ran an envelope system. Actual cash, split by category, and when an envelope was empty we were done until the next month."<cite>Notes 002 · Steph was right</cite></blockquote>
+      </div>
+
+      <div class="beat r">
+        <span class="yr">2017</span>
+        <div>
+          <h3>Then we made one decision, and everything after it is downstream.</h3>
+          <p>We weren't going back. The next dollar we borrowed had to pay us back — so we stopped borrowing for things that lose value and started borrowing for things that don't. The first one was a duplex. We lived in one side and rented the other.</p>
+        </div>
+        <div class="vid-clip">
+          <video id="duplex-vid" data-poster="media/tonehomes/stiles-poster.webp"
+                 muted playsinline preload="none"
+                 aria-label="The first rental — 2017">
+            <source src="media/tonehomes/stiles-web.mp4" type="video/mp4">
+          </video>
+          <button class="sound-btn" id="duplex-sound" type="button" aria-pressed="false">Sound on</button>
+          <span class="cap">The first rental · 2017 · The decision that started everything</span>
+        </div>
+      </div>
+
+      <div class="beat r">
+        <span class="yr">2019</span>
+        <div>
+          <h3>Western Ave, and the room nobody wanted.</h3>
+          <p>A single family nobody was bidding on. We put the money into the lower level and turned one house into two units. A tenant has covered most of that mortgage every month since March 2019.</p>
+        </div>
+        <a class="shot" href="https://www.instagram.com/p/DCOzagHPGaa/" target="_blank" rel="noopener">
+          <picture>
+            <source srcset="media/tonehomes/western-2019.webp" type="image/webp">
+            <img src="media/tonehomes/western-2019.png" alt="Western Ave — before and after renovation, 2019" loading="lazy" decoding="async" width="538" height="539" style="aspect-ratio:538/539;object-fit:cover">
+          </picture>
+          <span class="cap">Before &amp; after · Western Ave · @tonehomes</span>
+        </a>
+      </div>
+
+      <div class="beat r">
+        <span class="yr">2020</span>
+        <div>
+          <h3>A fixer-upper, in the middle of everything.</h3>
+          <p>Everyone told us to wait. We'd already learned that the ugly houses are the only ones where the math still works.</p>
+        </div>
+        <a class="shot" href="https://www.instagram.com/p/CO1R2Qdj9i-/" target="_blank" rel="noopener">
+          <img src="media/ig-stephdoor.jpg" alt="Steph at the door of the finished fixer-upper" loading="lazy" width="720" height="405">
+          <span class="cap">The pandemic fixer-upper · @tonehomes</span>
+        </a>
+      </div>
+
+      <div class="beat r">
+        <span class="yr">2021→</span>
+        <div>
+          <h3>And then three more times.</h3>
+          <p>Six now, counting from that first duplex. Every one bought with our own money, renovated on our own plans. We've made enough mistakes along the way that we think we can be useful to somebody else.</p>
+        </div>
+        <a class="shot" href="https://www.instagram.com/p/CWL4YAqLY1V/" target="_blank" rel="noopener">
+          <picture>
+            <source srcset="media/tonehomes/fairchild-sold.webp" type="image/webp">
+            <img src="media/tonehomes/fairchild-sold.png" alt="Justin and Steph holding a SOLD sign at 87 Fairchild" loading="lazy" decoding="async" width="723" height="575" style="aspect-ratio:723/575;object-fit:cover;object-position:center center">
+          </picture>
+          <span class="cap">87 Fairchild, sold · @tonehomes</span>
+        </a>
+      </div>
+    </div>
+
+    <p class="close r">People hear "we bought a house" and picture a decision. It was three years of saying no to small things, and then one day there was enough for a down payment.</p>
+  </div>
+</section>
+
+<!-- RESEARCHING MOMENT -->
+<div class="moment">
+  <video id="researching-vid" class="moment-vid"
+         data-poster="media/tonehomes/researching-sketchup-poster.webp"
+         muted loop playsinline preload="none"
+         aria-label="Steph designing the nursery in SketchUp for the Western Ave renovation">
+    <source src="media/tonehomes/researching-sketchup-web.mp4" type="video/mp4">
+  </video>
+  <div class="moment-scrim"></div>
+  <p class="moment-cap">Steph designing the nursery in SketchUp · Western Ave</p>
+</div>
+
+<!-- THE SPLIT — Justin & Steph -->
+<section class="section split-section">
+  <div class="section-wide">
+    <div class="split r">
+      <div>
+        <span class="eyebrow">The two of us</span>
+        <p class="statement">She sees what a room <span class="sage-em">could be.</span><br>I price it.</p>
+        <div class="dim"><span class="val">Design</span><span class="bar"></span><span class="val">Numbers</span></div>
+        <div class="roles">
+          <div class="role"><span class="n">Steph</span><span class="d">Interior designer. Years of it at Gensler in Morristown, drawing rooms for other people.</span></div>
+          <div class="role"><span class="n">Justin</span><span class="d">Licensed realtor, Keller Williams Metropolitan. They've bought six of these together — and he'll tell you which ones they'd do differently.</span></div>
+        </div>
+      </div>
+      <div class="split-visuals">
+        <figure class="split-portrait solo">
+          <picture>
+            <source srcset="media/jands-laptop.webp" type="image/webp">
+            <img src="media/jands-laptop.png" alt="Justin and Steph — she's doing the notes, he's on the laptop" loading="lazy" decoding="async" width="705" height="623">
+          </picture>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE PLANS -->
+<section id="plans" class="plans">
+  <div class="plans-head">
+    <div class="r">
+      <span class="eyebrow">The method · Four sheets</span>
+      <h2 class="display">Nothing starts until it is <em>on paper.</em></h2>
+    </div>
+    <p class="lede r d1">Steph drew every one of these. We couldn't afford to make mistakes in drywall, so we made them on paper first — moved a wall four times on a printout, put the sink in three places. None of it cost anything.</p>
+  </div>
+  <div class="plans-photo-strip r">
+    <picture>
+      <source srcset="media/tonehomes/steph-floorplans.webp" type="image/webp">
+      <img src="media/tonehomes/steph-floorplans.png" alt="Steph at the kitchen table, drawing floorplans" loading="lazy" decoding="async" width="1440" height="1006">
+    </picture>
+  </div>
+  <div class="plans-single-photo r">
+    <picture>
+      <source srcset="media/tonehomes/steph-floorplans-2.webp" type="image/webp">
+      <img src="media/tonehomes/steph-floorplans-2.png" alt="All four floorplans laid out on the table — demo, construction, kitchen, and finish" loading="lazy" decoding="async" width="1634" height="1241">
+    </picture>
+  </div>
+  <div class="plans-foot r">
+    <div class="dim"><span class="val">Demo</span><span class="bar"></span><span class="val">Construction</span><span class="bar"></span><span class="val">Kitchen</span><span class="bar"></span><span class="val">Finish</span></div>
+    <p class="lede">One sheet each, in that order, and nothing started until the sheet before it was done being argued about.</p>
+  </div>
+</section>
+
+<!-- DEAL SHEET — Western Ave -->
+<section class="proof-section">
+  <div class="proof-narrative">
+    <span class="eyebrow r">An open book · Western Ave, Morristown</span>
+    <h2 class="display r">Here's one of ours,<br>with <em>every number</em> on it.</h2>
+    <p class="r">What we paid, what the renovation cost, what it rents for, and the simple monthly spread before a full operating statement.</p>
+    <p class="r">If you're trying to work out whether a two-unit makes sense, this is more useful than anything we could say about ourselves.</p>
+    <p class="caveat r">Prices and dates are public record. Value today is my own estimate, so take it for what it is.</p>
+    <a class="readmore r" href="/notes/002-steph-was-right">Read the whole story →</a>
+    <div class="takes r">
+      <figure><img src="media/notes/002-western/tl-1-demo.webp" alt="Main floor during demolition" loading="lazy" width="1600" height="800"><span class="lab">01 Demo</span></figure>
+      <figure><img src="media/notes/002-western/tl-2-stripped.webp" alt="Main floor stripped" loading="lazy" width="1600" height="800"><span class="lab">02 Strip</span></figure>
+      <figure><img src="media/notes/002-western/tl-3-cabinets.webp" alt="Cabinets going in" loading="lazy" width="1600" height="800"><span class="lab">03 Cabs</span></figure>
+      <figure><img src="media/notes/002-western/tl-4-home.webp" alt="The finished main floor" loading="lazy" width="1600" height="800"><span class="lab">04 Home</span></figure>
+    </div>
+  </div>
+  <div class="sheet">
+    <div class="sheet-head"><span>The Sheet</span><span>L-01</span></div>
+    <table>
+      <tbody>
+        <tr><td>Purchase · 2 Oct 2018</td><td>$354,000</td></tr>
+        <tr><td>Renovation · upstairs</td><td>$30,000</td></tr>
+        <tr><td>Renovation · lower level</td><td>$15,000</td></tr>
+        <tr><td>All-in</td><td>$399,000</td></tr>
+        <tr><td>Value today · estimate</td><td>$600,000</td></tr>
+        <tr><td>Gross rent</td><td>$4,850 / mo</td></tr>
+        <tr><td>Mortgage payment</td><td>$1,950 / mo</td></tr>
+        <tr class="hi"><td>Gross rent − mortgage</td><td>$2,900 / mo</td></tr>
+      </tbody>
+    </table>
+    <p class="sheet-note">This is not net cashflow or a complete operating statement. Confirm what the mortgage figure includes; taxes, insurance, vacancy, repairs, capital expenses, utilities, management, and leasing costs are not itemized here.</p>
+    <div class="titleblock">
+      <div><span class="k">Project</span><span class="v">Western Ave</span></div>
+      <div><span class="k">Sheet</span><span class="v">L-01</span></div>
+      <div><span class="k">Closed</span><span class="v">2 Oct 2018</span></div>
+      <div><span class="k">Drawn by</span><span class="v">J.H. / S.H.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- RULES -->
+<section class="section rules-section">
+  <div class="section-wide">
+    <div class="r">
+      <span class="eyebrow">What we'd tell you before you hire anybody</span>
+      <p class="lede" style="margin-top:-4px">Including us. These are the five things we wish somebody had said out loud before our first one.</p>
+    </div>
+    <ol class="rules r">
+      <li><span class="n">01</span><h3>Look at the space, not the listing.</h3><p>Ceiling height, a way in and out, heat, and where a bathroom could go. Nobody photographs those four.</p></li>
+      <li><span class="n">02</span><h3>Price the fixer at the boring stuff.</h3><p>The invisible work is the budget. Treat the kitchen as the reward.</p></li>
+      <li><span class="n">03</span><h3>Know who is designing it.</h3><p>Not the contractor. Somebody has to hold the finished room in their head for two months.</p></li>
+      <li><span class="n">04</span><h3>Run the number first.</h3><p>Before you fall in love with the kitchen.</p></li>
+      <li><span class="n">05</span><h3>Cosmetic has a budget.</h3><p>Structural has a hole in the middle of it, and nobody ever says the hole was smaller than they thought.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- INQUIRY FORM -->
+<section id="inquiry" class="form-section">
+  <div class="form-inner">
+    <div class="form-left r">
+      <h2>Thinking about<br>a move?</h2>
+      <p>Buying, selling, investing, or staring at a room wondering what it could be. Fill this in or text Justin — either works. <em>Justin answers personally.</em></p>
+      <div class="contact-line">
+        Or text Justin directly<br>
+        <a href="sms:+16099020299" data-track="form_text">(609) 902-0299</a> · No call center. Justin answers.
+      </div>
+    </div>
+
+    <div class="r d1">
+      <div id="formShell">
+        <form id="thForm" novalidate autocomplete="on">
+          <div class="hp-field" aria-hidden="true">
+            <label>Leave blank<input type="text" name="hp" tabindex="-1" autocomplete="off"></label>
+          </div>
+
+          <p class="intent-label" style="margin-bottom:10px">Choose the path that fits</p>
+          <div class="intent-group" id="intentGroup" role="group" aria-label="Choose a service path" aria-describedby="intentError" aria-invalid="false">
+            <button type="button" class="intent-pill" data-intent="Buy" aria-pressed="false">Buy</button>
+            <button type="button" class="intent-pill" data-intent="Sell" aria-pressed="false">Sell</button>
+            <button type="button" class="intent-pill" data-intent="Invest" aria-pressed="false">Invest</button>
+            <button type="button" class="intent-pill" data-intent="Rework" aria-pressed="false">Rework</button>
+          </div>
+          <p class="intent-error" id="intentError" role="alert">Choose one path so we can ask the right questions.</p>
+          <input type="hidden" id="th-path" name="path" value="">
+          <input type="hidden" id="th-lead-id" name="lead_id" value="">
+          <input type="hidden" id="th-source" name="lead_source" value="">
+          <input type="hidden" id="th-medium" name="utm_medium" value="">
+          <input type="hidden" id="th-campaign" name="utm_campaign" value="">
+          <input type="hidden" id="th-content" name="utm_content" value="">
+          <input type="hidden" id="th-term" name="utm_term" value="">
+          <input type="hidden" id="th-referrer" name="referrer" value="">
+          <input type="hidden" id="th-landing" name="landing_page" value="">
+          <input type="hidden" id="th-cta" name="cta_origin" value="direct_form">
+
+          <div class="path-questions" id="pathQuestions" hidden>
+            <div class="field">
+              <label for="th-timeline" id="timelineLabel">When would you like to make a move?</label>
+              <select id="th-timeline" name="timeline" aria-describedby="timelineError" aria-invalid="false">
+                <option value="">Choose a timeframe</option>
+              </select>
+              <span class="err-msg" id="timelineError">Choose the timing that is closest.</span>
+            </div>
+            <div class="field">
+              <label for="th-property" id="propertyLabel">Which property are you considering?</label>
+              <input type="text" id="th-property" name="property" placeholder="Town, address, or property type" aria-describedby="propertyError" aria-invalid="false">
+              <span class="err-msg" id="propertyError">Give us the short version of the property.</span>
+            </div>
+            <div class="field">
+              <label for="th-readiness" id="readinessLabel">What would make you ready for the next step?</label>
+              <textarea id="th-readiness" name="readiness" placeholder="Budget, financing, scope, or the decision in front of you" aria-describedby="readinessError" aria-invalid="false"></textarea>
+              <span class="err-msg" id="readinessError">Tell us where things stand today.</span>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="th-name">Name</label>
+              <input type="text" id="th-name" name="name" placeholder="First &amp; last" autocomplete="name" required aria-describedby="nameError" aria-invalid="false">
+              <span class="err-msg" id="nameError">Who am I reaching out to?</span>
+            </div>
+            <div class="field">
+              <label for="th-email">Email</label>
+              <input type="email" id="th-email" name="email" placeholder="you@email.com" autocomplete="email" inputmode="email" required aria-describedby="emailError" aria-invalid="false">
+              <span class="err-msg" id="emailError">Need a real email to reach you</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="th-phone">Phone <span class="opt">(optional)</span></label>
+            <input type="tel" id="th-phone" name="phone" placeholder="(973) 555-0142" autocomplete="tel" inputmode="tel">
+          </div>
+
+          <button type="submit" class="submit-btn" id="thSubmitBtn">
+            Tell Justin what I'm considering
+            <svg width="15" height="10" viewBox="0 0 15 10" fill="none" aria-hidden="true"><path d="M1 5h13M9 1l5 4-5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <p class="form-trust">By sending, you're asking Justin to contact you about this inquiry. No call center. Justin answers. <a href="/privacy" data-track="form_privacy">Privacy.</a></p>
+          <p class="form-err-msg" id="th-msg" role="alert">That didn't go through. Try again, or text us at (609) 902-0299.</p>
+        </form>
+      </div>
+      <div class="form-done" id="formDone" role="status" aria-live="polite">
+        <h3>Got it.</h3>
+        <p>I'll reach out personally — usually same day.<br>In the meantime, text works too: <a href="sms:+16099020299" data-track="success_text" style="color:var(--sage)">(609) 902-0299</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <span>Justin &amp; Steph Herrera · Keller Williams Metropolitan · Morris Plains, NJ</span>
+  <div class="foot-links">
+    <a href="/">tone.dad</a>
+    <a href="https://tonemediastudio.com" target="_blank" rel="noopener">Tonemedia</a>
+    <a href="https://instagram.com/tonehomes" target="_blank" rel="noopener">@tonehomes</a>
+    <a href="/privacy">Privacy</a>
+  </div>
+</footer>
+
+<div class="mobile-contact" aria-label="Contact Tonehomes">
+  <a href="sms:+16099020299" data-track="mobile_text">Text Justin</a>
+  <a href="#inquiry" data-track="mobile_inquiry">Inquiry form</a>
+</div>
+
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<script>
+(function(){
+  var pageLoad = Date.now();
+  var query = new URLSearchParams(location.search);
+
+  function clipped(value, max){ return String(value || '').trim().slice(0, max || 120) }
+  function makeLeadId(){
+    if(window.crypto && crypto.randomUUID) return crypto.randomUUID();
+    return 'th-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2,10);
+  }
+  var leadId = '';
+  try {
+    leadId = sessionStorage.getItem('tonehomes_lead_id') || makeLeadId();
+    sessionStorage.setItem('tonehomes_lead_id', leadId);
+  } catch(err) { leadId = makeLeadId() }
+
+  var referrerHost = '';
+  try { referrerHost = document.referrer ? new URL(document.referrer).hostname.replace(/^www\./,'') : '' } catch(err) {}
+  var attribution = {
+    source: clipped(query.get('utm_source') || referrerHost || 'direct', 80),
+    medium: clipped(query.get('utm_medium') || (referrerHost ? 'referral' : 'none'), 80),
+    campaign: clipped(query.get('utm_campaign') || 'none', 100),
+    content: clipped(query.get('utm_content') || 'none', 100),
+    term: clipped(query.get('utm_term') || 'none', 100),
+    referrer: clipped(document.referrer || 'direct', 180),
+    landing: clipped(location.pathname + location.search, 180)
+  };
+  var lastCta = 'direct_form';
+
+  function track(name, data){
+    var payload = data || {};
+    try { window.va('event',{name:name,data:payload}) } catch(err) {}
+    try {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(Object.assign({event:name},payload));
+    } catch(err) {}
+  }
+
+  /* Scheduling and CRM callbacks can close the loop with:
+     trackTonehomesStage('appointment','scheduled') or
+     trackTonehomesStage('agreement','signed'). */
+  window.trackTonehomesStage = function(stage, status, detail){
+    if(stage !== 'appointment' && stage !== 'agreement') return false;
+    track('tonehomes_' + stage, {
+      status: clipped(status || 'recorded', 60),
+      detail: clipped(detail || '', 120),
+      lead_id: leadId,
+      source: attribution.source,
+      campaign: attribution.campaign
+    });
+    return true;
+  };
+
+  var leadIdField = document.getElementById('th-lead-id');
+  var sourceField = document.getElementById('th-source');
+  var mediumField = document.getElementById('th-medium');
+  var campaignField = document.getElementById('th-campaign');
+  var contentField = document.getElementById('th-content');
+  var termField = document.getElementById('th-term');
+  var referrerField = document.getElementById('th-referrer');
+  var landingField = document.getElementById('th-landing');
+  var ctaField = document.getElementById('th-cta');
+  if(leadIdField) leadIdField.value = leadId;
+  if(sourceField) sourceField.value = attribution.source;
+  if(mediumField) mediumField.value = attribution.medium;
+  if(campaignField) campaignField.value = attribution.campaign;
+  if(contentField) contentField.value = attribution.content;
+  if(termField) termField.value = attribution.term;
+  if(referrerField) referrerField.value = attribution.referrer;
+  if(landingField) landingField.value = attribution.landing;
+
+  track('tonehomes_source', {
+    lead_id: leadId,
+    source: attribution.source,
+    medium: attribution.medium,
+    campaign: attribution.campaign,
+    landing: clipped(location.pathname, 100)
+  });
+
+  document.addEventListener('click', function(event){
+    var link = event.target.closest('[data-track]');
+    if(!link) return;
+    lastCta = clipped(link.dataset.track, 80) || 'unknown';
+    if(ctaField) ctaField.value = lastCta;
+    track('tonehomes_cta', {
+      cta: lastCta,
+      path: clipped(link.dataset.path || '', 30),
+      lead_id: leadId,
+      source: attribution.source
+    });
+  });
+
+  /* nav scroll */
+  var nav = document.getElementById('navBar');
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('scrolled', window.scrollY > 36);
+  }, {passive:true});
+
+  /* IntersectionObserver reveals */
+  if(!window.IntersectionObserver) {
+    document.querySelectorAll('.r').forEach(function(el){ el.classList.add('in') });
+  } else {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target) }
+      });
+    },{rootMargin:'0px 0px -12% 0px', threshold:.08});
+    document.querySelectorAll('.r').forEach(function(el){ io.observe(el) });
+  }
+
+  /* scroll-autoplay for muted looping videos */
+  (function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    function loadPoster(video){
+      if(video.dataset.poster){
+        video.poster = video.dataset.poster;
+        delete video.dataset.poster;
+      }
+    }
+    var lazyVideos = document.querySelectorAll('video[data-poster]');
+    if(window.IntersectionObserver){
+      var posterObserver = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){ loadPoster(entry.target); posterObserver.unobserve(entry.target) }
+        });
+      },{rootMargin:'500px 0px',threshold:0});
+      lazyVideos.forEach(function(video){ posterObserver.observe(video) });
+    } else {
+      lazyVideos.forEach(loadPoster);
+    }
+    function autoplayVideo(id, threshold) {
+      var v = document.getElementById(id);
+      if(!v || reduce || !window.IntersectionObserver) return;
+      new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(e.isIntersecting){ loadPoster(v); var p=v.play(); if(p&&p.catch) p.catch(function(){}); }
+          else { try{ v.pause() }catch(err){} }
+        });
+      },{threshold: threshold||.25}).observe(v);
+    }
+    autoplayVideo('duplex-vid', .35);
+    autoplayVideo('researching-vid', .15);
+    autoplayVideo('cn-wedding-vid', .3);
+    autoplayVideo('cn-house-vid', .3);
+
+    /* duplex / Stiles clip — sound opt-in, no loop (9s clip) */
+    (function(){
+      var v = document.getElementById('duplex-vid');
+      var btn = document.getElementById('duplex-sound');
+      if(!v || !btn) return;
+      btn.addEventListener('click', function(){
+        v.muted = !v.muted;
+        btn.textContent = v.muted ? 'Sound on' : 'Sound off';
+        btn.setAttribute('aria-pressed', String(!v.muted));
+        if(!v.muted){ var p=v.play(); if(p&&p.catch) p.catch(function(){}); }
+      });
+    })();
+
+  })();
+
+  /* inquiry form */
+  var form  = document.getElementById('thForm');
+  var btn   = document.getElementById('thSubmitBtn');
+  var msg   = document.getElementById('th-msg');
+  var done  = document.getElementById('formDone');
+  var shell = document.getElementById('formShell');
+  if(!form) return;
+  var defaultBtnHtml = btn.innerHTML;
+  var selectedIntent = '';
+  var intentError = document.getElementById('intentError');
+  var intentGroup = document.getElementById('intentGroup');
+  var pathQuestions = document.getElementById('pathQuestions');
+  var timeline = document.getElementById('th-timeline');
+  var property = document.getElementById('th-property');
+  var readiness = document.getElementById('th-readiness');
+  var pathField = document.getElementById('th-path');
+  function setFieldError(field, invalid){
+    field.classList.toggle('err', invalid);
+    field.setAttribute('aria-invalid', String(invalid));
+  }
+  var pathConfig = {
+    Buy: {
+      timelineLabel: 'When would you like to move?',
+      timelineOptions: ['As soon as the right home appears','Within 3 months','Within 3–6 months','Within 6–12 months','More than a year out'],
+      propertyLabel: 'Where—and what kind of home—are you considering?',
+      propertyPlaceholder: 'e.g. Morristown, 3 bedrooms, or a two-family',
+      readinessLabel: 'What price range and financing stage are you in?',
+      readinessPlaceholder: 'e.g. Up to $750k; preapproved, speaking with a lender, or just starting'
+    },
+    Sell: {
+      timelineLabel: 'When would you like the home listed?',
+      timelineOptions: ['As soon as practical','Within 3 months','Within 3–6 months','Within 6–12 months','Timing is still open'],
+      propertyLabel: 'Which property are you considering selling?',
+      propertyPlaceholder: 'Street address or town, plus the property type',
+      readinessLabel: 'What needs to happen before you feel ready to list?',
+      readinessPlaceholder: 'e.g. Repairs, prep budget, finding the next home, or understanding value'
+    },
+    Invest: {
+      timelineLabel: 'When would you like to make the next purchase?',
+      timelineOptions: ['Actively looking now','Within 3 months','Within 3–6 months','Within 6–12 months','Researching for later'],
+      propertyLabel: 'What market and property type are you targeting?',
+      propertyPlaceholder: 'e.g. Morris County duplex, second unit, or house hack',
+      readinessLabel: 'What budget, financing, or return target are you working with?',
+      readinessPlaceholder: 'e.g. $850k ceiling, 25% down, or a target monthly spread'
+    },
+    Rework: {
+      timelineLabel: 'When would you like to start the project?',
+      timelineOptions: ['As soon as the scope is clear','Within 3 months','Within 3–6 months','Within 6–12 months','Exploring what is possible'],
+      propertyLabel: 'Which property or rooms need to be reworked?',
+      propertyPlaceholder: 'e.g. Morristown home; kitchen, lower level, and entry',
+      readinessLabel: 'What budget and decision are you working through?',
+      readinessPlaceholder: 'e.g. $75k; deciding between a layout change and an addition'
+    }
+  };
+
+  function choosePath(path, origin){
+    var config = pathConfig[path];
+    if(!config) return;
+    var changed = selectedIntent && selectedIntent !== path;
+    selectedIntent = path;
+    pathField.value = path;
+    intentError.classList.remove('on');
+    intentGroup.setAttribute('aria-invalid','false');
+    document.querySelectorAll('.intent-pill').forEach(function(pill){
+      var active = pill.dataset.intent === path;
+      pill.classList.toggle('selected', active);
+      pill.setAttribute('aria-pressed', String(active));
+    });
+    document.getElementById('timelineLabel').textContent = config.timelineLabel;
+    document.getElementById('propertyLabel').textContent = config.propertyLabel;
+    document.getElementById('readinessLabel').textContent = config.readinessLabel;
+    property.placeholder = config.propertyPlaceholder;
+    readiness.placeholder = config.readinessPlaceholder;
+    timeline.innerHTML = '<option value="">Choose a timeframe</option>';
+    config.timelineOptions.forEach(function(label){
+      var option = document.createElement('option');
+      option.value = label; option.textContent = label; timeline.appendChild(option);
+    });
+    if(changed){ timeline.value=''; property.value=''; readiness.value='' }
+    pathQuestions.hidden = false;
+    [timeline,property,readiness].forEach(function(field){
+      field.required = true;
+      setFieldError(field, false);
+    });
+    track('tonehomes_path_selected', {path:path, origin:origin || 'form', lead_id:leadId});
+  }
+
+  document.querySelectorAll('.intent-pill').forEach(function(pill){
+    pill.addEventListener('click', function(){ choosePath(pill.dataset.intent, 'form') });
+  });
+  document.querySelectorAll('[data-path][href="#inquiry"]').forEach(function(link){
+    link.addEventListener('click', function(){ choosePath(link.dataset.path, link.dataset.track || 'service_card') });
+  });
+
+  var formStarted = false;
+  form.addEventListener('focusin', function(){
+    if(formStarted) return;
+    formStarted = true;
+    track('tonehomes_form_started', {lead_id:leadId, path:selectedIntent || 'unselected', source:attribution.source});
+  });
+
+  /* hide the mobile shortcut once the real inquiry is on screen */
+  if(window.IntersectionObserver){
+    new IntersectionObserver(function(entries){
+      document.body.classList.toggle('inquiry-visible', entries[0].isIntersecting);
+    },{threshold:.18}).observe(document.getElementById('inquiry'));
+  }
+
+  function validate(){
+    var ok = true;
+    var ne = document.getElementById('th-name');
+    var ee = document.getElementById('th-email');
+    var firstInvalid = null;
+    if(!selectedIntent){
+      intentError.classList.add('on');
+      intentGroup.setAttribute('aria-invalid','true');
+      firstInvalid = document.querySelector('.intent-pill');
+      ok = false;
+    } else {
+      intentError.classList.remove('on');
+      intentGroup.setAttribute('aria-invalid','false');
+      [timeline,property,readiness].forEach(function(field){
+        if(!field.value.trim()){
+          setFieldError(field, true);
+          if(!firstInvalid) firstInvalid = field;
+          ok = false;
+        } else { setFieldError(field, false) }
+      });
+    }
+    if(!ne.value.trim()){ setFieldError(ne, true); if(!firstInvalid) firstInvalid=ne; ok=false } else { setFieldError(ne, false) }
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(ee.value.trim())){ setFieldError(ee, true); if(!firstInvalid) firstInvalid=ee; ok=false } else { setFieldError(ee, false) }
+    if(firstInvalid) firstInvalid.focus();
+    return ok;
+  }
+
+  [timeline,property,readiness,document.getElementById('th-name'),document.getElementById('th-email')].forEach(function(field){
+    ['input','change'].forEach(function(eventName){
+      field.addEventListener(eventName,function(){ setFieldError(field, false) });
+    });
+  });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    msg.classList.remove('on');
+    if(!validate()){
+      track('tonehomes_form_validation_error', {lead_id:leadId, path:selectedIntent || 'unselected'});
+      return;
+    }
+    btn.disabled = true; btn.textContent = 'Sending…';
+    track('tonehomes_form_submitted', {lead_id:leadId, path:selectedIntent, source:attribution.source, cta:lastCta});
+
+    var ne = document.getElementById('th-name');
+    var ee = document.getElementById('th-email');
+    var pe = document.getElementById('th-phone');
+    var hp = form.querySelector('input[name="hp"]');
+
+    fetch('/api/subscribe',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        email:  ee.value.trim(),
+        source: 'tonehomes-realtor',
+        lead_source: attribution.source,
+        utm_medium: attribution.medium,
+        utm_campaign: attribution.campaign,
+        utm_content: attribution.content,
+        utm_term: attribution.term,
+        lead_id: leadId,
+        cta: lastCta,
+        path: selectedIntent,
+        phone: pe ? pe.value.trim() : '',
+        referrer: attribution.referrer,
+        landing: attribution.landing,
+        q1:     'Path: '+selectedIntent+' | Name: '+ne.value.trim(),
+        q2:     'Timeline: '+timeline.value.trim(),
+        q3:     'Property: '+property.value.trim(),
+        q4:     'Readiness: '+readiness.value.trim(),
+        detail: [
+          pe&&pe.value.trim() ? 'Phone: '+pe.value.trim() : '',
+          'Lead ID: '+leadId,
+          'Attribution: '+attribution.source+' / '+attribution.medium+' / '+attribution.campaign+' / '+attribution.content+' / '+attribution.term,
+          'CTA: '+lastCta,
+          attribution.referrer !== 'direct' ? 'Referrer: '+attribution.referrer : ''
+        ].filter(Boolean).join(' | '),
+        hp:     hp ? hp.value : '',
+        t:      Date.now()-pageLoad
+      })
+    })
+    .then(function(r){ return r.json() })
+    .then(function(d){
+      if(d&&d.success){
+        shell.style.display='none'; done.classList.add('on');
+        track('tonehomes_form_success', {lead_id:leadId, path:selectedIntent, source:attribution.source, campaign:attribution.campaign});
+      } else {
+        track('tonehomes_form_error', {lead_id:leadId, path:selectedIntent, type:'api'});
+        msg.classList.add('on'); btn.disabled=false; btn.innerHTML=defaultBtnHtml;
+      }
+    })
+    .catch(function(){
+      track('tonehomes_form_error', {lead_id:leadId, path:selectedIntent, type:'network'});
+      msg.classList.add('on'); btn.disabled=false; btn.innerHTML=defaultBtnHtml;
+    });
+  });
+})();
+</script>
+</body>
+</html>

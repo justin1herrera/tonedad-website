@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.tone.dad/sitemap.xml
+Sitemap: https://tone.dad/sitemap.xml

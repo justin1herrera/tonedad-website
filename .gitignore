@@ -17,3 +17,21 @@ tonedad.html
 .DS_Store
 Thumbs.db
 .vercel
+
+# local credentials and dependencies — never back up
+.env
+.env.*
+node_modules/
+
+# local agent state and rollback/source archives
+.claude/agent-memory/
+.claude/agents/
+snapshots/
+002/
+media/_originals/
+
+# design and audit scratch
+ad-kit/
+font-compare.html
+hero-*.html
+tone-dad-fix-pack.md

@@ -1,0 +1,15 @@
+.env
+.env.*
+.git
+.vercel
+.claude
+node_modules
+.DS_Store
+**/.DS_Store
+snapshots
+screenshots
+uploads
+_check
+debug
+qa
+reference
