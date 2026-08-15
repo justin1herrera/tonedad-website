@@ -1,60 +1,68 @@
 # tone.dad — Full Context
 
-> Justin Herrera is a videographer, real estate advisor, web builder, and father based in Morristown, New Jersey. tone.dad is his personal brand hub connecting three distinct businesses.
+> Justin Herrera is a filmmaker, editor, real estate advisor, and father based in Morris Plains, NJ (Morris County). tone.dad is his personal brand hub. The homepage presents four "doors" (Tonemedia, Tonehomes, tone.notes, Noblepost), plus a résumé credit band, a newsletter, and a free video-coaching booking.
 
 ## Identity
 
 - Full name: Justin Herrera
-- Location: Morristown, NJ
+- Location: Morris Plains, NJ (Morris County)
 - Brand: tone.dad
 - Email: justin@tone.dad
 - Phone: +1 (609) 902-0299
 - Instagram: @tone.dad
 - Partner: Stephanie Herrera (co-runs Tonemedia and Tonehomes)
 
-## Business 1: Tonemedia (Video Production)
+## Door 1: Tonemedia (Wedding Films)
 
-Justin and Stephanie Herrera are NJ's premier wedding film duo. They've been shooting weddings for 12 years and have delivered over 350 wedding films. They also produce brand films, NFL content, and editorial shoots.
+Justin and Stephanie Herrera are a wedding film duo. They've been shooting weddings for 12 years and have delivered over 350 wedding films ("350 couples, zero bad reviews"). They also produce brand films, NFL content, and editorial shoots.
 
 Notable credits:
-- NBC Universal
-- Taylor Swift — "Blank Space" music video (on-set at a Long Island estate)
-- Katy Perry — 3 projects
+- NBC Universal (still cutting for NBC)
+- Taylor Swift — "Blank Space" music video (on-set editor, at Oheka Castle, Long Island)
+- Katy Perry — "Teenage Dream" and related projects (×3)
 - Lady Gaga — 2 projects (as assistant editor)
+- Mariah Carey
 - NY Jets — 5 NFL seasons on retainer
 - Crossed Keys Estate — long-running partnership
 - Brides Magazine
 
-Justin's editing background includes 10 months living in Dustin Robertson's (Avid DiVa) Hollywood studio, where they cut projects for Mariah Carey, Lady Gaga, and Gap before relocating to Palm Springs.
+Justin's editing background includes 10 months living in Dustin Robertson's (Avid DiVa) Hollywood studio, cutting projects for Mariah Carey, Lady Gaga, and Gap before relocating.
 
 Website: https://tonemediastudio.com (brand name is Tonemedia; domain retains legacy "studio" spelling)
 
-## Business 2: Tonehomes (Real Estate)
+## Door 2: Tonehomes (Real Estate)
 
-Justin and Stephanie work in real estate advisory, focused on couples, families, and first-time investors in New Jersey. They paid off $150,000 in debt (following Dave Ramsey's method), bought their first duplex, and house-hacked their way to owning 6 units. Their approach emphasizes building slowly and knowing when to wait rather than close fast.
+Real estate advisory focused on couples, families, and first-time investors in Morris County, New Jersey ("Aisle to address"). Justin and Stephanie paid off $150,000 in debt (following Dave Ramsey's method), bought their first duplex, and house-hacked their way to owning 6 units. Their approach emphasizes building slowly and knowing when to wait rather than close fast. Active since 2021. Many clients are past Tonemedia wedding couples now buying or selling a home.
 
-Active since 2021 in the NJ market.
+## Door 3: tone.notes (Stories)
 
-## Business 3: Tonebuild (Web Design & Development)
+Long-form notes from the edit suite and the houses — the stories behind the work. Each story page is an individually designed, immersive web experience rather than a blog template. Index: https://tone.dad/notes
 
-Justin designs and builds complete websites in a single day — brand, copy, and code, shipped. The tone.dad site itself serves as the portfolio demo. Built entirely with Claude Code (Anthropic's AI coding tool).
+## Door 4: Noblepost (Wedding Editing Services)
 
-Past sites include:
-- tone.dad (this site)
-- tonemediastudio.com
-- nobleposthouse.com
+Wedding-video editing done for other studios. Noblepost edits and ships under the studio's own name — no watermarks, no Noblepost branding — with a first draft before your next shoot. Positioned for busy studios who'd rather be behind the lens than living in a timeline. Website: https://nobleposthouse.com
+
+## Also on the site: Free Video Coaching · Learn with Tone
+
+Not a door, but a section of the homepage: thirty free minutes for wedding filmmakers. Bring a rough cut, a color problem, or a workflow that is eating the week, and work it on screen together. No pitch and no course at the end. Booking: cal.com/tonedad/tonebuild
+
+Justin also designs and builds websites — the tone.dad site itself was built with Claude Code (Anthropic's AI coding tool), as were tonemediastudio.com and nobleposthouse.com.
 
 ## Newsletter: Notes from the Edit Suite
 
 A subscriber-only newsletter covering faith, fatherhood, building things at 4 AM, and stories from Justin's career that don't fit in a wedding film. Published via beehiiv.
 
-Upcoming stories:
-- 001: "Blank Space" — The untold story of being on the Taylor Swift "Blank Space" music video set at Oheka Castle on Long Island. Directed by Joseph Kahn, the video broke VEVO's 24-hour record and became the fastest to 1 billion views on VEVO. Justin was on set during the two-day shoot. Each story page is an immersive, individually designed web experience.
-- 002: "The freakin' Jets" — Five NFL seasons on retainer with the NY Jets
-- 003: "Ten months with Avid DiVa" — Living in Dustin Robertson's Hollywood studio, cutting Mariah Carey, Gaga, and Gap
+Stories:
+- 001: "Blank Space" — The untold story of being the on-set editor on the Taylor Swift "Blank Space" music video at Oheka Castle, Long Island, September 2014. Directed by Joseph Kahn. Each story page is an immersive, individually designed web experience. Live: https://tone.dad/notes/001-blank-space
+- 002: "She saw a studio. I saw a basement." — The Western Ave house in Morristown, NJ. What Stephanie saw in a basement nobody wanted, the two months of work that turned a single family into two homes, and the full renovation numbers. Live: https://tone.dad/notes/002-steph-was-right
+- 003: "The freakin' Jets" — Five NFL seasons on retainer with the NY Jets, 2010 to 2015 (coming soon)
+- 004: "Ten months with Avid DiVa" — Living in Dustin Robertson's Hollywood studio, cutting Mariah Carey, Gaga, and Gap (coming soon)
+- 005: "How I got into weddings" — Saying yes to a favor for a friend, and the 350 weddings that followed (coming soon)
+- 006: "The LUMIX S1 II" — Fifteen years of buying cameras that promised to fix the footage, and the one camera he stopped switching from (coming soon)
+- 007: "Fourth place" — Justin and Stephanie's fourth-place finish in a Dance Dance Revolution couples sync tournament, before the wedding and the kids (coming soon)
 
-Notes index: https://www.tone.dad/notes
-Subscribe: https://www.tone.dad/subscribe or https://tonedad.beehiiv.com/subscribe
+Notes index: https://tone.dad/notes
+Subscribe: https://tone.dad/subscribe or https://tonedad.beehiiv.com/subscribe
 
 ## Faith
 
@@ -62,19 +70,19 @@ Justin is involved with Newbridge Church in New Jersey (newbridgenj.com). Faith 
 
 ## Technical Details
 
-- Site: Single-page static HTML, all CSS/JS inline
-- Hosting: Vercel (www.tone.dad)
-- Fonts: Fraunces (serif), Inter Tight (sans), JetBrains Mono (mono)
-- Design: Warm cream (#F2EDE2) background, deep ink (#1B1714), terracotta accent (#B5421F)
-- Features: Three-door navigation pattern, rotating brand wordmark, bilingual (EN/ES), scroll-triggered animations
-- Newsletter: beehiiv integration
+- Site: Single-page static HTML, all CSS/JS inline, no external JS (Google Fonts only)
+- Hosting: Vercel (tone.dad; www redirects to the apex)
+- Fonts: Cormorant Garamond (serif, italic headings), Inter Tight (sans body), Courier (mono labels/eyebrows)
+- Design: Warm mocha (#2C2622) dark canvas, warm off-white text (#F5F1E8), champagne-gold accent (#C6A16B). Cinematic, editorial, "edit-bay/cinema-slate" motif.
+- Structure: A cinematic hero photo/video carousel; four-"door" navigation (Tonemedia, Tonehomes, tone.notes, Noblepost); an inline newsletter capture; a résumé credit band with a 16:9 edit-desk clip and glowing "selected credits"; a Selected Work grid of reels; and in-page views for Tonemedia, Tonehomes, and the free video-coaching booking.
+- Newsletter: beehiiv integration via a serverless subscribe endpoint (also sends a branded welcome email via Resend)
 - Built with: Claude Code by Anthropic
 
 ## Links
 
-- Main site: https://www.tone.dad
-- Subscribe page: https://www.tone.dad/subscribe
+- Main site: https://tone.dad
+- Subscribe page: https://tone.dad/subscribe
 - Tonemedia: https://tonemediastudio.com
-- Noble Post House: https://nobleposthouse.com
+- Noblepost: https://nobleposthouse.com
 - Newbridge Church: https://www.newbridgenj.com
 - Instagram: https://instagram.com/tone.dad
