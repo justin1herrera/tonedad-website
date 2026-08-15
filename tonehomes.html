@@ -1433,7 +1433,7 @@ body::before {
               <span class="err-msg" id="propertyError">Give us the short version of the property.</span>
             </div>
             <div class="field">
-              <label for="th-readiness" id="readinessLabel">What would make you ready for the next step?</label>
+              <label for="th-readiness" id="readinessLabel">What would make you ready for the next step? <span class="opt">(optional)</span></label>
               <textarea id="th-readiness" name="readiness" placeholder="Budget, financing, scope, or the decision in front of you" aria-describedby="readinessError" aria-invalid="false"></textarea>
               <span class="err-msg" id="readinessError">Tell us where things stand today.</span>
             </div>
@@ -1720,7 +1720,12 @@ body::before {
     });
     document.getElementById('timelineLabel').textContent = config.timelineLabel;
     document.getElementById('propertyLabel').textContent = config.propertyLabel;
-    document.getElementById('readinessLabel').textContent = config.readinessLabel;
+    var readinessLabelEl = document.getElementById('readinessLabel');
+    readinessLabelEl.textContent = config.readinessLabel + ' ';
+    var optMark = document.createElement('span');
+    optMark.className = 'opt';
+    optMark.textContent = '(optional)';
+    readinessLabelEl.appendChild(optMark);
     property.placeholder = config.propertyPlaceholder;
     readiness.placeholder = config.readinessPlaceholder;
     timeline.innerHTML = '<option value="">Choose a timeframe</option>';
@@ -1730,10 +1735,12 @@ body::before {
     });
     if(changed){ timeline.value=''; property.value=''; readiness.value='' }
     pathQuestions.hidden = false;
-    [timeline,property,readiness].forEach(function(field){
+    [timeline,property].forEach(function(field){
       field.required = true;
       setFieldError(field, false);
     });
+    readiness.required = false;
+    setFieldError(readiness, false);
     track('tonehomes_path_selected', {path:path, origin:origin || 'form', lead_id:leadId});
   }
 
@@ -1771,7 +1778,7 @@ body::before {
     } else {
       intentError.classList.remove('on');
       intentGroup.setAttribute('aria-invalid','false');
-      [timeline,property,readiness].forEach(function(field){
+      [timeline,property].forEach(function(field){
         if(!field.value.trim()){
           setFieldError(field, true);
           if(!firstInvalid) firstInvalid = field;
@@ -1826,7 +1833,7 @@ body::before {
         q1:     'Path: '+selectedIntent+' | Name: '+ne.value.trim(),
         q2:     'Timeline: '+timeline.value.trim(),
         q3:     'Property: '+property.value.trim(),
-        q4:     'Readiness: '+readiness.value.trim(),
+        q4:     'Readiness: '+(readiness.value.trim() || '(not provided)'),
         detail: [
           pe&&pe.value.trim() ? 'Phone: '+pe.value.trim() : '',
           'Lead ID: '+leadId,
