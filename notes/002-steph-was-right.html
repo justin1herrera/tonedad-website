@@ -1,0 +1,2446 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>She saw a studio. I saw a basement. · Justin Herrera</title>
+<meta name="description" content="Steph looked at a Morristown fixer-upper and saw rooms. I saw a basement. How we turned one single family into two units — the envelope system, four sheets of paper, and what it actually cost." />
+<meta name="robots" content="index, follow" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<!-- Canonical -->
+<link rel="canonical" href="https://www.tone.dad/notes/002-steph-was-right" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.tone.dad/notes/002-steph-was-right" />
+<meta property="og:title" content="She saw a studio. I saw a basement." />
+<meta property="og:description" content="Steph looked at the house and saw rooms. I saw a basement. How one single family in Morristown became two units." />
+<meta property="og:image" content="https://www.tone.dad/media/notes/002-western/og-002.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="tone.dad" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="She saw a studio. I saw a basement." />
+<meta name="twitter:description" content="She sees what a room could be. I price it. One house, two units, $15,000." />
+<meta name="twitter:image" content="https://www.tone.dad/media/notes/002-western/og-002.jpg" />
+
+<link rel="preload" as="image" href="../media/notes/002-western/hero.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "She saw a studio. I saw a basement.",
+  "description": "Steph looked at a Morristown fixer-upper and saw rooms. I saw a basement. How we turned one single family into two units — the envelope system, four sheets of paper, and what it actually cost.",
+  "image": "https://www.tone.dad/media/notes/002-western/og-002.jpg",
+  "author": [
+    { "@type": "Person", "name": "Justin Herrera", "url": "https://www.tone.dad/" },
+    { "@type": "Person", "name": "Steph Herrera" }
+  ],
+  "publisher": { "@type": "Organization", "name": "tone.dad", "url": "https://www.tone.dad/" },
+  "mainEntityOfPage": "https://www.tone.dad/notes/002-steph-was-right",
+  "articleSection": "Notes from the Edit Suite",
+  "about": "Western Ave, Morristown, New Jersey"
+}
+</script>
+
+<style>
+  /* ============================================================
+     "Three years of rice and beans." — Notes No. 002
+     Design system inherited verbatim from notes/001-blank-space.html.
+     Additions for this issue only: --steph, the drafting grid,
+     .ledger, .scrubber, .steph margin notes, .ph placeholders.
+     ============================================================ */
+  :root {
+    --paper: #f3f0e8;
+    --paper-warm: #ece6d8;
+    --ink: #0e0e0e;
+    --ink-soft: #2a2a26;
+    --hush: #5a5a54;
+    --hush-soft: #8a8a82;
+    --rule: #cdc9bf;
+    --rule-strong: #b8b3a3;
+    --draft: #2f5a78;                       /* drafting blue — rules, marks, callouts */
+    --draft-soft: rgba(47, 90, 120, .13);
+    --press: #7a2a1a;                       /* red pencil — corrections, emphasis */
+    --serif: "Cormorant Garamond", "Times New Roman", Times, Georgia, serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+
+    /* No. 002 only — Steph's voice, from the Tonehomes palette */
+    --steph: #8a5a33;
+    --steph-soft: rgba(138, 90, 51, .14);
+
+    /* No. 002 only — drafting paper, behind card sections. Never behind prose. */
+    --grid-minor: rgba(23, 20, 16, .026);
+    --grid-major: rgba(23, 20, 16, .068);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; overflow-x: clip; }
+  html, body { margin: 0; padding: 0; max-width: 100%; }
+
+  body {
+    background-color: var(--paper);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .045 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    background-size: 240px 240px;
+    background-repeat: repeat;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 20px;
+    line-height: 1.62;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--draft); outline-offset: 4px; }
+
+  /* ---------- reading progress bar ---------- */
+  .progress-bar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 2.5px;
+    width: 100%;
+    background: transparent;
+    z-index: 100;
+    pointer-events: none;
+  }
+  .progress-bar::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: var(--progress, 0%);
+    background: var(--draft);
+    transition: width .12s linear;
+  }
+
+  /* ---------- top nav ---------- */
+  .topnav {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    z-index: 10;
+    padding: 22px clamp(20px, 4vw, 48px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .26em;
+    text-transform: uppercase;
+    color: rgba(243, 240, 232, .82);
+  }
+  .topnav a { text-decoration: none; transition: color .2s ease; }
+  .topnav a:hover { color: var(--paper); }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    height: clamp(420px, 78vh, 720px);
+    overflow: hidden;
+    color: #ede8da;
+    background: #17140f;
+  }
+  .hero picture { display: contents; }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 45%;
+    filter: brightness(.6) contrast(1.08) saturate(.88);
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(14,14,14,.46) 0%, rgba(14,14,14,.1) 26%, rgba(14,14,14,.1) 62%, rgba(14,14,14,.58) 100%);
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(64px, 12vh, 110px) clamp(24px, 4vw, 48px) clamp(40px, 8vh, 72px);
+    z-index: 2;
+    text-align: center;
+  }
+  .hero-kicker {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .32em;
+    text-transform: uppercase;
+    color: #f0d79c;
+    margin-bottom: 28px;
+    text-shadow: 0 1px 2px rgba(0,0,0,.9), 0 2px 8px rgba(0,0,0,.6);
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(34px, 6.2vw, 78px);
+    line-height: 1.02;
+    letter-spacing: -.013em;
+    margin: 0 auto 18px;
+    max-width: 18ch;
+    text-wrap: balance;
+    color: #ede8da;
+    text-shadow:
+      0 1px 2px rgba(0,0,0,.85),
+      0 2px 10px rgba(0,0,0,.6);
+  }
+  .hero-subtitle {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(16px, 1.8vw, 22px);
+    color: rgba(237, 232, 218, .92);
+    max-width: 32ch;
+    margin: 0 auto;
+    letter-spacing: .003em;
+    text-shadow: 0 1px 2px rgba(0,0,0,.85), 0 2px 9px rgba(0,0,0,.55);
+  }
+
+  /* ---------- STANDFIRST ---------- */
+  .standfirst {
+    max-width: 620px;
+    margin: clamp(22px, 3.4vh, 32px) auto 0;
+    padding: clamp(20px, 3vh, 26px) clamp(20px, 4vw, 32px) 0;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--hush);
+    text-wrap: pretty;
+  }
+  .standfirst .brand {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .standfirst em { font-style: italic; color: var(--ink-soft); }
+
+  /* ---------- INLINE CTA ---------- */
+  .cta-inline {
+    max-width: 720px;
+    margin: clamp(44px, 7vh, 72px) auto;
+    padding: clamp(22px, 3.2vh, 30px) clamp(20px, 4vw, 32px);
+    border-top: 1px solid var(--rule-strong);
+    border-bottom: 1px solid var(--rule-strong);
+    text-align: center;
+  }
+  .cta-inline .eyebrow {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: var(--draft);
+    margin: 0 0 12px;
+  }
+  .cta-inline p.line {
+    font-family: var(--serif);
+    font-size: clamp(18px, 2vw, 21px);
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0 auto 18px;
+    max-width: 46ch;
+    text-wrap: pretty;
+  }
+  .cta-inline a.go {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--draft);
+    padding-bottom: 4px;
+    transition: color .2s ease, border-color .2s ease;
+  }
+  .cta-inline a.go:hover { color: var(--draft); border-bottom-color: var(--ink); }
+  .cta-inline .sub {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--hush);
+    margin: 14px 0 0;
+    font-variant-numeric: tabular-nums;
+  }
+  .cta-inline .sub a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule-strong); padding-bottom: 2px; }
+  .cta-inline .sub a:hover { border-bottom-color: var(--draft); }
+
+  /* ---------- BYLINE ---------- */
+  .byline {
+    max-width: 720px;
+    margin: clamp(36px, 6vh, 56px) auto 0;
+    padding: 0 clamp(20px, 4vw, 32px);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--hush);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 6px 14px;
+    line-height: 1.7;
+  }
+  .byline .author { color: var(--ink); font-weight: 500; }
+  .byline .sep { color: var(--rule); }
+  .byline .read-time { color: var(--draft); }
+
+  /* ---------- MEDIA PLACEHOLDER ----------
+     Every image/video sits inside a .ph. The .ph owns the aspect ratio,
+     so the page has no layout shift and reads as finished even when the
+     media folder is empty (reviewing this file straight off disk). */
+  .ph {
+    position: relative;
+    display: block;
+    background: var(--paper-warm);
+    border: 1px solid var(--rule-strong);
+    overflow: hidden;
+  }
+  .ph::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, var(--grid-major) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-major) 1px, transparent 1px),
+      linear-gradient(to right, var(--grid-minor) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-minor) 1px, transparent 1px);
+    background-size: 200px 200px, 200px 200px, 40px 40px, 40px 40px;
+  }
+  .ph::after {
+    content: attr(data-ph);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    text-align: center;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .16em;
+    line-height: 1.7;
+    color: var(--hush-soft);
+    text-transform: uppercase;
+  }
+  .ph > picture { display: contents; }
+  .ph > img, .ph > video, .ph > picture > img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .ph[data-missing] > img, .ph[data-missing] > video, .ph[data-missing] > picture { display: none; }
+  .ph-4x5 { aspect-ratio: 4 / 5; }
+  .ph-3x2 { aspect-ratio: 3 / 2; }
+  .ph-16x9 { aspect-ratio: 16 / 9; }
+  .ph-1x1 { aspect-ratio: 1 / 1; }
+
+  /* ---------- DRAFTING GRID (card sections only) ---------- */
+  .grid-plate {
+    position: relative;
+    background-color: var(--paper-warm);
+    background-image:
+      linear-gradient(to right, var(--grid-major) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-major) 1px, transparent 1px),
+      linear-gradient(to right, var(--grid-minor) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-minor) 1px, transparent 1px);
+    background-size: 200px 200px, 200px 200px, 40px 40px, 40px 40px;
+    border: 1px solid var(--rule);
+  }
+
+  /* ---------- TK tokens ---------- */
+  .tk {
+    font-family: var(--mono);
+    font-size: .66em;
+    letter-spacing: .05em;
+    padding: 2px 6px 1px;
+    color: var(--press);
+    background: rgba(122, 42, 26, .07);
+    border: 1px dashed var(--press);
+    white-space: normal;
+    line-height: 1.5;
+  }
+  .tk::before {
+    content: "REV";
+    font-size: .8em;
+    letter-spacing: .18em;
+    margin-right: 6px;
+    opacity: .6;
+  }
+
+  /* ---------- RECEIPTS ---------- */
+  .receipts { margin: 30px 0 6px; padding: 26px 0 2px; border-top: 1px solid var(--rule); }
+  .receipts-lead { font-family: var(--serif); font-style: italic; font-size: 1.34rem; line-height: 1.4; color: var(--ink); margin: 0 0 20px; }
+  .receipt { margin: 0; }
+  .receipt figcaption { font-family: var(--mono); font-size: 11px; letter-spacing: .05em; line-height: 1.5; color: var(--hush); margin-top: 9px; }
+  .receipts-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
+  @media (max-width: 460px) {
+    .receipts-lead { font-size: 1.2rem; }
+    .receipts-pair { gap: 11px; }
+    .receipt figcaption { font-size: 10px; }
+  }
+
+  /* ---------- ARTICLE PROSE ---------- */
+  .prose {
+    max-width: 720px;
+    margin: clamp(48px, 7vh, 80px) auto;
+    padding: 0 clamp(22px, 4vw, 36px);
+  }
+  .prose section { scroll-margin-top: 24px; position: relative; }
+  .prose section + section { margin-top: clamp(44px, 6vh, 72px); }
+
+  .prose h2 {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--draft);
+    margin: 0 0 clamp(20px, 3vh, 32px);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .prose h2::before { content: ""; display: inline-block; width: 22px; height: 1px; background: var(--draft); }
+  .prose h2 .h2-title { font-family: var(--serif); font-style: italic; font-size: 22px; letter-spacing: .01em; text-transform: none; color: var(--ink); }
+
+  .prose p {
+    font-family: var(--serif);
+    font-size: clamp(18px, 1.5vw, 21px);
+    line-height: 1.62;
+    color: var(--ink-soft);
+    margin: 0 0 1.15em;
+    text-wrap: pretty;
+  }
+  .prose p:last-child { margin-bottom: 0; }
+  .prose section:first-of-type p:first-of-type::first-letter {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 4.4em;
+    line-height: .82;
+    float: left;
+    padding: .04em .12em 0 0;
+    color: var(--ink);
+  }
+  .prose em { font-style: italic; }
+  .prose strong { font-weight: 600; color: var(--ink); }
+  .prose p a { color: var(--draft); text-decoration: none; border-bottom: 1px solid rgba(47,90,120,.45); transition: color .2s ease, border-bottom-color .2s ease; }
+  .prose p a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+
+  /* ---------- STEPH — margin notes ---------- */
+  .steph {
+    font-family: "Caveat", "Marker Felt", cursive;
+    font-size: 21px;
+    line-height: 1.3;
+    color: var(--steph);
+    margin: 18px 0 24px;
+    padding: 10px 0 10px 16px;
+    border-left: 2px solid var(--steph);
+    background: var(--steph-soft);
+    max-width: 34ch;
+  }
+  .steph .steph-label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--steph);
+    opacity: .78;
+    margin-bottom: 5px;
+  }
+  @media (min-width: 1024px) {
+    .steph {
+      position: absolute;
+      left: calc(100% - clamp(22px, 4vw, 36px) + 30px);
+      width: clamp(128px, calc((100vw - 720px) / 2 - 46px), 208px);
+      margin: 0;
+      padding: 2px 0 2px 12px;
+      background: none;
+      font-size: 19px;
+      max-width: none;
+    }
+  }
+
+  /* ---------- LEDGER ---------- */
+  .ledger {
+    margin: clamp(36px, 5vh, 56px) 0;
+    padding: clamp(24px, 3.4vh, 34px) clamp(20px, 3vw, 30px);
+  }
+  .ledger .eyebrow {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--draft);
+    margin: 0 0 20px;
+  }
+  .ledger dl { margin: 0; font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+  .ledger .row {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding: 9px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .ledger .row:first-child { border-top: 0; }
+  .ledger dt {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .17em;
+    text-transform: uppercase;
+    color: var(--hush);
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .ledger dd {
+    margin: 0;
+    font-family: var(--mono);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .ledger .row.emph { border-top-color: var(--rule-strong); }
+  .ledger .row.emph dt { color: var(--press); }
+  .ledger .row.emph dd { color: var(--press); font-weight: 500; }
+  .ledger .foot {
+    margin: 22px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .ledger .foot p {
+    margin: 0;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    line-height: 1.75;
+    letter-spacing: .05em;
+    color: var(--hush);
+  }
+  @media (max-width: 460px) {
+    .ledger dt { font-size: 9.5px; letter-spacing: .12em; }
+    .ledger dd { font-size: 13px; }
+  }
+
+  /* ---------- SCRUBBER ---------- */
+  .scrubber { margin: clamp(36px, 5vh, 56px) 0; }
+  .scrub-stage {
+    position: relative;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    border: 1px solid var(--rule-strong);
+    background: var(--paper-warm);
+    touch-action: pan-y;
+    cursor: ew-resize;
+    --sx: 50%;
+  }
+  .scrub-layer { position: absolute; inset: 0; }
+  .scrub-layer .ph { position: absolute; inset: 0; border: 0; }
+  .scrub-before { clip-path: inset(0 calc(100% - var(--sx)) 0 0); z-index: 2; }
+  .scrub-handle {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: var(--sx);
+    width: 34px;
+    margin-left: -17px;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: ew-resize;
+  }
+  .scrub-handle::before {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0; left: 50%;
+    width: 3px;
+    margin-left: -1.5px;
+    background: var(--paper);
+    box-shadow: inset 1px 0 0 var(--ink), inset -1px 0 0 var(--ink);
+  }
+  .scrub-grip {
+    position: relative;
+    width: 30px; height: 30px;
+    background: var(--paper);
+    border: 1px solid var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink);
+    letter-spacing: -.05em;
+  }
+  .scrub-chip {
+    position: absolute;
+    top: 12px;
+    z-index: 3;
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    color: var(--paper);
+    background: var(--draft);
+    padding: 5px 9px 4px;
+  }
+  .scrub-chip.is-before { left: 12px; }
+  .scrub-chip.is-after { right: 12px; }
+  .scrubber figcaption {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--hush);
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid var(--rule);
+  }
+
+  /* ---------- PHOTO INSETS ---------- */
+  figure.inset { margin: clamp(28px, 4vh, 44px) 0; }
+  figure.inset figcaption {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--hush);
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid var(--rule);
+  }
+  figure.bleed {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    width: 100vw;
+  }
+  figure.bleed .ph { border-left: 0; border-right: 0; }
+  figure.bleed figcaption { max-width: 720px; margin-left: auto; margin-right: auto; padding-left: clamp(22px,4vw,36px); padding-right: clamp(22px,4vw,36px); }
+
+  /* ---------- BASEMENT: four dated takes ---------- */
+  .takes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    gap: 18px;
+    margin: clamp(28px, 4vh, 42px) 0;
+  }
+  .take { margin: 0; position: relative; }
+  .take .ph { border-color: var(--rule-strong); background: var(--paper); }
+  /* The 1 Feb clip is genuinely landscape. Keep the box the same 4/5 as its
+     neighbours so the row shares a baseline, and letterbox rather than crop. */
+  .take.is-wide .ph { background: #14130f; border-color: var(--rule-strong); }
+  .take.is-wide .ph video, .take.is-wide .ph img { object-fit: contain; }
+  .take .hud {
+    position: absolute;
+    top: 9px; left: 9px;
+    z-index: 3;
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--paper);
+    background: var(--draft);
+    padding: 4px 8px 3px;
+  }
+  .take figcaption {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.45;
+    color: var(--ink-soft);
+    margin-top: 11px;
+  }
+  .take .src {
+    display: block;
+    font-family: var(--mono);
+    font-style: normal;
+    font-size: 9.5px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--hush-soft);
+    margin-top: 7px;
+  }
+  @media (max-width: 860px) { .takes { grid-template-columns: 1fr; gap: 26px; } }
+
+  .take .ph, .moment .ph, .snd .ph { cursor: pointer; }
+  .take-cue {
+    position: absolute;
+    right: 8px; bottom: 8px;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--paper);
+    background: rgba(14,14,14,.72);
+    padding: 5px 8px 4px;
+    pointer-events: none;
+    transition: background .25s ease;
+  }
+  .take-cue .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--paper);
+    opacity: .55;
+  }
+  .take.is-live .take-cue,
+  .moment.is-live .take-cue,
+  .snd.is-live .take-cue { background: var(--press); }
+  .take.is-live .take-cue .dot,
+  .moment.is-live .take-cue .dot,
+  .snd.is-live .take-cue .dot { opacity: 1; animation: take-pulse 1.3s ease-in-out infinite; }
+  .moment .take-cue, .snd .take-cue { right: 10px; bottom: 10px; }
+  .snd { position: relative; }
+  @keyframes take-pulse { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
+  .takes-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 16px;
+    margin: 0 0 14px;
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    color: var(--hush);
+  }
+  .takes-play {
+    appearance: none;
+    border: 1px solid var(--draft);
+    background: var(--draft);
+    color: var(--paper);
+    font: inherit;
+    letter-spacing: .2em;
+    padding: 7px 12px 6px;
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease;
+  }
+  .takes-play:hover { background: var(--ink); border-color: var(--ink); }
+  .takes-play[aria-pressed="true"] { background: var(--press); border-color: var(--press); }
+
+  /* ---------- SIX-FRAME STRIP ---------- */
+  .strip {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 12px;
+    margin: 8px 0 clamp(30px, 4vh, 44px);
+    -webkit-overflow-scrolling: touch;
+  }
+  .strip .frame { flex: 0 0 19%; min-width: 132px; scroll-snap-align: start; margin: 0; }
+  .strip .frame .ph { border-color: var(--rule); }
+  .strip .frame figcaption {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--hush-soft);
+    margin-top: 6px;
+  }
+
+
+  /* ---------- DIMENSION LINE ---------- */
+  .dimline {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: clamp(40px, 6vh, 64px) 0;
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: .26em;
+    text-transform: uppercase;
+    color: var(--draft);
+  }
+  .dimline .leg { flex: 1 1 auto; height: 7px; border-top: 1px solid var(--draft); position: relative; }
+  .dimline .leg::before, .dimline .leg::after {
+    content: ""; position: absolute; top: -4px; width: 1px; height: 9px; background: var(--draft);
+  }
+  .dimline .leg::before { left: 0; }
+  .dimline .leg::after { right: 0; }
+  .dimline .leg-l::before { transform: rotate(-32deg); }
+  .dimline .leg-r::after { transform: rotate(-32deg); }
+
+  /* ---------- SECTION CALLOUT ---------- */
+  .prose h2 { align-items: center; gap: 14px; }
+  .prose h2::before { display: none; }
+  .prose h2 .callout {
+    flex: 0 0 auto;
+    width: 46px; height: 46px;
+    border: 1px solid var(--draft);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--draft);
+    letter-spacing: 0;
+    line-height: 1;
+  }
+  .prose h2 .lead { flex: 0 0 auto; width: 22px; height: 1px; background: var(--draft); }
+  .prose h2 .callout small { font-size: 6.5px; letter-spacing: .18em; opacity: .62; margin-top: 2px; }
+
+  /* ---------- TITLE BLOCK ---------- */
+  .titleblock {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+    border: 1px solid var(--rule-strong);
+    border-bottom: 0;
+    margin-top: 26px;
+  }
+  .titleblock div { border-bottom: 1px solid var(--rule-strong); border-right: 1px solid var(--rule-strong); padding: 9px 11px 8px; }
+  .titleblock div:last-child { border-right: 0; }
+  .titleblock dt {
+    font-family: var(--mono); font-size: 8px; letter-spacing: .24em;
+    text-transform: uppercase; color: var(--hush-soft); margin: 0 0 4px;
+  }
+  .titleblock dd { margin: 0; font-family: var(--mono); font-size: 11px; letter-spacing: .06em; color: var(--ink); }
+
+  /* ---------- VELLUM PLATE ---------- */
+  .blueprint {
+    background-color: var(--paper-warm);
+    background-image:
+      linear-gradient(to right, rgba(47,90,120,.16) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(47,90,120,.16) 1px, transparent 1px),
+      linear-gradient(to right, rgba(47,90,120,.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(47,90,120,.06) 1px, transparent 1px);
+    background-size: 160px 160px, 160px 160px, 32px 32px, 32px 32px;
+    border-top: 1px solid var(--rule-strong);
+    border-bottom: 1px solid var(--rule-strong);
+    margin: clamp(28px, 4vh, 44px) calc(50% - 50vw);
+    width: 100vw;
+    padding: clamp(28px, 4.5vh, 48px) clamp(22px, 4vw, 36px);
+  }
+  .blueprint > * { max-width: 720px; margin-left: auto; margin-right: auto; }
+  .blueprint .plate-label {
+    font-family: var(--mono); font-size: 9.5px; letter-spacing: .3em;
+    text-transform: uppercase; color: var(--draft); margin: 0 0 22px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .blueprint .plate-label::after { content: ""; flex: 1; height: 1px; background: rgba(47,90,120,.35); }
+  .blueprint .take .ph, .blueprint .strip .ph { border-color: var(--rule-strong); background: var(--paper); }
+
+  /* ---------- STACK DIAGRAM ---------- */
+  .stack { margin: clamp(32px, 4.5vh, 48px) 0; }
+  .stack svg { display: block; width: 100%; height: auto; }
+  .stack .s-wall { fill: none; stroke: var(--ink); stroke-width: 2; }
+  .stack .s-thin { fill: none; stroke: var(--draft); stroke-width: 1; }
+  .stack .s-dim { fill: none; stroke: var(--draft); stroke-width: 1; }
+  .stack .s-hatch { fill: url(#hatch); stroke: none; }
+  .stack .s-grade { stroke: var(--rule-strong); stroke-width: 1; stroke-dasharray: 6 4; }
+  .stack text { font-family: var(--mono); fill: var(--hush); }
+  .stack .t-room { font-size: 11px; letter-spacing: .2em; fill: var(--ink); }
+  .stack .t-dim { font-size: 9.5px; letter-spacing: .14em; fill: var(--draft); }
+  .stack .t-note { font-size: 9px; letter-spacing: .16em; fill: var(--hush-soft); }
+  .stack .t-press { fill: var(--press); }
+  .stack .t-mark {
+    font-size: 13px;
+    letter-spacing: .34em;
+    fill: var(--draft);
+    opacity: .85;
+    font-weight: 500;
+  }
+  .stack figcaption {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: .22em;
+    text-transform: uppercase; color: var(--hush);
+    margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--rule);
+  }
+
+  /* ---------- TIME-LAPSE: scroll-driven feature ---------- */
+  .tlx {
+    position: relative;
+    margin: clamp(30px, 5vh, 54px) calc(50% - 50vw) clamp(34px, 6vh, 64px);
+    width: 100vw;
+    background-color: var(--paper-warm);
+    background-image:
+      linear-gradient(to right, rgba(47,90,120,.15) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(47,90,120,.15) 1px, transparent 1px),
+      linear-gradient(to right, rgba(47,90,120,.055) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(47,90,120,.055) 1px, transparent 1px);
+    background-size: 160px 160px, 160px 160px, 32px 32px, 32px 32px;
+    border-top: 1px solid var(--rule-strong);
+    border-bottom: 1px solid var(--rule-strong);
+  }
+  .tlx-track { position: relative; }
+  .tlx-sticky {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+    display: flex;
+    align-items: center;
+    padding: clamp(14px, 2.4vh, 30px) clamp(16px, 3.5vw, 40px);
+  }
+  .tlx-inner {
+    width: 100%;
+    max-width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(10px, 1.6vh, 18px);
+  }
+
+  .tlx-head { flex: 0 0 auto; margin: 0; }
+  .tlx-eyebrow {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: .32em;
+    text-transform: uppercase;
+    color: var(--draft);
+    margin: 0 0 8px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .tlx-eyebrow::after { content: ""; flex: 1; height: 1px; background: rgba(47,90,120,.3); }
+  .tlx-title {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(26px, 3.6vw, 46px);
+    line-height: 1.04;
+    color: var(--ink);
+    margin: 0 0 6px;
+    letter-spacing: -.01em;
+  }
+  .tlx-stand {
+    font-family: var(--serif);
+    margin-top: 6px;
+    font-size: clamp(15px, 1.35vw, 18px);
+    line-height: 1.45;
+    color: var(--hush);
+    margin: 0;
+    max-width: 56ch;
+  }
+
+  .tlx-stage {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
+    max-width: calc(200svh);
+    margin: 0 auto;
+    overflow: hidden;
+    background: var(--paper);
+    border: 1px solid var(--rule-strong);
+  }
+  .tlx-frame {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    will-change: opacity;
+  }
+  .tlx-stage > picture { display: contents; }
+  .tlx-stage > picture:first-of-type > .tlx-frame,
+  .tlx-stage > .tlx-frame:first-of-type { opacity: 1; }
+  .tlx-hud {
+    position: absolute; left: 12px; top: 12px; z-index: 3;
+    display: flex;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+  .tlx-hud .n { background: var(--draft); color: var(--paper); padding: 6px 9px 5px; }
+  .tlx-hud .l { background: rgba(243,240,232,.94); color: var(--ink); padding: 6px 11px 5px; }
+  .tlx-cue {
+    position: absolute; right: 12px; bottom: 12px; z-index: 3;
+    font-family: var(--mono); font-size: 9px; letter-spacing: .24em; text-transform: uppercase;
+    color: var(--ink); background: rgba(243,240,232,.9); padding: 5px 9px 4px;
+    transition: opacity .4s ease;
+  }
+
+  .tlx-rail {
+    position: relative;
+    flex: 0 0 auto;
+    margin-top: 0;
+    padding-top: 13px;
+    border-top: 1px solid var(--rule-strong);
+    display: flex;
+    gap: 8px;
+  }
+  .tlx-prog {
+    position: absolute; top: -1px; left: 0; right: 0;
+    height: 2px; background: var(--draft);
+    transform-origin: left center;
+    transform: scaleX(var(--p, 0));
+  }
+  .tlx-stop {
+    flex: 1 1 0; min-width: 0;
+    appearance: none; background: none; border: 0;
+    margin-top: -15px; padding: 15px 0 0;
+    text-align: left; cursor: pointer;
+    font-family: var(--mono); color: var(--hush-soft);
+    transition: color .3s ease;
+  }
+  .tlx-stop::before {
+    content: ""; display: block; width: 1px; height: 8px;
+    background: var(--rule-strong); margin-bottom: 8px;
+    transition: height .3s ease, background .3s ease, margin-top .3s ease;
+  }
+  .tlx-stop .s-n { display: block; font-size: clamp(15px, 1.7vw, 22px); letter-spacing: .02em; line-height: 1; margin-bottom: 6px; }
+  .tlx-stop .s-l { display: block; font-size: 9px; letter-spacing: .2em; text-transform: uppercase; line-height: 1.4; }
+  .tlx-stop[aria-current="true"] { color: var(--ink); }
+  .tlx-stop[aria-current="true"]::before { background: var(--draft); height: 14px; margin-top: -6px; }
+  .tlx-stop:last-child[aria-current="true"] { color: var(--press); }
+  .tlx-stop:last-child[aria-current="true"]::before { background: var(--press); }
+  .tlx-stop:hover { color: var(--ink-soft); }
+
+  @media (max-width: 620px) {
+    .tlx-stop .s-l { font-size: 8px; letter-spacing: .1em; }
+    .tlx-cue { display: none; }
+  }
+  @media (max-height: 680px) {
+    .tlx-stand { display: none; }
+    .tlx-title { font-size: clamp(22px, 3vw, 30px); }
+  }
+  /* Mobile: the pinned scroll-scrub is unreliable on phones (address-bar
+     resize fights sticky). Fall back to a static contact sheet. */
+  @media (max-width: 760px) {
+    .tlx-track { height: auto !important; }
+    .tlx-sticky { position: static; height: auto; min-height: 0; padding: 22px 16px 26px; }
+    .tlx-inner { height: auto; display: block; }
+    /* Must NOT be display:contents here. That promotes *both* children of each
+       <picture> to grid items, and <source> computes to display:block — so a
+       <source> claimed column 1 of every row and shoved all four photos into
+       column 2, leaving the sheet off-centre with a dead left half. */
+    .tlx-stage > picture { display: block; }
+    .tlx-stage {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5px;
+      aspect-ratio: auto; height: auto; flex: none; margin-top: 16px;
+      background: none; border: 0; overflow: visible;
+    }
+    .tlx-frame {
+      position: static; inset: auto; display: block;
+      /* 2:1 is the native frame. The old 3/2 cover-cropped ~25% of the width,
+         which cut the old kitchen out of the left edge of shot 01. */
+      width: 100%; height: auto; aspect-ratio: 2 / 1;
+      opacity: 1 !important; object-fit: cover;
+      border: 1px solid var(--rule-strong);
+    }
+    .tlx-hud, .tlx-cue, .tlx-prog { display: none; }
+    .tlx-rail { margin-top: 10px; border: 0; padding: 0; }
+    .tlx-stop { pointer-events: none; }
+    .tlx-stop .s-l { font-size: 8.5px; }
+  }
+  /* Phones: one full-width column. Two-up leaves each 2:1 frame ~169px wide —
+     too small to read the change the sequence exists to show. */
+  @media (max-width: 560px) {
+    .tlx-stage { grid-template-columns: 1fr; gap: 7px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tlx-track { height: auto !important; }
+    .tlx-sticky { position: static; height: auto; }
+    .tlx-inner { height: auto; }
+    .tlx-stage { flex: 0 0 auto; aspect-ratio: 2 / 1; }
+    .tlx-cue { display: none; }
+  }
+
+  /* ---------- MOMENT ---------- */
+  .moment {
+    position: relative;
+    margin: clamp(34px, 5vh, 52px) 0 0;
+    background: var(--paper-warm);
+    overflow: hidden;
+    border: 1px solid var(--rule-strong);
+  }
+  .moment .ph { border: 0; background: var(--paper-warm); }
+  .moment-hud {
+    position: absolute;
+    top: 10px; left: 10px; right: 10px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    color: var(--draft);
+  }
+  .moment-rec {
+    width: 7px; height: 7px;
+    background: var(--press);
+    border-radius: 50%;
+    display: inline-block;
+    animation: moment-blink 1.4s ease-in-out infinite;
+  }
+  .moment-tag {
+    margin-left: auto;
+    color: var(--paper);
+    background: var(--draft);
+    padding: 4px 8px;
+  }
+  @keyframes moment-blink { 0%, 100% { opacity: 1; } 50% { opacity: .22; } }
+  .moment-cap {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 17px;
+    color: var(--hush);
+    margin: 12px 0 0;
+  }
+  .moment-script {
+    margin: 14px 0 0;
+    padding: 16px 18px;
+    border-left: 2px solid var(--rule-strong);
+    font-family: var(--mono);
+    font-size: 11.5px;
+    line-height: 1.9;
+    letter-spacing: .04em;
+    color: var(--hush);
+  }
+  .moment-script b { color: var(--ink); font-weight: 500; letter-spacing: .14em; }
+  .moment-script b.s { color: var(--steph); }
+
+  /* ---------- PULL QUOTES ---------- */
+  .pull {
+    margin: clamp(40px, 6vh, 64px) 0;
+    padding: clamp(24px, 4vh, 36px) 0 clamp(24px, 4vh, 36px) clamp(20px, 3vw, 36px);
+    border-left: 3px solid var(--draft);
+    position: relative;
+  }
+  .pull p {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(24px, 3.2vw, 36px);
+    line-height: 1.22;
+    color: var(--ink);
+    margin: 0;
+    max-width: 22ch;
+    text-wrap: balance;
+  }
+  .pull .attribution {
+    margin-top: 18px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-style: normal;
+    letter-spacing: .26em;
+    text-transform: uppercase;
+    color: var(--hush);
+  }
+  .pull.pull-center {
+    padding: clamp(28px, 4.5vh, 44px) 0;
+    border-left: none;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    text-align: center;
+  }
+  .pull.pull-center p { max-width: 24ch; margin: 0 auto; }
+  .pull.pull-center .attribution { margin-top: 20px; }
+  .pull.pull-steph {
+    border-left-color: var(--steph);
+    background: var(--steph-soft);
+    padding-right: clamp(20px, 3vw, 36px);
+    transform: rotate(-0.6deg);
+  }
+  .pull.pull-steph p {
+    font-family: "Caveat", "Marker Felt", cursive;
+    font-style: normal;
+    color: var(--steph);
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1.1;
+  }
+  .pull.pull-steph .attribution { color: var(--steph); opacity: .8; }
+
+  /* ---------- hidden-detail subscribe popup ---------- */
+  .hd-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(8, 7, 6, .72);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+  }
+  .hd-overlay.open { opacity: 1; visibility: visible; }
+  .hd-modal {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    max-height: 92vh;
+    overflow: hidden auto;
+    background: var(--paper);
+    color: var(--ink);
+    border: 1px solid var(--rule);
+    border-top: 3px solid var(--draft);
+    padding: 34px 30px 30px;
+    box-shadow: 0 30px 80px -24px rgba(0, 0, 0, .7);
+    transform: translateY(12px) scale(.985);
+    transition: transform .3s cubic-bezier(.2, .7, .2, 1);
+    font-family: var(--serif);
+  }
+  .hd-overlay.open .hd-modal { transform: none; }
+  .hd-kicker { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: var(--draft); margin-bottom: 14px; }
+  .hd-line { font-style: italic; font-size: 1.34rem; line-height: 1.4; margin: 0 0 14px; color: var(--ink); }
+  .hd-sub { font-family: var(--sans); font-style: normal; font-size: .82rem; line-height: 1.5; color: var(--hush); margin: 0 0 22px; }
+  .hd-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 20px 12px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--ink);
+    transition: background .25s ease, color .25s ease, transform .25s ease;
+  }
+  .hd-btn:hover { background: var(--draft); color: var(--ink); border-color: var(--draft); transform: translateY(-1px); }
+  .hd-form { display: flex; flex-direction: column; gap: 10px; margin-top: 2px; }
+  .hd-input {
+    width: 100%;
+    padding: 13px 14px;
+    font-family: var(--sans);
+    font-size: 16px;
+    color: var(--ink);
+    background: transparent;
+    border: 1px solid var(--rule-strong);
+    border-radius: 0;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .hd-input::placeholder { color: var(--hush-soft); }
+  .hd-input:focus { outline: none; border-color: var(--draft); box-shadow: 0 0 0 2px rgba(47, 90, 120, .18); }
+  .hd-form .hd-btn { width: 100%; justify-content: center; cursor: pointer; }
+  .hd-form .hd-btn[disabled] { opacity: .55; cursor: default; }
+  .hd-msg { margin: 14px 0 0; font-family: var(--sans); font-size: .85rem; line-height: 1.45; }
+  .hd-msg.ok { font-family: var(--serif); font-style: italic; font-size: 1.16rem; color: var(--draft); }
+  .hd-msg.err { color: var(--press); }
+  .hd-close {
+    position: absolute;
+    top: 10px; right: 12px;
+    width: 32px; height: 32px;
+    display: grid; place-items: center;
+    background: transparent;
+    border: 0;
+    color: var(--hush);
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    transition: color .2s ease;
+  }
+  .hd-close:hover { color: var(--ink); }
+  .hd-photo {
+    position: relative;
+    margin: 6px -30px 22px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    overflow: hidden;
+  }
+  .hd-photo .ph { border: 0; }
+  .hd-trigger-wrap { margin: 4px 0 6px; text-align: center; }
+  .hd-trigger {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--draft);
+    text-decoration: none;
+    border-bottom: 1px solid var(--draft-soft);
+    padding-bottom: 3px;
+    cursor: pointer;
+    transition: border-color .2s ease;
+  }
+  .hd-trigger:hover { border-color: var(--draft); }
+  @media (max-width: 460px) {
+    .hd-overlay { padding: 16px; }
+    .hd-modal { padding: 30px 22px 26px; min-width: 0; max-width: 100%; }
+    .hd-line { font-size: 1.16rem; }
+    .hd-photo { margin-left: -22px; margin-right: -22px; }
+  }
+
+  /* ---------- CASHFLOW HOOK ---------- */
+  .hook {
+    margin: clamp(34px, 5vh, 52px) 0;
+    padding: clamp(24px, 3.4vh, 32px) 0;
+    border-top: 1px solid var(--rule-strong);
+    border-bottom: 1px solid var(--rule-strong);
+    text-align: center;
+  }
+  .hook .hook-lead {
+    font-family: var(--serif);
+    font-size: clamp(18px, 1.8vw, 22px);
+    line-height: 1.4;
+    color: var(--ink);
+    margin: 0 auto 16px;
+    max-width: 36ch;
+    text-wrap: pretty;
+  }
+  .hook .hook-num {
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    font-size: clamp(20px, 2.6vw, 30px);
+    font-weight: 500;
+    color: var(--ink);
+    margin: 0 0 10px;
+    line-height: 1;
+  }
+  .hook .hook-num .v {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: .62em;
+    color: var(--hush);
+    padding: 0 .35em;
+  }
+  .hook .hook-note {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--hush);
+    margin: 0;
+  }
+
+  /* ---------- THE MODEL ---------- */
+  .model {
+    margin: 0 0 clamp(34px, 5vh, 52px);
+    padding: 0 0 clamp(26px, 3.5vh, 34px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .model .model-eyebrow {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--draft);
+    margin: 0 0 16px;
+  }
+  .model .model-line {
+    font-family: var(--serif);
+    font-size: clamp(21px, 2.3vw, 27px);
+    line-height: 1.38;
+    color: var(--ink);
+    margin: 0 0 14px;
+    text-wrap: pretty;
+  }
+  .model .model-note {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--hush);
+    margin: 0;
+  }
+
+  /* ---------- CTA BLOCK ---------- */
+  .cta-block {
+    background: var(--paper-warm);
+    color: var(--ink);
+    border-top: 1px solid var(--rule-strong);
+    border-bottom: 1px solid var(--rule-strong);
+    padding: clamp(48px, 7vh, 88px) clamp(24px, 4vw, 48px);
+    text-align: center;
+    margin-top: clamp(56px, 8vh, 96px);
+    position: relative;
+    overflow: hidden;
+    background-image:
+      linear-gradient(to right, rgba(47,90,120,.13) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(47,90,120,.13) 1px, transparent 1px),
+      linear-gradient(to right, rgba(47,90,120,.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(47,90,120,.05) 1px, transparent 1px);
+    background-size: 160px 160px, 160px 160px, 32px 32px, 32px 32px;
+  }
+  .cta-block > * { position: relative; z-index: 1; }
+  .cta-block .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: var(--draft);
+    margin-bottom: 18px;
+  }
+  .cta-block h3 {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(32px, 4.5vw, 56px);
+    line-height: 1.02;
+    margin: 0 0 16px;
+    letter-spacing: -.01em;
+  }
+  .cta-block .cta-line {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(17px, 1.4vw, 20px);
+    color: var(--hush);
+    margin: 0 auto 32px;
+    max-width: 42ch;
+    line-height: 1.5;
+  }
+  .cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: var(--draft);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background .2s ease, color .2s ease, transform .2s ease;
+  }
+  .cta-link:hover { background: var(--ink); color: var(--paper); transform: translateY(-1px); }
+  .cta-link .arrow { font-family: var(--serif); font-size: 16px; }
+  .cta-block .cta-phone {
+    margin: 20px 0 0;
+    font-family: var(--mono);
+    font-size: clamp(16px, 1.8vw, 21px);
+    letter-spacing: .14em;
+    font-variant-numeric: tabular-nums;
+  }
+  .cta-block .cta-phone a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule-strong); padding-bottom: 3px; }
+  .cta-block .cta-phone a:hover { border-bottom-color: var(--draft); }
+  .cta-block .cta-alt {
+    margin: 14px 0 0;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--hush-soft);
+  }
+
+
+  /* ---------- NEXT ISSUE ---------- */
+  .next-issue {
+    display: block;
+    max-width: 720px;
+    margin: clamp(48px, 7vh, 76px) auto 0;
+    text-decoration: none;
+    color: inherit;
+    padding: clamp(24px, 3.4vh, 32px) clamp(22px, 3vw, 30px);
+    transition: transform .3s cubic-bezier(.2,.6,.2,1);
+  }
+  .next-issue:hover { transform: translateY(-2px); }
+  .next-issue .eyebrow {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--draft);
+    margin: 0 0 12px;
+  }
+  .next-issue h3 {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(26px, 3.4vw, 40px);
+    line-height: 1.05;
+    margin: 0 0 10px;
+    color: var(--ink);
+  }
+  .next-issue .go {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    color: var(--hush);
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer.foot {
+    padding: clamp(32px, 5vh, 48px) clamp(20px, 4vw, 32px);
+    margin-top: clamp(40px, 6vh, 64px);
+    text-align: center;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--hush);
+    border-top: 1px solid var(--rule);
+  }
+  footer.foot a { color: var(--ink); text-decoration: none; transition: color .2s ease; }
+  footer.foot a:hover { color: var(--draft); }
+  footer.foot .row { margin: 6px 0; }
+  footer.foot .sig {
+    font-family: "Caveat", "Marker Felt", cursive;
+    font-size: 26px;
+    letter-spacing: .01em;
+    text-transform: none;
+    color: var(--steph);
+    margin-top: 18px;
+  }
+  footer.foot .foot-portrait {
+    width: 132px;
+    margin: 0 auto 22px;
+  }
+  footer.foot .loc {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: .005em;
+    text-transform: none;
+    color: var(--hush);
+    margin-top: 8px;
+  }
+
+  /* ---------- fade-in on scroll ---------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .8s cubic-bezier(.2,.7,.3,1), transform .9s cubic-bezier(.2,.7,.3,1);
+    will-change: opacity, transform;
+  }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* Light only — this issue is drafting paper, not a blueprint reversal. */
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 600px) {
+    .hero h1 { max-width: 14ch; }
+    .pull p { font-size: clamp(22px, 5vw, 28px); }
+    .pull.pull-center { padding: 28px 0; }
+    .pull.pull-center p { max-width: 100%; }
+    .byline { font-size: 10.5px; letter-spacing: .18em; flex-direction: column; gap: 5px; }
+    .byline .sep { display: none; }
+    .prose h2 { flex-wrap: wrap; }
+    .prose h2 .h2-title { font-size: 19px; }
+  }
+
+  /* ---------- REDUCED MOTION ---------- */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+    .reveal { opacity: 1; transform: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="hero">
+    <!-- swap to <video class="hero-bg" muted autoplay loop playsinline poster="../media/notes/002-western/hero-poster.jpg"> once hero-loop.mp4 is encoded -->
+    <picture><source srcset="../media/notes/002-western/hero.webp" type="image/webp"><img class="hero-bg" fetchpriority="high" decoding="async" src="../media/notes/002-western/hero.jpg" alt="The finished living and dining rooms at the Western Ave house, Morristown, New Jersey." width="2400" height="1800" /></picture>
+    <nav class="topnav">
+      <a href="/notes">← Notes</a>
+      <a href="/">tone.dad</a>
+    </nav>
+    <div class="hero-overlay">
+      <p class="hero-kicker">Notes from the Edit Suite · No. 002</p>
+      <h1>She saw a studio.<br>I saw a basement.</h1>
+      <p class="hero-subtitle">She sees what a room could be.<br>I price it.</p>
+    </div>
+  </header>
+
+  <div class="byline">
+    <span class="author">Justin Herrera</span>
+    <span class="sep">·</span>
+    <span>with Steph Herrera</span>
+    <span class="sep">·</span>
+    <span>Western Ave, Morristown NJ</span>
+    <span class="sep">·</span>
+    <span>Sept 2018 – Mar 2019</span>
+    <span class="sep">·</span>
+    <span class="read-time">4:30 read</span>
+  </div>
+
+  <p class="standfirst">
+    We’re Justin and Steph Herrera. We run <span class="brand">Tonehomes</span> in Morris County, New Jersey.
+    <em>Before we ever advised anybody on a house, we did this one to ourselves.</em>
+  </p>
+
+  <article class="prose">
+
+    <!-- ============ THE MODEL ============ -->
+    <section class="model reveal" aria-label="The model in one line">
+      <p class="model-eyebrow">What we did, in one line</p>
+      <p class="model-line">Bought a single family nobody wanted. Put the money into the part of it nobody wanted, the lower level, and turned one house into two units. A tenant has covered most of the mortgage every month since March 2019.</p>
+      <p class="model-note">That’s the whole trick. The rest of this is how long it took and what it cost.</p>
+    </section>
+
+    <!-- ============ TIME-LAPSE ============ -->
+    <section class="tlx" id="tl" aria-label="The main floor in four stages, from demolition to lived in.">
+      <div class="tlx-track" id="tlxTrack">
+        <div class="tlx-sticky">
+          <div class="tlx-inner">
+            <div class="tlx-head">
+              <p class="tlx-eyebrow">Main floor · one camera position</p>
+              <h2 class="tlx-title">The same shot, four times.</h2>
+              <p class="tlx-stand">Shooting is the one part I never second-guessed. Same spot, same frame, every time I came by. I think I did it eight times. I can only find four.</p>
+            </div>
+            <div class="tlx-stage" id="tlxStage" tabindex="0" role="group">
+              <picture><source srcset="../media/notes/002-western/tl-1-demo.webp" type="image/webp"><img class="tlx-frame" src="../media/notes/002-western/tl-1-demo.jpg" alt="The main floor during demolition: ladder, exposed beam, the old kitchen still standing at the left." width="2200" height="1100"></picture>
+              <picture><source srcset="../media/notes/002-western/tl-2-stripped.webp" type="image/webp"><img class="tlx-frame" loading="lazy" src="../media/notes/002-western/tl-2-stripped.jpg" alt="The same view stripped and patched: bare subfloor, tile underlayment, empty rooms." width="2200" height="1100"></picture>
+              <picture><source srcset="../media/notes/002-western/tl-3-cabinets.webp" type="image/webp"><img class="tlx-frame" loading="lazy" src="../media/notes/002-western/tl-3-cabinets.jpg" alt="The same view with cabinets installed, the island framed in plywood, floors refinished dark." width="2200" height="1100"></picture>
+              <picture><source srcset="../media/notes/002-western/tl-4-home.webp" type="image/webp"><img class="tlx-frame" loading="lazy" src="../media/notes/002-western/tl-4-home.jpg" alt="The same view finished and furnished, with Steph working at the peninsula." width="2200" height="1100"></picture>
+              <div class="tlx-hud" aria-hidden="true"><span class="n" id="tlxN">01</span><span class="l" id="tlxL">Demo</span></div>
+              <span class="tlx-cue" id="tlxCue" aria-hidden="true">Keep scrolling</span>
+            </div>
+            <div class="tlx-rail" role="group" aria-label="Jump to a stage">
+              <span class="tlx-prog" id="tlxProg" aria-hidden="true"></span>
+              <button type="button" class="tlx-stop" data-i="0" aria-current="true"><span class="s-n">01</span><span class="s-l">Demo</span></button>
+              <button type="button" class="tlx-stop" data-i="1"><span class="s-n">02</span><span class="s-l">Stripped</span></button>
+              <button type="button" class="tlx-stop" data-i="2"><span class="s-n">03</span><span class="s-l">Cabinets</span></button>
+              <button type="button" class="tlx-stop" data-i="3"><span class="s-n">04</span><span class="s-l">Home</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="hook reveal">
+      <p class="hook-lead">The room we almost didn’t build covers nearly all of the mortgage on its own.</p>
+      <p class="hook-num">$1,850 <span class="v">against</span> $1,950</p>
+      <p class="hook-note">Studio rent · mortgage</p>
+    </aside>
+
+    <!-- ============ § 1 ============ -->
+    <section>
+      <h2><span class="callout">01<small>SEC</small></span><span class="lead"></span> <span class="h2-title">The 500 square feet</span></h2>
+      <p>Before any of it there was an apartment in Randolph. Five hundred square feet. We were in it three years.</p>
+      <p>We ran an envelope system. Actual cash, split by category, and when an envelope was empty we were done until the next month. It’s a dumb way to run a household and it’s the only reason any of the rest of this happened. Every dollar of debt got paid off with wedding money. I shot and cut weddings, and it went at the debt instead of at a lifestyle.</p>
+
+      <figure class="inset reveal">
+        <span class="ph ph-3x2" data-ph="randolph-apartment.jpg">
+          <picture><source srcset="../media/randolph-apartment.webp" type="image/webp"><img src="../media/randolph-apartment.jpg" alt="The living room of the 500 square foot apartment in Randolph, New Jersey." loading="lazy" width="2592" height="1936"></picture>
+        </span>
+        <figcaption>Randolph · 500 sq ft · three years</figcaption>
+      </figure>
+
+      <p>People hear “we bought a house” and picture a decision. It was three years of saying no to small things, and then one day there was enough for a down payment.</p>
+      <p>It didn’t buy this house. In July 2017 it bought a duplex on Stiles Ave in Morris Plains. Two doors, one mortgage, and the first time somebody else’s rent showed up in our account. Western Ave came fifteen months later, and only because the first one was already working. That’s the part people skip.</p>
+    </section>
+
+    <!-- ============ § 2 ============ -->
+    <section>
+      <h2><span class="callout">02<small>SEC</small></span><span class="lead"></span> <span class="h2-title">The listing that sat</span></h2>
+      <p>Steph found it. A single family on Western Ave in Morristown, built in 1928. It’s two units now. That part was ours.</p>
+      <p>It had failed to sell once already. Listed July 2016 at $425,000, under contract that August, pulled by the end of the month. Whatever that deal was, it fell apart. It came back in July 2018 asking $369,000 — fifty-six thousand less than it wanted two years before. That’s the whole reason we could afford it.</p>
+      <p>We walked it on 12 September. Thirty seconds of that tape is below. You can hear the agent telling me what to ignore.</p>
+
+      <figure class="inset reveal">
+        <span class="ph ph-16x9" data-ph="walkthrough-2018.mp4">
+          <video muted loop playsinline preload="none"
+                 poster="../media/notes/002-western/walkthrough-2018.jpg"
+                 aria-label="The walkthrough at the Western Ave house, 12 September 2018.">
+            <source src="../media/notes/002-western/walkthrough-2018.mp4" type="video/mp4">
+          </video>
+        </span>
+        <figcaption>The walkthrough · 30 sec cut · 12 Sept 2018</figcaption>
+      </figure>
+
+      <p>At 03:03 he says: <em>“Okay, go ahead, you can probably kill that dishwasher.”</em> That was the energy of the whole showing. We closed three weeks later, 2 October 2018, at $354,000.</p>
+
+      <aside class="steph">
+        <span class="steph-label">Steph</span>
+        “How do I do it again?”
+      </aside>
+
+      <p>Everyone else saw a house that needed everything. Steph saw rooms — which walls were doing nothing, where the light would land once the terracotta was gone, and a basement that didn’t have to be a basement. She sees what a room could be. I price it.</p>
+
+      <div class="receipts-pair" style="margin-bottom:20px">
+        <figure class="receipt">
+          <span class="ph ph-3x2" data-ph="before-living-pano.jpg">
+            <picture><source srcset="../media/notes/002-western/before-living-pano.webp" type="image/webp"><img src="../media/notes/002-western/before-living-pano.jpg" alt="The front rooms as bought: orange walls, French doors, somebody else's furniture." loading="lazy" width="2000" height="1500"></picture>
+          </span>
+          <figcaption>Front rooms, as bought</figcaption>
+        </figure>
+        <figure class="receipt">
+          <span class="ph ph-3x2" data-ph="before-kitchen.jpg">
+            <picture><source srcset="../media/notes/002-western/before-kitchen.webp" type="image/webp"><img src="../media/notes/002-western/before-kitchen.jpg" alt="The kitchen as bought: dark oak cabinets, butcher block, a green sink and a French door to the landing." loading="lazy" width="2000" height="1500"></picture>
+          </span>
+          <figcaption>Kitchen, as bought</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="cta-inline reveal" aria-label="Tonehomes">
+      <p class="eyebrow">Tonehomes · Morris County</p>
+      <p class="line">Standing in a house right now trying to work out whether the lower level is worth anything? Send me the listing. I’ve made this exact decision with my own money and I’ll tell you what I see.</p>
+      <a class="go" href="sms:+16099020299">Text me the listing &rarr;</a>
+      <p class="sub"><a href="tel:+16099020299">609 · 902 · 0299</a> · my actual phone</p>
+    </section>
+
+    <!-- ============ SCRUBBER ============ -->
+    <figure class="scrubber reveal">
+      <div class="scrub-stage" id="scrubStage">
+        <div class="scrub-layer scrub-after">
+          <span class="ph" data-ph="after-dining.jpg">
+            <picture><source srcset="../media/notes/002-western/after-dining.webp" type="image/webp"><img src="../media/notes/002-western/after-dining.jpg" alt="The living and dining rooms after renovation, with the French doors gone and the opening widened." loading="lazy" width="2000" height="1500"></picture>
+          </span>
+        </div>
+        <div class="scrub-layer scrub-before">
+          <span class="ph" data-ph="before-dining.jpg">
+            <picture><source srcset="../media/notes/002-western/before-dining.webp" type="image/webp"><img src="../media/notes/002-western/before-dining.jpg" alt="The same rooms as bought, with salmon walls and the original French doors." loading="lazy" width="2000" height="1500"></picture>
+          </span>
+        </div>
+        <span class="scrub-chip is-before">Before</span>
+        <span class="scrub-chip is-after">After</span>
+        <button type="button" class="scrub-handle" id="scrubHandle"
+                role="slider" aria-label="Compare the dining room before and after"
+                aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="50 percent before">
+          <span class="scrub-grip" aria-hidden="true">◂▸</span>
+        </button>
+      </div>
+      <figcaption>Living into dining · before and after · drag or use ← →</figcaption>
+    </figure>
+
+
+    <div class="dimline reveal" aria-hidden="true">
+      <span class="leg leg-l"></span><span>Sept – Oct 2018</span><span class="leg leg-r"></span>
+    </div>
+
+    <!-- ============ § 3 ============ -->
+    <section>
+      <h2><span class="callout">03<small>SEC</small></span><span class="lead"></span> <span class="h2-title">Four sheets of paper</span></h2>
+      <p>We taped four plans to the wall. Demo. Construction. Kitchen. Finish. One sheet each, in that order, and nothing started until the sheet before it was done being argued about.</p>
+      <p>We couldn’t afford to make mistakes in drywall, so we made them on paper. Moved a wall four times on a printout. Put the kitchen sink in three different places. None of it cost anything.</p>
+      <p>They’re not architect’s drawings — printouts in sheet protectors, marked up in pen. Red for what comes out, blue for what stays. Steph drew them. She’s an interior designer by trade, years of it at Gensler in Morristown, drawing rooms for other people. This one was ours.</p>
+
+      <!-- ============ RECEIPTS ============ -->
+      <aside class="receipts reveal" aria-label="Proof">
+        <p class="receipts-lead">Everyone’s origin story sounds better than it was. So, the paperwork.</p>
+
+        <figure class="receipt">
+          <span class="ph" style="aspect-ratio:2.58/1" data-ph="plans-wall.jpg">
+            <picture><source srcset="../media/notes/002-western/plans-wall.webp" type="image/webp"><img src="../media/notes/002-western/plans-wall.jpg" alt="Four of Steph's hand-annotated plans in sheet protectors taped to the wall: demo plan, construction plan, kitchen, finish plan." loading="lazy" width="2200" height="853"></picture>
+          </span>
+          <figcaption>Demo · Construction · Kitchen · Finish. Steph’s drawings, taped up in that order.</figcaption>
+        </figure>
+
+      </aside>
+
+      <figure class="inset reveal">
+        <span class="ph ph-3x2" data-ph="demo-studs.jpg">
+          <picture><source srcset="../media/notes/002-western/demo-studs.webp" type="image/webp"><img src="../media/notes/002-western/demo-studs.jpg" alt="The main floor mid-demolition: the load-bearing wall opened up to a raw beam, plaster off, the old stove still standing." loading="lazy" width="2000" height="1500"></picture>
+        </span>
+        <figcaption>The wall comes out · the beam that replaced it</figcaption>
+      </figure>
+
+      <p>Steph ran baseboard. On 21 October she learned the miter saw, which mostly meant learning that 45 and 22 are the only two numbers that matter, and that you mark the other side before you cut.</p>
+
+      <aside class="steph">“Oh, 22. Okay, I got it.”</aside>
+
+      <figure class="inset reveal snd" style="max-width:420px;margin-left:auto;margin-right:auto">
+        <span class="take-cue" aria-hidden="true"><span class="dot"></span><span class="lbl">Tap for sound</span></span>
+        <span class="ph" style="aspect-ratio:406/720" data-ph="steph-baseboard.mp4">
+          <video muted loop playsinline preload="none"
+                 poster="../media/notes/002-western/steph-baseboard.jpg"
+                 aria-label="Steph cutting baseboard on the miter saw, 21 October 2018.">
+            <source src="../media/notes/002-western/steph-baseboard.mp4" type="video/mp4">
+          </video>
+        </span>
+        <figcaption>Steph and the miter saw · 21 Oct 2018</figcaption>
+      </figure>
+
+      <aside class="steph">“This might be wrong. Wait. Is this easier?”</aside>
+
+      <p>It was easier. It usually is, the way she does it.</p>
+    </section>
+
+
+
+    <!-- ============ § 4 ============ -->
+    <section>
+      <h2><span class="callout">04<small>SEC</small></span><span class="lead"></span> <span class="h2-title">The lower level</span></h2>
+      <p>Two months, three takes. I didn’t plan on documenting it. I kept opening the camera because the room kept not looking like it did the last time.</p>
+
+      <!-- MOMENT: the light switch. Re-add <track kind="captions" src="…​.vtt" srclang="en" label="English" default> inside each <video> once the .vtt files are authored. -->
+      <figure class="moment reveal" aria-label="The light switch clip, the Western Ave lower level.">
+        <span class="take-cue" aria-hidden="true"><span class="dot"></span><span class="lbl">Tap for sound</span></span>
+        <span class="ph ph-1x1" data-ph="lightswitch.mp4">
+          <video muted loop playsinline preload="none"
+                 poster="../media/notes/002-western/lightswitch.jpg"
+                 aria-label="Justin and Steph discussing the light switch location in the basement studio.">
+            <source src="../media/notes/002-western/lightswitch.mp4" type="video/mp4">
+          </video>
+        </span>
+        <div class="moment-hud">
+          <span class="moment-rec" aria-hidden="true"></span>
+          <span>MOMENT 001</span>
+          <span class="moment-tag">Western Ave · Lower level</span>
+        </div>
+      </figure>
+      <div class="moment-script">
+        <b>JUSTIN:</b> So we’re here. Studio apartment. We’re in the middle of renovations.<br>
+        <b class="s">STEPH:</b> I love the light switch location.<br>
+        <b>JUSTIN:</b> I know, I just, I felt like, let’s switch it up totally and just kind of let it hang here.
+      </div>
+      <p class="moment-cap">Steph is behind the camera. She usually is.</p>
+
+      <div class="blueprint">
+      <p class="plate-label">Lower level · three takes · Jan–Mar 2019</p>
+      <div class="takes-bar">
+        <button type="button" class="takes-play" id="takesPlay" aria-pressed="false">Play all with sound</button>
+        <span>Or tap any take. His voice is on the tape.</span>
+      </div>
+      <div class="takes reveal">
+        <figure class="take">
+          <span class="hud">1 Jan 2019</span>
+          <span class="take-cue" aria-hidden="true"><span class="dot"></span><span class="lbl">Tap for sound</span></span>
+          <span class="ph ph-4x5" data-ph="basement-jan01.mp4">
+            <video muted loop playsinline preload="none"
+                   poster="../media/notes/002-western/basement-jan01.jpg"
+                   aria-label="The unfinished basement on New Year's Day 2019.">
+              <source src="../media/notes/002-western/basement-jan01.mp4" type="video/mp4">
+            </video>
+          </span>
+          <figcaption>“Very unfinished down here, but there’s a lot of potential down here.”
+            <span class="src">New Year’s Day · with Bowie · IMG_4301</span></figcaption>
+        </figure>
+
+        <figure class="take is-wide">
+          <span class="hud">1 Feb 2019</span>
+          <span class="take-cue" aria-hidden="true"><span class="dot"></span><span class="lbl">Tap for sound</span></span>
+          <span class="ph ph-4x5" data-ph="basement-feb01.mp4">
+            <video muted loop playsinline preload="none"
+                   poster="../media/notes/002-western/basement-feb01.jpg"
+                   aria-label="Drywall going up in the studio bedroom, 1 February 2019.">
+              <source src="../media/notes/002-western/basement-feb01.mp4" type="video/mp4">
+            </video>
+          </span>
+          <figcaption>“Obviously it is unfinished right now. Dominic is working his butt off to get it finished.”
+            <span class="src">Drywall up · IMG_4482</span></figcaption>
+        </figure>
+
+        <figure class="take">
+          <span class="hud">8 Mar 2019</span>
+          <span class="take-cue" aria-hidden="true"><span class="dot"></span><span class="lbl">Tap for sound</span></span>
+          <span class="ph ph-4x5" data-ph="basement-finished.mp4">
+            <video muted loop playsinline preload="none"
+                   poster="../media/notes/002-western/basement-finished.jpg"
+                   aria-label="The finished studio apartment, 8 March 2019.">
+              <source src="../media/notes/002-western/basement-finished.mp4" type="video/mp4">
+            </video>
+          </span>
+          <figcaption>“Someone’s moving actually in tomorrow.”
+            <span class="src">The finished tour · IMG_4679</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="strip reveal" aria-label="The lower level in five frames, January to March 2019">
+        <figure class="frame"><span class="ph ph-1x1" data-ph="base-01"><picture><source srcset="../media/notes/002-western/base-01-studs.webp" type="image/webp"><img src="../media/notes/002-western/base-01-studs.jpg" alt="The lower level down to studs and joists, laundry still in place." loading="lazy" width="1400" height="775"></picture></span><figcaption>01 · studs</figcaption></figure>
+                <figure class="frame"><span class="ph ph-1x1" data-ph="base-03"><picture><source srcset="../media/notes/002-western/base-03-drywall.webp" type="image/webp"><img src="../media/notes/002-western/base-03-drywall.jpg" alt="Drywall hung and taped, recessed lights in." loading="lazy" width="2000" height="788"></picture></span><figcaption>02 · drywall</figcaption></figure>
+        <figure class="frame"><span class="ph ph-1x1" data-ph="base-04"><picture><source srcset="../media/notes/002-western/base-04-flooring.webp" type="image/webp"><img src="../media/notes/002-western/base-04-flooring.jpg" alt="Flooring going down, boxes still stacked." loading="lazy" width="1277" height="1400"></picture></span><figcaption>03 · flooring</figcaption></figure>
+        <figure class="frame"><span class="ph ph-1x1" data-ph="base-05"><picture><source srcset="../media/notes/002-western/base-05-nearly.webp" type="image/webp"><img src="../media/notes/002-western/base-05-nearly.jpg" alt="Kitchenette cabinets going in, floor down." loading="lazy" width="1400" height="1050"></picture></span><figcaption>04 · kitchenette</figcaption></figure>
+        <figure class="frame"><span class="ph ph-1x1" data-ph="base-06"><picture><source srcset="../media/notes/002-western/base-06-finished.webp" type="image/webp"><img src="../media/notes/002-western/base-06-finished.jpg" alt="The finished studio: white cabinets, black counter, laundry in the alcove." loading="lazy" width="1400" height="1050"></picture></span><figcaption>05 · finished</figcaption></figure>
+      </div>
+      </div>
+
+      <p>Between the first take and the last: Dominic, two months, and a schedule we didn’t control. On 7 January I woke up without a corporate job for the first time. That’s a different story.</p>
+
+      <blockquote class="pull pull-center">
+        <p>“Steph had the vision of actually transforming it into this beautiful studio apartment space.”</p>
+        <div class="attribution">8 March 2019 · IMG_4679 · 01:15</div>
+      </blockquote>
+
+      <p>By March it was our third rental unit. On the tape I say <em>“We’re tired. We’re ready for the renovations to be over,”</em> and thirty seconds later, <em>“It was a lot of work, but hey, we’re here.”</em> Both true.</p>
+
+
+
+    </section>
+
+
+    <div class="dimline reveal" aria-hidden="true">
+      <span class="leg leg-l"></span><span>Two months</span><span class="leg leg-r"></span>
+    </div>
+
+    <!-- ============ LEDGER ============ -->
+    <section class="ledger grid-plate reveal" aria-labelledby="ledger-h">
+      <p class="eyebrow" id="ledger-h">the Western Ave house · the sheet</p>
+      <dl>
+        <div class="row"><dt>Asking, July 2016</dt><dd>$425,000</dd></div>
+        <div class="row"><dt>Asking, July 2018</dt><dd>$369,000</dd></div>
+        <div class="row"><dt>Purchase price · 2 Oct 2018</dt><dd>$354,000</dd></div>
+        <div class="row"><dt>Renovation · upstairs</dt><dd>$30,000</dd></div>
+        <div class="row"><dt>Renovation · lower level</dt><dd>$15,000</dd></div>
+        <div class="row emph"><dt>All-in</dt><dd>$399,000</dd></div>
+        <div class="row emph"><dt>Value today</dt><dd>$600,000</dd></div>
+        <div class="row"><dt>Rent · upstairs · 2019</dt><dd>$2,650 / mo</dd></div>
+        <div class="row"><dt>Rent · upstairs · today</dt><dd>$3,000 / mo</dd></div>
+        <div class="row"><dt>Rent · studio</dt><dd>$1,850 / mo</dd></div>
+        <div class="row emph"><dt>Gross rent</dt><dd>$4,850 / mo</dd></div>
+        <div class="row"><dt>Mortgage</dt><dd>$1,950 / mo</dd></div>
+        <div class="row emph"><dt>Cashflow · today</dt><dd>$2,900 / mo</dd></div>
+      </dl>
+      <div class="foot">
+        <p>The prices and dates are public record. Value today is my own estimate, so take it for what it is. The only line on this sheet I actually run anything on is the last one.</p>
+        <p>Some of that gap is the work. Some of it is Morris County between 2018 and now. Both are true.</p>
+        <p>Rents have moved since 2019, so the cashflow line has grown with them. Upstairs has turned over five times. The studio has had the same tenant since the day it opened.</p>
+      </div>
+      <dl class="titleblock">
+        <div><dt>Project</dt><dd>Western Ave</dd></div>
+        <div><dt>Sheet</dt><dd>L-01</dd></div>
+        <div><dt>Closed</dt><dd>2 Oct 2018</dd></div>
+        <div><dt>Drawn by</dt><dd>J.H. / S.H.</dd></div>
+      </dl>
+    </section>
+
+
+    <!-- ============ § 5 ============ -->
+    <section>
+      <h2><span class="callout">05<small>SEC</small></span><span class="lead"></span> <span class="h2-title">We never slept there</span></h2>
+      <p>People assume we lived in it while we worked on it. We didn’t — we were still at Stiles Ave, driving over most nights after work. If you can avoid living in the work, avoid living in the work.</p>
+      <p>And I want to be straight about who built this, because the internet is full of people implying they swung every hammer. Dominic did it. Ninety percent of the work in these videos is his. We did demo, some painting, the quarter round, and an unreasonable number of runs to Home Depot.</p>
+      <p>Two months on a contractor’s calendar isn’t two months on yours. A 7am text that the material didn’t come in, four days where nothing happens, then a Tuesday where the whole room changes. You just keep showing up.</p>
+      <p>It was also fun, which nobody believes about a renovation. First thing where Steph made every call — layout, light, finishes, all hers.</p>
+
+    </section>
+
+    <!-- ============ § 6 ============ -->
+    <section>
+      <h2><span class="callout">06<small>SEC</small></span><span class="lead"></span> <span class="h2-title">What it actually bought us</span></h2>
+      <p>Not the house. The decision.</p>
+      <p>The studio meant a tenant covered nearly all of the mortgage from the day we finished it. That changed what a bad month could do to us, and it cost $15,000 and two months.</p>
+
+      <figure class="inset reveal">
+        <span class="ph" style="aspect-ratio:2.47/1" data-ph="after-christmas.jpg">
+          <picture><source srcset="../media/notes/002-western/after-christmas.webp" type="image/webp"><img src="../media/notes/002-western/after-christmas.jpg" alt="Christmas at the Western Ave house, with the tree up in the front room and presents under the mantel." loading="lazy" width="2200" height="889"></picture>
+        </span>
+        <figcaption>The first Christmas in it</figcaption>
+      </figure>
+
+
+      <figure class="stack reveal">
+        <svg viewBox="0 0 720 330" role="img" aria-label="Diagram: the upstairs unit rents for $3,000 a month, the basement studio for $1,850, against a $1,950 mortgage.">
+          <defs>
+            <pattern id="hatch" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+              <line x1="0" y1="0" x2="0" y2="7" stroke="currentColor" stroke-width="1" opacity=".28"/>
+            </pattern>
+          </defs>
+
+          <!-- roof -->
+          <path class="s-wall" d="M96 96 L268 30 L440 96"/>
+          <text class="t-mark" x="268" y="82" text-anchor="middle">TONEHOMES</text>
+          <!-- upstairs unit -->
+          <rect class="s-wall" x="120" y="96" width="296" height="104"/>
+          <line class="s-thin" x1="120" y1="150" x2="416" y2="150"/>
+          <rect class="s-thin" x="150" y="118" width="34" height="24"/>
+          <rect class="s-thin" x="212" y="118" width="34" height="24"/>
+          <rect class="s-thin" x="274" y="118" width="34" height="24"/>
+          <rect class="s-thin" x="336" y="118" width="34" height="24"/>
+          <text class="t-room" x="136" y="180">UPSTAIRS UNIT</text>
+
+          <!-- grade -->
+          <line class="s-grade" x1="60" y1="200" x2="470" y2="200"/>
+          <text class="t-note" x="60" y="215">GRADE</text>
+
+          <!-- basement studio, hatched = the part they built -->
+          <g color="#2f5a78"><rect class="s-hatch" x="120" y="200" width="296" height="82"/></g>
+          <rect class="s-wall" x="120" y="200" width="296" height="82"/>
+          <rect class="s-thin" x="150" y="222" width="30" height="20"/>
+          <path class="s-thin" d="M356 282 L356 240 M356 240 A26 26 0 0 1 382 266"/>
+          <text class="t-room" x="136" y="266">BASEMENT STUDIO</text>
+          <text class="t-note" x="136" y="278">BUILT 2019 · $15,000 · 2 MONTHS</text>
+
+          <!-- dimension / money column -->
+          <line class="s-dim" x1="470" y1="96" x2="470" y2="200"/>
+          <line class="s-dim" x1="464" y1="96" x2="476" y2="96"/>
+          <line class="s-dim" x1="464" y1="200" x2="476" y2="200"/>
+          <text class="t-dim" x="488" y="144">$3,000 / MO</text>
+          <text class="t-note" x="488" y="158">RENT · UPSTAIRS</text>
+
+          <line class="s-dim" x1="470" y1="200" x2="470" y2="282"/>
+          <line class="s-dim" x1="464" y1="282" x2="476" y2="282"/>
+          <text class="t-dim" x="488" y="238">$1,850 / MO</text>
+          <text class="t-note" x="488" y="252">RENT · STUDIO</text>
+
+          <line class="s-dim" x1="96" y1="96" x2="96" y2="282"/>
+          <line class="s-dim" x1="90" y1="96" x2="102" y2="96"/>
+          <line class="s-dim" x1="90" y1="282" x2="102" y2="282"/>
+          <text class="t-dim" x="10" y="180">$1,950 / MO</text>
+          <text class="t-note" x="10" y="194">MORTGAGE</text>
+
+          <line class="s-dim" x1="488" y1="298" x2="700" y2="298"/>
+          <text class="t-dim t-press" x="488" y="318">NET +$2,900 / MO</text>
+        </svg>
+        <figcaption>Schematic · not to scale · the mechanism, drawn</figcaption>
+      </figure>
+
+      <p>Here’s what I didn’t expect. Upstairs, the big unit, the real apartment with the kitchen we fought over, has had five tenants in six years. Every turnover is a vacancy and a paint job and a month of showings. It started at $2,650 and it’s $3,000 now, and getting there cost us five moves.</p>
+      <p>The studio has had one tenant. She moved in the day after we finished it and she’s still there. Never late, takes care of the place, and in six years I’ve spent maybe an afternoon on that unit.</p>
+      <p>So the cheap half of the budget, $15,000 against $30,000, the room we almost didn’t build, is the half that has given us no trouble at all. If you’re running numbers on a second unit, run them on turnover too. A small place somebody can comfortably afford keeps them longer than a nice one they’re stretching for.</p>
+
+      <p>What compounded after was not the equity. It was that we had done it once, badly, with our own money, and we knew which parts of it were theater.</p>
+
+      <blockquote class="pull pull-center">
+        <p>“It’s the hardest project we’ve taken on. It’s also the only one I’d do again tomorrow.”</p>
+        <div class="attribution">Justin · Western Ave</div>
+      </blockquote>
+
+      <figure class="inset reveal" style="max-width:520px;margin-left:auto;margin-right:auto">
+        <span class="ph ph-4x5" style="aspect-ratio:3/4" data-ph="closing-puzzle.jpg">
+          <picture><source srcset="../media/notes/002-western/closing-puzzle.webp" type="image/webp"><img src="../media/notes/002-western/closing-puzzle.jpg" alt="Steph working on a Starry Night jigsaw at the round dining table, late evening." loading="lazy" width="1200" height="1600"></picture>
+        </span>
+        <figcaption>An ordinary Thursday · 26 Sept 2019</figcaption>
+      </figure>
+    </section>
+
+
+    <div class="dimline reveal" aria-hidden="true">
+      <span class="leg leg-l"></span><span>Six years on</span><span class="leg leg-r"></span>
+    </div>
+
+    <!-- ============ § 7 ============ -->
+    <section>
+      <h2><span class="callout">07<small>SEC</small></span><span class="lead"></span> <span class="h2-title">What we’d tell you</span></h2>
+      <p>If you’re looking at a house in Morris County with space nobody is using, a lower level or an attic or a garage, these are the things we’d think about first.</p>
+      <p><strong>Look at the space, not the listing.</strong> Ceiling height, a way in and out, heat, and where a bathroom could go. Those four decide whether the room is worth anything. Nobody photographs them.</p>
+      <p><strong>Price the fixer at the boring stuff.</strong> Ours ran $30,000 upstairs and $15,000 down, and the parts that cost most are the parts nobody sees. Assume the invisible work is the budget and treat the kitchen as the reward.</p>
+      <p><strong>Finance the appliances, not the renovation.</strong> Every appliance in both units went on a Home Depot card at twenty-four months, no interest, paid off before the promo ended. It’s the one piece of debt in this story I’d do again without thinking.</p>
+      <p><strong>Know who is designing it.</strong> Not the contractor. Somebody has to hold the finished room in their head for two months, and if that person isn’t in the house every week you pay for it. For us that was Steph.</p>
+      <p><strong>When to walk.</strong> My rule was one percent: the place has to rent for one percent of the purchase price every month. Western Ave cost $354,000, so it had to clear $3,540. It does $4,850. That’s the only reason I bought it. One percent isn’t reasonable in Morris County anymore, and anybody still quoting it either bought in 2018 or hasn’t bought anything — but the habit underneath survives. Run the number before you fall in love with the kitchen.</p>
+      <p>The other line is structure. I’ll take on cosmetic work all day, but the bones have to be sound. Cosmetic work has a budget. Structural work has a hole in the middle of it, and I’ve never heard anybody say the hole was smaller than they thought.</p>
+
+      <figure class="inset reveal">
+        <span class="ph ph-3x2" data-ph="ig-duplex2017.jpg">
+          <picture><source srcset="../media/ig-duplex2017.webp" type="image/webp"><img src="../media/ig-duplex2017.jpg" alt="Justin and Steph in front of their first investment property on Stiles Ave, Morris Plains: a duplex with two front doors." loading="lazy" width="1440" height="1080"></picture>
+        </span>
+        <figcaption>Stiles Ave, Morris Plains · the first one · 2017</figcaption>
+      </figure>
+
+      <p>Stiles again, the one that started it. Same shape as everything since: two doors on one mortgage. Duplex, lower level, room over a garage — what matters is whether the second space is somewhere a person would actually want to live.</p>
+      <p>This isn’t a formula. We did it once, on one street, and got some of it wrong. But we did it with our own money, and I’ll tell you which parts hurt.</p>
+
+      <aside class="steph">“Yup, and then you can mark the other side.”</aside>
+    </section>
+
+    <p class="hd-trigger-wrap">
+      <a class="hd-trigger" href="/subscribe" data-hd-open>Get the next one &rarr;</a>
+    </p>
+
+  </article>
+
+  <section class="cta-block">
+    <p class="eyebrow">Tonehomes · Morris County</p>
+    <h3>Thinking about one of these?</h3>
+    <p class="cta-line">If you’re looking at a house in Morris County with a lower level, an attic, or a garage that could be doing something, text me the listing. I’ll run the number on it and tell you what I’d actually pay, or whether I’d walk.</p>
+    <a class="cta-link" href="sms:+16099020299">Text me a listing <span class="arrow" aria-hidden="true">&rarr;</span></a>
+    <p class="cta-phone"><a href="tel:+16099020299">609 · 902 · 0299</a></p>
+    <p class="cta-alt">No forms, no funnel. It’s my actual phone.</p>
+  </section>
+
+  <a class="next-issue grid-plate reveal" href="/notes">
+    <p class="eyebrow">Next issue</p>
+    <h3>Five years in the building with the Jets.</h3>
+    <span class="go">Subscribe &rarr;</span>
+    <dl class="titleblock">
+      <div><dt>Issue</dt><dd>No. 003</dd></div>
+      <div><dt>Years</dt><dd>2010 – 2015</dd></div>
+      <div><dt>From</dt><dd>Morris Plains</dd></div>
+    </dl>
+  </a>
+
+  <footer class="foot">
+    <figure class="foot-portrait">
+      <span class="ph ph-4x5" data-ph="justin-steph-studio-web.jpg">
+        <picture><source srcset="../media/justin-steph-studio-web.webp" type="image/webp"><img src="../media/justin-steph-studio-web.jpg" alt="Justin and Steph Herrera." loading="lazy" width="1066" height="1600"></picture>
+      </span>
+    </figure>
+    <div class="row"><a href="/notes">← back to notes</a></div>
+    <div class="row"><a href="/subscribe">subscribe →</a></div>
+    <div class="sig">Justin &amp; Steph.</div>
+    <div class="loc">Written from Morris Plains.</div>
+  </footer>
+
+  <div class="hd-overlay" id="hdPopup" role="dialog" aria-modal="true" aria-labelledby="hdLine">
+    <div class="hd-modal">
+      <button type="button" class="hd-close" data-hd-close aria-label="Close">&times;</button>
+      <figure class="hd-photo">
+        <span class="ph ph-16x9" data-ph="justin-steph-livingroom.jpg">
+          <picture><source srcset="../media/justin-steph-livingroom.webp" type="image/webp"><img src="../media/justin-steph-livingroom.jpg" alt="Justin and Steph Herrera." loading="lazy" width="538" height="438"></picture>
+        </span>
+      </figure>
+      <span class="hd-kicker">Off the record</span>
+      <p class="hd-line" id="hdLine">The next one, before it’s written.</p>
+      <p class="hd-sub">We send one of these when we have something worth sending. A deal we looked at, a number that surprised us, what a renovation actually cost. No schedule, no filler.</p>
+      <form class="hd-form" novalidate>
+        <div class="hp-field" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none"><label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
+        <input type="text" class="hd-input hd-name" placeholder="Full name" aria-label="Full name" autocomplete="name" required>
+        <input type="email" class="hd-input" placeholder="you@email.com" aria-label="Your email" autocomplete="email" required>
+        <button type="submit" class="hd-btn">Send me the notes <span aria-hidden="true">&rarr;</span></button>
+      </form>
+      <p class="hd-msg" role="status" hidden></p>
+    </div>
+  </div>
+
+  <script>
+  (function () {
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* media placeholders: if a file is missing, fall back to the .ph plate */
+    document.addEventListener('error', function (e) {
+      var el = e.target;
+      if (!el || (el.tagName !== 'IMG' && el.tagName !== 'SOURCE')) return;
+      var host = el.closest('.ph');
+      if (host) host.setAttribute('data-missing', '');
+    }, true);
+    document.querySelectorAll('.ph > video').forEach(function (v) {
+      v.addEventListener('error', function () { v.closest('.ph').setAttribute('data-missing', ''); });
+      if (reduce) v.setAttribute('controls', '');
+    });
+
+    /* reading progress */
+    var bar = document.querySelector('.progress-bar');
+    function progress() {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var r = max > 0 ? Math.min(100, Math.max(0, (window.scrollY / max) * 100)) : 0;
+      bar.style.setProperty('--progress', r.toFixed(2) + '%');
+    }
+    window.addEventListener('scroll', progress, { passive: true });
+    window.addEventListener('resize', progress, { passive: true });
+    progress();
+
+    /* reveal */
+    var rev = document.querySelectorAll('.reveal');
+    if (reduce || !('IntersectionObserver' in window)) {
+      rev.forEach(function (el) { el.classList.add('in'); });
+    } else {
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+      }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
+      rev.forEach(function (el) { io.observe(el); });
+    }
+
+    /* one video at a time */
+    var soundVid = null;
+    var vids = document.querySelectorAll('video');
+    if (!reduce && 'IntersectionObserver' in window) {
+      var playing = null;
+      var vio = new IntersectionObserver(function (es) {
+        es.forEach(function (en) {
+          var v = en.target;
+          if (soundVid && v !== soundVid) return;
+          if (en.isIntersecting) {
+            if (playing && playing !== v) { playing.pause(); }
+            playing = v;
+            if (v.preload === 'none') v.preload = 'auto';
+            var p = v.play(); if (p && p.catch) p.catch(function () {});
+          } else if (v === playing || !v.paused) {
+            v.pause();
+          }
+        });
+      }, { threshold: 0.6 });
+      vids.forEach(function (v) { vio.observe(v); });
+    } else {
+      vids.forEach(function (v) { v.removeAttribute('autoplay'); v.setAttribute('controls', ''); });
+    }
+
+    /* scrubber */
+    var stage = document.getElementById('scrubStage');
+    var handle = document.getElementById('scrubHandle');
+    if (stage && handle) {
+      var pos = 50, dragging = false;
+      function set(p) {
+        pos = Math.min(100, Math.max(0, p));
+        stage.style.setProperty('--sx', pos + '%');
+        handle.setAttribute('aria-valuenow', Math.round(pos));
+        handle.setAttribute('aria-valuetext', Math.round(pos) + ' percent before');
+      }
+      function fromEvent(e) {
+        var r = stage.getBoundingClientRect();
+        var x = (e.touches ? e.touches[0].clientX : e.clientX) - r.left;
+        set((x / r.width) * 100);
+      }
+      stage.addEventListener('pointerdown', function (e) { dragging = true; stage.setPointerCapture(e.pointerId); fromEvent(e); });
+      stage.addEventListener('pointermove', function (e) { if (dragging) fromEvent(e); });
+      stage.addEventListener('pointerup', function () { dragging = false; });
+      stage.addEventListener('pointercancel', function () { dragging = false; });
+      handle.addEventListener('keydown', function (e) {
+        var step = e.shiftKey ? 10 : 2;
+        if (e.key === 'ArrowLeft') { set(pos - step); e.preventDefault(); }
+        else if (e.key === 'ArrowRight') { set(pos + step); e.preventDefault(); }
+        else if (e.key === 'Home') { set(0); e.preventDefault(); }
+        else if (e.key === 'End') { set(100); e.preventDefault(); }
+      });
+      set(reduce ? 50 : 100);
+      if (!reduce && 'IntersectionObserver' in window) {
+        var sio = new IntersectionObserver(function (es) {
+          if (!es[0].isIntersecting) return;
+          sio.disconnect();
+          var t0 = 0;
+          requestAnimationFrame(function step(t) {
+            if (!t0) t0 = t;
+            var k = Math.min(1, (t - t0) / 900);
+            set(100 - 50 * (1 - Math.pow(1 - k, 3)));
+            if (k < 1) requestAnimationFrame(step);
+          });
+        }, { threshold: 0.4 });
+        sio.observe(stage);
+      }
+    }
+
+    /* time-lapse: scroll drives the dissolve */
+    (function () {
+      var track = document.getElementById('tlxTrack');
+      var stage = document.getElementById('tlxStage');
+      if (!track || !stage) return;
+      var frames = [].slice.call(stage.querySelectorAll('.tlx-frame'));
+      var stops = [].slice.call(document.querySelectorAll('.tlx-stop'));
+      var prog = document.getElementById('tlxProg');
+      var hudN = document.getElementById('tlxN'), hudL = document.getElementById('tlxL');
+      var cue = document.getElementById('tlxCue');
+      var labels = ['Demo', 'Stripped', 'Cabinets', 'Home'];
+      var last = 4, N = frames.length;
+
+      function paint(p) {
+        p = Math.max(0, Math.min(1, p));
+        var idx = p * (N - 1);
+        for (var i = 0; i < N; i++) {
+          frames[i].style.opacity = Math.max(0, Math.min(1, 1 - Math.abs(idx - i)));
+        }
+        prog.style.setProperty('--p', p.toFixed(4));
+        var near = Math.round(idx);
+        if (near !== last) {
+          last = near;
+          hudN.textContent = '0' + (near + 1);
+          hudL.textContent = labels[near];
+          for (var j = 0; j < stops.length; j++) {
+            stops[j].setAttribute('aria-current', j === near ? 'true' : 'false');
+          }
+        }
+        if (cue) cue.style.opacity = p > 0.08 ? '0' : '1';
+      }
+
+      if (reduce) {
+        track.style.height = 'auto';
+        paint(1);
+        stops.forEach(function (s) {
+          s.addEventListener('click', function () { paint(+s.dataset.i / (N - 1)); });
+        });
+        return;
+      }
+
+      /* Phones get the static 2×2 contact sheet (see the max-width:760px block):
+         nothing scrolls or dissolves, so tear the engine down and retire the
+         controls. Re-entrant, because rotating a phone crosses the breakpoint. */
+      var rail = stage.parentNode.querySelector('.tlx-rail');
+      var flatMq = window.matchMedia && window.matchMedia('(max-width: 760px)');
+      var wired = false, flat = null;
+
+      function onScroll() {
+        var r = track.getBoundingClientRect();
+        var travel = r.height - window.innerHeight;
+        paint(travel > 0 ? -r.top / travel : 0);
+      }
+      function seek(i) {
+        var r = track.getBoundingClientRect();
+        var docTop = r.top + window.scrollY;
+        var travel = r.height - window.innerHeight;
+        window.scrollTo({ top: docTop + travel * (i / (N - 1)), behavior: 'smooth' });
+      }
+      stops.forEach(function (s) {
+        s.addEventListener('click', function () { if (!flat) seek(+s.dataset.i); });
+      });
+      stage.addEventListener('keydown', function (e) {
+        if (flat) return;
+        var dir = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+        if (!dir) return;
+        e.preventDefault();
+        seek(Math.max(0, Math.min(N - 1, last + dir)));
+      });
+
+      function setMode(nextFlat) {
+        if (nextFlat === flat) return;
+        flat = nextFlat;
+        if (flat) {
+          if (wired) {
+            window.removeEventListener('scroll', onScroll);
+            window.removeEventListener('resize', onScroll);
+            wired = false;
+          }
+          track.style.height = '';
+          stage.removeAttribute('tabindex');
+          stage.removeAttribute('role');
+          /* The stops are the only thing naming the four frames once the HUD is
+             hidden, so they stay readable — just not focusable or activatable. */
+          if (rail) rail.setAttribute('aria-label', 'Stage key');
+          stops.forEach(function (s) { s.setAttribute('tabindex', '-1'); s.disabled = true; });
+        } else {
+          /* the taller the track, the slower the dissolve */
+          track.style.height = 'calc(100svh + ' + (N - 1) * 78 + 'svh)';
+          stage.setAttribute('tabindex', '0');
+          stage.setAttribute('role', 'group');
+          if (rail) rail.setAttribute('aria-label', 'Jump to a stage');
+          stops.forEach(function (s) { s.removeAttribute('tabindex'); s.disabled = false; });
+          if (!wired) {
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onScroll, { passive: true });
+            wired = true;
+          }
+          onScroll();
+        }
+      }
+
+      setMode(!!(flatMq && flatMq.matches));
+      if (flatMq) {
+        var onMq = function (e) { setMode(e.matches); };
+        if (flatMq.addEventListener) flatMq.addEventListener('change', onMq);
+        else if (flatMq.addListener) flatMq.addListener(onMq);
+      }
+    })();
+
+    /* four takes: tap for sound, or play the set */
+    (function () {
+      var takes = [].slice.call(document.querySelectorAll('.take, .moment, .snd'));
+      if (!takes.length) return;
+      var btn = document.getElementById('takesPlay');
+      var seqSet = takes.filter(function (t) { return t.classList.contains('take'); });
+      var seq = false, idx = 0;
+
+      function label(t, s) { var l = t.querySelector('.lbl'); if (l) l.textContent = s; }
+      function reset(t) { t.classList.remove('is-live'); label(t, 'Tap for sound'); }
+
+      function stopAll(except) {
+        takes.forEach(function (t) {
+          var v = t.querySelector('video');
+          if (v === except) return;
+          v.pause(); v.muted = true; reset(t);
+        });
+      }
+
+      function playTake(t, cb) {
+        var v = t.querySelector('video');
+        stopAll(v);
+        soundVid = v;
+        v.muted = false;
+        v.currentTime = 0;
+        t.classList.add('is-live');
+        label(t, 'Playing');
+        var p = v.play();
+        if (p && p.catch) p.catch(function () { v.muted = true; v.play(); label(t, 'Muted by browser'); });
+        v.onended = cb || null;
+      }
+
+      takes.forEach(function (t) {
+        var ph = t.querySelector('.ph');
+        ph.addEventListener('click', function () {
+          var v = t.querySelector('video');
+          if (t.classList.contains('is-live')) {
+            v.pause(); v.muted = true; reset(t); soundVid = null; seq = false;
+            if (btn) btn.setAttribute('aria-pressed', 'false');
+            return;
+          }
+          seq = false;
+          if (btn) btn.setAttribute('aria-pressed', 'false');
+          playTake(t);
+        });
+      });
+
+      if (btn) {
+        btn.addEventListener('click', function () {
+          if (seq) {
+            seq = false; stopAll(null); soundVid = null;
+            btn.setAttribute('aria-pressed', 'false');
+            btn.textContent = 'Play all with sound';
+            return;
+          }
+          seq = true; idx = 0;
+          btn.setAttribute('aria-pressed', 'true');
+          btn.textContent = 'Stop';
+          (function step() {
+            if (!seq || idx >= seqSet.length) {
+              seq = false; stopAll(null); soundVid = null;
+              btn.setAttribute('aria-pressed', 'false');
+              btn.textContent = 'Play all with sound';
+              return;
+            }
+            var t = seqSet[idx++];
+            t.scrollIntoView({ block: 'center', behavior: 'smooth' });
+            playTake(t, step);
+          })();
+        });
+      }
+    })();
+
+    /* off-the-record modal */
+    var NOTE_T0 = Date.now();   // page-load stamp — proves the signup came from this page
+    var ov = document.getElementById('hdPopup');
+    if (ov) {
+      var open = function (e) { if (e) e.preventDefault(); ov.classList.add('open'); };
+      var close = function () { ov.classList.remove('open'); };
+      document.querySelectorAll('[data-hd-open]').forEach(function (t) { t.addEventListener('click', open); });
+      ov.querySelectorAll('[data-hd-close]').forEach(function (c) { c.addEventListener('click', close); });
+      ov.addEventListener('click', function (e) { if (e.target === ov) close(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+
+      var form = ov.querySelector('.hd-form');
+      var msg = ov.querySelector('.hd-msg');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var nameEl = form.querySelector('.hd-name');
+        var mailEl = form.querySelector('.hd-input[type=email]');
+        var name = (nameEl.value || '').trim();
+        var email = (mailEl.value || '').trim();
+        if (!/\S+\s+\S+/.test(name)) { msg.hidden = false; msg.className = 'hd-msg err'; msg.textContent = 'Full name too, it’s only fair.'; nameEl.focus(); return; }
+        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { msg.hidden = false; msg.className = 'hd-msg err'; msg.textContent = 'That email looks off. Try again.'; return; }
+        var btn = form.querySelector('.hd-btn');
+        btn.disabled = true; btn.textContent = 'Sending...';
+        var hpEl = form.querySelector('.hp-field input');
+        fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          /* source must exist in SOURCE_LABEL in api/subscribe.js. See note to Justin. */
+          body: JSON.stringify({
+            email: email, source: 'note-western', q1: 'Note 002 · Western Ave', q2: 'Name: ' + name,
+            hp: ((hpEl && hpEl.value) || '').trim(),   // honeypot — humans leave it empty
+            t: Date.now() - NOTE_T0                    // ms from page load; bots posting direct send none
+          })
+        }).then(function (r) { return r.ok ? r.json() : Promise.reject(r); })
+          .then(function () {
+            form.hidden = true;
+            msg.hidden = false; msg.className = 'hd-msg ok'; msg.textContent = 'You’re in. Talk soon.';
+          })
+          .catch(function () {
+            btn.disabled = false; btn.innerHTML = 'Send me the notes <span aria-hidden="true">&rarr;</span>';
+            msg.hidden = false; msg.className = 'hd-msg err'; msg.textContent = 'Something glitched. Try once more.';
+          });
+      });
+    }
+  })();
+  </script>
+</body>
+</html>

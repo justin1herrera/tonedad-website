@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Notes from the Edit Suite — tone.dad</title>
-<meta name="description" content="Stories from the edit suite. Weddings, the Jets years, Avid DiVa, and other things I keep meaning to write down. By Justin Herrera.">
+<meta name="description" content="Stories from the edit suite. Weddings, the Jets years, Avid DiVa, the houses Steph and I rebuild, and other things I keep meaning to write down. By Justin Herrera.">
 
 <!-- Canonical -->
 <link rel="canonical" href="https://www.tone.dad/notes">
@@ -13,15 +13,15 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.tone.dad/notes">
 <meta property="og:title" content="Notes from the Edit Suite — tone.dad">
-<meta property="og:description" content="Stories from the edit suite. Weddings, the Jets years, Avid DiVa, and things I keep meaning to write down.">
-<meta property="og:image" content="https://www.tone.dad/media/og-share.jpg">
+<meta property="og:description" content="Stories from the edit suite. Weddings, the Jets years, Avid DiVa, the houses we rebuild, and things I keep meaning to write down.">
+<meta property="og:image" content="https://www.tone.dad/media/og-share-hub.jpg">
 <meta property="og:site_name" content="tone.dad">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Notes from the Edit Suite — tone.dad">
-<meta name="twitter:description" content="Stories from the edit suite. Weddings, the Jets years, Avid DiVa, and things I keep meaning to write down.">
-<meta name="twitter:image" content="https://www.tone.dad/media/og-share.jpg">
+<meta name="twitter:description" content="Stories from the edit suite. Weddings, the Jets years, Avid DiVa, the houses we rebuild, and things I keep meaning to write down.">
+<meta name="twitter:image" content="https://www.tone.dad/media/og-share-hub.jpg">
 
 <!-- Favicon -->
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -29,25 +29,28 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --bg:        #F2EDE2;
-  --bg-2:      #EBE3D2;
-  --ink:       #1B1714;
-  --ink-soft:  #4A3F35;
-  --muted:     #7A6D5C;
-  --rule:      #C9BDA3;
-  --rule-soft: #DCD1B7;
+  --bg:        #f3f0e8;
+  --bg-2:      #ece6d8;
+  --ink:       #0e0e0e;
+  --ink-soft:  #2a2a26;
+  --muted:     #5a5a54;
+  --rule:      #cdc9bf;
+  --rule-soft: #ddd9cf;
+  --draft:     #2f5a78;
 
   --tag-music: #B5421F;
   --tag-jets:  #0B5C3D;
   --tag-life:  #4F5E3F;
   --tag-craft: #2A4666;
   --tag-faith: #8A6A2C;
+  --tag-gear:  #3D4F52;
+  --tag-homes: #8A5A33;
 
-  --serif:  'Fraunces', 'Times New Roman', serif;
+  --serif:  'Cormorant Garamond', 'Times New Roman', Times, Georgia, serif;
   --mono:   'JetBrains Mono', ui-monospace, monospace;
   --ease:   cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -66,14 +69,14 @@ body {
 ::selection { background: var(--ink); color: var(--bg); }
 a { color: inherit; text-decoration: none; }
 
-/* grain */
+/* Paper fibre, not a dot grid. The 3px radial grid read as a screen pattern;
+   turbulence reads as stock. Same filter the notes themselves use. */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image:
-    radial-gradient(rgba(27,23,20,0.025) 1px, transparent 1px);
-  background-size: 3px 3px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='p'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .09  0 0 0 0 .08  0 0 0 0 .06  0 0 0 .05 0'/></filter><rect width='100%' height='100%' filter='url(%23p)'/></svg>");
+  background-size: 180px 180px;
   pointer-events: none;
   z-index: 1;
 }
@@ -84,6 +87,25 @@ body::before {
   max-width: 760px;
   margin: 0 auto;
   padding: 64px 32px 120px;
+}
+/* The margin rule off a legal pad — one hairline down the content edge,
+   faded in and out so it never announces itself. Desktop only; on a phone
+   there isn't gutter enough for it to be anything but a stripe. */
+.wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 13px;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0,
+    rgba(181, 66, 31, 0.15) 90px,
+    rgba(181, 66, 31, 0.15) calc(100% - 170px),
+    transparent 100%
+  );
+  pointer-events: none;
 }
 
 /* ============================================================
@@ -111,17 +133,39 @@ body::before {
 .top-back .arrow { display: inline-block; transition: transform 0.3s var(--ease); }
 .top-back:hover .arrow { transform: translateX(-3px); }
 .top-meta { display: flex; gap: 14px; }
-.top-meta .sep { color: var(--rule); }
+.top-meta .sep { color: #9B875B; }
 
 /* ============================================================
    MASTHEAD
    ============================================================ */
-.mast { margin-bottom: 80px; }
+.mast { margin-bottom: 72px; position: relative; }
+/* Feint ruling behind the masthead only — notebook lines that fade out
+   before the eye decides they're a pattern. Not the whole page; that would
+   be a stationery store. */
+.mast::before {
+  content: '';
+  position: absolute;
+  inset: -10px -24px 34px -24px;
+  z-index: -1;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 27px,
+    rgba(47, 90, 120, 0.055) 27px 28px
+  );
+  /* 28px cycle matches the dek's line-height so the ruling runs with the
+     text rather than against it; the offset lands it under the baseline.
+     Decorative, not baseline-locked — at this alpha a pixel or two of
+     drift is invisible, and chasing it exactly isn't worth the CSS. */
+  background-position: 0 12px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 26%, #000 58%, transparent 94%);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 26%, #000 58%, transparent 94%);
+  pointer-events: none;
+}
 .mast-eyebrow {
   font-size: 10px;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--draft);
   margin-bottom: 18px;
   display: inline-flex;
   align-items: center;
@@ -131,7 +175,7 @@ body::before {
   content: '';
   width: 18px;
   height: 1px;
-  background: var(--muted);
+  background: var(--draft);
 }
 .mast-title {
   font-family: var(--serif);
@@ -143,21 +187,60 @@ body::before {
   color: var(--ink);
   font-variation-settings: "opsz" 144, "SOFT" 60;
   margin-bottom: 24px;
+  white-space: nowrap;
+  min-height: 1em; /* hold the line while the typewriter has it empty */
 }
+/* Running prose is serif. Mono stays for labels, meta and datelines —
+   at 13px over 180+ characters it was a squint, and its 56ch measure
+   stopped at 57% of the wrap while the pull quote below ran to 88%,
+   which is what put the hole in the right side of the masthead. */
 .mast-dek {
-  font-family: var(--mono);
-  font-size: 13px;
-  letter-spacing: 0.04em;
+  font-family: var(--serif);
+  font-size: 17.5px;
+  letter-spacing: 0;
   color: var(--ink-soft);
-  max-width: 56ch;
-  line-height: 1.7;
+  max-width: 60ch;
+  line-height: 1.6;
 }
 .mast-dek em {
-  font-family: var(--serif);
   font-style: italic;
-  font-size: 16px;
-  letter-spacing: -0.01em;
   color: var(--ink);
+}
+
+/* byline */
+.mast-byline {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule-soft);
+}
+.mast-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: saturate(0.8);
+}
+.mast-byline-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.mast-author {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.mast-count {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-transform: uppercase;
 }
 
 /* cursor blink */
@@ -171,132 +254,420 @@ body::before {
   font-weight: 300;
 }
 @keyframes blink { 50% { opacity: 0; } }
+.mast-title.typing::after { animation: none; opacity: 1; } /* cursor holds solid while typing, blinks on pauses */
 
 /* ============================================================
-   INDEX
+   PULL QUOTE (between masthead and index)
    ============================================================ */
-.idx-head {
-  display: grid;
-  grid-template-columns: 36px 1fr 90px 100px;
-  gap: 18px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--rule);
-  font-size: 9.5px;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 6px;
-}
-.idx-head .tag { text-align: right; }
-.idx-head .date { text-align: right; }
-
-.idx { list-style: none; }
-.idx-row {
-  display: grid;
-  grid-template-columns: 36px 1fr 90px 100px;
-  gap: 18px;
-  align-items: baseline;
-  padding: 22px 0;
-  border-bottom: 1px dashed var(--rule-soft);
+.pull {
   position: relative;
-  transition: padding 0.4s var(--ease);
+  margin: 0 0 72px;
+  padding: 0 0 0 28px;
+  border-left: 2px solid var(--rule);
 }
-.idx-row::before {
-  content: '';
-  position: absolute;
-  left: -32px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 1px;
-  background: var(--ink);
-  transition: width 0.4s var(--ease);
-}
-.idx-row:hover { padding-left: 16px; }
-.idx-row:hover::before { width: 24px; }
-
-.idx-row.is-soon {
-  opacity: 0.45;
-  cursor: default;
-}
-.idx-row.is-soon:hover { padding-left: 0; }
-.idx-row.is-soon:hover::before { width: 0; }
-
-.idx-num {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  color: var(--muted);
-  padding-top: 4px;
-}
-.idx-body { min-width: 0; }
-.idx-title {
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(20px, 2.4vw, 28px);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-  margin-bottom: 6px;
-  font-variation-settings: "opsz" 144, "SOFT" 50;
-}
-.idx-title em { font-style: italic; color: var(--muted); }
-.idx-dek {
-  font-family: var(--mono);
-  font-size: 12px;
-  line-height: 1.6;
-  color: var(--ink-soft);
-  max-width: 58ch;
-}
-.idx-dek em {
+.pull-text {
   font-family: var(--serif);
   font-style: italic;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: clamp(22px, 3.4vw, 32px);
+  line-height: 1.32;
+  letter-spacing: -0.02em;
   color: var(--ink);
-  letter-spacing: -0.005em;
+  font-variation-settings: "opsz" 72, "SOFT" 70;
 }
-.idx-tag {
+.pull-cite {
+  display: block;
+  margin-top: 14px;
   font-family: var(--mono);
-  font-size: 9.5px;
+  font-style: normal;
+  font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  text-align: right;
-  padding-top: 8px;
+  color: var(--muted);
+}
+
+/* ============================================================
+   SECTION RULE
+   ============================================================ */
+.section-rule {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 38px;
+}
+.section-rule::before,
+.section-rule::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+.section-label {
+  font-family: var(--mono);
+  font-weight: 400; /* these are h2 for document outline — undo the UA bold */
+  color: var(--draft);
+  font-size: 9.5px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--muted);
   white-space: nowrap;
 }
-.idx-row[data-tag="music"] .idx-tag { color: var(--tag-music); }
-.idx-row[data-tag="jets"]  .idx-tag { color: var(--tag-jets); }
-.idx-row[data-tag="life"]  .idx-tag { color: var(--tag-life); }
-.idx-row[data-tag="craft"] .idx-tag { color: var(--tag-craft); }
-.idx-row[data-tag="faith"] .idx-tag { color: var(--tag-faith); }
 
-.idx-date {
+/* ============================================================
+   ENTRIES — editorial card layout
+   ============================================================ */
+.entries { list-style: none; display: flex; flex-direction: column; gap: 0; }
+
+.entries-aside { list-style: none; }
+
+/* --- Featured entry (lead) --- */
+.entry-featured {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 56px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid var(--rule);
+}
+.entry-featured .entry-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 2px;
+  filter: saturate(0.85) contrast(1.02);
+  transition: filter 0.5s var(--ease);
+}
+.entry-featured:hover .entry-img {
+  filter: saturate(1) contrast(1);
+}
+.entry-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+.entry-num {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+.entry-tag {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border: 1px solid;
+  border-radius: 1px;
+}
+.entry-tag[data-tag="music"] { color: var(--tag-music); border-color: var(--tag-music); }
+.entry-tag[data-tag="jets"]  { color: var(--tag-jets); border-color: var(--tag-jets); }
+.entry-tag[data-tag="life"]  { color: var(--tag-life); border-color: var(--tag-life); }
+.entry-tag[data-tag="craft"] { color: var(--tag-craft); border-color: var(--tag-craft); }
+.entry-tag[data-tag="faith"] { color: var(--tag-faith); border-color: var(--tag-faith); }
+.entry-tag[data-tag="gear"]  { color: var(--tag-gear); border-color: var(--tag-gear); }
+.entry-tag[data-tag="homes"] { color: var(--tag-homes); border-color: var(--tag-homes); }
+.entry-date {
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  text-align: right;
   color: var(--muted);
-  padding-top: 10px;
-  white-space: nowrap;
 }
-.idx-date.is-soon::before { content: '— —'; color: var(--rule); }
-.idx-date.is-soon { font-size: 9.5px; }
-.idx-row.is-soon .idx-tag { color: var(--muted); opacity: 0.7; }
-
-/* Live badge for story 001 */
-.idx-live {
+.entry-live {
   display: inline-block;
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--tag-music);
-  margin-right: 6px;
+  background: currentColor;
   animation: livePulse 2s ease-in-out infinite;
 }
 @keyframes livePulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
+}
+.entry-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(32px, 4.6vw, 48px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  margin-bottom: 12px;
+}
+.entry-excerpt {
+  font-family: var(--serif);
+  font-size: 17.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 60ch;
+}
+.entry-excerpt em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: inherit;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+.entry-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.3s var(--ease);
+}
+.entry-cta .ar { transition: transform 0.3s var(--ease); }
+.entry-featured:hover .entry-cta { color: var(--ink); }
+.entry-featured:hover .entry-cta .ar { transform: translateX(4px); }
+
+.entry-featured.is-second { margin-bottom: 48px; padding-bottom: 48px; }
+.entry-featured.is-second .entry-img { aspect-ratio: 21/9; }
+.entry-featured.is-second .entry-title { font-size: clamp(26px, 3.4vw, 36px); }
+.entry-featured.is-second .entry-excerpt { font-size: 12.5px; }
+
+.entry-deck {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(17px, 2vw, 20px);
+  line-height: 1.45;
+  color: var(--ink-soft);
+  margin: 10px 0 14px;
+}
+
+/* lead flag on the newest published note */
+.entry-flag {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--ink);
+  padding: 3px 8px;
+  border-radius: 1px;
+}
+
+/* --- Inline photo break --- */
+/* Two frames with opposite proportions — a 2.39:1 still and a 0.56:1
+   portrait — so they can't share a box. Forcing both to 3/2 cropped the
+   phone out of Taylor's hand (it sits at 14-20% across, her face at
+   67-80%; a 3/2 cover keeps only the middle 63%, so the phone goes
+   first) and took 63% of the height off Steph's. Columns are weighted to
+   each frame instead, which lands both at the same height. */
+.photo-break {
+  margin: 8px 0 48px;
+  display: grid;
+  grid-template-columns: 2.39fr 0.75fr;
+  gap: 12px;
+  align-items: start;
+}
+.photo-break img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+  filter: saturate(0.7);
+}
+.photo-break img:first-of-type  { aspect-ratio: 714 / 299; } /* native — uncropped, phone intact */
+.photo-break img:nth-of-type(2) { aspect-ratio: 3 / 4; }
+.photo-caption {
+  grid-column: 1 / -1;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.06em;
+  color: #7A6A48;
+  text-align: center;
+  margin-top: -4px;
+}
+
+/* --- Standard entries (003–007) --- */
+.entry-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: start;
+  padding: 32px 0;
+  border-bottom: 1px dashed var(--rule-soft);
+  text-decoration: none;
+  color: inherit;
+  transition: padding 0.4s var(--ease);
+}
+.entry-row:hover { padding-left: 6px; }
+/* Rows carrying art get a thumbnail column; rows without stay full width. */
+.entry-row.has-thumb { grid-template-columns: 140px 1fr; gap: 20px; }
+.entry-img-wrap {
+  position: relative;
+  width: 140px;
+  height: 100px;
+}
+.entry-row .entry-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+  filter: saturate(0.75);
+  transition: filter 0.4s var(--ease);
+}
+.entry-row:hover .entry-img { filter: saturate(1); }
+/* lil vid per entry — footage wakes up on hover, like scrubbing a bin clip */
+.entry-img-wrap video,
+.entry-media video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.45s var(--ease);
+  pointer-events: none;
+}
+.entry-row:hover .entry-img-wrap video,
+.entry-featured:hover .entry-media video { opacity: 1; }
+.entry-media { position: relative; display: block; }
+.entry-row .entry-title {
+  font-size: clamp(20px, 2.6vw, 28px);
+  margin-bottom: 6px;
+}
+.entry-row .entry-excerpt {
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* Soon entries — on the timeline, moving through the pipeline.
+   Five of these run under two finished notes, and at full weight they ate
+   a quarter of the page teasing things you can't click. Compacted so the
+   published work carries the scroll and these read as a contents list. */
+.entry-row.is-soon { cursor: default; padding: 18px 0; }
+.entry-row.is-soon .entry-title { font-size: clamp(18px, 2vw, 21px); margin-bottom: 4px; }
+.entry-row.is-soon .entry-excerpt {
+  font-size: 14.5px;
+  max-width: 56ch;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.entry-row.is-soon:hover { padding-left: 0; }
+.entry-row.is-soon .entry-img { filter: saturate(0) brightness(0.9); opacity: 0.8; }
+.entry-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.status-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  animation: livePulse 2s ease-in-out infinite;
+}
+.entry-row[data-tag="music"] .status-dot { background: var(--tag-music); }
+.entry-row[data-tag="jets"]  .status-dot { background: var(--tag-jets); }
+.entry-row[data-tag="life"]  .status-dot { background: var(--tag-life); }
+.entry-row[data-tag="craft"] .status-dot { background: var(--tag-craft); }
+.entry-row[data-tag="faith"] .status-dot { background: var(--tag-faith); }
+.entry-row[data-tag="gear"]  .status-dot { background: var(--tag-gear); }
+.entry-row[data-tag="homes"] .status-dot { background: var(--tag-homes); }
+
+/* ============================================================
+   DROP CAP (for the featured entry excerpt)
+   ============================================================ */
+.drop-cap::first-letter {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  float: left;
+  font-size: 3.4em;
+  line-height: 0.78;
+  margin: 4px 8px 0 -2px;
+  color: var(--ink);
+  font-variation-settings: "opsz" 144, "SOFT" 40;
+}
+
+/* ============================================================
+   COLOPHON
+   ============================================================ */
+.colophon-rule { margin-top: 96px; }
+.colophon {
+  display: grid;
+  grid-template-columns: minmax(0, 58ch) 150px;
+  gap: 36px;
+  align-items: end;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  line-height: 1.75;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+}
+.colophon-photo { margin: 0; }
+.colophon-photo img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: 2px;
+  filter: saturate(0.9);
+}
+.colophon-photo figcaption {
+  font-size: 9.5px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-top: 8px;
+  line-height: 1.5;
+}
+.colophon a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--rule);
+  transition: text-decoration-color 0.3s var(--ease);
+}
+.colophon a:hover { text-decoration-color: var(--ink-soft); }
+/* the one highlighter mark on the page — flags the line worth remembering */
+.colophon a.hl {
+  position: relative;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.colophon a.hl:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--ink-soft);
+}
+.colophon a.hl::before {
+  content: '';
+  position: absolute;
+  left: -0.14em;
+  right: -0.22em; /* more overshoot where the hand lifts the marker */
+  top: 0.08em;
+  bottom: -0.04em;
+  background: #F3CE3B;
+  opacity: 0.82;
+  mix-blend-mode: multiply;
+  border-radius: 1px 4px 2px 5px / 3px 1px 4px 2px;
+  transform: rotate(-0.7deg);
+  z-index: -1;
+}
+.colophon-sign {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-align: right;
+  margin-top: 18px;
 }
 
 /* ============================================================
@@ -314,6 +685,7 @@ body::before {
   text-transform: uppercase;
   color: var(--muted);
 }
+.foot-l { display: flex; flex-direction: column; gap: 6px; }
 .foot-r { display: flex; gap: 16px; }
 .foot-r a { transition: color 0.3s var(--ease); }
 .foot-r a:hover { color: var(--ink); }
@@ -323,21 +695,32 @@ body::before {
    ============================================================ */
 @media (max-width: 720px) {
   .wrap { padding: 40px 22px 80px; }
+  .wrap::before { display: none; }   /* no gutter for a margin rule on a phone */
+  .mast::before { inset: -8px -14px 28px -14px; }
   .top { font-size: 10px; }
   .top-meta .sep,
   .top-meta .top-meta-loc { display: none; }
-  .mast { margin-bottom: 56px; }
-  .mast-title { font-size: clamp(48px, 12vw, 72px); }
-  .idx-head { grid-template-columns: 28px 1fr 80px; gap: 12px; }
-  .idx-head .date { display: none; }
-  .idx-row { grid-template-columns: 28px 1fr 80px; gap: 12px; padding: 18px 0; }
-  .idx-row .idx-date { display: none; }
-  .idx-title { font-size: 22px; }
-  .idx-dek { font-size: 11.5px; }
-  .idx-tag { font-size: 8.5px; letter-spacing: 0.18em; }
-  .idx-row:hover { padding-left: 0; }
-  .idx-row::before { display: none; }
+  .mast { margin-bottom: 48px; }
+  .mast-title { font-size: clamp(54px, 13vw, 78px); }
+  .pull { margin-bottom: 48px; }
+  .pull-text { font-size: clamp(20px, 5vw, 26px); }
+  .photo-break { grid-template-columns: 1fr; gap: 10px; margin: 0 0 36px; }
+  .entry-featured { margin-bottom: 40px; padding-bottom: 40px; }
+  .entry-title { font-size: clamp(26px, 7vw, 36px); }
+  .entry-row { gap: 16px; padding: 24px 0; }
+  /* 140px of thumb leaves the text column too narrow on a phone */
+  .entry-row.has-thumb { grid-template-columns: 96px 1fr; gap: 14px; }
+  .entry-img-wrap { width: 96px; height: 68px; }
+  .entry-row .entry-title { font-size: 20px; }
+  .entry-row .entry-excerpt { font-size: 11.5px; }
+  .entry-row:hover { padding-left: 0; }
+  .colophon { grid-template-columns: 1fr; gap: 24px; }
+  .colophon-photo { max-width: 180px; }
   .foot { flex-direction: column; gap: 12px; align-items: flex-start; }
+}
+@media (max-width: 480px) {
+  .mast-byline { gap: 10px; }
+  .mast-avatar { width: 36px; height: 36px; }
 }
 </style>
 </head>
@@ -355,103 +738,200 @@ body::before {
       <span>Notes</span>
       <span class="sep">&middot;</span>
       <span class="top-meta-loc">Vol. I</span>
+      <span class="sep">&middot;</span>
+      <span class="top-meta-loc">Est. 2026</span>
     </div>
   </div>
 
   <!-- MASTHEAD -->
   <header class="mast">
     <div class="mast-eyebrow">Notes from the edit suite</div>
-    <h1 class="mast-title">Notes.</h1>
+    <h1 class="mast-title"><span id="mastType">tone.notes</span></h1>
     <p class="mast-dek">
-      Stories I keep meaning to write down. Weddings, the Jets years, the year I lived with <em>Avid DiVa</em>, the time Taylor was on the timeline. <em>One at a time. No schedule.</em>
+      Stories I keep meaning to write down. Weddings, the Jets years, the year I lived with <em>Avid DiVa</em>, the houses Steph and I have been rebuilding since 2019. <em>One at a time. No schedule.</em>
     </p>
+    <div class="mast-byline">
+      <img class="mast-avatar" src="/media/justin-portrait.jpg" alt="Justin Herrera">
+      <div class="mast-byline-text">
+        <span class="mast-author">Justin Herrera</span>
+        <span class="mast-count">7 entries · 2 published</span>
+      </div>
+    </div>
   </header>
 
-  <!-- INDEX -->
-  <div class="idx-head">
-    <span class="num">&numero;</span>
-    <span class="ttl">Title</span>
-    <span class="tag">Tag</span>
-    <span class="date">Filed</span>
+  <!-- PULL QUOTE -->
+  <blockquote class="pull">
+    <p class="pull-text">It&rsquo;s the hardest project we&rsquo;ve taken on. It&rsquo;s also the only one I&rsquo;d do again tomorrow.</p>
+    <cite class="pull-cite">&mdash; from Notes 002</cite>
+  </blockquote>
+
+  <!-- SECTION RULE -->
+  <div class="section-rule">
+    <h2 class="section-label">Published</h2>
   </div>
 
-  <ol class="idx">
+  <!-- ENTRIES -->
+  <ol class="entries">
 
+    <!-- 002 — FEATURED -->
     <li>
-      <a class="idx-row is-soon" data-tag="music" href="#001" aria-disabled="true">
-        <span class="idx-num">001</span>
-        <div class="idx-body">
-          <h3 class="idx-title">Blank Space.</h3>
-          <p class="idx-dek">
-            How a Taylor Swift session ended up on a hard drive next to a wedding from <em>Hoboken</em>. The night I learned the timeline doesn't care who you are.
-          </p>
+      <a class="entry-featured" href="/notes/002-steph-was-right">
+        <span class="entry-media"><img class="entry-img" src="/media/notes/002-western/hero.jpg" alt="The Western Ave kitchen after renovation" loading="lazy"><video muted loop playsinline preload="none" data-src="/media/notes/002-western/walkthrough-2018-web.mp4"></video></span>
+        <div class="entry-meta">
+          <span class="entry-flag">Latest</span>
+          <span class="entry-num">002</span>
+          <span class="entry-tag" data-tag="homes"><span class="entry-live"></span> Home</span>
+          <span class="entry-date">July 2026</span>
         </div>
-        <span class="idx-tag">Soon</span>
-        <span class="idx-date is-soon"></span>
+        <h3 class="entry-title">She saw a studio. I saw a basement.</h3>
+        <p class="entry-deck">She sees what a room could be. I price it.</p>
+        <p class="entry-excerpt drop-cap">A single family in Morristown nobody wanted, the basement I would have left alone, and the two months that made it two homes. <em>With the whole sheet.</em></p>
+        <span class="entry-cta">Read the story <span class="ar">&rarr;</span></span>
       </a>
     </li>
 
+    <!-- 001 — FEATURED -->
     <li>
-      <a class="idx-row is-soon" data-tag="jets" href="#002" aria-disabled="true">
-        <span class="idx-num">002</span>
-        <div class="idx-body">
-          <h3 class="idx-title">The freakin' Jets.</h3>
-          <p class="idx-dek">
-            Five seasons inside <em>1 Jets Drive</em> &mdash; 2010 to 2015. What Rex's locker room actually sounded like, and the Sunday I almost missed the team plane.
-          </p>
+      <a class="entry-featured is-second" href="/notes/001-blank-space">
+        <span class="entry-media"><img class="entry-img" src="/media/reel-blankspace.jpg" alt="Taylor Swift, Blank Space — on set at Oheka Castle" loading="lazy"><video muted loop playsinline preload="none" data-src="/media/blank-space-stairs.mp4"></video></span>
+        <div class="entry-meta">
+          <span class="entry-num">001</span>
+          <span class="entry-tag" data-tag="music"><span class="entry-live"></span> Music</span>
+          <span class="entry-date">May 2026</span>
         </div>
-        <span class="idx-tag">Soon</span>
-        <span class="idx-date is-soon"></span>
+        <h3 class="entry-title">Blank Space.</h3>
+        <p class="entry-excerpt drop-cap">Oheka Castle, September 2014. A music video shoot, a moment at the monitor, and the call about Prague I said no to. <em>The honest version.</em></p>
+        <span class="entry-cta">Read the story <span class="ar">&rarr;</span></span>
       </a>
     </li>
 
-    <li>
-      <a class="idx-row is-soon" data-tag="craft" href="#003" aria-disabled="true">
-        <span class="idx-num">003</span>
-        <div class="idx-body">
-          <h3 class="idx-title">Ten months with <em>Avid DiVa</em>.</h3>
-          <p class="idx-dek">
-            Dustin Robertson let me live in his Hollywood studio. We cut Mariah, Gaga, Gap. Then we packed up for Palm Springs.
-          </p>
-        </div>
-        <span class="idx-tag">Soon</span>
-        <span class="idx-date is-soon"></span>
-      </a>
+    <!-- PHOTO BREAK -->
+    <li class="entries-aside">
+    <div class="photo-break">
+      <img src="/media/blank-space-phone.jpg" alt="My phone on the monitor cart during the Blank Space shoot" loading="lazy">
+      <img src="/media/notes/002-western/steph-baseboard.jpg" alt="Steph cutting baseboard on the miter saw at Western Ave" loading="lazy">
+      <!-- No "Left / Right" — these stack on a phone, where the labels lie. -->
+      <span class="photo-caption">My phone, in the Blank Space video. Steph, running baseboard on Western Ave.</span>
+    </div>
+    <div class="section-rule">
+      <h2 class="section-label">On the Timeline</h2>
+    </div>
     </li>
 
+    <!-- 003 -->
     <li>
-      <a class="idx-row is-soon" data-tag="life" href="#004" aria-disabled="true">
-        <span class="idx-num">004</span>
-        <div class="idx-body">
-          <h3 class="idx-title">How I got into weddings.</h3>
-          <p class="idx-dek">
-            I said yes to a favor for a friend. Three hundred and fifty weddings later, I still <em>say yes</em> to the same kind of room.
-          </p>
+      <div class="entry-row is-soon is-next has-thumb" data-tag="jets">
+        <div class="entry-img-wrap">
+          <img class="entry-img" src="/media/jets-field-steph.jpg" alt="Justin in Jets staff kit with a field credential, next to Steph in a Jets tee, on the field at MetLife before kickoff." loading="lazy">
         </div>
-        <span class="idx-tag">Soon</span>
-        <span class="idx-date is-soon"></span>
-      </a>
+        <div>
+          <div class="entry-meta">
+            <span class="entry-num">003</span>
+            <span class="entry-tag" data-tag="jets">Jets</span>
+            <span class="entry-status"><span class="status-dot"></span>Fine cut</span>
+          </div>
+          <h3 class="entry-title">The freakin' Jets.</h3>
+          <p class="entry-excerpt">Five seasons inside <em>1 Jets Drive</em> &mdash; 2010 to 2015. What Rex's locker room actually sounded like, and the Sunday I almost missed the team plane.</p>
+        </div>
+      </div>
     </li>
 
+    <!-- 004 -->
     <li>
-      <a class="idx-row is-soon" data-tag="faith" href="#005" aria-disabled="true">
-        <span class="idx-num">005</span>
-        <div class="idx-body">
-          <h3 class="idx-title">4:42 AM.</h3>
-          <p class="idx-dek">
-            On waking up before the kids do. Coffee, prayer, the first cut of the day, and why the morning stays the most honest hour.
-          </p>
+      <div class="entry-row is-soon has-thumb" data-tag="craft">
+        <div class="entry-img-wrap">
+          <img class="entry-img" src="/media/avid-diva-suite.jpg" alt="An edit suite lined with equipment racks and a wall of tape stock, Justin working at the keyboard." loading="lazy">
         </div>
-        <span class="idx-tag">Soon</span>
-        <span class="idx-date is-soon"></span>
-      </a>
+        <div>
+          <div class="entry-meta">
+            <span class="entry-num">004</span>
+            <span class="entry-tag" data-tag="craft">Craft</span>
+            <span class="entry-status">Rough cut</span>
+          </div>
+          <h3 class="entry-title">Ten months with <em>Avid DiVa</em>.</h3>
+          <p class="entry-excerpt">Dustin Robertson let me live in his Hollywood studio. We cut Mariah, Gaga, Gap. Then we packed up for Palm Springs.</p>
+        </div>
+      </div>
+    </li>
+
+    <!-- 005 -->
+    <li>
+      <div class="entry-row is-soon has-thumb" data-tag="life">
+        <div class="entry-img-wrap">
+          <img class="entry-img" src="/media/michelle-freddy.jpg" alt="A bride and groom hand in hand on the steps outside a glass conservatory at dusk." loading="lazy">
+        </div>
+        <div>
+          <div class="entry-meta">
+            <span class="entry-num">005</span>
+            <span class="entry-tag" data-tag="life">Life</span>
+            <span class="entry-status">String-out</span>
+          </div>
+          <h3 class="entry-title">How I got into weddings.</h3>
+          <p class="entry-excerpt">I said yes to a favor for a friend. Three hundred and fifty weddings later, I still <em>say yes</em> to the same kind of room.</p>
+        </div>
+      </div>
+    </li>
+
+    <!-- 006 -->
+    <li>
+      <div class="entry-row is-soon has-thumb" data-tag="gear">
+        <div class="entry-img-wrap">
+          <img class="entry-img" src="/media/lumix-s1ii.jpg" alt="Close on a Lumix S1 II body and lens, the red record button in the foreground." loading="lazy">
+          <video muted loop playsinline preload="none" data-src="/media/lumix-s1ii-loop.mp4"></video>
+        </div>
+        <div>
+          <div class="entry-meta">
+            <span class="entry-num">006</span>
+            <span class="entry-tag" data-tag="gear">Gear</span>
+            <span class="entry-status">Logged</span>
+          </div>
+          <h3 class="entry-title">The LUMIX S1 II.</h3>
+          <p class="entry-excerpt">Fifteen years of buying cameras that promised to fix my footage. Turns out the fix was <em>one camera, actually used.</em> This is the one I stopped switching from.</p>
+        </div>
+      </div>
+    </li>
+
+    <!-- 007 -->
+    <li>
+      <div class="entry-row is-soon has-thumb" data-tag="life">
+        <div class="entry-img-wrap">
+          <img class="entry-img" src="/media/ddr-freestyle.jpg" alt="Justin and Steph mid-routine on a Dance Dance Revolution machine, 2007." loading="lazy">
+        </div>
+        <div>
+          <div class="entry-meta">
+            <span class="entry-num">007</span>
+            <span class="entry-tag" data-tag="life">Life</span>
+            <span class="entry-status">Ingesting</span>
+          </div>
+          <h3 class="entry-title">Fourth place.</h3>
+          <p class="entry-excerpt">Before the wedding, before the kids, there was a Dance Dance Revolution machine and a couples sync tournament. Steph and I got fourth place. <em>It was love.</em></p>
+        </div>
+      </div>
     </li>
 
   </ol>
 
+  <!-- COLOPHON -->
+  <div class="section-rule colophon-rule">
+    <h2 class="section-label">Colophon</h2>
+  </div>
+  <div class="colophon">
+    <div class="colophon-text">
+      <p>Notes is written and cut by me, Justin Herrera &mdash; wedding filmmaker, broadcast editor, dad. Entries move through the same pipeline as my films: logged, string-out, rough cut, fine cut, published. No schedule, no algorithm. If you&rsquo;re trying to get better at video yourself, I keep <a class="hl" href="https://cal.com/tonedad/tonebuild">a free half hour</a> on my calendar for exactly that.</p>
+      <p class="colophon-sign">Justin.</p>
+    </div>
+    <figure class="colophon-photo">
+      <img src="/media/justin-cafe.jpg" alt="Justin Herrera at a caf&eacute; table, laptop open, iced coffee in reach" loading="lazy">
+      <figcaption>Office hours. The coffee is load-bearing.</figcaption>
+    </figure>
+  </div>
+
   <!-- FOOT -->
   <div class="foot">
-    <span>&copy; 2026 Justin Herrera</span>
+    <div class="foot-l">
+      <span>A production of tone.dad.</span>
+      <span>&copy; 2026 Justin Herrera</span>
+    </div>
     <div class="foot-r">
       <a href="/">tone.dad</a>
       <a href="mailto:justin@tone.dad">email</a>
@@ -461,5 +941,121 @@ body::before {
 
 </div>
 
+<script>
+/* Masthead typewriter: types "Ntoes.", notices, fixes it, tries a few
+   other names for this page, gives up, settles on "Notes." */
+(function(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var span = document.getElementById('mastType');
+  if (!span) return;
+  var h1 = span.parentElement;
+  var sleep = function(ms){ return new Promise(function(r){ setTimeout(r, ms); }); };
+  var jitter = function(base){ return base + (Math.random() - 0.5) * base * 0.7; };
+
+  async function type(text, speed){
+    h1.classList.add('typing');
+    for (var i = 0; i < text.length; i++){
+      span.textContent += text[i];
+      await sleep(jitter(speed));
+    }
+    h1.classList.remove('typing');
+  }
+  async function erase(count, speed){
+    h1.classList.add('typing');
+    for (var i = 0; i < count; i++){
+      span.textContent = span.textContent.slice(0, -1);
+      await sleep(jitter(speed));
+    }
+    h1.classList.remove('typing');
+  }
+
+  async function run(){
+    span.textContent = '';
+    await sleep(500);
+    await type('Ntoes.', 90);         /* the typo */
+    await sleep(900);                  /* ...he notices */
+    await erase(5, 55);                /* back to "N" */
+    await type('otes.', 90);           /* fixed */
+    await sleep(1250);
+    await erase(6, 45);
+    await type('Brain Dump.', 85);
+    await sleep(1150);
+    await erase(11, 45);
+    await type('Dear Diary', 85);
+    await sleep(700);
+    await type('—', 90);          /* "Dear Diary—" */
+    await sleep(500);                  /* ...nope. */
+    await erase(11, 30);               /* fast erase = embarrassment */
+    await sleep(300);
+    await type('Notes.', 95);          /* settles for it */
+    await sleep(1150);                 /* ...then remembers the thing has a real name */
+    await erase(6, 40);
+    await type('tone.notes', 80);      /* straightens its tie. this one stays. */
+  }
+  run();
+})();
+
+/* Media that lives on the deployed site but not in the working tree renders as a
+   broken-image glyph locally. Collapse it instead of showing the glyph; in
+   production the files resolve and this never fires. */
+(function(){
+  document.querySelectorAll('img').forEach(function(img){
+    img.addEventListener('error', function(){
+      var fig = img.closest('.photo-break, .colophon-photo, .entry-media, .mast-byline');
+      if (img.classList.contains('mast-avatar')) { img.style.display = 'none'; return; }
+      if (fig && fig.classList.contains('photo-break')) { img.style.visibility = 'hidden'; return; }
+      img.style.display = 'none';
+    }, { once: true });
+  });
+})();
+
+/* lil vids — the footage wakes up on hover (desktop only; stills on touch) */
+(function(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(hover: none)').matches) return;
+  document.querySelectorAll('.entry-row, .entry-featured').forEach(function(row){
+    var v = row.querySelector('video');
+    if (!v) return;
+    var play = function(){
+      if (!v.src && v.dataset.src) v.src = v.dataset.src;
+      var p = v.play(); if (p && p.catch) p.catch(function(){});
+    };
+    var stop = function(){ try { v.pause(); } catch(e){} };
+    row.addEventListener('mouseenter', play);
+    row.addEventListener('mouseleave', stop);
+  });
+})();
+
+/* touch devices have no hover — so the footage plays itself. When a card scrolls
+   into view the clip fades up and loops muted, one at a time (pause + hide the
+   last one), which keeps it to a single stream on cellular. */
+(function(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!window.matchMedia('(hover: none)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var current = null;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      var v = en.target.querySelector('video');
+      if (!v) return;
+      if (en.isIntersecting){
+        if (current && current !== v){ try { current.pause(); } catch(e){} current.style.opacity = ''; }
+        current = v;
+        if (!v.src && v.dataset.src) v.src = v.dataset.src;
+        v.style.opacity = 1;
+        var p = v.play(); if (p && p.catch) p.catch(function(){});
+      } else {
+        try { v.pause(); } catch(e){}
+        v.style.opacity = '';
+        if (current === v) current = null;
+      }
+    });
+  }, { threshold: 0.6 });
+  document.querySelectorAll('.entry-row, .entry-featured').forEach(function(row){
+    if (row.querySelector('video')) io.observe(row);
+  });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
