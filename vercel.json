@@ -9,6 +9,11 @@
       "source": "/notes/002-taylor-watched-my-cut",
       "destination": "/notes/002-steph-was-right",
       "statusCode": 301
+    },
+    {
+      "source": "/couples",
+      "destination": "/tonehomes",
+      "statusCode": 301
     }
   ],
   "headers": [
