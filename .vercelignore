@@ -13,3 +13,13 @@ _check
 debug
 qa
 reference
+
+# rollback snapshots and design scratch — never deploy, they are publicly
+# fetchable once uploaded even though nothing links to them
+index-prev-*.html
+*-prev-*.html
+*.bak
+font-compare.html
+hero-a.html
+hero-b.html
+hero-c.html
