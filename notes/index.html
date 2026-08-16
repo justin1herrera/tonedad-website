@@ -469,22 +469,34 @@ body::before {
   gap: 12px;
   align-items: start;
 }
+.photo-break figure { margin: 0; min-width: 0; }
 .photo-break img {
   width: 100%;
   object-fit: cover;
   border-radius: 2px;
   filter: saturate(0.7);
 }
-.photo-break img:first-of-type  { aspect-ratio: 714 / 299; } /* native — uncropped, phone intact */
-.photo-break img:nth-of-type(2) { aspect-ratio: 3 / 4; }
+/* native — uncropped, phone intact. It's a dusk-graded frame and saturate(0.7)
+   sinks it further, so this one gets lifted on its own. */
+.pb-still img {
+  aspect-ratio: 714 / 299;
+  filter: saturate(0.82) brightness(1.26) contrast(0.96);
+}
+/* 503x900 source into a 3/4 box crops 229px of height. Centered, that took her
+   hands and the baseboard off the bottom — the thing the caption is about.
+   Bias the crop down so the work stays in frame. */
+.pb-portrait img {
+  aspect-ratio: 3 / 4;
+  object-position: center 65%;
+}
 .photo-caption {
-  grid-column: 1 / -1;
+  display: block;
   font-family: var(--mono);
   font-size: 9.5px;
   letter-spacing: 0.06em;
   color: #7A6A48;
   text-align: center;
-  margin-top: -4px;
+  margin-top: 6px;
 }
 
 /* --- Standard entries (003–007) --- */
@@ -807,11 +819,17 @@ body::before {
 
     <!-- PHOTO BREAK -->
     <li class="entries-aside">
+    <!-- Each frame carries its own caption: they stack on a phone, so one shared
+         line under both made you guess which half described which picture. -->
     <div class="photo-break">
-      <img src="/media/blank-space-phone.jpg" alt="My phone on the monitor cart during the Blank Space shoot" loading="lazy">
-      <img src="/media/notes/002-western/steph-baseboard.jpg" alt="Steph cutting baseboard on the miter saw at Western Ave" loading="lazy">
-      <!-- No "Left / Right" — these stack on a phone, where the labels lie. -->
-      <span class="photo-caption">My phone, in the Blank Space video. Steph, running baseboard on Western Ave.</span>
+      <figure class="pb-still">
+        <img src="/media/blank-space-phone.jpg" alt="Taylor Swift holding out a phone in the Blank Space video" loading="lazy">
+        <figcaption class="photo-caption">My phone, in the Blank Space video.</figcaption>
+      </figure>
+      <figure class="pb-portrait">
+        <img src="/media/notes/002-western/steph-baseboard.jpg" alt="Steph sitting on the floor at Western Ave, running baseboard along the wall" loading="lazy">
+        <figcaption class="photo-caption">Steph, running baseboard on Western Ave.</figcaption>
+      </figure>
     </div>
     <div class="section-rule">
       <h2 class="section-label">On the Timeline</h2>
