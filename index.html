@@ -485,7 +485,7 @@
   /* ============ CREDITS / PROOF BAND (home, below the doors) ============ */
   .proof{position:relative;z-index:3;background:var(--black);border-top:1px solid var(--gold-line);padding:clamp(46px,7vw,82px) 0 clamp(44px,6vw,68px);text-shadow:none}
   /* Résumé band: the words lead. A small, incidental clip of the edit desk sits beside them, not a hero shot. */
-  .proof-intro{padding:clamp(34px,5vw,58px) calc(var(--pad) + 14px);margin:0 auto clamp(26px,4vw,38px);display:grid;grid-template-columns:.92fr 1.08fr;align-items:center;gap:clamp(20px,3vw,28px) clamp(40px,6vw,80px);max-width:1280px}
+  .proof-intro{padding:clamp(34px,5vw,58px) calc(var(--pad) + 14px);margin:0 auto clamp(26px,4vw,38px);display:grid;grid-template-columns:minmax(0,1fr);align-items:start;gap:clamp(14px,2vw,20px);max-width:1280px}
   .proof-intro>.kicker{grid-column:1/-1}
   .proof-copy{min-width:0}
   .proof-line{font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,2.6vw,1.68rem);line-height:1.34;color:var(--paper);margin:12px 0 0;max-width:44ch}
@@ -512,6 +512,46 @@
   @media (hover:none){a.pc-star{text-decoration:underline;text-decoration-color:rgba(231,200,119,.55);text-underline-offset:4px;text-decoration-thickness:1px}}
   /* Taylor — the rare one; brighter gold with a breathing glow */
   @keyframes pcStar{0%,100%{text-shadow:0 0 10px rgba(231,200,119,.5),0 0 20px rgba(200,136,60,.24),0 1px 12px rgba(0,0,0,.7)}50%{text-shadow:0 0 18px rgba(231,200,119,.92),0 0 40px rgba(200,136,60,.5),0 1px 12px rgba(0,0,0,.7)}}
+  /* ---- the sequence: the résumé rendered as an edit timeline ---- */
+  /* no overflow:hidden here — tips on the top row need to escape the box.
+     .seq-bg is inset:0 at the wrap's exact size, so nothing bleeds without it. */
+  .seq-wrap{position:relative;grid-column:1/-1;margin-top:clamp(16px,2.4vw,26px);border:1px solid var(--gold-line);background:var(--black)}
+  .seq-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 32%;opacity:.13;filter:saturate(.7) brightness(.7);pointer-events:none}
+  .seq-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,33,24,.82),rgba(22,33,24,.93));pointer-events:none}
+  .seq{position:relative;z-index:2;padding:clamp(14px,2.4vw,24px)}
+  .seq-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:9px}
+  .seq-eyebrow{font-family:var(--mono);font-size:.46rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+  .seq-tc{font-family:var(--mono);font-size:.52rem;letter-spacing:.08em;color:rgba(244,239,226,.45)}
+  .seq-ruler{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.5rem;letter-spacing:.12em;color:rgba(244,239,226,.34);border-bottom:1px solid rgba(200,136,60,.16);padding-bottom:6px;margin-bottom:12px}
+  .seq-track{display:grid;grid-template-columns:104px minmax(0,1fr);gap:12px;padding:8px 0;border-bottom:1px solid rgba(244,239,226,.06)}
+  .seq-track:last-of-type{border-bottom:0}
+  .seq-label{font-family:var(--mono);font-size:.5rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);padding-top:9px}
+  .seq-blocks{display:flex;gap:10px;min-width:0;flex-wrap:wrap}
+  .seq-block{position:relative;flex:1 1 260px;min-width:0;border:1px solid rgba(200,136,60,.22);border-left:2px solid var(--gold);background:rgba(200,136,60,.04);padding:8px 10px 9px}
+  .seq-block-sm{flex:0 1 190px}
+  .seq-block-head{display:block;font-family:var(--mono);font-size:.46rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
+  .seq-clips{display:flex;flex-wrap:wrap;gap:5px}
+  .clip{position:relative;display:block;text-align:left;text-decoration:none;font-family:var(--mono);font-size:.55rem;letter-spacing:.05em;line-height:1.3;color:rgba(244,239,226,.66);background:rgba(244,239,226,.04);border:1px solid var(--line);border-radius:2px;padding:4px 7px;cursor:pointer;transition:border-color .3s var(--ease),color .3s var(--ease),background .3s var(--ease)}
+  .clip:hover,.clip:focus-visible{border-color:var(--gold-line);color:var(--paper);background:rgba(200,136,60,.10)}
+  .clip.marquee{font-size:.66rem;color:var(--paper);border-color:rgba(200,136,60,.3);background:rgba(200,136,60,.07)}
+  .clip-name{display:block}
+  .clip-work{display:block;font-size:.48rem;letter-spacing:.04em;color:rgba(244,239,226,.42);margin-top:2px}
+  .clip-tip{position:absolute;left:0;bottom:calc(100% + 8px);z-index:6;width:max-content;max-width:min(260px,60vw);white-space:normal;font-family:var(--mono);font-size:.56rem;letter-spacing:.04em;line-height:1.45;text-transform:none;color:var(--paper);background:rgba(22,33,24,.96);padding:6px 9px;border-radius:2px;border:1px solid var(--gold-line);box-shadow:0 6px 18px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:opacity .28s var(--ease)}
+  .clip:hover .clip-tip,.clip:focus-visible .clip-tip,.clip.open .clip-tip{opacity:1}
+  /* flipped by JS when a tip would run past the right edge of the sequence */
+  .clip-tip.flip{left:auto;right:0}
+  /* Taylor — the rare one, same breathing gold as the old credit list */
+  .clip-star .clip-name{color:#E7C877;text-shadow:0 0 11px rgba(231,200,119,.5),0 0 24px rgba(200,136,60,.28);animation:pcStar 3.4s ease-in-out infinite}
+  .clip-star{border-color:rgba(231,200,119,.4)}
+  .clip-star:hover .clip-name,.clip-star:focus-visible .clip-name{color:#F3E2A8}
+  .seq-foot{font-family:var(--mono);font-size:.5rem;letter-spacing:.08em;color:rgba(244,239,226,.34);margin:14px 0 0;padding-top:10px;border-top:1px solid rgba(244,239,226,.06)}
+  /* phones: no hover to lean on — the tip drops inline under the clip, revealed by tap.
+     Must sit after the base .clip-tip rule above; source order decides this one. */
+  @media (max-width:680px){
+    .clip-tip{position:static;width:auto;max-width:none;display:none;opacity:1;background:none;border:0;padding:3px 0 0;box-shadow:none;color:rgba(244,239,226,.55)}
+    .clip.open .clip-tip{display:block}
+  }
+
   .faves{padding:0 calc(var(--pad) + 14px);margin-top:clamp(36px,5vw,58px)}
   .faves-head{display:flex;align-items:baseline;justify-content:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:22px}
   .faves-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
@@ -654,11 +694,18 @@
     .credits .lbl{color:var(--gold)}
     .cred-row{flex-wrap:nowrap;gap:7px}
     .door .desc{color:rgba(244,239,226,.78)}
-    /* proof band on phones: stack; the small clip stays small and sits under the copy */
-    .proof-intro{grid-template-columns:1fr;gap:20px;padding:clamp(30px,7vw,44px) var(--pad)}
+    /* proof band on phones: stack the sequence, drop the ruler, kill the video backdrop */
+    .proof-intro{grid-template-columns:1fr;gap:16px;padding:clamp(30px,7vw,44px) var(--pad)}
     .proof-copy{max-width:none}
-    .proof-panel{width:min(560px,92vw);aspect-ratio:16/9;border-radius:4px;background:url("media/resume-panel.jpg") center 32%/cover no-repeat}
-    .proof-vid{display:none}
+    .seq-ruler{display:none}
+    .seq-bg{display:none}
+    .seq-wrap{background:rgba(20,16,14,.5)}
+    .seq-track{grid-template-columns:1fr;gap:7px;padding:12px 0}
+    .seq-label{padding-top:0}
+    .seq-blocks{flex-direction:column;gap:8px}
+    .seq-block{flex:1 1 auto}
+    .seq-block-sm{flex:1 1 auto}
+    .clip{width:100%}
     /* phones: freeze the reel progress bar */
     .reel-prog i{animation:none;width:0}
     .signup-input{flex-basis:100%}
@@ -755,28 +802,101 @@
   <!-- ============ CREDITS / PROOF BAND ============ -->
   <section class="proof" aria-label="Selected credits and favorite films">
     <div class="proof-intro">
-      <span class="kicker">The résumé, briefly</span>
-      <figure class="proof-panel">
-        <video class="proof-vid" src="media/resume-panel.mp4" poster="media/resume-panel.jpg" autoplay muted loop playsinline preload="metadata"></video>
-        <figcaption class="proof-credits">
-          <span class="pc-eyebrow">Selected Credits</span>
-          <span class="pc-rule"></span>
-          <ul class="pc-list">
-            <li><a class="pc-star" href="/notes/001-blank-space" title="Read the story — on-set editor on Blank Space">Taylor Swift</a><span class="pc-tip">On-set editor, Blank Space</span></li>
-            <li>Katy Perry<span class="pc-tip">Contracted 3× for remix edits</span></li>
-            <li>Lady Gaga<span class="pc-tip">Asst. editor — Born This Way, Alejandro</span></li>
-            <li>The Jets<span class="pc-tip">Video editor, 5 seasons (Rex Ryan era)</span></li>
-            <li>NBC<span class="pc-tip">Broadcast editorial</span></li>
-          </ul>
-        </figcaption>
-        <span class="pm-tc" aria-hidden="true">01:04:32:14</span>
-        <svg class="pm-transport" viewBox="0 0 600 10" preserveAspectRatio="none" aria-hidden="true">
-          <line x1="0" y1="5" x2="600" y2="5" stroke="rgba(200,136,60,0.14)" stroke-width="0.75"/>
-          <line x1="138" y1="1" x2="138" y2="9" stroke="rgba(200,136,60,0.38)" stroke-width="1"/>
-        </svg>
-      </figure>
+      <span class="kicker">The other world</span>
       <div class="proof-copy">
-        <p class="proof-line">Twelve years cutting for networks, artists, and 350 couples on the best day of their lives. The credits prove the range. The weddings are the reason.</p>
+        <p class="proof-line">Sixteen years in a dark room. Music videos, five seasons of Jets football, four years of promos at NBCU. The last twelve of it, weddings &mdash; that's the part I'd keep.</p>
+      </div>
+
+      <div class="seq-wrap">
+        <video class="seq-bg" src="media/resume-panel.mp4" poster="media/resume-panel.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+        <span class="seq-scrim" aria-hidden="true"></span>
+        <div class="seq" role="group" aria-label="Editing credits, 2009 to today">
+          <div class="seq-head">
+            <span class="seq-eyebrow">Sequence &middot; selected credits</span>
+            <span class="seq-tc" aria-hidden="true">16:00:00:00</span>
+          </div>
+          <div class="seq-ruler" aria-hidden="true">
+            <span>2009</span><span>2012</span><span>2015</span><span>2018</span><span>2021</span><span>2024</span><span>2026</span>
+          </div>
+
+          <div class="seq-track">
+            <span class="seq-label">V1 &middot; Music videos</span>
+            <div class="seq-blocks">
+              <div class="seq-block">
+                <span class="seq-block-head">Freelance &middot; 2009&ndash;2014</span>
+                <div class="seq-clips">
+                  <a class="clip marquee clip-star" href="/notes/001-blank-space"><span class="clip-name">Taylor Swift</span><span class="clip-work">Blank Space</span><span class="clip-tip">On-set editor. My actual phone is in the video. Read the story &rarr;</span></a>
+                  <button type="button" class="clip marquee"><span class="clip-name">Katy Perry</span><span class="clip-work">Mega Remix</span><span class="clip-tip">Six of her #1s in one video remix. Never been done before.</span></button>
+                  <button type="button" class="clip marquee"><span class="clip-name">Katy Perry</span><span class="clip-work">Teenage Dream</span><span class="clip-tip">Editor. They contracted me three times.</span></button>
+                  <button type="button" class="clip marquee"><span class="clip-name">Lady Gaga</span><span class="clip-work">Born This Way</span><span class="clip-tip">Assistant editor.</span></button>
+                  <button type="button" class="clip marquee"><span class="clip-name">Mariah Carey</span><span class="clip-work">Obsessed</span><span class="clip-tip">Assistant editor.</span></button>
+                  <button type="button" class="clip marquee"><span class="clip-name">Maybelline</span><span class="clip-work">Make It Happen</span><span class="clip-tip">On-set editor.</span></button>
+                  <button type="button" class="clip"><span class="clip-name">Katy Perry</span><span class="clip-work">Waking Up in Vegas</span><span class="clip-tip">Editor.</span></button>
+                  <button type="button" class="clip"><span class="clip-name">Lady Gaga</span><span class="clip-work">Alejandro</span><span class="clip-tip">Assistant editor.</span></button>
+                  <button type="button" class="clip"><span class="clip-name">Faith Hill</span><span class="clip-work">Parfums</span><span class="clip-tip">Editor.</span></button>
+                  <button type="button" class="clip"><span class="clip-name">Sky Ferreira</span><span class="clip-work">Obsession (Remix)</span><span class="clip-tip">Editor.</span></button>
+                  <button type="button" class="clip"><span class="clip-name">Richie Kotzen</span><span class="clip-work">Larger Than Life</span><span class="clip-tip">Editor.</span></button>
+                  <button type="button" class="clip"><span class="clip-name">Moxie</span><span class="clip-work">Buffalo Bill</span><span class="clip-tip">Editor.</span></button>
+                  <button type="button" class="clip"><span class="clip-name">Meaku</span><span class="clip-work">Gotta Have My Pop</span><span class="clip-tip">Editor.</span></button>
+                  <button type="button" class="clip"><span class="clip-name">Ty James</span><span class="clip-work">Dance With Me</span><span class="clip-tip">Editor.</span></button>
+                  <button type="button" class="clip"><span class="clip-name">Lolene</span><span class="clip-work">Sexy People</span><span class="clip-tip">Assistant editor.</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="seq-track">
+            <span class="seq-label">V2 &middot; Sports</span>
+            <div class="seq-blocks">
+              <div class="seq-block">
+                <span class="seq-block-head">New York Jets &middot; 2010&ndash;2015</span>
+                <div class="seq-clips">
+                  <button type="button" class="clip marquee"><span class="clip-name">Jets Flight Plan</span><span class="clip-work">CBS, weekly</span><span class="clip-tip">Five seasons with the Jets. I handle the highlights, they handle the heartbreak. #JetUp</span></button>
+                  <button type="button" class="clip marquee"><span class="clip-name">Jets Huddle</span><span class="clip-work">CBS, weekly</span><span class="clip-tip">The other award-winning one.</span></button>
+                  <button type="button" class="clip"><span class="clip-name">Jets Talk Live</span><span class="clip-work">Live stream</span><span class="clip-tip">Technical director, on a Tricaster.</span></button>
+                  <button type="button" class="clip"><span class="clip-name">Jets Replay</span><span class="clip-work">Live stream</span><span class="clip-tip">Technical director, on a Tricaster.</span></button>
+                  <button type="button" class="clip"><span class="clip-name">MetLife Stadium</span><span class="clip-work">In-stadium</span><span class="clip-tip">The stuff that played on the boards on Sunday.</span></button>
+                  <button type="button" class="clip"><span class="clip-name">newyorkjets.com</span><span class="clip-work">Daily</span><span class="clip-tip">Daily cut, every day, for five years.</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="seq-track">
+            <span class="seq-label">V3 &middot; Networks</span>
+            <div class="seq-blocks">
+              <div class="seq-block seq-block-sm">
+                <span class="seq-block-head">Strand &middot; 2011</span>
+                <div class="seq-clips">
+                  <button type="button" class="clip"><span class="clip-name">Wendy Williams</span><span class="clip-work">Promos</span><span class="clip-tip">Wrote them too.</span></button>
+                  <button type="button" class="clip"><span class="clip-name">Dr. Oz</span><span class="clip-work">Sales tape</span><span class="clip-tip">Editor.</span></button>
+                </div>
+              </div>
+              <div class="seq-block">
+                <span class="seq-block-head">NBCUniversal &middot; 2015&ndash;2019</span>
+                <div class="seq-clips">
+                  <button type="button" class="clip marquee"><span class="clip-name">Mr. Robot</span><span class="clip-work">USA &middot; S2 EPK + promos</span><span class="clip-tip">Broadcast editorial. Yes, that NBC.</span></button>
+                  <button type="button" class="clip marquee"><span class="clip-name">The Expanse</span><span class="clip-work">SYFY &middot; S1 EPK</span><span class="clip-tip">Season one, before everyone caught up to it.</span></button>
+                  <button type="button" class="clip"><span class="clip-name">Futurama</span><span class="clip-work">SYFY &middot; launch campaign</span><span class="clip-tip">The whole launch.</span></button>
+                  <button type="button" class="clip"><span class="clip-name">Colony</span><span class="clip-work">USA &middot; promos</span><span class="clip-tip">Editor.</span></button>
+                  <button type="button" class="clip"><span class="clip-name">Ninja Warrior Jr.</span><span class="clip-work">Universal Kids &middot; launch</span><span class="clip-tip">Launch promos.</span></button>
+                  <button type="button" class="clip"><span class="clip-name">SYFY</span><span class="clip-work">Original movie promos</span><span class="clip-tip">If it had a shark in it, I probably cut it.</span></button>
+                  <button type="button" class="clip"><span class="clip-name">Sprout</span><span class="clip-work">Network remixes</span><span class="clip-tip">I remixed the song. It sparked fifteen network remixes.</span></button>
+                </div>
+              </div>
+              <div class="seq-block">
+                <span class="seq-block-head">SYFY &middot; freelance</span>
+                <div class="seq-clips">
+                  <button type="button" class="clip"><span class="clip-name">Inside Chucky</span><span class="clip-work">S2 &amp; S3</span><span class="clip-tip">Still cutting for them.</span></button>
+                  <button type="button" class="clip"><span class="clip-name">Wynonna Earp</span><span class="clip-work">EPK &middot; S4 &amp; S5</span><span class="clip-tip">Editor.</span></button>
+                  <button type="button" class="clip"><span class="clip-name">Resident Alien</span><span class="clip-work">Revisited</span><span class="clip-tip">Editor.</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="seq-foot">Prologue &mdash; 2008, LA Digital Post. Stringouts, b-roll, interview selects. Everybody starts somewhere.</p>
+        </div>
       </div>
     </div>
 
@@ -1136,6 +1256,31 @@
 <script>
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* reduced motion: CSS kills the animations, but a <video> keeps playing — hold the backdrop still */
+  if(reduce){
+    var seqBg = document.querySelector('.seq-bg');
+    if(seqBg){ seqBg.removeAttribute('autoplay'); seqBg.pause(); }
+  }
+
+  /* sequence tips: keep them inside the band instead of pushing the page sideways */
+  (function(){
+    var wrap = document.querySelector('.seq-wrap');
+    if(!wrap) return;
+    function place(clip){
+      var tip = clip.querySelector('.clip-tip');
+      if(!tip) return;
+      tip.classList.remove('flip');
+      if(window.innerWidth <= 680) return;           /* inline on phones, nothing to flip */
+      var edge = wrap.getBoundingClientRect().right;
+      if(tip.getBoundingClientRect().right > edge - 4) tip.classList.add('flip');
+    }
+    wrap.querySelectorAll('.clip').forEach(function(clip){
+      clip.addEventListener('pointerenter', function(){ place(clip); });
+      clip.addEventListener('focus', function(){ place(clip); });
+      clip.addEventListener('click', function(){ place(clip); });
+    });
+  })();
+
   /* ---------- cal.com embed (lazy — only loads when "Help me with video" opens) ---------- */
   var calInit = false;
   function initCal(){
@@ -1308,7 +1453,9 @@
 
   /* ---------- credit easter eggs (hover or click) ---------- */
   (function(){
-    var creds = document.querySelectorAll('.cred');
+    /* .cred = hero credit row; button.clip = a clip in the sequence band.
+       The Blank Space clip is an <a>, so it stays out of this and navigates natively. */
+    var creds = document.querySelectorAll('.cred, button.clip');
     if(!creds.length) return;
     function closeAll(except){ creds.forEach(function(c){ if(c!==except) c.classList.remove('open'); }); }
     function tsBurst(c){ if(!c.classList.contains('ts-logo')) return; c.classList.remove('burst'); void c.offsetWidth; c.classList.add('burst'); setTimeout(function(){ c.classList.remove('burst'); }, 850); }
