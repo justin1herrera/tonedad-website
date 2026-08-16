@@ -484,33 +484,13 @@
 
   /* ============ CREDITS / PROOF BAND (home, below the doors) ============ */
   .proof{position:relative;z-index:3;background:var(--black);border-top:1px solid var(--gold-line);padding:clamp(46px,7vw,82px) 0 clamp(44px,6vw,68px);text-shadow:none}
-  /* Résumé band: the words lead. A small, incidental clip of the edit desk sits beside them, not a hero shot. */
+  /* Résumé band: the words lead, then the sequence below them. */
   .proof-intro{padding:clamp(34px,5vw,58px) calc(var(--pad) + 14px);margin:0 auto clamp(26px,4vw,38px);display:grid;grid-template-columns:minmax(0,1fr);align-items:start;gap:clamp(14px,2vw,20px);max-width:1280px}
   .proof-intro>.kicker{grid-column:1/-1}
   .proof-copy{min-width:0}
   .proof-line{font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,2.6vw,1.68rem);line-height:1.34;color:var(--paper);margin:12px 0 0;max-width:44ch}
   .proof-line b{font-style:normal;font-weight:500;color:var(--gold)}
-  .proof-panel{position:relative;margin:0;width:100%;border:1px solid var(--gold-line);border-radius:0;overflow:hidden;aspect-ratio:16/9;background:var(--black);box-shadow:0 16px 38px -24px rgba(0,0,0,.8)}
-  .proof-panel::before{content:"";position:absolute;inset:3px;border:1px solid rgba(200,136,60,.07);pointer-events:none;z-index:3}
-  .proof-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 32%;display:block;filter:saturate(.9) contrast(1.03) brightness(.82)}
-  .proof-panel::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,16,14,.85) 0%,rgba(20,16,14,.55) 34%,rgba(20,16,14,.12) 66%,rgba(20,16,14,0) 100%),linear-gradient(180deg,rgba(20,16,14,0) 64%,rgba(20,16,14,.55) 100%);pointer-events:none}
-  .pm-tc{position:absolute;right:12px;bottom:14px;font-family:var(--mono);font-size:.52rem;letter-spacing:.08em;color:rgba(244,239,226,.52);text-shadow:0 0 6px rgba(200,136,60,.14);pointer-events:none;z-index:3}
-  .pm-transport{position:absolute;bottom:0;left:0;width:100%;height:10px;z-index:3;pointer-events:none}
-  .proof-credits{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;gap:clamp(8px,2vw,12px);padding:clamp(18px,7%,28px);padding-top:clamp(36px,9%,48px)}
-  .pc-eyebrow{position:absolute;top:10px;left:clamp(18px,7%,28px);font-family:var(--mono);font-size:.44rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);text-shadow:0 0 12px rgba(200,136,60,.4),0 1px 8px rgba(0,0,0,.6);z-index:3}
-  .pc-rule{position:absolute;top:26px;left:0;right:0;width:100%;height:1px;background:rgba(200,136,60,.10);box-shadow:none;z-index:3}
-  .pc-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:clamp(8px,1.9vw,12px)}
-  .pc-list li{font-family:var(--mono);font-size:clamp(.62rem,1.3vw,.76rem);letter-spacing:.14em;text-transform:uppercase;line-height:1;color:var(--paper);text-shadow:0 1px 12px rgba(0,0,0,.7),0 0 4px rgba(0,0,0,.6);position:relative;cursor:default}
-  .pc-list li span{color:var(--gold)}
-  .pc-tip{position:absolute;left:calc(100% + 14px);top:50%;transform:translateY(-50%);white-space:nowrap;font-family:var(--mono);font-size:clamp(.56rem,1.1vw,.66rem);letter-spacing:.06em;text-transform:none;color:var(--paper);opacity:0;pointer-events:none;transition:opacity .3s var(--ease);background:rgba(22,33,24,.82);padding:4px 9px;border-radius:2px;border:1px solid var(--gold-line);text-shadow:none;box-shadow:0 4px 12px rgba(0,0,0,.4)}
-  .pc-list li:hover .pc-tip,.pc-list li:focus-within .pc-tip{opacity:1}
-  @media (max-width:680px){.pc-tip{display:none}}
-  .pc-credit-link{color:var(--paper);text-decoration:none;transition:color .25s}
-  .pc-credit-link:hover,.pc-credit-link:focus-visible{color:var(--gold)}
-  .pc-list li .pc-star{color:#E7C877;text-decoration:none;cursor:pointer;text-shadow:0 0 11px rgba(231,200,119,.55),0 0 24px rgba(200,136,60,.3),0 1px 12px rgba(0,0,0,.7);animation:pcStar 3.4s ease-in-out infinite;transition:color .25s}
-  a.pc-star:hover,a.pc-star:focus-visible{color:#F3E2A8;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
-  @media (hover:none){a.pc-star{text-decoration:underline;text-decoration-color:rgba(231,200,119,.55);text-underline-offset:4px;text-decoration-thickness:1px}}
-  /* Taylor — the rare one; brighter gold with a breathing glow */
+  /* Taylor — the rare one; brighter gold with a breathing glow. Used by .clip-star. */
   @keyframes pcStar{0%,100%{text-shadow:0 0 10px rgba(231,200,119,.5),0 0 20px rgba(200,136,60,.24),0 1px 12px rgba(0,0,0,.7)}50%{text-shadow:0 0 18px rgba(231,200,119,.92),0 0 40px rgba(200,136,60,.5),0 1px 12px rgba(0,0,0,.7)}}
   /* ---- the sequence: the résumé rendered as an edit timeline ---- */
   /* no overflow:hidden here — tips on the top row need to escape the box.
